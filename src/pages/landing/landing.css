@@ -49,6 +49,11 @@ button {
     left: 0%;
   }
 }
+@media screen and (max-width: 500px) {
+  .hero {
+    max-width: 95%;
+  }
+}
 @media screen and (max-width: 320px) {
   .text-content {
     width: 100% !important;
