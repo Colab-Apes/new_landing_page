@@ -28,6 +28,12 @@ button {
 .hero {
   max-width: 80%;
 }
+
+@media screen and (max-width: 1280px) {
+  .hero {
+    max-width: 90%;
+  }
+}
 @media screen and (max-width: 800px) {
   .mobile-nav {
     display: block;
