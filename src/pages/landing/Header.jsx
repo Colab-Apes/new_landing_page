@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header bg h-screen">
+    <header className={`header bg h-screen ${isOpen ? "over-hidden" : ""}`}>
       <div className="bg-image hidden md:block -z-10">
         <img src={polygon} alt="polygon" />
       </div>
