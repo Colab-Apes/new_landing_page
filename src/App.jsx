@@ -12,6 +12,11 @@ import feature2 from "./assets/feature2.png";
 import feature3 from "./assets/feature3.png";
 import feature4 from "./assets/feature4.png";
 
+import AOS from 'aos'
+import "aos/dist/aos.css";
+
+AOS.init({ once: false })
+
 import "./App.css";
 
 function App() {
@@ -98,7 +103,8 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%] -z-40" src={feature1} alt="Feature Frame" />
+                <img className="w-[100%] -z-40" src={feature1} alt="Feature Frame"
+                />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
                     Key Features:
@@ -159,7 +165,8 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%]" src={feature2} alt="Feature Frame" />
+                <img className="w-[100%]" src={feature2} alt="Feature Frame"
+                />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
                     Key Features:
@@ -226,7 +233,8 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%]" src={feature3} alt="Feature Frame" />
+                <img className="w-[100%]" src={feature3} alt="Feature Frame"
+                />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
                     Key Features:
@@ -293,7 +301,8 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%]" src={feature4} alt="Feature Frame" />
+                <img className="w-[100%]" src={feature4} alt="Feature Frame" data-aos="fade-up"
+                />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
                     Key Features:
@@ -319,7 +328,8 @@ function App() {
                 </div>
               </div>
 
-              <div className="feat-info text-center  md:text-left w-full md:w-[40%]">
+              <div className="feat-info text-center  md:text-left w-full md:w-[40%]" data-aos="fade-up"
+                data-aos-duration="3000">
                 <h1 className="text-[#333333] font-semibold text-5xl md:text-6xl mb-10">
                   Value Stake Protocol
                 </h1>
