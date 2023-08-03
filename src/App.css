@@ -1,0 +1,25 @@
+.app__itemsContainer {
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+}
+.features {
+  align-self: center;
+}
+.kf-mobile,
+.hc-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .kf-mobile,
+  .hc-mobile {
+    display: block;
+  }
+}
+/*# sourceMappingURL=App.css.map */
