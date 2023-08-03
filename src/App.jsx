@@ -12,10 +12,10 @@ import feature2 from "./assets/feature2.png";
 import feature3 from "./assets/feature3.png";
 import feature4 from "./assets/feature4.png";
 
-import AOS from 'aos'
+import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({ once: false })
+AOS.init({ once: false });
 
 import "./App.css";
 
@@ -28,7 +28,7 @@ function App() {
 
       {/* Items */}
       <div className="app__itemsContainer">
-        <Section backgroundImg={bg} >
+        <Section backgroundImg={bg}>
           <div className="hero container w-full mx-auto mt-32 flex flex-col md:flex-row justify-evenly md:justify-between items-center">
             <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
               <p className="text-primaryColor mb-7">
@@ -103,7 +103,10 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%] -z-40" src={feature1} alt="Feature Frame"
+                <img
+                  className="w-[100%] -z-40"
+                  src={feature1}
+                  alt="Feature Frame"
                 />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
@@ -165,8 +168,7 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%]" src={feature2} alt="Feature Frame"
-                />
+                <img className="w-[100%]" src={feature2} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
                     Key Features:
@@ -182,7 +184,9 @@ function App() {
                     </div>
                     <div className="stuff bg-[#FFE0A5] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
-                      <p className="text-[1.3rem]">Interactive learning environment</p>
+                      <p className="text-[1.3rem]">
+                        Interactive learning environment
+                      </p>
                     </div>
                     <div className="stuff bg-[#FFB3F3] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
@@ -197,7 +201,10 @@ function App() {
                   Learning Pool
                 </h1>
                 <p className="text-[#3B513F] text-[1.7rem] mb-10">
-                  Access our comprehensive learning resources and participate in live group-based learning sessions. Enhance your skills, expand your knowledge, and stay updated with the latest industry trends
+                  Access our comprehensive learning resources and participate in
+                  live group-based learning sessions. Enhance your skills,
+                  expand your knowledge, and stay updated with the latest
+                  industry trends
                 </p>
                 <div className="key-features hidden md:block">
                   <p className="text-[#3B513F] text-[1.5rem] mb-7 font-semibold">
@@ -214,7 +221,9 @@ function App() {
                     </div>
                     <div className="stuff bg-[#FFE0A5] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
-                      <p className="text-[1.3rem]">Interactive learning environment</p>
+                      <p className="text-[1.3rem]">
+                        Interactive learning environment
+                      </p>
                     </div>
                     <div className="stuff bg-[#FFB3F3] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
@@ -233,8 +242,7 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%]" src={feature3} alt="Feature Frame"
-                />
+                <img className="w-[100%]" src={feature3} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
                     Key Features:
@@ -250,7 +258,9 @@ function App() {
                     </div>
                     <div className="stuff bg-[#FFFB6B] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
-                      <p className="text-[1.3rem]">First principle thinking roadmap</p>
+                      <p className="text-[1.3rem]">
+                        First principle thinking roadmap
+                      </p>
                     </div>
                     <div className="stuff bg-[#BBD2FF] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
@@ -265,7 +275,10 @@ function App() {
                   Build The Future
                 </h1>
                 <p className="text-[#3B513F] text-[1.7rem] mb-10">
-                  Transform your ideas into reality with our Build Feature. Collaborate with other talented creators, leverage the power of First Principle Thinking, and create innovative projects together
+                  Transform your ideas into reality with our Build Feature.
+                  Collaborate with other talented creators, leverage the power
+                  of First Principle Thinking, and create innovative projects
+                  together
                 </p>
                 <div className="key-features hidden md:block">
                   <p className="text-[#3B513F] text-[1.5rem] mb-7 font-semibold">
@@ -282,7 +295,9 @@ function App() {
                     </div>
                     <div className="stuff bg-[#FFFB6B] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
-                      <p className="text-[1.3rem]">First principle thinking roadmap</p>
+                      <p className="text-[1.3rem]">
+                        First principle thinking roadmap
+                      </p>
                     </div>
                     <div className="stuff bg-[#BBD2FF] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
@@ -301,8 +316,7 @@ function App() {
             </div>
             <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
               <div className="feat-image">
-                <img className="w-[100%]" src={feature4} alt="Feature Frame" data-aos="fade-up"
-                />
+                <img className="w-[100%]" src={feature4} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">
                   <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
                     Key Features:
@@ -318,7 +332,9 @@ function App() {
                     </div>
                     <div className="stuff bg-[#FFDFA0] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
-                      <p className="text-[1.3rem]">Progress-based payments fraud prevention technology</p>
+                      <p className="text-[1.3rem]">
+                        Progress-based payments fraud prevention technology
+                      </p>
                     </div>
                     <div className="stuff bg-[#ADE6FF] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
@@ -328,13 +344,19 @@ function App() {
                 </div>
               </div>
 
-              <div className="feat-info text-center  md:text-left w-full md:w-[40%]" data-aos="fade-up"
-                data-aos-duration="3000">
+              <div
+                className="feat-info text-center  md:text-left w-full md:w-[40%]"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >
                 <h1 className="text-[#333333] font-semibold text-5xl md:text-6xl mb-10">
                   Value Stake Protocol
                 </h1>
                 <p className="text-[#3B513F] text-[1.7rem] mb-10">
-                  Secure project funding with our Value Stake Protocol. Showcase your ideas, demonstrate value, and attract early-stage investors who believe in your vision                </p>
+                  Secure project funding with our Value Stake Protocol. Showcase
+                  your ideas, demonstrate value, and attract early-stage
+                  investors who believe in your vision{" "}
+                </p>
                 <div className="key-features hidden md:block">
                   <p className="text-[#3B513F] text-[1.5rem] mb-7 font-semibold">
                     Key Features:
@@ -350,7 +372,9 @@ function App() {
                     </div>
                     <div className="stuff bg-[#FFDFA0] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
-                      <p className="text-[1.3rem]">Progress-based payments fraud prevention technology</p>
+                      <p className="text-[1.3rem]">
+                        Progress-based payments fraud prevention technology
+                      </p>
                     </div>
                     <div className="stuff bg-[#ADE6FF] px-10 py-5 rounded-lg">
                       <div className="icon"></div>
