@@ -8,8 +8,13 @@
   top: 0;
   z-index: -1000;
 }
+.app_container {
+  max-width: 90%;
+  margin: 0 auto;
+}
 .features {
   align-self: center;
+  padding: 0 3rem;
 }
 .kf-mobile,
 .hc-mobile {

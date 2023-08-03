@@ -23,7 +23,7 @@ function App() {
 
       {/* Items */}
       <div className="app__itemsContainer">
-        <Section backgroundImg={bg}>
+        <Section backgroundImg={bg} >
           <div className="hero container w-full mx-auto mt-32 flex flex-col md:flex-row justify-evenly md:justify-between items-center">
             <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
               <p className="text-primaryColor mb-7">
@@ -60,7 +60,7 @@ function App() {
             <div className="image-content relative fade-in-top">
               <img src={frame1} alt="Frame" />
               <img
-                className="absolute top-24 -left-20 hidden md:block -z-10"
+                className="absolute top-24 -left-20 hidden md:block"
                 src={frame2}
                 alt="frame"
               />
@@ -92,7 +92,7 @@ function App() {
           </div>
         </Section>
         <Section backgroundImg={bg}>
-          <div className="features container mt-36">
+          <div className="features">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-10">
               Features
             </div>
@@ -157,7 +157,7 @@ function App() {
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-10">
               Features
             </div>
-            <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24">
+            <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
               <div className="feat-image">
                 <img className="w-[100%]" src={feature2} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">
@@ -291,7 +291,7 @@ function App() {
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-10">
               Features
             </div>
-            <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24">
+            <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
               <div className="feat-image">
                 <img className="w-[100%]" src={feature4} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">

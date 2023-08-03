@@ -50,7 +50,7 @@ function Header() {
         </div>
       </header>
 
-      <div className="mobile-nav">
+      <div className="mobile-nav app_container">
         <nav className="nav container flex mx-auto justify-between items-center">
           <div className="logo">
             <img src={logo} alt="" />
