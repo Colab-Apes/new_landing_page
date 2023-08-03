@@ -346,8 +346,6 @@ function App() {
 
               <div
                 className="feat-info text-center  md:text-left w-full md:w-[40%]"
-                data-aos="fade-up"
-                data-aos-duration="3000"
               >
                 <h1 className="text-[#333333] font-semibold text-5xl md:text-6xl mb-10">
                   Value Stake Protocol
