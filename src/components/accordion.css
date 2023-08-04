@@ -1,0 +1,50 @@
+/**
+* ----------------------------------------------
+* Demo styles
+* ----------------------------------------------
+**/
+
+.accordion__button {
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__item{
+  color: #054E12;
+
+}
+.faq-border{
+  border-top: solid 2px #999999;
+  width: 100%;
+  padding-top: 4rem;
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  padding: 20px 40px;
+  animation: fadein 0.35s ease-in;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

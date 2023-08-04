@@ -42,7 +42,7 @@ function Header() {
               Sign in
             </a>
           </button>
-          <button className="md:bg-green2  bg-green1 px-10 py-4 rounded-md">
+          <button className="md:bg-green2  bg-green1 px-10 py-4 rounded-xl">
             <a href="#" className="text-2xl text-white ">
               Sign up
             </a>
@@ -88,7 +88,7 @@ function Header() {
                 Sign in
               </a>
             </button>
-            <button className="md:bg-green2  bg-green1 px-10 py-4 rounded-md">
+            <button className="md:bg-green2  bg-green1 px-10 py-4 rounded-xl">
               <a href="#" className="text-2xl text-white ">
                 Sign up
               </a>

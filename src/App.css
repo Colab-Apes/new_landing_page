@@ -20,6 +20,14 @@
 .hc-mobile {
   display: none;
 }
+.coll-form {
+  border: solid 2px #054e12;
+}
+
+.footer__links {
+  border-bottom: solid 1px #e8e2e28b;
+  padding-bottom: 6rem;
+}
 
 @media screen and (max-width: 800px) {
   .kf-mobile,
