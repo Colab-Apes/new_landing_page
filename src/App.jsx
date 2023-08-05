@@ -487,7 +487,7 @@ function App() {
             </div>
           </div>
         </Section>
-        <Section backgroundImg={bg}>
+        <Section backgroundImg={bg} className={"width-remove"}>
           <div className="works py-40 container mx-auto px-10">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               How It Works
