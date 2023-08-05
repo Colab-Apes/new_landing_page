@@ -464,7 +464,7 @@ function App() {
           </div>
         </Section>
         <Section backgroundImg={bg} className={"width-remove"}>
-          <div className="collaborate py-52 container mx-auto">
+          <div className="collaborate pt-52 container mx-auto">
             <div className="title px-10 text-center text-5xl text-[#3B8004] font-bold mb-5 md:mb-20">
               Ready to collaborate & Innovate ?
             </div>
@@ -478,7 +478,7 @@ function App() {
                     Get Started
                   </a>
                 </button>
-                <button className="w-full bg-white px-7 py-7 rounded-xl mb-10">
+                <button className="w-full bg-white px-7 py-7 rounded-xl mb-10 box-shadow">
                   <a href="#" className="text-2xl text-black">
                     Join the wait list
                   </a>
@@ -493,7 +493,7 @@ function App() {
               How It Works
             </div>
             <div className="works flex flex-col md:flex-row gap-12 justify-between mb-10">
-              <div className="w-box bg-[#ECF8EE] flex gap-10 p-7 rounded-xl w-full md:w-1/2">
+              <div className="w-box bg-[#ECF8EE] flex gap-10 p-7 rounded-xl w-full md:w-1/2 box-shadow">
                 <div className="w-number">
                   <img src={one} alt="One" className="" />
                 </div>
@@ -506,7 +506,7 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 rounded-xl w-full md:w-1/2">
+              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 rounded-xl w-full md:w-1/2 box-shadow">
                 <div className="w-number">
                   <img src={two} alt="One" className="" />
                 </div>
@@ -522,7 +522,7 @@ function App() {
               </div>
             </div>
             <div className="works flex flex-col md:flex-row gap-12 justify-between">
-              <div className="w-box bg-[#ECF8EE] flex gap-10 p-7 rounded-xl w-full md:w-1/2">
+              <div className="w-box bg-[#ECF8EE] flex gap-10 p-7 rounded-xl w-full md:w-1/2 box-shadow">
                 <div className="w-number]">
                   <img src={three} alt="One" className="" />
                 </div>
@@ -536,7 +536,7 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 rounded-xl w-full md:w-1/2">
+              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 rounded-xl w-full md:w-1/2 box-shadow">
                 <div className="w-number">
                   <img src={four} alt="One" className="" />
                 </div>

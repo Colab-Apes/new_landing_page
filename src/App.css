@@ -20,6 +20,9 @@
 .hc-mobile {
   display: none;
 }
+.box-shadow {
+  box-shadow: 1px 1px 1rem #7777774f;
+}
 .coll-form {
   border: solid 2px #054e12;
 }
