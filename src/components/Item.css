@@ -94,6 +94,7 @@ section {
   }
   .width-remove {
     height: 100%;
+    margin: 0rem 0rem;
   }
 }
 @media screen and (max-width: 320px) {
