@@ -463,12 +463,12 @@ function App() {
             </div>
           </div>
         </Section>
-        <Section backgroundImg={bg}>
-          <div className="collaborate mt-72 container mx-auto">
+        <Section backgroundImg={bg} className={"width-remove"}>
+          <div className="collaborate py-52 container mx-auto">
             <div className="title px-10 text-center text-5xl text-[#3B8004] font-bold mb-5 md:mb-20">
               Ready to collaborate & Innovate ?
             </div>
-            <div className="coll-box flex flex-col justify-center items-center bg-transparent md:bg-[#ECF8EE] h-[80%] w-[100%] rounded-xl p-14">
+            <div className="coll-box flex flex-col justify-start md:justify-center items-center bg-transparent md:bg-[#ECF8EE] h-[80%] w-[100%] rounded-xl p-14">
               <h1 className="text-[#333333] text-center text-[2rem] font-semibold mb-20">
                 Join Co_lab Apes Today & Explore a World of Possibilities
               </h1>
@@ -488,7 +488,7 @@ function App() {
           </div>
         </Section>
         <Section backgroundImg={bg}>
-          <div className="works my-30 md:mt-72 container mx-auto px-10">
+          <div className="works py-40 container mx-auto px-10">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               How It Works
             </div>
@@ -583,12 +583,12 @@ function App() {
             <TabComponent />
           </div>
         </Section>
-        <Section backgroundImg={bg}>
+        <Section backgroundImg={bg} className={"width-remove"}>
           <div className="collaborate mt-48 container mx-auto">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               Join Our Newsletter
             </div>
-            <div className="footer-box flex flex-col justify-center items-center bg-transparent md:bg-[#ECF8EE]  h-[80%] w-[80%] mx-auto rounded-2xl p-0 md:p-14">
+            <div className="footer-box flex flex-col jjustify-start md:justify-center items-center bg-transparent md:bg-[#ECF8EE]  h-[80%] w-[80%] mx-auto rounded-2xl p-0 md:p-14">
               <h1 className="text-[#054E12] text-center text-[2rem]  mb-28">
                 Stay connected and informed: <br />
                 Join our newsletter for the latest successful projects and
