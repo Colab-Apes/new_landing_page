@@ -553,7 +553,7 @@ function App() {
             </div>
           </div>
         </Section>
-        <Section backgroundImg={bg} className={"mt-72 md:mt-0 space-add"}>
+        <Section backgroundImg={bg} className={"mt-92 md:mt-0 space-add"}>
           {/* <div className="collaborate mt-48 container mx-auto">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               Frequently Asked Questions
@@ -583,7 +583,7 @@ function App() {
             <TabComponent />
           </div>
         </Section>
-        <Section backgroundImg={bg} className={"width-remove"}>
+        <Section backgroundImg={bg} className={"width-remove height-remove"}>
           <div className="collaborate mt-48 container mx-auto">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               Join Our Newsletter
