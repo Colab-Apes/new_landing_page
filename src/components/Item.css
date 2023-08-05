@@ -96,6 +96,9 @@ section {
     height: 80%;
     margin: 0rem 0rem;
   }
+  .space-add {
+    margin-top: 30rem 0rem;
+  }
 }
 @media screen and (max-width: 320px) {
   section {
