@@ -13,6 +13,17 @@ button {
 .logo img {
   width: 100%;
 }
+.header {
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.scrolled {
+  background-color: red; /* Change to your desired color */
+}
+.none {
+  display: none;
+}
 
 @media screen and (max-width: 1280px) {
   .hero {

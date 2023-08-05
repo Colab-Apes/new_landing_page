@@ -1,57 +1,82 @@
 import "./Header.css";
 import logo from "../assets/logo.png";
-import MenuIcon from '../assets/svg/menu-icon.svg'
+import MenuIcon from "../assets/svg/menu-icon.svg";
 
 import { FaTimes } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [navBackground, setNavBackground] = useState(false);
 
   const handleClick = () => {
     setIsOpen((e) => !e);
-
-    console.log('cjcjcjhjhdjhd');
   };
+
+  const handleScroll = () => {
+    window.onscroll = () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        setNavBackground(true);
+      } else {
+        setNavBackground(false);
+      }
+    };
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <header className="header container relative mx-auto hidden md:flex items-center justify-between z-10 py-10">
-        <div className="logo">
-          <img src={logo} alt="" />
-        </div>
+      <header
+        className={`header bg-[#ECF8EE]   ${navBackground ? "scrolled" : ""}`}
+      >
+        <div className="top container relative mx-auto hidden md:flex items-center justify-between z-10 py-10">
+          <div className="logo">
+            <img src={logo} alt="" />
+          </div>
 
-        <ul className=" header__center flex gap-10 md:gap-20 flex-col md:flex-row  ">
-          <li className="text-3xl text-[#555555]">
-            <a href="#">Projects</a>
-          </li>
-          <li className="text-3xl text-[#555555]">
-            <a href="#">Learning pool</a>
-          </li>
-          <li className="text-3xl text-[#555555]">
-            <a href="#">Create project</a>
-          </li>
-        </ul>
+          <ul className=" header__center flex gap-10 md:gap-20 flex-col md:flex-row  ">
+            <li className="text-3xl text-[#555555]">
+              <a href="#">Projects</a>
+            </li>
+            <li className="text-3xl text-[#555555]">
+              <a href="#">Learning pool</a>
+            </li>
+            <li className="text-3xl text-[#555555]">
+              <a href="#">Create project</a>
+            </li>
+          </ul>
 
-        <div className="nav-cta flex gap-10">
-          <button className="">
-            <a
-              href="#"
-              className="text-2xl md:text-primaryColor font-600 text-[#222]"
-            >
-              Sign in
-            </a>
-          </button>
-          <button className="md:bg-green2  bg-green1 px-10 py-4 rounded-xl">
-            <a href="#" className="text-2xl text-white ">
-              Sign up
-            </a>
-          </button>
+          <div className="nav-cta flex gap-10">
+            <button className="">
+              <a
+                href="#"
+                className="text-2xl md:text-primaryColor font-600 text-[#222]"
+              >
+                Sign in
+              </a>
+            </button>
+            <button className="md:bg-green2  bg-green1 px-10 py-4 rounded-xl">
+              <a href="#" className="text-2xl text-white ">
+                Sign up
+              </a>
+            </button>
+          </div>
         </div>
       </header>
 
-      <div className="mobile-nav app_container">
-        <nav className="nav container flex mx-auto justify-between items-center">
+      <div
+        className={`mobile-nav bg-[#ECF8EE] ${navBackground ? "scrolled" : ""}`}
+      >
+        <nav className="nav container px-10 flex mx-auto justify-between items-center">
           <div className="logo">
             <img src={logo} alt="" />
           </div>
@@ -60,7 +85,11 @@ function Header() {
             <nav className="nav container  mx-auto  py-10 flex justify-between items-center">
               <div className="nav-cta flex items-center gap-10 md:flex">
                 <button onClick={handleClick} className="text-green2">
-                  {isOpen ? <FaTimes size={24} /> : <img src={MenuIcon} alt="menu-icon" />}
+                  {isOpen ? (
+                    <FaTimes size={24} />
+                  ) : (
+                    <img src={MenuIcon} alt="menu-icon" />
+                  )}
                 </button>
               </div>
             </nav>
@@ -69,7 +98,7 @@ function Header() {
 
         {/* <img src={MenuIcon} alt="menu-icon" /> */}
 
-        <div className={`mobile px-10 py-20 ${isOpen ? 'open' : ''}`}>
+        <div className={`mobile px-10 py-20 ${isOpen ? "open" : ""}`}>
           <ul className="mb-10">
             <li className="text-4xl text-[#222] mb-10">
               <a href="#">Projects</a>
