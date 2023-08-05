@@ -84,8 +84,17 @@ section {
 @media screen and (max-width: 800px) {
   section {
     scroll-snap-align: unset;
-    padding: 10rem 0;
-    height: 140vh;
+    height: 110vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  section {
+    height: 125vh;
+  }
+}
+@media screen and (max-width: 320px) {
+  section {
+    height: 130vh;
   }
 }
 /*# sourceMappingURL=Item.css.map */
