@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Section from "./components/Section";
 
 import bg from "./assets/bg.png";
-import logoWhite from './assets/logo-white.png';
+import logoWhite from "./assets/logo-white.png";
 
 import frame1 from "./assets/frame1.png";
 import frame2 from "./assets/frame2.png";
@@ -23,7 +23,6 @@ import insta from "./assets/svg/insta.svg";
 import linkedin from "./assets/svg/linkedin.svg";
 import twitter from "./assets/svg/twitter.svg";
 import youtube from "./assets/svg/youtube.svg";
-
 
 import userTag from "./assets/svg/user-tag.svg";
 import layer from "./assets/svg/layer.svg";
@@ -226,9 +225,7 @@ function App() {
                       <div className="icon">
                         <img src={people} alt="frame" />
                       </div>
-                      <p className="text-[1.3rem]">
-                        Engaging environment
-                      </p>
+                      <p className="text-[1.3rem]">Engaging environment</p>
                     </div>
                     <div className="stuff flex items-center gap-2 bg-[#FFB3F3] px-10 py-5 rounded-lg">
                       <div className="icon">
@@ -467,11 +464,11 @@ function App() {
           </div>
         </Section>
         <Section backgroundImg={bg}>
-          <div className="collaborate mt-48 container mx-auto">
-            <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
+          <div className="collaborate mt-72 container mx-auto">
+            <div className="title px-10 text-center text-5xl text-[#3B8004] font-bold mb-5 md:mb-20">
               Ready to collaborate & Innovate ?
             </div>
-            <div className="coll-box flex flex-col justify-center items-center bg-transparent md:bg-[#ECF8EE] h-[70%] w-[100%] rounded-xl p-14">
+            <div className="coll-box flex flex-col justify-center items-center bg-transparent md:bg-[#ECF8EE] h-[80%] w-[100%] rounded-xl p-14">
               <h1 className="text-[#333333] text-center text-[2rem] font-semibold mb-20">
                 Join Co_lab Apes Today & Explore a World of Possibilities
               </h1>
@@ -491,7 +488,7 @@ function App() {
           </div>
         </Section>
         <Section backgroundImg={bg}>
-          <div className="works mt-48 container mx-auto px-10">
+          <div className="works my-30 md:mt-72 container mx-auto px-10">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               How It Works
             </div>
@@ -594,11 +591,16 @@ function App() {
             <div className="footer-box flex flex-col justify-center items-center bg-transparent md:bg-[#ECF8EE]  h-[80%] w-[80%] mx-auto rounded-2xl p-0 md:p-14">
               <h1 className="text-[#054E12] text-center text-[2rem]  mb-28">
                 Stay connected and informed: <br />
-                Join our newsletter for the latest successful projects and business deals.
+                Join our newsletter for the latest successful projects and
+                business deals.
               </h1>
               <form className="coll-form gap-10 flex items-center p-3 rounded-3xl">
                 <div className="input">
-                  <input className="text-3xl bg-transparent w-full md:w-[30rem] p-2 outline-none border-none bg-none" type="text" placeholder="" />
+                  <input
+                    className="text-3xl bg-transparent w-full md:w-[30rem] p-2 outline-none border-none bg-none"
+                    type="text"
+                    placeholder="Email Address"
+                  />
                 </div>
                 <button className="bg-green2 px-12 py-7 rounded-3xl">
                   <a href="#" className="text-3xl text-white">
@@ -651,7 +653,9 @@ function App() {
                 </div>
                 <div className="footer-link ">
                   <img src={logoWhite} alt="Logo" className="mb-10" />
-                  <p className="text-2xl text-center mb-7">help@colabapes.com</p>
+                  <p className="text-2xl text-center mb-7">
+                    help@colabapes.com
+                  </p>
                   <div className="socials flex items-center justify-end gap-5 mb-10">
                     <div className="social-img">
                       <img src={youtube} alt="Youtube" className="w-full" />

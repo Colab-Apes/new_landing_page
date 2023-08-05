@@ -15,12 +15,23 @@
   justify-content: space-between;
   align-items: center;
 }
-
-.accordion__item{
-  color: #054E12;
-
+@media screen and (max-width: 800px) {
+  .accordion__button {
+    display: inline-block;
+    text-align: center;
+  }
+  .icon {
+    display: none;
+  }
+  .faq-text {
+    text-align: center;
+  }
 }
-.faq-border{
+
+.accordion__item {
+  color: #054e12;
+}
+.faq-border {
   border-top: solid 2px #999999;
   width: 100%;
   padding-top: 4rem;
