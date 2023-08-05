@@ -90,9 +90,10 @@ section {
 @media screen and (max-width: 500px) {
   section {
     height: 100%;
+    margin: 10rem 0rem;
   }
   .width-remove {
-    height: 50%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 320px) {
