@@ -697,7 +697,7 @@ function App() {
             <img
               src={ape}
               alt=""
-              className="bottom-0 absolute object-contain w-[30rem] lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] left-[-0.2rem]  lg:left-0 z-[1] "
+              className="bottom-0 absolute object-contain w-[30rem] hidden lg:block lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] left-[-0.2rem]  lg:left-0 z-[1] "
             />
             <div className="grid   text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-white pt-20 h-full gap-x-8 gap-y-10 lg:gap-y-0 ">
               <div className="flex flex-col  w-full mx-auto  text-sm lg:text-2xl text-left z-[3] gap-y-8">
