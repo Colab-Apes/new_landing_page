@@ -1,16 +1,23 @@
 .app__itemsContainer {
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
-  overflow: auto;
+  /* -ms-scroll-snap-type: y mandatory; */
+  /* scroll-snap-type: y mandatory; */
+  /* overflow: auto; */
   overflow-x: hidden;
-  height: 100vh;
+  /* height: 100vh; */
   position: absolute;
   top: 0;
   z-index: -1000;
 }
+body {
+  overflow-x:hidden;
+}
 .app_container {
   max-width: 90%;
   margin: 0 auto;
+}
+.graid{
+  background: linear-gradient(224deg, #054E12 0%, #3B8004 100%);
+
 }
 .features {
   align-self: center;
