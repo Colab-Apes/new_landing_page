@@ -692,12 +692,12 @@ function App() {
           </div>
         </Section> */}
 
-        <Section backgroundImg={bg} className="h-fit  mx-auto w-full">
+        <Section backgroundImg={bg} className="h-fit  mx-auto w-full px-5">
           <footer className=" mt-2 container    pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
             <img
               src={ape}
               alt=""
-              className="bottom-0  absolute object-contain w-[30rem] lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] -left-32 lg:left-0 z-[1] "
+              className="bottom-0 absolute object-contain w-[30rem] lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] left-[-0.2rem]  lg:left-0 z-[1] "
             />
             <div className="grid   text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-white pt-20 h-full gap-x-8 gap-y-10 lg:gap-y-0 ">
               <div className="flex flex-col  w-full mx-auto  text-sm lg:text-2xl text-left z-[3] gap-y-8">
@@ -725,7 +725,7 @@ function App() {
                 <p className="">Video editting</p>
                 <p className="">3D modelling</p>
               </div>
-              <div className="flex flex-col items-center z-[3] text-sm">
+              <div className="flex flex-col items-end lg:items-center  z-[3] text-sm">
                 <img
                   src={footlogo}
                   alt=""
