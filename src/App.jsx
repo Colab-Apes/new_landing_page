@@ -692,7 +692,7 @@ function App() {
           </div>
         </Section> */}
 
-        <Section backgroundImg={bg} className="h-fit  mx-auto">
+        <Section backgroundImg={bg} className="h-fit  mx-auto w-full">
           <footer className=" mt-2 container    pb-2 px-5 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
             <img
               src={ape}
@@ -731,7 +731,7 @@ function App() {
                   alt=""
                   className="z-[2] w-[10rem] object-contain"
                 />
-                <p className="mt-5 font-semibold xl:font-bold xl:text-lg">
+                <p className="mt-5 font-semibold xl:font-bold xl:text-2xl xl:mt-12">
                   help@colabapes.com
                 </p>
                 <div className="socials flex items-center justify-end gap-5 mt-5">
@@ -751,7 +751,7 @@ function App() {
                     <img src={linkedin} alt="Linkedin" className="w-full" />
                   </div>
                 </div>
-                <button className=" w-full font-bold text-3xl lg:px-12 py-8 mt-8 z-[3] text-[#054E12] bg-white rounded-[30px] font-latoxl:mt-20">
+                <button className=" font-[700] text-3xl lg:px-12 py-8 mt-8 z-[3] text-[#054E12] bg-white rounded-[30px] font-latoxl:mt-20">
                   Contact Us
                 </button>
               </div>
