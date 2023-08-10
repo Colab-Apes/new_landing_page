@@ -693,11 +693,11 @@ function App() {
         </Section> */}
 
         <Section backgroundImg={bg} className="h-fit  mx-auto w-full">
-          <footer className=" mt-2 container    pb-2 px-5 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
+          <footer className=" mt-2 container    pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
             <img
               src={ape}
               alt=""
-              className="bottom-0  absolute object-contain w-[26rem] lg:w-[29.2rem] xl:w-[34.8rem] rounded-bl-[15px] lg:rounded-l-[15px] left-0 z-[1] "
+              className="bottom-0  absolute object-contain w-[30rem] lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] -left-32 lg:left-0 z-[1] "
             />
             <div className="grid   text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-white pt-20 h-full gap-x-8 gap-y-10 lg:gap-y-0 ">
               <div className="flex flex-col  w-full mx-auto  text-sm lg:text-2xl text-left z-[3] gap-y-8">
@@ -751,19 +751,19 @@ function App() {
                     <img src={linkedin} alt="Linkedin" className="w-full" />
                   </div>
                 </div>
-                <button className=" font-[700] text-3xl lg:px-12 py-8 mt-8 z-[3] text-[#054E12] bg-white rounded-[30px] font-latoxl:mt-20">
+                <button className=" font-[700] w-full lg:w-fit text-3xl lg:px-12 py-8 mt-8 lg:mt-20 z-[3] text-[#054E12] bg-white rounded-[30px] font-latoxl:mt-20">
                   Contact Us
                 </button>
               </div>
               <div
-                className="h-[0.08px] rounded w-full bg-[#999] z-[3] col-span-2 lg:col-span-4
+                className="h-[0.1px] rounded w-full bg-[#999] z-[3] col-span-2 lg:col-span-4
               xl:col-span-4 
-              lg:mt-10 "
+              lg:mt-14 "
               ></div>
-              <div className="col-span-2 lg:col-span-4 flex justify-center items-center lg:mt-4 z-[3] mb-2">
+              <div className="col-span-2 lg:col-span-4 flex justify-center items-center  z-[3] lg:mt-8 mb-2">
                 <div className="flex items-center">
                   {" "}
-                  <div className="text-2xl">
+                  <div className="text-2xl font-[500]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -778,7 +778,7 @@ function App() {
                       />
                     </svg>
                   </div>
-                  <div className="text-[14px] font-[200]">
+                  <div className="text-[14px] font-[500] ">
                     2023, all rights reserved
                   </div>
                 </div>
