@@ -56,18 +56,11 @@ function Header() {
           </ul>
 
           <div className="nav-cta flex gap-10">
-            <button className="">
-              <a
-                href="#"
-                className="text-2xl md:text-primaryColor font-600 text-[#222]"
-              >
-                Sign in
-              </a>
+            <button className="px-12 py-5 text-[17px] rounded-[20px] font-bold font-600 text-[#222]">
+              Sign in
             </button>
-            <button className="md:bg-green2  bg-green1 px-10 py-4 rounded-xl">
-              <a href="#" className="text-2xl text-white ">
-                Sign up
-              </a>
+            <button className=" text-[17px] text-white md:bg-green2 btngrad  bg-green1 px-12 py-5 rounded-[20px] font-bold">
+              Sign up
             </button>
           </div>
         </div>

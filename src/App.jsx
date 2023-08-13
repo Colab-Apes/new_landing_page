@@ -72,8 +72,8 @@ function App() {
                 Join Co_lab Apes and Bring Your Ideas to Life!
               </p>
               <div className="hero-cta hidden md:flex flex-col-reverse md:flex-row gap-12 justify-center md:justify-normal  items-center mt-10">
-                <button className="bg-green2 px-10 py-7 rounded-xl">
-                  <a href="#" className="text-2xl text-white">
+                <button className="btngrad shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-14 py-7 rounded-[]">
+                  <a href="#" className=" text-[17px] text-white">
                     Get Started
                   </a>
                 </button>
@@ -474,14 +474,12 @@ function App() {
               <h1 className="text-[#333333] text-center text-[2rem] font-semibold mb-20">
                 Join Co_lab Apes Today & Explore a World of Possibilities
               </h1>
-              <div className="coll-cta flex flex-col md:flex-row w-full md:w-1/2 gap-5 md:gap-10">
-                <button className="w-full bg-green2 px-7 py-7 rounded-xl mb-10">
-                  <a href="#" className="text-2xl text-white">
-                    Get Started
-                  </a>
+              <div className="coll-cta flex justify-center items-center flex-col md:flex-row w-full md:w-1/2 gap-5 md:gap-10">
+                <button className="w-full bg-green2 text-2xl text-white px-1 py-1 rounded-xl mb-10 btngrad">
+                  Get Started
                 </button>
-                <button className="w-full bg-white px-7 py-7 rounded-xl mb-10 box-shadow">
-                  <a href="#" className="text-2xl text-black">
+                <button className="w-full bg-white px-1 py-7 text-2xl text-black rounded-xl mb-10 box-shadow">
+                  <a href="#" className="">
                     Join the wait list
                   </a>
                 </button>
@@ -613,7 +611,6 @@ function App() {
             </div>
           </div>
         </Section>
-       
 
         <Section backgroundImg={bg} className="h-fit  mx-auto w-full px-5">
           <footer className=" mt-2 container    pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
