@@ -489,7 +489,7 @@ function App() {
               How It Works
             </div>
             <div className="works flex flex-col md:flex-row gap-12 justify-between mb-10">
-              <div className="w-box bg-[#ECF8EE] flex gap-10 p-7 rounded-xl w-full md:w-1/2 box-shadow">
+              <div className="w-box rounded-[20px]  bg-[#ECF8EE] flex gap-10 p-7  w-full md:w-1/2 box-shadow">
                 <div className="w-number">
                   <img src={one} alt="One" className="" />
                 </div>
@@ -502,7 +502,7 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 rounded-xl w-full md:w-1/2 box-shadow">
+              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 w-full md:w-1/2 box-shadow  rounded-[20px]">
                 <div className="w-number">
                   <img src={two} alt="One" className="" />
                 </div>
@@ -518,7 +518,7 @@ function App() {
               </div>
             </div>
             <div className="works flex flex-col md:flex-row gap-12 justify-between">
-              <div className="w-box bg-[#ECF8EE] flex gap-10 p-7 rounded-xl w-full md:w-1/2 box-shadow">
+              <div className="w-box bg-[#ECF8EE] flex gap-10 p-7 rounded-[20px] w-full md:w-1/2 box-shadow">
                 <div className="w-number]">
                   <img src={three} alt="One" className="" />
                 </div>
@@ -532,7 +532,7 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 rounded-xl w-full md:w-1/2 box-shadow">
+              <div className="w-box bg-[#ECF8EE] flex gap-10  p-7 rounded-[20px] w-full md:w-1/2 box-shadow">
                 <div className="w-number">
                   <img src={four} alt="One" className="" />
                 </div>
@@ -579,7 +579,7 @@ function App() {
             <TabComponent />
           </div>
         </Section>
-        <Section className={"width-remove height-remove"}>
+        <Section backgroundImg={bg} className={"width-remove height-remove"}>
           <div className="collaborate mt-48 container mx-auto">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               Join Our Newsletter
@@ -606,7 +606,10 @@ function App() {
           </div>
         </Section>
 
-        <Section className="h-fit  mx-auto w-full px-5 mt-20">
+        <Section
+          backgroundImg={bg}
+          className="h-fit  mx-auto w-full px-5 mt-20"
+        >
           <footer className=" mt-2 container    pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
             <img
               src={ape}
