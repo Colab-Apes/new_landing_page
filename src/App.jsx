@@ -132,7 +132,7 @@ function App() {
                   alt="Feature Frame"
                 />
                 <div className="key-features kf-mobile text-center">
-                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
+                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
                     Key Features:
                   </p>
                   <div className="flex flex-col items-center flex-wrap gap-5">
@@ -168,7 +168,7 @@ function App() {
                   and ideas to gain exposure and find potential collaborators
                 </p>
                 <div className="key-features hidden md:block">
-                  <p className="text-[#3B513F] text-[1.5rem] mb-7 font-semibold">
+                  <p className="text-[#3B513F] text-[1.5rem] mb-7 font-bold">
                     Key Features:
                   </p>
                   <div className="flex items-center flex-wrap gap-10">
@@ -205,7 +205,7 @@ function App() {
               <div className="feat-image">
                 <img className="w-[100%]" src={feature2} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">
-                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
+                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
                     Key Features:
                   </p>
                   <div className="flex flex-col items-center flex-wrap gap-5">
