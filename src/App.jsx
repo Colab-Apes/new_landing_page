@@ -72,10 +72,8 @@ function App() {
                 Join Co_lab Apes and Bring Your Ideas to Life!
               </p>
               <div className="hero-cta hidden md:flex flex-col-reverse md:flex-row gap-12 justify-center md:justify-normal  items-center mt-10">
-                <button className="btngrad shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-14 py-7 rounded-[]">
-                  <a href="#" className=" text-[17px] text-white">
-                    Get Started
-                  </a>
+                <button className="btngrad shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-14 py-7 rounded-[20px] text-[17px] text-white">
+                  Get Started
                 </button>
                 <img className="hidden md:block" src={emoji} alt="Emoji next" />
                 <a
@@ -475,10 +473,10 @@ function App() {
                 Join Co_lab Apes Today & Explore a World of Possibilities
               </h1>
               <div className="flex flex-col md:flex-row  gap-5 md:gap-10 w-full md:w-1/2 items-center xl:w-[26%]">
-                <button className="w-full bg-green2 text-2xl text-white px-7 py-7 rounded-xl mb-10 btngrad">
+                <button className="w-full bg-green2 text-2xl text-white px-7 py-7  mb-10 btngrad font-bold rounded-[20px]">
                   Get Started
                 </button>
-                <button className="w-full bg-white text-2xl text-black px-7 py-7 rounded-xl mb-10">
+                <button className="w-full bg-white text-2xl text-black px-7 py-7  mb-10 font-bold rounded-[20px]">
                   Join the wait list
                 </button>
               </div>
@@ -600,10 +598,8 @@ function App() {
                     placeholder="Email Address"
                   />
                 </div>
-                <button className="bg-green2 px-12 py-7 rounded-3xl">
-                  <a href="#" className="text-3xl text-white">
-                    Subscribe
-                  </a>
+                <button className=" px-12 btngrad py-7 rounded-3xl text-3xl text-white">
+                  Subscribe
                 </button>
               </form>
             </div>
