@@ -579,7 +579,7 @@ function App() {
             <TabComponent />
           </div>
         </Section>
-        <Section backgroundImg={bg} className={"width-remove height-remove"}>
+        <Section className={"width-remove height-remove"}>
           <div className="collaborate mt-48 container mx-auto">
             <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
               Join Our Newsletter
@@ -606,7 +606,7 @@ function App() {
           </div>
         </Section>
 
-        <Section backgroundImg={bg} className="h-fit  mx-auto w-full px-5">
+        <Section className="h-fit  mx-auto w-full px-5 mt-20">
           <footer className=" mt-2 container    pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
             <img
               src={ape}
