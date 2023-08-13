@@ -293,7 +293,7 @@ function App() {
               <div className="feat-image">
                 <img className="w-[100%]" src={feature3} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">
-                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
+                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
                     Key Features:
                   </p>
                   <div className="flex flex-col items-center flex-wrap gap-5">
@@ -338,7 +338,7 @@ function App() {
                   together
                 </p>
                 <div className="key-features hidden md:block">
-                  <p className="text-[#3B513F] text-[1.5rem] mb-7 font-semibold">
+                  <p className="text-[#3B513F] text-[1.5rem] mb-7 font-bold">
                     Key Features:
                   </p>
                   <div className="flex items-center flex-wrap gap-5">
@@ -383,7 +383,7 @@ function App() {
               <div className="feat-image">
                 <img className="w-[100%]" src={feature4} alt="Feature Frame" />
                 <div className="key-features kf-mobile text-center">
-                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-semibold">
+                  <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
                     Key Features:
                   </p>
                   <div className="flex flex-col items-center flex-wrap gap-5">
@@ -427,7 +427,7 @@ function App() {
                   investors who believe in your vision{" "}
                 </p>
                 <div className="key-features hidden md:block">
-                  <p className="text-[#3B513F] text-[1.5rem] mb-7 font-semibold">
+                  <p className="text-[#3B513F] text-[1.5rem] mb-7 font-bold">
                     Key Features:
                   </p>
                   <div className="flex items-center flex-wrap gap-5">
