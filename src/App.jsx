@@ -474,14 +474,12 @@ function App() {
               <h1 className="text-[#333333] text-center text-[2rem] font-semibold mb-20">
                 Join Co_lab Apes Today & Explore a World of Possibilities
               </h1>
-              <div className="coll-cta flex justify-center items-center flex-col md:flex-row w-full md:w-1/2 gap-5 md:gap-10">
-                <button className="w-full bg-green2 text-2xl text-white px-1 py-1 rounded-xl mb-10 btngrad">
+              <div className="flex flex-col md:flex-row  gap-5 md:gap-10 w-full md:w-1/2 items-center xl:w-[26%]">
+                <button className="w-full bg-green2 text-2xl text-white px-7 py-7 rounded-xl mb-10 btngrad">
                   Get Started
                 </button>
-                <button className="w-full bg-white px-1 py-7 text-2xl text-black rounded-xl mb-10 box-shadow">
-                  <a href="#" className="">
-                    Join the wait list
-                  </a>
+                <button className="w-full bg-white text-2xl text-black px-7 py-7 rounded-xl mb-10">
+                  Join the wait list
                 </button>
               </div>
             </div>
