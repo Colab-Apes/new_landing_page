@@ -6,6 +6,7 @@ import SocialHub from "./components/SocialHub";
 import LearningPool from "./components/LearningPool";
 import BuildTheFuture from "./components/BuildTheFuture";
 import ValueStake from "./components/ValueStake";
+import HowItWorks from "./components/HowItWorks";
 
 const LandPage = () => {
   return (
@@ -22,6 +23,8 @@ const LandPage = () => {
       <BuildTheFuture />
       {/* Value Stake*/}
       <ValueStake />
+      {/* How it works */}
+      <HowItWorks />
      
     </div>
   );
