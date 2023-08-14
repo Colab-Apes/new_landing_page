@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import SocialHub from "./components/SocialHub";
 import LearningPool from "./components/LearningPool";
 import BuildTheFuture from "./components/BuildTheFuture";
+import ValueStake from "./components/ValueStake";
+
 const LandPage = () => {
   return (
     <div className="bg-[#F5FFF7] font-lato">
@@ -18,7 +20,8 @@ const LandPage = () => {
       <LearningPool />
       {/* Build the Future */}
       <BuildTheFuture />
-      {/* jdnfsfadf */}
+      {/* Value Stake*/}
+      <ValueStake />
     </div>
   );
 };
