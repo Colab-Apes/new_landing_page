@@ -1,18 +1,16 @@
 import React from "react";
 import feature1 from "../../assets/feature1.png";
-import feature2 from "../../assets/feature2.png";
-import feature3 from "../../assets/feature3.png";
-import feature4 from "../../assets/feature4.png";
+
 import frame from "../../assets/svg/frame.svg";
 import monitor from "../../assets/svg/monitor.svg";
-import map from "../../assets/svg/map.svg";
+
 import global from "../../assets/svg/global.svg";
 
 const SocialHub = () => {
   return (
     <div>
       {" "}
-      <div className="mt-32 container mx-auto relative">
+      <div className="mt-36  container mx-auto relative">
         <div className="bg-[#054E12] rounded-full h-[ 649.982px] w-[774px] blur-[500px] absolute right-[-10rem] top-24 flex justify-center items-center">
           {" "}
         </div>

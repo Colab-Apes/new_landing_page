@@ -8,7 +8,8 @@ import people from "../../assets/svg/people.svg";
 const LearningPool = () => {
   return (
     <div>
-      <div className=" container mx-auto">
+      <div className=" container mx-auto mt-36 relative">
+        <div className="w-[400px] h-[400px] top-[-8rem] left-[-20rem] absolute bg-[#054E12] blur-[300px] rounded-[607px] "></div>
         <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature2} alt="Feature Frame" />
@@ -63,19 +64,23 @@ const LearningPool = () => {
                   <div className="icon">
                     <img src={layer} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Categorised courses</p>
+                  <p className="text-[1.25rem] text-[#3B513F]  font-bold">
+                    Categorised courses
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#A3E3FF] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={userTag} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Expert instructors</p>
+                  <p className="text-[1.25rem] text-[#3B513F]  font-bold">
+                    Expert instructors
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFE0A5] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={people} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">
+                  <p className="text-[1.25rem] text-[#3B513F]  font-bold">
                     Interactive learning environment
                   </p>
                 </div>
@@ -83,7 +88,9 @@ const LearningPool = () => {
                   <div className="icon">
                     <img src={video} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Live sessions</p>
+                  <p className="text-[1.25rem] text-[#3B513F]  font-bold">
+                    Live sessions
+                  </p>
                 </div>
               </div>
             </div>
