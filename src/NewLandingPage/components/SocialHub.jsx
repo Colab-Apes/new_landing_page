@@ -14,6 +14,7 @@ const SocialHub = () => {
         <div className="bg-[#054E12] rounded-full h-[ 649.982px] w-[774px] blur-[500px] absolute right-[-10rem] top-24 flex justify-center items-center">
           {" "}
         </div>
+        
         <div className="h-[200px] w-[300px] absolute bg-[#C26AAA] rounded-full right-[-10rem] top-24 blur-[200px]"></div>
         <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24 xl:gap-x-32">
           <div className="feat-image">

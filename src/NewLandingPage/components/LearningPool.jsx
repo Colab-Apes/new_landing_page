@@ -9,7 +9,9 @@ const LearningPool = () => {
   return (
     <div>
       <div className=" container mx-auto mt-36 relative">
-        <div className="w-[400px] h-[400px] top-[-8rem] left-[-20rem] absolute bg-[#054E12] blur-[300px] rounded-[607px] "></div>
+        <div className="px-20"></div>
+        <div className="py-5 bg-[#3B8004] h-[58px] w-[91px] absolute top-36 left-[-10rem] "></div>
+        <div className="w-[400px] h-[400px] top-[-3rem] left-[-20rem] absolute bg-[#054E12] blur-[200px] rounded-[607px] "></div>
         <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature2} alt="Feature Frame" />
