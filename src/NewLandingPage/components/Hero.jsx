@@ -4,10 +4,6 @@ import frame1 from "../../assets/frame1.png";
 import frame2 from "../../assets/frame2.png";
 import frame3 from "../../assets/frame3.png";
 import emoji from "../../assets/svg/emoji.svg";
-import feature1 from "../../assets/feature1.png";
-import feature2 from "../../assets/feature2.png";
-import feature3 from "../../assets/feature3.png";
-import feature4 from "../../assets/feature4.png";
 
 const Hero = () => {
   return (
@@ -22,7 +18,7 @@ const Hero = () => {
           <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
               <span className="text-4xl font-600 hidden md:block">
-                Welcome to Co_lab Apes, Let’s Remote Create !{" "}
+                Welcome to  Apes, Let’s Remote Create !{" "}
               </span>
               {/* <span className="text-4xl font-light hidden md:inline"></span> */}
             </p>
