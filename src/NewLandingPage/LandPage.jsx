@@ -1,11 +1,12 @@
 import React from "react";
-import logo from "../assets/newimages/logo.pooling";
+import logo from "../assets/newimages/logo.png";
+import "../App.css";
 const LandPage = () => {
   return (
     <div>
-      <nav className="flex items-center justify-between container">
+      <nav className="flex items-center justify-between container mx-auto">
         <img src={logo} alt="" />
-        <div className="flex items-center">
+        <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
           <p>Learning pool</p>
           <p>Create project</p>
