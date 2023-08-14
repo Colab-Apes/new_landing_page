@@ -22,6 +22,7 @@ const LandPage = () => {
       <BuildTheFuture />
       {/* Value Stake*/}
       <ValueStake />
+     
     </div>
   );
 };
