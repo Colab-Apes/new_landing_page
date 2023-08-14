@@ -65,19 +65,23 @@ const ValueStake = () => {
                   <div className="icon">
                     <img src={tickCircle} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Smart-contract protocol</p>
+                  <p className="text-[1.25rem] text-[#3B513F] font-bold">
+                    Smart-contract protocol
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={lock} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Secure funding</p>
+                  <p className="text-[1.25rem] text-[#3B513F] font-bold">
+                    Secure funding
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={dollarCircle} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">
+                  <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Progress-based payments fraud prevention technology
                   </p>
                 </div>
@@ -85,7 +89,9 @@ const ValueStake = () => {
                   <div className="icon">
                     <img src={moneys} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Investor pooling</p>
+                  <p className="text-[1.25rem] text-[#3B513F] font-bold">
+                    Investor pooling
+                  </p>
                 </div>
               </div>
             </div>
