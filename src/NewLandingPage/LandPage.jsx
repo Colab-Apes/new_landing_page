@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import SocialHub from "./components/SocialHub";
 const LandPage = () => {
   return (
-    <div className="bg-[#F5FFF7]">
+    <div className="bg-[#F5FFF7] font-lato">
       {/* Nav */}
       <Nav />
       {/* Hero */}
