@@ -3,8 +3,8 @@ import logo from "../../assets/newimages/logo.png";
 import "../../App.css";
 const Nav = () => {
   return (
-    <div>
-      <nav className="flex  bg-[#ECF8EE] font-lato items-center justify-between w-full px-12  py-4 mx-auto">
+    <div className="w-full bg-[#ECF8EE]">
+      <nav className="flex  container font-lato items-center justify-between w-full  py-4 mx-auto">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>

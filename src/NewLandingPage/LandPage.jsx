@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 const LandPage = () => {
   return (
-    <div>
+    <div className="bg-[#F5FFF7]">
       {/* Nav */}
       <Nav />
       {/* Hero */}
