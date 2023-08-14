@@ -9,7 +9,9 @@ const ValueStake = () => {
   return (
     <div>
       <div className="mx-auto container mt-[120vh] z-20 relative">
-        <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
+        <div className="bg-[#054E12] bottom-3 z-[-1] blur-[500px] rounded-full h-[300px] w-[300px] absolute"></div>
+        <div className="bg-[#C26AAA] bottom-[-6rem] z-[-1] blur-[150px] rounded-full h-[300px] w-[300px] absolute"></div>
+        <div className=" flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature4} alt="Feature Frame" />
             <div className="key-features kf-mobile text-center">
