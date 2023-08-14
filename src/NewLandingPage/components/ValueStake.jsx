@@ -1,12 +1,14 @@
 import React from "react";
+import dollarCircle from "../../assets/svg/dollar-circle.svg";
+import lock from "../../assets/svg/lock.svg";
+import moneys from "../../assets/svg/moneys.svg";
+import tickCircle from "../../assets/svg/tick-circle.svg";
+import feature4 from "../../assets/feature4.png";
 
 const ValueStake = () => {
   return (
     <div>
-      <div className="mx-auto container mt-36">
-        <div className="title text-center text-5xl text-[#3B8004] font-bold mb-10">
-          Features
-        </div>
+      <div className="mx-auto container mt-[120vh] z-20 relative">
         <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature4} alt="Feature Frame" />

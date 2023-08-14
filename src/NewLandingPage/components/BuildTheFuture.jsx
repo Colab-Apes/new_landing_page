@@ -16,11 +16,11 @@ const BuildTheFuture = () => {
         <div className="bg-[#C26AAA] rounded-full h-[200px] w-[200px]   absolute left-[-20rem] top-0 flex justify-center items-center blur-[200px]">
           {" "}
         </div>
-        <div className="bg-[#054E12] rounded-full h-[400px] w-[400px]   absolute right-[-10rem] top-[24rem] flex justify-center items-center blur-[500px]">
+        <div className="bg-[#054E12] rounded-full h-[400px] w-[400px]   absolute right-[-10rem] top-[24rem] flex justify-center items-center blur-[200px]">
           {" "}
         </div>
 
-        <div className=" flex flex-col-reverse md:flex-row items-center z-[10] absolute justify-center xl:items-center md:gap-24">
+        <div className=" flex flex-col-reverse md:flex-row items-center z-[10] absolute  justify-center xl:items-center md:gap-24">
           <div className="">
             <img
               className="w-full h-full object-contain  "
