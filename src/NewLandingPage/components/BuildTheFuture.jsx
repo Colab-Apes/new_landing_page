@@ -8,7 +8,9 @@ import mouseCircle from "../../assets/svg/mouse-circle.svg";
 const BuildTheFuture = () => {
   return (
     <div>
-      <div className=" mx-auto container mt-36">
+      <div className=" mx-auto container mt-36 relative">
+        <div className="py-5 bg-[#3B8004] h-[58px] w-[80px] absolute top-36 left-[68.2rem] "></div>
+        
         <div className=" flex flex-col-reverse md:flex-row items-center justify-center xl:items-center md:gap-24">
           <div className="">
             <img
@@ -55,7 +57,7 @@ const BuildTheFuture = () => {
             <h1 className="text-[#333333] font-semibold text-5xl md:text-6xl ">
               Build The Future
             </h1>
-            <p className="text-[#3B513F] text-[1.7rem] mb-10">
+            <p className="text-[#3B513F] text-[1.7rem] mb-10 mt-20">
               Transform your ideas into reality with our Build Feature.
               Collaborate with other talented creators, leverage the power of
               First Principle Thinking, and create innovative projects together
