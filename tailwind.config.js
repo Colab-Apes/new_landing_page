@@ -15,8 +15,7 @@ export default {
         white: 'var(--white)',
       },
       screens: {
-				sm: "425px",
-				md: "800px",
+			
 			},
     },
   },
