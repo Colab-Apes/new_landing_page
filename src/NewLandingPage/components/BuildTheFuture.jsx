@@ -10,11 +10,17 @@ const BuildTheFuture = () => {
     <div>
       <div className=" mx-auto container mt-36 relative">
         <div className="py-5 bg-[#3B8004] h-[58px] w-[80px] absolute top-36 left-[68.2rem] "></div>
-        
-        <div className=" flex flex-col-reverse md:flex-row items-center justify-center xl:items-center md:gap-24">
+        <div className="bg-[#054E12] rounded-full h-[400px] w-[400px]   absolute left-[-20rem] top-0 flex justify-center items-center blur-[500px]">
+          {" "}
+        </div>
+        <div className="bg-[#C26AAA] rounded-full h-[400px] w-[400px]   absolute left-[-20rem] top-0 flex justify-center items-center blur-[200px]">
+          {" "}
+        </div>
+
+        <div className=" flex flex-col-reverse md:flex-row items-center z-[10] absolute justify-center xl:items-center md:gap-24">
           <div className="">
             <img
-              className="w-full h-full object-contain "
+              className="w-full h-full object-contain  "
               src={feature3}
               alt="Feature Frame"
             />
