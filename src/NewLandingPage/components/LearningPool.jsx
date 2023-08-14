@@ -1,12 +1,14 @@
 import React from "react";
+import feature2 from "../../assets/feature2.png";
+import userTag from "../../assets/svg/user-tag.svg";
+import layer from "../../assets/svg/layer.svg";
+import video from "../../assets/svg/video.svg";
+import people from "../../assets/svg/people.svg";
 
 const LearningPool = () => {
   return (
     <div>
-      <div className="features container mt-36">
-        <div className="title text-center text-5xl text-[#3B8004] font-bold mb-10">
-          Features
-        </div>
+      <div className=" container mx-auto">
         <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature2} alt="Feature Frame" />
