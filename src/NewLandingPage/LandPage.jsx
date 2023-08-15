@@ -10,6 +10,7 @@ import HowItWorks from "./components/HowItWorks";
 import Ready from "./components/Ready";
 import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
 import Foot from "./components/Foot";
+import Faqs from "./components/Faqs";
 
 const LandPage = () => {
   return (
@@ -30,6 +31,8 @@ const LandPage = () => {
       <HowItWorks />
       {/*Ready to collaborate & Innovation */}
       <Ready />
+      {/*FAQS*/}
+      <Faqs />
       {/*Join Our News Letter*/}
       <JoinOurNewsLetter />
       {/* Footer */}
