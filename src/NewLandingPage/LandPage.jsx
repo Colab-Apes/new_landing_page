@@ -7,6 +7,7 @@ import LearningPool from "./components/LearningPool";
 import BuildTheFuture from "./components/BuildTheFuture";
 import ValueStake from "./components/ValueStake";
 import HowItWorks from "./components/HowItWorks";
+import Ready from "./components/Ready";
 
 const LandPage = () => {
   return (
@@ -25,7 +26,8 @@ const LandPage = () => {
       <ValueStake />
       {/* How it works */}
       <HowItWorks />
-     
+      {/*Ready to collaborate & Innovat */}
+      <Ready />
     </div>
   );
 };
