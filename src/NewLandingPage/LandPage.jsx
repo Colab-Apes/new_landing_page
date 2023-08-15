@@ -8,6 +8,7 @@ import BuildTheFuture from "./components/BuildTheFuture";
 import ValueStake from "./components/ValueStake";
 import HowItWorks from "./components/HowItWorks";
 import Ready from "./components/Ready";
+import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
 
 const LandPage = () => {
   return (
@@ -26,8 +27,11 @@ const LandPage = () => {
       <ValueStake />
       {/* How it works */}
       <HowItWorks />
-      {/*Ready to collaborate & Innovat */}
+      {/*Ready to collaborate & Innovation */}
       <Ready />
+      {/*Join Our News Letter*/}
+      <JoinOurNewsLetter />
+      {/* Footer */}
     </div>
   );
 };

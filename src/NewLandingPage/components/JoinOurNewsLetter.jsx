@@ -1,27 +1,27 @@
 import React from "react";
-
+import "../../App.css";
 const JoinOurNewsLetter = () => {
   return (
     <div>
       <div className="collaborate mt-48 container mx-auto">
-        <div className="title text-center text-5xl text-[#3B8004] font-bold mb-20">
+        <div className="title text-center text-5xl text-[#3B8004] font-bold ">
           Join Our Newsletter
         </div>
-        <div className="footer-box flex flex-col justify-start md:justify-center items-center bg-transparent md:bg-[#ECF8EE]  h-[80%] w-[80%] mx-auto rounded-2xl p-0 md:p-14">
-          <h1 className="text-[#054E12] text-center text-[2rem]  mb-28">
+        <div className=" flex flex-col justify-start md:justify-center items-center mt-20 bg-transparent   h-[80%] w-[80%] mx-auto rounded-2xl p-0 md:p-14 xl:p-0">
+          <h1 className="text-[#054E12] text-center text-[24px]  ">
             Stay connected and informed: <br />
             Join our newsletter for the latest successful projects and business
             deals.
           </h1>
-          <form className="coll-form gap-10 flex items-center p-3 rounded-3xl">
-            <div className="input">
+          <form className="border-2 border-solid py-2 relative border-[#3B8004] gap-10 flex  mt-20 items-center p-3 xl:0  rounded-[20px]">
+            <div className="input py-7">
               <input
-                className="text-3xl bg-transparent w-full md:w-[30rem] p-2 outline-none border-none bg-none"
+                className="text-3xl bg-transparent w-full md:w-[40rem] xl:w-[45rem] p-0 outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999] px-4"
                 type="text"
-                placeholder="Email Address"
+                placeholder="enter your email address..."
               />
             </div>
-            <button className=" px-12 btngrad py-7 rounded-3xl text-3xl text-white">
+            <button className=" absolute shadow-[15px_15px_50px_0px_rgba(0,_0,_0,_0.05)] px-12 btngrad py-6 text-[1.4rem] rounded-[15px] text-3xl text-white right-2 font-bold">
               Subscribe
             </button>
           </form>
