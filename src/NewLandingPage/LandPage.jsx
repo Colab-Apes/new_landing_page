@@ -9,6 +9,7 @@ import ValueStake from "./components/ValueStake";
 import HowItWorks from "./components/HowItWorks";
 import Ready from "./components/Ready";
 import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
+import Foot from "./components/Foot";
 
 const LandPage = () => {
   return (
@@ -32,6 +33,7 @@ const LandPage = () => {
       {/*Join Our News Letter*/}
       <JoinOurNewsLetter />
       {/* Footer */}
+      <Foot />
     </div>
   );
 };

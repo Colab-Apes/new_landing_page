@@ -4,11 +4,18 @@ import "../../App.css";
 
 import ape from "../../assets/apehead.png";
 import footlogo from "../../assets/footlogo.png";
+
+import facebook from "../../assets/svg/facebook.svg";
+import insta from "../../assets/svg/insta.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
+import twitter from "../../assets/svg/twitter.svg";
+import youtube from "../../assets/svg/youtube.svg";
+
 const Foot = () => {
   return (
     <div>
       {" "}
-      <footer className=" mt-2 container    pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
+      <footer className=" container  mx-auto mt-36   pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
         <img
           src={ape}
           alt=""
