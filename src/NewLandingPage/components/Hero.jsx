@@ -10,9 +10,9 @@ const Hero = () => {
     <div>
       <section
         style={{
-          backgroundImage: `url(${herobg})`,
+       
         }}
-        className="pb-20"
+        className="pb-20 "
       >
         <div className="hero container pt-10 w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">

@@ -4,7 +4,7 @@ import "../../App.css";
 const Nav = () => {
   return (
     <div className="w-full bg-[#ECF8EE]">
-      <nav className="flex  container font-lato items-center justify-between w-full  py-4 mx-auto">
+      <nav className="flex  container font-lato items-center justify-between w-full  py-8 mx-auto">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
