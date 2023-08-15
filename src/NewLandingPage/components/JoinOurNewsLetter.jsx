@@ -3,7 +3,8 @@ import "../../App.css";
 const JoinOurNewsLetter = () => {
   return (
     <div>
-      <div className="collaborate mt-48 container mx-auto">
+      <div className="relative mt-48 container mx-auto">
+        <div className="absolute z-[-1] blur-[150px] bottom-[-20rem] right-[-20rem] w-[387px] h-[410px] bg-[#C26AAA] rounded-[400px]"></div>
         <div className="title text-center text-5xl text-[#3B8004] font-bold ">
           Join Our Newsletter
         </div>
@@ -16,7 +17,7 @@ const JoinOurNewsLetter = () => {
           <form className="border-2 border-solid py-2 relative border-[#3B8004] gap-10 flex  mt-20 items-center p-3 xl:0  rounded-[20px]">
             <div className="input py-7">
               <input
-                className="text-3xl bg-transparent w-full md:w-[40rem] xl:w-[45rem] p-0 outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999] px-4"
+                className="text-3xl bg-transparent w-full md:w-[40rem] xl:w-[45rem] p-0 outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999]"
                 type="text"
                 placeholder="enter your email address..."
               />
