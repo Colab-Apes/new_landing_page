@@ -9,7 +9,7 @@ const HowItWorks = () => {
     <div>
       {" "}
       <div className=" py-40 mt-36 z-10 container mx-auto px-32 relative">
-        <div className="absolute -z-10 blur-[300px] right-[-20rem] w-[387px] h-[410.85px] bg-[#C26AAA] rounded-[410.85px]"></div>
+        <div className="absolute -z-10 blur-[150px] right-[-20rem] w-[387px] h-[410.85px] bg-[#C26AAA] rounded-[410.85px]"></div>
         <div className="absolute -z-10 blur-[150px] bottom-[-18rem] left-[-6rem] w-[387px] h-[410.85px] bg-[#C26AAA] rounded-[410.85px]"></div>
         <div className="w-full text-center text-5xl text-[#333] font-bold mb-36">
           How It Works
