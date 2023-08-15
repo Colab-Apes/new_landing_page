@@ -11,7 +11,7 @@ import Ready from "./components/Ready";
 
 const LandPage = () => {
   return (
-    <div className="bg-[#F5FFF7] font-lato">
+    <div className=" font-lato">
       {/* Nav */}
       <Nav />
       {/* Hero */}
