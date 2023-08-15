@@ -8,7 +8,7 @@ import mouseCircle from "../../assets/svg/mouse-circle.svg";
 const BuildTheFuture = () => {
   return (
     <div>
-      <div className=" mx-auto container mt-36 relative ">
+      <div className=" mx-auto container mt-36 relative  z-[10]">
         <div className="py-5 bg-[#3B8004] h-[58px] w-[80px] absolute top-36 left-[68.2rem] "></div>
         <div className="bg-[#054E12] rounded-full h-[400px] w-[400px]   absolute left-[-20rem] top-0 flex justify-center items-center blur-[500px]">
           {" "}
@@ -20,7 +20,7 @@ const BuildTheFuture = () => {
           {" "}
         </div>
 
-        <div className=" flex flex-col-reverse md:flex-row items-center z-[10] absolute  justify-center xl:items-center md:gap-24">
+        <div className=" flex flex-col-reverse md:flex-row items-center   justify-center xl:items-center md:gap-24">
           <div className="">
             <img
               className="w-full h-full object-contain  "

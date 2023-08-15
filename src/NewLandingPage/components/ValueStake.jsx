@@ -8,7 +8,7 @@ import feature4 from "../../assets/feature4.png";
 const ValueStake = () => {
   return (
     <div>
-      <div className="mx-auto container mt-[120vh] z-20 relative">
+      <div className="mx-auto container mt-36  relative">
         <div className="py-5 bg-[#3B8004] h-[58px] w-[91px] absolute top-[5rem] left-[-10rem] "></div>
         <div className="bg-[#054E12] bottom-3 z-[-1] blur-[500px] rounded-full h-[300px] w-[300px] absolute"></div>
         <div className="bg-[#C26AAA] bottom-[-6rem] z-[-1] blur-[150px] rounded-full h-[200px] w-[200px] absolute"></div>
