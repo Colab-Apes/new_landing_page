@@ -7,7 +7,7 @@ const Faqs = () => {
     <div className="font-lato">
       {" "}
       <div className="faq bg-[#D5EEDA] mt-56 mt text-center container mx-auto px-10 relative z-20 rounded-[20px] h-[450px] py-10">
-        <div className="absolute z-[-10] blur-[150px] bottom-[-1rem] left-[20rem] w-[387px] h-[410px] bg-[#C26AAA] rounded-[410.85px]"></div>
+        <div className="absolute z-[-10] blur-[150px] bottom-[-1rem] left-[20rem] w-[387px] h-[410px] bg-[#C26AAA] rounded-[400px]"></div>
         <div className="w-full flex justify-center items-center">
           <div className="bg-white w-[50rem] flex rounded-[20px]  justify-between px-2 py-2">
             <button className="btngrad text-white text-2xl font-bold rounded-[15px] py-[16px] w-[14rem] ">
