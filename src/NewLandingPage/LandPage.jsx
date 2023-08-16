@@ -26,9 +26,9 @@ const LandPage = () => {
       {/* Build the Future */}
       <BuildTheFuture />
       {/* Value Stake*/}
-      {/* <ValueStake /> */}
+      <ValueStake />
       {/* How it works */}
-      {/* <HowItWorks /> */}
+      <HowItWorks />
       {/*Ready to collaborate & Innovation */}
       {/* <Ready /> */}
       {/*FAQS*/}
