@@ -28,10 +28,10 @@ const Hero = () => {
             <h1 className="w-full text-[3.6rem] leading-[1.8] text-left mt-14 text-[#054E12] font-[650] mb-12">
               Unleash Your Creativity. <br /> Collaborate. Innovate.
             </h1>
-            <p className="text-3xl md:text-3xl text-[#3B513F]">
+            <p className="text-3xl md:text-2xl xl:text-[1.9rem] text-[#3B513F]">
               Join Co_lab Apes and Bring Your Ideas to Life!
             </p>
-            <div className="hero-cta hidden md:flex flex-col-reverse md:flex-row gap-12 justify-center md:justify-normal  items-center mt-10">
+            <div className="hero-cta hidden md:flex flex-col-reverse md:flex-row gap-12 justify-center md:justify-normal  items-center mt-20">
               <button className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-12 py-7 rounded-[20px] text-[17px] text-white">
                 Get Started
               </button>
