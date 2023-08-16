@@ -32,7 +32,7 @@ const LandPage = () => {
       {/*Ready to collaborate & Innovation */}
       <Ready />
       {/*FAQS*/}
-      {/* <Faqs /> */}
+      <Faqs />
       {/*Join Our News Letter*/}
       {/* <JoinOurNewsLetter /> */}
       {/* Footer */}

@@ -50,7 +50,7 @@ const ValueStake = () => {
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Investor pooling
-                  </p>
+                  </p>2
                 </div>
               </div>
             </div>
