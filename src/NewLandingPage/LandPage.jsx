@@ -24,7 +24,7 @@ const LandPage = () => {
       {/* Learning Pool */}
       <LearningPool />
       {/* Build the Future */}
-      {/* <BuildTheFuture /> */}
+      <BuildTheFuture />
       {/* Value Stake*/}
       {/* <ValueStake /> */}
       {/* How it works */}
