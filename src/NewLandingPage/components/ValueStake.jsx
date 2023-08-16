@@ -8,10 +8,10 @@ import feature4 from "../../assets/feature4.png";
 const ValueStake = () => {
   return (
     <div>
-      <div className="mx-auto hidden lg:block mt-36  relative">
-        <div className="py-5 bg-[#3B8004] h-[58px] w-[91px] absolute top-[5rem] left-[-10rem] "></div>
-        <div className="bg-[#054E12] bottom-3 z-[-1] blur-[500px] rounded-full h-[300px] w-[300px] absolute"></div>
-        <div className="bg-[#C26AAA] bottom-[-6rem] z-[-1] blur-[150px] rounded-full h-[200px] w-[200px] absolute"></div>
+      <div className="mt-64 lg:mt-36 px-4 lg:px-20 relative">
+        <div className="py-5 hidden lg:block bg-[#3B8004] h-[58px] w-[91px] absolute top-[5rem] left-[-10rem] "></div>
+        <div className="bg-[#054E12] hidden lg:block bottom-3 z-[-1] blur-[500px] rounded-full h-[300px] w-[300px] absolute"></div>
+        <div className="bg-[#C26AAA] hidden lg:block bottom-[-6rem] z-[-1] blur-[150px] rounded-full h-[200px] w-[200px] absolute"></div>
         <div className=" flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature4} alt="Feature Frame" />
@@ -24,19 +24,23 @@ const ValueStake = () => {
                   <div className="icon">
                     <img src={tickCircle} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Smart-contract protocol</p>
+                  <p className="text-[1.7rem] text-[#3B513F] font-bold">
+                    Smart-contract protocol
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={lock} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Secure funding</p>
+                  <p className="text-[1.7rem] text-[#3B513F] font-bold">
+                    Secure funding
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={dollarCircle} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">
+                  <p className="text-[1.4rem] text-[#3B513F] font-bold">
                     Progress-based payments fraud prevention technology
                   </p>
                 </div>
@@ -44,7 +48,9 @@ const ValueStake = () => {
                   <div className="icon">
                     <img src={moneys} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Investor pooling</p>
+                  <p className="text-[1.7rem] text-[#3B513F] font-bold">
+                    Investor pooling
+                  </p>
                 </div>
               </div>
             </div>
