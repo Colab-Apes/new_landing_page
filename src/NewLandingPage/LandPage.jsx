@@ -30,7 +30,7 @@ const LandPage = () => {
       {/* How it works */}
       <HowItWorks />
       {/*Ready to collaborate & Innovation */}
-      {/* <Ready /> */}
+      <Ready />
       {/*FAQS*/}
       {/* <Faqs /> */}
       {/*Join Our News Letter*/}
