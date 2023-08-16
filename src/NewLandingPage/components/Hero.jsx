@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="hero container pt-10 w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
-              <span className="text-[2.2rem] font-bold hidden md:block text-[#3B513F]">
+              <span className="text-[2rem] font-bold hidden md:block text-[#3B513F]">
                 Welcome to Co_lab Apes,
                 <span className="font-normal"> Let’s Remote Create ! </span>
               </span>
