@@ -26,10 +26,10 @@ const Hero = () => {
               {/* <span className="text-4xl font-light hidden md:inline"></span> */}
             </p>
             <div className="w-[15%] bg-primaryColor h-2 rounded-full  mt-12 hidden md:block"></div>
-            <h1 className="w-full text-[3.6rem] leading-[1.8] text-left mt-14 text-[#054E12] font-[650] mb-12">
+            <h1 className="w-full text-[3.6rem] leading-[1.8] text-left mt-14 text-[#054E12] font-[650] ">
               Unleash Your Creativity. <br /> Collaborate. Innovate.
             </h1>
-            <p className="text-3xl md:text-2xl xl:text-[1.9rem] text-[#3B513F]">
+            <p className="text-3xl md:text-2xl xl:text-[1.8rem] mt-12 text-[#3B513F]">
               Join Co_lab Apes and Bring Your Ideas to Life!
             </p>
             <div className="hero-cta hidden md:flex flex-col-reverse md:flex-row gap-12 justify-center md:justify-normal  items-center mt-20">

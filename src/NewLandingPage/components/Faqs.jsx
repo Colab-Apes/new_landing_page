@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
 import minus from "../../assets/icons/minus.svg";
 import plus from "../../assets/icons/plus.svg";
 const Faqs = () => {
+  const [arr, setarr] = useState([]);
   return (
     <div className="font-lato">
       {" "}
