@@ -28,27 +28,31 @@ const BuildTheFuture = () => {
               alt="Feature Frame"
             />
             <div className="key-features kf-mobile text-center">
-              <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
+              <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">
                 Key Features:
               </p>
-              <div className="flex flex-col items-center flex-wrap gap-5">
-                <div className="stuff flex items-center gap-2 bg-[#FFD6BF] px-10 py-5 rounded-lg">
+              <div className="flex  flex-col items-center flex-wrap gap-5 text-[#3B513F] font-bold  ">
+                <div className="stuff flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={repeatCircle} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Project collaboration</p>
+                  <p className="text-[1.7rem] text-[#3B513F] font-bold">
+                    Project collaboration
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#C0FFCE] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={mouseCircle} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Project tracking</p>
+                  <p className="text-[1.7rem] text-[#3B513F] font-bold">
+                    Project tracking
+                  </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFFB6B] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={map} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">
+                  <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     First principle thinking roadmap
                   </p>
                 </div>
@@ -56,17 +60,19 @@ const BuildTheFuture = () => {
                   <div className="icon">
                     <img src={locationSlash} alt="frame" />
                   </div>
-                  <p className="text-[1.3rem]">Virtual shared workspace</p>
+                  <p className="text-[1.7rem] text-[#3B513F] font-bold">
+                    Virtual shared workspace
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className=" text-center  md:text-left w-full md:w-[40%]">
-            <h1 className="text-[#333333] font-semibold text-5xl md:text-6xl ">
+            <h1 className="text-[#333333] font-semibold text-[4rem] md:text-6xl mb-10">
               Build The Future
             </h1>
-            <p className="text-[#3B513F] text-[1.7rem] mb-10 mt-20">
+            <p className="text-[#3B513F] font-bold z-[1rem] text-[1.7rem] mb-10">
               Transform your ideas into reality with our Build Feature.
               Collaborate with other talented creators, leverage the power of
               First Principle Thinking, and create innovative projects together
