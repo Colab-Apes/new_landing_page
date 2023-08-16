@@ -8,19 +8,19 @@ import people from "../../assets/svg/people.svg";
 const LearningPool = () => {
   return (
     <div>
-      <div className="mt-64 lg:mt-36 relative">
+      <div className="mt-64 lg:mt-36 relative px-4 lg:px-20">
         <div className="px-20"></div>
         <div className="py-5 bg-[#3B8004] hidden lg:block h-[58px] w-[91px] absolute top-36 left-[-10rem] "></div>
         <div className="w-[400px] h-[400px] hidden lg:block top-[-3rem] lg:left-[-20rem] absolute bg-[#054E12] blur-[250pxc] rounded-[607px]  "></div>
         <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature2} alt="Feature Frame" />
-            <div className=" lg:hidden key-features kf-mobile text-center">
-              <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
+            <div className=" lg:hidden text-center">
+              <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">
                 Key Features:
               </p>
-              <div className="flex flex-col items-center flex-wrap gap-5">
-                <div className="stuff flex items-center gap-2 bg-[#7BFF88] px-10 py-5 rounded-lg">
+              <div className="flex  flex-col items-center flex-wrap gap-5 text-[#3B513F] font-bold  ">
+                <div className="stuff flex items-center gap-2 bg-[#7BFF88] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={layer} alt="frame" />
                   </div>
@@ -28,7 +28,7 @@ const LearningPool = () => {
                     Categorised courses
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#A3E3FF] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#A3E3FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={userTag} alt="frame" />
                   </div>
@@ -36,7 +36,7 @@ const LearningPool = () => {
                     Expert instructors
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFE0A5] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FFE0A5] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={people} alt="frame" />
                   </div>
@@ -44,7 +44,7 @@ const LearningPool = () => {
                     Interactive learning environment
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFB3F3] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FFB3F3] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={video} alt="frame" />
                   </div>
