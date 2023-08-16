@@ -6,10 +6,13 @@ const Faqs = () => {
   const [arr, setarr] = useState([]);
   return (
     <div className="font-lato">
-      {" "}
-      <div className="faq bg-[#D5EEDA] mt-56 w-full text-center container mx-auto px-10 relative rounded-[20px] h-[450px] py-10">
+      <div className="title mt-36 text-center text-6xl text-[#3B8004] font-bold mb-20">
+        Frequently Asked Questions
+      </div>
+      <div className="faq bg-[#D5EEDA] mt-2 w-full text-center container mx-auto px-10 relative rounded-[20px] h-[450px] py-10">
         <div className="absolute z-[-1] blur-[150px] bottom-[-20rem] left-[-20rem] w-[387px] h-[410px] bg-[#C26AAA] rounded-[400px]"></div>
         <div className="absolute z-[-1] blur-[200px] top-[-30rem] right-[-20rem] w-[387px] h-[410.85px] bg-[#C26AAA] rounded-[410.85px]"></div>
+
         <div className="w-full flex justify-center items-center">
           <div className="bg-white w-[50rem] flex rounded-[20px]  justify-between px-2 py-2">
             <button className="btngrad text-white text-2xl font-bold rounded-[15px] py-[16px] w-[14rem] ">

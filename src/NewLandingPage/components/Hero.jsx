@@ -16,6 +16,7 @@ const Hero = () => {
       >
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
         <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
+
         <div className="hero container pt-10 w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
@@ -33,7 +34,7 @@ const Hero = () => {
               Join Co_lab Apes and Bring Your Ideas to Life!
             </p>
             <div className="hero-cta hidden md:flex flex-col-reverse md:flex-row gap-12 justify-center md:justify-normal  items-center mt-12">
-              <button className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-12 py-7 rounded-[20px] text-[17px] text-white">
+              <button className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-16 py-8 rounded-[18px] text-[16px] text-white">
                 Get Started
               </button>
               <img
