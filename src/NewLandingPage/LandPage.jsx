@@ -18,11 +18,11 @@ const LandPage = () => {
       {/* Nav */}
       <Nav />
       {/* Hero */}
-      {/* <Hero /> */}
+      <Hero />
       {/* SocialHub */}
-      {/* <SocialHub /> */}
+      <SocialHub />
       {/* Learning Pool */}
-      {/* <LearningPool /> */}
+      <LearningPool />
       {/* Build the Future */}
       {/* <BuildTheFuture /> */}
       {/* Value Stake*/}
