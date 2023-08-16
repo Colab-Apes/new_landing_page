@@ -19,25 +19,29 @@ const Hero = () => {
         <div className="hero container pt-10 w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
-              <span className="text-4xl font-600 hidden md:block">
+              <span className="text-4xl font-bold hidden md:block text-[#3B513F]">
                 Welcome to Apes, Let’s Remote Create !{" "}
               </span>
               {/* <span className="text-4xl font-light hidden md:inline"></span> */}
             </p>
-            <div className="w-[20%] bg-primaryColor h-2 rounded-full  mt-14 hidden md:block"></div>
-            <h1 className="w-full text-[3.4rem] leading-[2] text-left mt-10 text-[#054E12] font-[900] mb-12">
+            <div className="w-[15%] bg-primaryColor h-2 rounded-full  mt-12 hidden md:block"></div>
+            <h1 className="w-full text-[3.6rem] leading-[1.8] text-left mt-14 text-[#054E12] font-[650] mb-12">
               Unleash Your Creativity. <br /> Collaborate. Innovate.
             </h1>
             <p className="text-3xl md:text-3xl text-[#3B513F]">
               Join Co_lab Apes and Bring Your Ideas to Life!
             </p>
             <div className="hero-cta hidden md:flex flex-col-reverse md:flex-row gap-12 justify-center md:justify-normal  items-center mt-10">
-              <button className="btngrad shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-14 py-7 rounded-[20px] text-[17px] text-white">
+              <button className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] px-12 py-7 rounded-[20px] text-[17px] text-white">
                 Get Started
               </button>
-              <img className="hidden md:block  object-contain w-[6.9rem]" src={emoji} alt="Emoji next" />
+              <img
+                className="hidden md:block  object-contain w-[6.9rem]"
+                src={emoji}
+                alt="Emoji next"
+              />
               <a
-                className="text-3xl text-primaryColor border-b-2 border-primaryColor"
+                className="text-3xl text-[#054E12] font-bold text-primaryColor border-b-2 border-primaryColor"
                 href="#"
               >
                 See how it works
