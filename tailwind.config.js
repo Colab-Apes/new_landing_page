@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
   content: [
     "./index.html",
@@ -15,9 +16,12 @@ export default {
         white: 'var(--white)',
       },
       screens: {
-				sm: "425px",
-				md: "800px",
+			
 			},
+      fontFamily: {
+        lato: ["Lato", ...defaultTheme.fontFamily.sans],
+      
+      },
     },
   },
   plugins: [],
