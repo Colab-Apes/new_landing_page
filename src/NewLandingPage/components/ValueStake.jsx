@@ -15,7 +15,7 @@ const ValueStake = () => {
         <div className=" flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
             <img className="w-[100%]" src={feature4} alt="Feature Frame" />
-            <div className="key-features kf-mobile text-center">
+            <div className="key-features lg:hidden kf-mobile text-center">
               <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
                 Key Features:
               </p>

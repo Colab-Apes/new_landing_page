@@ -34,9 +34,9 @@ const LandPage = () => {
       {/*FAQS*/}
       <Faqs />
       {/*Join Our News Letter*/}
-      {/* <JoinOurNewsLetter /> */}
+      <JoinOurNewsLetter />
       {/* Footer */}
-      {/* <Foot /> */}
+      <Foot />
     </div>
   );
 };

@@ -13,15 +13,15 @@ import youtube from "../../assets/svg/youtube.svg";
 
 const Foot = () => {
   return (
-    <div>
+    <div className="px-4 lg:px-20">
       {" "}
-      <footer className="  mx-auto mt-36   pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
+      <footer className="mt-36   pb-2 px-20 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
         <img
           src={ape}
           alt=""
           className="bottom-0 absolute object-contain w-[30rem] hidden lg:block lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] left-[-0.2rem]  lg:left-0 z-[1] "
         />
-        <div className="grid   text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-white pt-20 h-full gap-x-8 gap-y-10 lg:gap-y-0 ">
+        <div className="grid   text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-white pt-20 h-full gap-x-10 gap-y-10 lg:gap-y-0 ">
           <div className="flex flex-col  w-full mx-auto  text-sm lg:text-2xl text-left z-[3] gap-y-8">
             <p className="text-3xl font-bold ">Co_lab Apes</p>
             <p className="lg:mt-4 mt-2">About Us</p>
@@ -29,7 +29,7 @@ const Foot = () => {
             <p className="">Privacy policy</p>
             <p className="">Terms of Use</p> <p className="">Legal</p>
           </div>
-          <div className="flex flex-col w-full mx-auto    text-sm lg:text-2xl text-left z-[3] gap-y-6">
+          <div className="flex flex-col w-full mx-auto     text-sm lg:text-2xl text-left z-[3] gap-y-6 pl-20">
             <p className="text-3xl font-bold">Features</p>
             <p className="lg:mt-4 mt-2">Home</p>
             <p className="">Top 10 projects</p>
@@ -47,13 +47,13 @@ const Foot = () => {
             <p className="">Video editting</p>
             <p className="">3D modelling</p>
           </div>
-          <div className="flex flex-col items-end lg:items-center  z-[3] text-sm">
+          <div className="flex flex-col items-center lg:items-center  z-[3] text-sm">
             <img
               src={footlogo}
               alt=""
               className="z-[2] w-[10rem] object-contain"
             />
-            <p className="mt-5 font-semibold xl:font-bold xl:text-2xl xl:mt-12">
+            <p className="mt-5 text-[12px] font-semibold xl:font-bold xl:text-2xl xl:mt-12">
               help@colabapes.com
             </p>
             <div className="socials flex items-center justify-end gap-5 mt-5">
@@ -73,7 +73,7 @@ const Foot = () => {
                 <img src={linkedin} alt="Linkedin" className="w-full" />
               </div>
             </div>
-            <button className=" font-[700] w-full lg:w-fit text-3xl lg:px-12 py-8 mt-8 lg:mt-20 z-[3] text-[#054E12] bg-white rounded-[30px] font-latoxl:mt-20">
+            <button className=" font-[700] w-full lg:w-fit lg:text-3xl lg:px-12 py-6 text-xl  lg:py-8 mt-8 lg:mt-20 z-[3] text-[#054E12] bg-white rounded-[15px] lg:rounded-[30px] font-lato xl:mt-20">
               Contact Us
             </button>
           </div>
