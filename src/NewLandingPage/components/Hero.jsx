@@ -17,7 +17,7 @@ const Hero = () => {
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
         <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
 
-        <div className="hero container pt-10 w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
+        <div className="hero pt-10 w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
               <span className="text-[2rem]  font-bold hidden md:block text-[#3B513F]">

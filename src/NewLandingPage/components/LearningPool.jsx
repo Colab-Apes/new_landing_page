@@ -8,7 +8,7 @@ import people from "../../assets/svg/people.svg";
 const LearningPool = () => {
   return (
     <div>
-      <div className=" container mx-auto mt-36 relative">
+      <div className=" mt-36 relative">
         <div className="px-20"></div>
         <div className="py-5 bg-[#3B8004] h-[58px] w-[91px] absolute top-36 left-[-10rem] "></div>
         <div className="w-[400px] h-[400px] top-[-3rem] left-[-20rem] absolute bg-[#054E12] blur-[250px] rounded-[607px]  "></div>

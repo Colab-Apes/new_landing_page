@@ -18,25 +18,25 @@ const LandPage = () => {
       {/* Nav */}
       <Nav />
       {/* Hero */}
-      <Hero />
+      {/* <Hero /> */}
       {/* SocialHub */}
-      <SocialHub />
+      {/* <SocialHub /> */}
       {/* Learning Pool */}
-      <LearningPool />
+      {/* <LearningPool /> */}
       {/* Build the Future */}
-      <BuildTheFuture />
+      {/* <BuildTheFuture /> */}
       {/* Value Stake*/}
-      <ValueStake />
+      {/* <ValueStake /> */}
       {/* How it works */}
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       {/*Ready to collaborate & Innovation */}
-      <Ready />
+      {/* <Ready /> */}
       {/*FAQS*/}
-      <Faqs />
+      {/* <Faqs /> */}
       {/*Join Our News Letter*/}
-      <JoinOurNewsLetter />
+      {/* <JoinOurNewsLetter /> */}
       {/* Footer */}
-      <Foot />
+      {/* <Foot /> */}
     </div>
   );
 };

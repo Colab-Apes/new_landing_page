@@ -10,7 +10,7 @@ const SocialHub = () => {
   return (
     <div>
       {" "}
-      <div className="mt-36  container mx-auto relative">
+      <div className="mt-36   relative">
         <div className="bg-[#054E12] rounded-full h-[ 649.982px] w-[774px] blur-[500px] absolute right-[-10rem] top-24 flex justify-center items-center">
           {" "}
         </div>

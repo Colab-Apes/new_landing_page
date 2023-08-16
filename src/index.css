@@ -71,7 +71,7 @@ body {
   animation: fadeInLeft 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .info {
     position: fixed;
     top: 12%;
@@ -120,4 +120,4 @@ body {
   .text-content {
     width: 100%;
   }
-}
+} */

@@ -3,7 +3,7 @@ import "../../App.css";
 const JoinOurNewsLetter = () => {
   return (
     <div>
-      <div className="relative mt-48 container mx-auto">
+      <div className="relative mt-48  mx-auto">
         <div className="absolute z-[-1] blur-[150px] bottom-[-20rem] right-[-20rem] w-[387px] h-[410px] bg-[#C26AAA] rounded-[400px]"></div>
         <div className="title text-center text-5xl text-[#3B8004] font-bold ">
           Join Our Newsletter
