@@ -3,7 +3,7 @@ import "../../App.css";
 const Ready = () => {
   return (
     <div>
-      <div className=" mt-64 lg:mt-36 relative z-10 px-4 w-full lg:px-20 ">
+      <div className=" mt-64 lg:mt-36 relative z-10 px-4 w-full  md:px-14 lg:px-20 ">
         <div className=" px-10 text-center text-5xl text-[#333] font-bold mb-5 md:mb-20  xl:mb-0 ">
           Ready to collaborate & Innovate
         </div>

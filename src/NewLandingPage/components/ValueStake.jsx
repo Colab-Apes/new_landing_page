@@ -8,7 +8,7 @@ import feature4 from "../../assets/feature4.png";
 const ValueStake = () => {
   return (
     <div>
-      <div className="mt-64 lg:mt-36 px-4 lg:px-20 relative">
+      <div className="mt-64 lg:mt-36 px-4   md:px-14 lg:px-20 relative">
         <div className="py-5 bg-[#3B8004] hidden lg:block h-[58px] w-[91px] absolute top-[8rem] left-[-6rem] "></div>
         <div className="bg-[#054E12] hidden lg:block bottom-3 z-[-1] blur-[500px] rounded-full h-[300px] w-[300px] absolute"></div>
         <div className="bg-[#C26AAA] hidden lg:block bottom-[-6rem] z-[-1] blur-[150px] rounded-full h-[200px] w-[200px] absolute"></div>

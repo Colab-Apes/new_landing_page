@@ -12,7 +12,7 @@ const Hero = () => {
         style={{
           backgroundImage: `url(${herobg})`,
         }}
-        className="pb-20 px-4 lg:px-20"
+        className="pb-20 px-4  md:px-14 lg:px-20"
       >
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
         <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
@@ -20,13 +20,13 @@ const Hero = () => {
         <div className="hero xl:pt-10 w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className="text-content w-full md:w-[70%] text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
-              <span className="text-[2rem]  font-bold hidden md:block text-[#3B513F]">
+              <span className="text-[2rem]  font-bold hidden lg:block text-[#3B513F]">
                 Welcome to Co_lab Apes,
                 <span className="font-normal"> Let’s Remote Create ! </span>
               </span>
               {/* <span className="text-4xl font-light hidden md:inline"></span> */}
             </p>
-            <div className="w-[15%] bg-primaryColor h-2 rounded-full  mt-12 hidden md:block"></div>
+            <div className="w-[15%] bg-primaryColor h-2 rounded-full  mt-12 hidden lg:block"></div>
             <h1 className="w-full text-[3.6rem] text-center lg:text-left xl:text-[3.8rem] leading-[1.8]  mt-14 text-[#054E12] font-[750] xl:font-[650] ">
               Unleash Your Creativity. <br /> Collaborate. Innovate.
             </h1>

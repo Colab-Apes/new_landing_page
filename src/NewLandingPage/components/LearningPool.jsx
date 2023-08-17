@@ -8,7 +8,7 @@ import people from "../../assets/svg/people.svg";
 const LearningPool = () => {
   return (
     <div>
-      <div className="mt-64 lg:mt-36 relative px-4 lg:px-20">
+      <div className="mt-64 lg:mt-36 relative px-4  md:px-14 lg:px-20">
         <div className="px-20"></div>
         <div className="py-5 bg-[#3B8004] hidden lg:block h-[58px] w-[91px] absolute top-[8rem] left-[-6rem] "></div>
         <div className="w-[400px] h-[400px] hidden lg:block top-[-3rem] lg:left-[-20rem] absolute bg-[#054E12] blur-[250px] rounded-[607px]  "></div>
