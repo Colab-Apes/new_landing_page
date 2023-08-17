@@ -29,14 +29,14 @@ const Foot = () => {
             <p className="">Privacy policy</p>
             <p className="">Terms of Use</p> <p className="">Legal</p>
           </div>
-          <div className="flex flex-col w-full mx-auto     text-sm lg:text-2xl text-left z-[3] gap-y-6 pl-20">
+          <div className="flex flex-col w-full mx-auto  text-2xl lg:text-2xl text-left z-[3] gap-y-6 pl-20">
             <p className="text-3xl font-bold">Features</p>
             <p className="lg:mt-4 mt-2">Home</p>
             <p className="">Top 10 projects</p>
             <p className="">Learning pool</p> <p className="">Join </p>
             <p className="">Create project</p>
           </div>
-          <div className="flex flex-col w-full mx-auto  text-sm lg:text-2xl text-left z-[3] gap-y-6">
+          <div className="flex flex-col w-full mx-auto text-2xl lg:text-2xl text-left z-[3] gap-y-6">
             <p className="text-3xl font-bold">Learning pool</p>
             <p className="lg:mt-4 mt-2">Analytics</p>
             <p className="">Artificial intelligence</p>{" "}
