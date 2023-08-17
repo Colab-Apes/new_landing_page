@@ -28,7 +28,7 @@ const Faqs = () => {
             </button>
           </div>
         </div>
-        ;
+
         <div className=" lg:px-32 mt-20">
           <div className="flex justify-between items-center border-b border-b-[#999] pb-10">
             <p className="text-3xl font-bold  text-[#054E12]">

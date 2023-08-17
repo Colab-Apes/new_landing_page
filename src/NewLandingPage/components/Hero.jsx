@@ -30,10 +30,10 @@ const Hero = () => {
             <h1 className="w-full text-[3.6rem] text-center md:text-left md:text-[3rem]  lg::text-[3.8rem] leading-[1.8]  mt-14 text-[#054E12] font-[750] xl:font-[650] ">
               Unleash Your Creativity. <br /> Collaborate. Innovate.
             </h1>
-            <p className="text-3xl md:text-2xl xl:text-[1.8rem] md:mt-10 lg:mt-14 text-[#3B513F]">
+            <p className="text-3xl md:text-2xl xl:text-[1.8rem] mt-14 text-[#3B513F]">
               Join Co_lab Apes and Bring Your Ideas to Life!
             </p>
-            <div className="hidden md:flex flex-col-reverse md:flex-row  lg:gap-12 justify-center md:justify-between  items-center md:mt-10  lg:mt-5 xl:mt-12">
+            <div className="hidden md:flex flex-col-reverse md:flex-row  lg:gap-12 justify-center md:justify-between lg:justify-normal items-center mt-5 xl:mt-12">
               <button className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] lg:px-16  md:px-10 md:py-6 lg:py-8 rounded-[18px] text-[12px] lg:text-[16px] text-white ">
                 Get Started
               </button>
@@ -54,18 +54,18 @@ const Hero = () => {
           <div className="image-content relative fade-in-top  ">
             <img src={frame1} alt="Frame" className="" />
             <img
-              className="absolute object-contain md:w-[14rem] lg:w-full top-24 md:-left-14 lg:-left-20 hidden md:block"
+              className="absolute object-contain md:w-[14rem] lg:w-fit top-24 lg:-left-20 hidden md:block"
               src={frame2}
               alt="frame"
             />
             <img
-              className="absolute object-contain  md:w-[14rem] lg:w-full  -bottom-16 md:-bottom-0 md:-right-2  -right-7 hidden md:block"
+              className="absolute object-contain  md:w-[14rem] lg:w-fit lg:-bottom-16 md:-bottom-0 md:-right-2  lg:-right-7 hidden md:block"
               src={frame3}
               alt="frame"
             />
           </div>
 
-          <div className="hero-cta hc-mobile container mx-auto md:hidden">
+          <div className="hero-cta hc-mobile container mx-auto  md:hidden">
             <button className="w-full  btngrad px-10 py-7 rounded-xl mb-10">
               <a href="#" className="text-2xl text-white">
                 Get Started
