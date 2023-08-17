@@ -15,7 +15,7 @@ const Foot = () => {
   return (
     <div className="px-4 lg:px-20 mt-64 lg:mt-36">
       {" "}
-      <footer className="mt-36   pb-2 px-20 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
+      <footer className="mt-36   pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
         <img
           src={ape}
           alt=""
