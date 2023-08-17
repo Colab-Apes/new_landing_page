@@ -10,8 +10,8 @@ const Faqs = () => {
       <div className="title mt-36 text-center  text-5xl lg:text-6xl ext-[#333] lg:text-[#3B8004] font-bold mb-20">
         Frequently Asked Questions
       </div>
-      <div className="absolute z-[-1]  hidden lg:block blur-[150px] bottom-[-20rem] left-[-20rem] w-[387px] h-[410px] bg-[#C26AAA] rounded-[400px]"></div>
-      <div className="absolute z-[-1]  hidden lg:block blur-[200px] top-[-30rem] right-[0rem] w-[200px] h-[200px] bg-[#C26AAA] rounded-[410.85px]"></div>
+      <div className="absolute z-[-1]  hidden lg:block blur-[200px] bottom-[-20rem] left-[-20rem] w-[387px] h-[410px] bg-[#C26AAA] rounded-[400px]"></div>
+      <div className="absolute z-[-1]   hidden lg:block blur-[200px] top-[-30rem] right-[0rem] w-[200px] h-[200px] bg-[#C26AAA] rounded-[410.85px]"></div>
 
       <div className="faq bg-[#D5EEDA] mt-2 w-full text-center  mx-auto px-10 relative rounded-[20px] h-[450px] py-10">
         <div className="w-full flex justify-center items-center">
