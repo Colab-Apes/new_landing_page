@@ -9,7 +9,7 @@ const BuildTheFuture = () => {
   return (
     <div>
       <div className="mt-64 lg:mt-36 relative px-4 lg:px-20  z-[10]">
-        <div className="py-5 hidden lg:block bg-[#3B8004] h-[58px] w-[80px] absolute top-36 left-[68.2rem] "></div>
+        <div className="py-5 hidden lg:block bg-[#3B8004] h-[58px] w-[75px] absolute top-24 left-[69.8rem] "></div>
         <div className="bg-[#054E12] hidden lg:flex rounded-full h-[400px] w-[400px]   absolute left-[-20rem] top-0 justify-center items-center blur-[500px]">
           {" "}
         </div>
@@ -20,14 +20,14 @@ const BuildTheFuture = () => {
           {" "}
         </div>
 
-        <div className="lg:hidden flex flex-col-reverse md:flex-row items-center   justify-center xl:items-center md:gap-24">
+        <div className="flex flex-col-reverse md:flex-row items-center   justify-center xl:items-center md:gap-24">
           <div className="">
             <img
               className="w-full h-full object-contain  "
               src={feature3}
               alt="Feature Frame"
             />
-            <div className="key-features kf-mobile text-center">
+            <div className=" lg:hidden  text-center">
               <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">
                 Key Features:
               </p>
@@ -81,7 +81,7 @@ const BuildTheFuture = () => {
               <p className="text-[#3B513F] text-[1.5rem] mb-7 font-bold">
                 Key Features:
               </p>
-              <div className="flex items-center flex-wrap gap-5">
+              <div className=" flex items-center flex-wrap gap-5">
                 <div className="stuff flex items-center gap-2 bg-[#FFD6BF] px-10 py-5 rounded-lg">
                   <div className="icon">
                     <img src={repeatCircle} alt="frame" />

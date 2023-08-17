@@ -16,7 +16,7 @@ const Ready = () => {
             <button className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-lg  lg:rounded-[20px]">
               Get Started
             </button>
-            <button className=" bg-white text-2xl text-black mt-8 w-full lg:w-[17rem]  py-8 lg:py-10  font-bold  rounded-lg lg:rounded-[20px] shadow-md">
+            <button className=" bg-white text-2xl text-black mt-8 lg:mt-0 w-full lg:w-[17rem]  py-8 lg:py-10  font-bold  rounded-lg lg:rounded-[20px] shadow-md">
               Join the wait list
             </button>
           </div>

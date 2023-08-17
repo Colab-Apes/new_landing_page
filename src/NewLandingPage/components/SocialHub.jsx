@@ -11,14 +11,14 @@ const SocialHub = () => {
     <div>
       {" "}
       <div className="mt-64 lg:mt-36 px-4 lg:px-20   relative">
-        <div className="bg-[#054E12] rounded-full h-[ 649.982px] w-[774px] blur-[500px] absolute right-[-10rem] top-24 flex justify-center items-center">
+        <div className="bg-[#054E12] rounded-full h-[400px] w-[400px] blur-[500px] absolute right-[0rem] top-[5rem] flex justify-center items-center">
           {" "}
         </div>
 
         <div className="h-[200px] w-[200px] lg:h-[200px] lg:w-[300px]  absolute bg-[#C26AAA] rounded-full right-[2rem] lg:right-[2rem]  top-[-8rem] lg:top-24 blur-[125px]"></div>
         <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24 xl:gap-x-32">
           <div className="feat-image">
-            <div className="py-5 hidden lg:block bg-[#3B8004] h-[58px] w-[91px] absolute top-36 left-[67rem] "></div>
+            <div className="py-5 hidden lg:block bg-[#3B8004]  h-[58px] w-[75px] absolute top-24 left-[69.2rem] "></div>
             <img className="w-[100%] " src={feature1} alt="Feature Frame" />
             <div className="lg:hidden text-center">
               <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">

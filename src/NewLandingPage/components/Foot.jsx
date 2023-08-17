@@ -21,10 +21,10 @@ const Foot = () => {
           alt=""
           className="bottom-0 absolute object-contain w-[30rem] hidden lg:block lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] left-[-0.2rem]  lg:left-0 z-[1] "
         />
-        <div className="grid   text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-white pt-20 h-full gap-x-10 gap-y-10 lg:gap-y-0 ">
-          <div className="flex flex-col  w-full mx-auto  text-sm lg:text-2xl text-left z-[3] gap-y-8">
+        <div className="grid text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-[#fff]/[0.8] pt-20 h-full gap-x-10 gap-y-10 lg:gap-y-0 ">
+          <div className="flex flex-col text-2xl  w-full mx-auto   lg:text-2xl text-left z-[3] gap-y-8">
             <p className="text-3xl font-bold ">Co_lab Apes</p>
-            <p className="lg:mt-4 mt-2">About Us</p>
+            <p className="lg:mt-4 mt-2 text-2xl">About Us</p>
             <p className="">About Us</p>
             <p className="">Privacy policy</p>
             <p className="">Terms of Use</p> <p className="">Legal</p>
