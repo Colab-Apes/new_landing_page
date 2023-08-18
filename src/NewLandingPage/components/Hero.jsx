@@ -67,21 +67,21 @@ const Hero = () => {
             />
           </div>
 
-          <div className="hero-cta hc-mobile container mx-auto  md:hidden">
-            <button className="w-full  btngrad px-10 py-7 rounded-xl mb-10">
-              <a href="#" className="text-2xl text-white">
+          <div className="hero-cta hc-mobile w-full flex flex-col justify-center  md:hidden mt-4">
+            <button className="w-[60%] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 ">
+              <a href="#" className="text-[2rem] font-bold text-white">
                 Get Started
               </a>
             </button>
-            <div className="flex  items-center justify-center gap-5">
+            <div className="flex  items-center justify-center gap-x-10">
               <img
-                className="w-[7rem] object-contain"
+                className="w-[7.5rem] object-contain"
                 src={emoji}
                 alt="Emoji next"
               />
 
               <a
-                className="text-[2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
+                className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
                 href="#"
               >
                 See how it works
