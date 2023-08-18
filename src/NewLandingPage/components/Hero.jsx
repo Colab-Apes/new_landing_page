@@ -4,6 +4,8 @@ import frame1 from "../../assets/frame1.png";
 import frame2 from "../../assets/frame2.png";
 import frame3 from "../../assets/frame3.png";
 import emoji from "../../assets/svg/emoji.svg";
+import bg1desktop from "../../assets/bg/bg1mobile.jpg";
+import bg1mobile from "../../assets/bg/bg1mobile.jpg";
 import "../../App.css";
 const Hero = () => {
   return (
@@ -27,7 +29,7 @@ const Hero = () => {
               {/* <span className="text-4xl font-light hidden md:inline"></span> */}
             </p>
             <div className="w-[15%] bg-primaryColor h-2 rounded-full mt-8 lg:mt-12 hidden md:block"></div>
-            <h1 className="w-full text-[3.6rem] text-center md:text-left md:text-[3rem]  lg::text-[3.8rem] leading-[1.8]  mt-14 text-[#054E12] font-[750] xl:font-[650] ">
+            <h1 className="w-full text-[3.6rem] text-center md:text-left md:text-[3rem]  lg:text-[3.8rem] xl:text-[4rem] leading-[1.8]  mt-14 text-[#054E12] font-[750] xl:font-[650] ">
               Unleash Your Creativity. <br /> Collaborate. Innovate.
             </h1>
             <p className="text-3xl md:text-2xl xl:text-[1.8rem] mt-14 text-[#3B513F]">
