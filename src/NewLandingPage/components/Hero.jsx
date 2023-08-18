@@ -12,9 +12,9 @@ const Hero = () => {
     <div>
       <section
         style={{
-          backgroundImage: `url(${herobg})`,
+          backgroundImage: `url(${bg1mobile})`,
         }}
-        className="pb-20 px-4  md:px-10 lg:px-20"
+        className={"pb-20 px-4  md:px-10 lg:px-20"}
       >
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
         <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
