@@ -1,10 +1,12 @@
 import React from "react";
 import logo from "../../assets/newimages/logo.png";
+import menuicon from "../../assets/svg/menu-icon.svg";
+
 import "../../App.css";
 const Nav = () => {
   return (
-    <div className="w-full bg-[#ECF8EE]">
-      <nav className="flex  container font-lato items-center justify-between w-full  py-8 mx-auto">
+    <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
+      <nav className="lg:flex font-lato items-center justify-between w-full hidden  py-8">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
@@ -19,6 +21,11 @@ const Nav = () => {
             Join waitlist
           </button>
         </div>
+      </nav>
+      <nav className="flex font-lato items-center justify-between w-full lg:hidden h-[6rem] md:h-[8rem] ">
+        {" "}
+        <img src={logo} alt="" className=" w-[16rem] md:w-[18rem] object-contain" />
+        <img src={menuicon} alt="" className="  w-[4rem]  md:w-[6rem] object-contain" />
       </nav>
     </div>
   );

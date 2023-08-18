@@ -1,12 +1,12 @@
-.app__itemsContainer {
-  /* -ms-scroll-snap-type: y mandatory; */
-  /* scroll-snap-type: y mandatory; */
-  /* overflow: auto; */
-  overflow-x: hidden;
-  /* height: 100vh; */
+/* .app__itemsContainer {
+  -ms-scroll-snap-type: y mandatory; 
+  scroll-snap-type: y mandatory; 
+   overflow: auto;
+   overflow-x: hidden;
+  height: 100vh;
   position: absolute;
   top: 0;
-  z-index: -1000;
+  z-index: -1000; 
 }
 body {
   overflow-x:hidden;
@@ -14,12 +14,12 @@ body {
 .app_container {
   max-width: 90%;
   margin: 0 auto;
-}
+} */
 .graid{
   background: linear-gradient(224deg, #054E12 0%, #3B8004 100%);
 
 }
-.features {
+/* .features {
   align-self: center;
   padding: 7rem 3rem;
 }
@@ -44,8 +44,8 @@ body {
   .hc-mobile {
     display: block;
   }
-}
-/*# sourceMappingURL=App.css.map */
+} */
+/* # sourceMappingURL=App.css.map */
 .btngrad{
   background:linear-gradient(218deg, #007D16 0%, #4BA900 100%);
 }
