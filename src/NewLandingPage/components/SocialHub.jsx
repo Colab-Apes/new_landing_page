@@ -11,13 +11,14 @@ const SocialHub = () => {
     <div>
       {" "}
       <div className="mt-[20rem] lg:mt-[40rem] px-4  md:px-14 lg:px-20 z-10 relative">
-        <div className="bg-[#054E12] z-[-2]  rounded-full h-[400px] w-[400px] blur-[500px] absolute right-[0rem] top-[5rem] flex justify-center items-center"></div>
+        <div className="bg-[#054E12] rounded-full h-[400px] w-[400px] blur-[500px] absolute right-[0rem] top-[5rem] flex justify-center items-center">
+          {" "}
+        </div>
 
         <div className="h-[200px] w-[200px] lg:h-[200px] lg:w-[300px]  absolute bg-[#C26AAA] rounded-full right-[2rem] lg:right-[2rem]  top-[-8rem] lg:top-24 blur-[125px] hidden lg:block"></div>
-        
         <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24 xl:gap-x-32">
           <div className="feat-image">
-            <div className="py-5 hidden lg:block bg-[#fff]  h-[58px] w-[75px] absolute -z-10 top-24 left-[69.2rem] "></div>
+            <div className="py-5 hidden lg:block bg-[#3F8004]  h-[58px] w-[75px] absolute -z-10 top-24 left-[69.2rem] "></div>
             <img className="w-[100%] " src={feature1} alt="Feature Frame" />
             <div className="lg:hidden text-center">
               <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">
