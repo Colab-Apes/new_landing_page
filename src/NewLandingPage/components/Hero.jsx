@@ -4,17 +4,18 @@ import frame1 from "../../assets/frame1.png";
 import frame2 from "../../assets/frame2.png";
 import frame3 from "../../assets/frame3.png";
 import emoji from "../../assets/svg/emoji.svg";
-import bg1desktop from "../../assets/bg/bg1mobile.jpg";
-import bg1mobile from "../../assets/bg/bg1mobile.jpg";
+
 import "../../App.css";
 const Hero = () => {
   return (
     <div>
       <section
-        style={{
-          backgroundImage: `url(${bg1mobile})`,
-        }}
-        className={"pb-20 px-4  md:px-10 lg:px-20"}
+        // style={{
+        //   backgroundImage: `url(${bg1mobile})`,
+        // }}
+        className={
+          "pb-20 px-4  md:px-10 lg:px-20  bg-[url('./assets/bg/bg1mobile.jpg')] md:bg-[url('./assets/bg/bg1desktop.jpg')]"
+        }
       >
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
         <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
