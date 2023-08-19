@@ -15,28 +15,30 @@ const HowItWorks = () => {
           How It Works
         </div>
         <div className="   flex flex-col mt-20  md:flex-row gap-x-[8rem] justify-between items-start lg:mb-10">
-          <div className="flex items-start gap-x-16 rounded-[20px] pb-26 shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full">
-            <img src={one} alt="One" className="w-[5rem] object-contain" />
-            <div className=" flex flex-col mt-4 ">
-              <h1 className="text-[2.127rem] text-[#333] font-bold ">
+          {/* <div className="flex rounded-[20px]  bg-[#ECF8EE] h-[22rem] w-full"></div> */}
+
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[23rem] ">
+            <img src={one} alt="One" className="w-[6rem] object-contain" />
+
+            <div className="w-text mt-7">
+              <h1 className="text-[2rem] text-[#333333] font-semibold mb-16 ">
                 Join Co_lab Apes
               </h1>
-              <div className="border mt-8"></div>
+              <div className="border border-[#999]/[0.3] mt-8"></div>
               <p className="text-[1.5rem] text-[#445C48]  font-normal mt-8">
                 Sign Up and Complete your profile
               </p>
             </div>
           </div>
-          {/* <div className="flex rounded-[20px]  bg-[#ECF8EE] h-[22rem] w-full"></div> */}
 
-          <div className="flex mt-20  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full">
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[23rem]">
             <img src={two} alt="One" className="w-[6rem] object-contain" />
 
             <div className="w-text mt-7">
               <h1 className="text-[2rem] text-[#333333] font-semibold mb-16 ">
                 Explore Opportunities
               </h1>
-              <div className="border mt-8"></div>
+              <div className="border border-[#999]/[0.3] mt-8"></div>
               <p className="text-[1.5rem] text-[#445C48]  font-normal mt-8">
                 Discover projects, connect with collaborators, and learn from
                 experts
@@ -45,28 +47,30 @@ const HowItWorks = () => {
           </div>
         </div>
         <div className=" flex flex-col mt-20  md:flex-row gap-x-[8rem] justify-between items-start ">
-          <div className="flex items-start gap-x-20 rounded-[20px] pb-26 lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full">
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[23rem]">
             <img src={three} alt="One" className="w-[6rem] object-contain" />
 
             <div className="w-text mt-7">
               <h1 className="text-[2rem] text-[#333333] font-semibold mb-16 ">
                 Collaborate & Innovate
               </h1>
-              <div className="border mt-8"></div>
-              <p className="text-[1.5rem] text-[#445C48] font-normal mt-8">
+              <div className="border border-[#999]/[0.3] mt-8"></div>
+              <p className="text-[1.5rem] text-[#445C48]  font-normal mt-8">
                 Engage in collaborative projects, leverage the power of shared
                 knowledge, and bring your ideas to life
               </p>
             </div>
           </div>
-          <div className="flex items-start mt-20 gap-x-16 rounded-[20px] pb-26 shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA]   py-10 px-10 w-full">
+
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[23rem]">
             <img src={four} alt="One" className="w-[6rem] object-contain" />
-            <div className=" flex flex-col mt-4 ">
-              <h1 className="text-[2.127rem] text-[#333] font-bold ">
+
+            <div className="w-text mt-7">
+              <h1 className="text-[2rem] text-[#333333] font-semibold mb-16 ">
                 Grow & Succeed
               </h1>
-              <div className="border mt-8"></div>
-              <p className="text-[1.5rem] text-[#445C48] font-normal mt-8">
+              <div className="border border-[#999]/[0.3] mt-8"></div>
+              <p className="text-[1.5rem] text-[#445C48]  font-normal mt-8">
                 Gain exposure, attract investors, and achieve success with your
                 innovative projects.
               </p>
