@@ -12,9 +12,9 @@ const Hero = () => {
     <div>
       <section
         style={{
-          backgroundImage: `url(${herobg})`,
+          backgroundImage: `url(${bg1mobile})`,
         }}
-        className="pb-20 px-4  md:px-10 lg:px-20"
+        className={"pb-20 px-4  md:px-10 lg:px-20"}
       >
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
         <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
@@ -67,21 +67,21 @@ const Hero = () => {
             />
           </div>
 
-          <div className="hero-cta hc-mobile container mx-auto  md:hidden">
-            <button className="w-full  btngrad px-10 py-7 rounded-xl mb-10">
-              <a href="#" className="text-2xl text-white">
+          <div className="hero-cta hc-mobile w-full flex flex-col justify-center  md:hidden mt-4">
+            <button className="w-[60%] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 ">
+              <a href="#" className="text-[2rem] font-bold text-white">
                 Get Started
               </a>
             </button>
-            <div className="flex  items-center justify-center gap-5">
+            <div className="flex  items-center justify-center gap-x-10">
               <img
-                className="w-[7rem] object-contain"
+                className="w-[7.5rem] object-contain"
                 src={emoji}
                 alt="Emoji next"
               />
 
               <a
-                className="text-[2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
+                className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
                 href="#"
               >
                 See how it works

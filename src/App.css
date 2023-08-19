@@ -47,5 +47,5 @@ body {
 } */
 /* # sourceMappingURL=App.css.map */
 .btngrad{
-  background:linear-gradient(218deg, #007D16 0%, #4BA900 100%);
+  background: #007D16 linear-gradient(218deg, #007D16 0%, #4BA900 100%);
 }
