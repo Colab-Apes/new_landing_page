@@ -53,7 +53,7 @@ const BuildTheFuture = () => {
                     <img src={map} alt="frame" />
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
-                    First principle thinking roadmap
+                    First principle roadmap
                   </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-lg">
@@ -103,7 +103,7 @@ const BuildTheFuture = () => {
                     <img src={map} alt="frame" />
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
-                    First principle thinking roadmap
+                    First principle roadmap
                   </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-lg">
