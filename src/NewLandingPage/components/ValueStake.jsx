@@ -92,7 +92,7 @@ const ValueStake = () => {
                     <img src={dollarCircle} alt="frame" />
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
-                    Progress-based payments fraud prevention technology
+                    Fraud prevention technology
                   </p>
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#ADE6FF] px-10 py-5 rounded-lg">
