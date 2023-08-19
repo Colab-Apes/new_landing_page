@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoIosClose } from "react-icons/io";
 import { ClipLoader } from "react-spinners";
@@ -31,24 +30,26 @@ const JoinOurNewsLetter = () => {
             // Success Message
             <div
               className={
-                "w-[92%] lg:w-[22rem] duration-500 origin-left scale-x-[92%] lg:scale-x-[22rem] md:px-10 h-[4.5rem] border-main border-4 text-white bg-main/[50%] rounded-[20px] flex items-center text-center justify-center"
+                "w-[92%] md:w-[40rem] xl:w-[45rem] duration-500 origin-left scale-x-[92%] lg:scale-x-[22rem] md:px-10 h-[7rem] border-[#054E12] border-4 text-white  bg-[#054E12]/[50%] rounded-[20px] flex items-center text-center justify-center mt-20"
               }
             >
-              <RiErrorWarningLine className="text-2xl mr-3" />
-              <p className="md:text-lg mr-3">Successfully submitted!</p>
+              <RiErrorWarningLine className="text-2xl lg:text-4xl mr-3" />
+              <p className="md:text-lg lg:text-xl xl:text-2xl mr-3">
+                Successfully submitted!
+              </p>
               <IoIosClose
-                className="text-2xl cursor-pointer"
+                className="text-2xl  lg:text-5xl cursor-pointer"
                 onClick={() => setsuccess(false)}
               />
             </div>
           ) : (
-            <form className="border-2 border-solid py-2 relative lg:w-[50%] border-[#3B8004] gap-10 flex  mt-20 items-center p-3 xl:0  rounded-[10px] lg:rounded-[20px] w-full">
+            <div className="border-2 border-solid py-2 origin-left  duration-500 relative lg:w-[50%] border-[#3B8004] gap-10 flex  0 items-center p-3 xl:0 mt-20 rounded-[10px] lg:rounded-[20px] w-full">
               <div className="input py-7">
                 <input
                   type="email"
                   onChange={(e) => setemail(e.target.value)}
                   value={email}
-                  className="text-3xl bg-transparent w-full md:w-[40rem] xl:w-[45rem] p-0 outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999]"
+                  className="text-3xl bg-transparent  w-full md:w-[40rem] xl:w-[45rem] p-0 outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999]"
                   placeholder="enter your email address..."
                 />
               </div>
@@ -59,15 +60,20 @@ const JoinOurNewsLetter = () => {
                   aria-label="Loading Spinner"
                   data-testid="loader"
                 />
-                ) : (
-                <button 
-                  onClick={() => submitEmail()}
-                  className=" absolute shadow-[15px_15px_50px_0px_rgba(0,_0,_0,_0.05)] px-12 btngrad py-6 lg:py-6 lg:text-[1.4rem] rounded-[8px] lg:rounded-[15px] text-3xl text-white right-2 font-bold">
+              ) : (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    submitEmail();
+                    console.log("ecco");
+                  }}
+                  className=" absolute shadow-[15px_15px_50px_0px_rgba(0,_0,_0,_0.05)]  px-12 btngrad py-6 lg:py-6 lg:text-[1.4rem] rounded-[8px] lg:rounded-[15px] text-3xl text-white right-2 font-bold"
+                >
                   Subscribe
                 </button>
               )}
-            </form>
-          )}  
+            </div>
+          )}
         </div>
       </div>
     </div>
