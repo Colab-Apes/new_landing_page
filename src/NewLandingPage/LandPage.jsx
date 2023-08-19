@@ -10,7 +10,7 @@ import HowItWorks from "./components/HowItWorks";
 import Ready from "./components/Ready";
 import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
 import Foot from "./components/Foot";
-import Faqs from "./components/Faqs";
+import Faqs from "./components/Faqs/Faqs";
 
 const LandPage = () => {
   return (
