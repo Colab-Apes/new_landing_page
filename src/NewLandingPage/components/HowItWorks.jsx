@@ -17,7 +17,7 @@ const HowItWorks = () => {
         <div className="   flex flex-col mt-20  md:flex-row gap-x-[8rem]  lg:gap-x-[4rem] justify-between items-start lg:mb-10">
           {/* <div className="flex rounded-[20px]  bg-[#ECF8EE] h-[22rem] w-full"></div> */}
 
-          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[25rem] ">
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10  h-[30rem] w-[50%] ">
             <img src={one} alt="One" className="w-[6rem] object-contain" />
 
             <div className="w-text mt-7">
@@ -31,7 +31,7 @@ const HowItWorks = () => {
             </div>
           </div>
 
-          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[25rem]">
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-[50%] h-[30rem]">
             <img src={two} alt="One" className="w-[6rem] object-contain" />
 
             <div className="w-text mt-7">
@@ -47,7 +47,7 @@ const HowItWorks = () => {
           </div>
         </div>
         <div className=" flex flex-col mt-20 lg:mt-10  md:flex-row gap-x-[8rem]  lg:gap-x-[4rem] justify-between items-start ">
-          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[25rem]">
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10  w-[50%] h-[30rem]">
             <img src={three} alt="One" className="w-[6rem] object-contain" />
 
             <div className="w-text mt-7">
@@ -62,7 +62,7 @@ const HowItWorks = () => {
             </div>
           </div>
 
-          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10 w-full h-[25rem]">
+          <div className="flex mt-20 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-20  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10  w-[50%] h-[30rem]">
             <img src={four} alt="One" className="w-[6rem] object-contain" />
 
             <div className="w-text mt-7">
