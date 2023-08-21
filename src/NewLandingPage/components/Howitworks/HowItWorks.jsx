@@ -30,7 +30,7 @@ const HowItWorks = () => {
             details="Discover projects, connect with collaborators, and learn from experts"
           />
         </div>
-        <div className=" flex flex-col mt-20 lg:mt-10  md:flex-row gap-x-[8rem]  lg:gap-x-[4rem] justify-between items-start ">
+        <div className=" flex flex-col  lg:mt-10  md:flex-row gap-x-[8rem]  lg:gap-x-[4rem] justify-between items-start ">
           <Card
             img={three}
             title="Collaborate & Innovate"

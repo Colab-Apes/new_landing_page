@@ -25,7 +25,9 @@ const SeeAll = ({ minus, plus }) => {
             }}
             className="flex cursor-pointer justify-between mb-8 items-center "
           >
-            <p className="text-3xl font-bold  text-[#054E12]">{item.title}</p>
+            <p className="text-3xl font-bold  text-left text-[#054E12]">
+              {item.title}
+            </p>
             <img
               src={getindex === index ? (openclose ? minus : plus) : plus}
               alt=""
