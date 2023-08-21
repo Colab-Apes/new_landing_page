@@ -7,7 +7,7 @@ const Nav = () => {
   const [opensidenav, setopensidenav] = useState(false);
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
-      <nav className="lg:flex font-lato items-center justify-between w-full hidden  py-8">
+      <nav className="lg:flex font-lato fixed  items-center justify-between w-full hidden  py-8">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
@@ -23,7 +23,7 @@ const Nav = () => {
           </button>
         </div>
       </nav>
-      <nav className="flex font-lato  fixed bg-[#ECF8EE]  left-0 items-center  px-4 justify-between w-full lg:hidden h-[6rem] md:h-[8rem] z-[100]">
+      <nav className="flex font-lato fixed bg-[#ECF8EE]  left-0 items-center  px-4 justify-between w-full lg:hidden h-[6rem] md:h-[8rem] z-[90]">
         {" "}
         <img
           src={logo}
@@ -42,15 +42,15 @@ const Nav = () => {
         onClick={() => setopensidenav(false)}
         className={
           opensidenav
-            ? "fixed top-0 right-0 bottom-0 h-[100vh] w-full bg-[#000]/[25%] z-30 lg:hidden"
+            ? "fixed top-0 right-0 bottom-0 h-[100vh] w-full bg-[#000]/[25%] z-[100] lg:hidden"
             : "hidden lg:hidden"
         }
       ></div>
       <div
         className={
           opensidenav
-            ? "fixed top-0 right-0 duration-500 ease-in-out bottom-0 h-[100vh] w-[75%] sm:w-[60%] px-5 sm:px-16 md:px-20 pt-3 sm:pt-10 bg-[#F8F8F8] bg-sidenav bg-cover z-30 rounded-l-[20px] lg:hidden"
-            : "fixed top-0 right-[-100%] duration-500 ease-in-out bottom-0 h-[100vh] w-[75%] sm:w-[60%] px-5 sm:px-16 md:px-20 pt-3 sm:pt-10 bg-[#F8F8F8] bg-sidenav bg-cover z-30 rounded-l-[20px] lg:hidden"
+            ? "fixed top-0 right-0 duration-500 ease-in-out bottom-0 h-[100vh] w-[75%] sm:w-[60%] px-5 sm:px-16 md:px-20 pt-3 sm:pt-10 bg-[#F8F8F8] bg-sidenav bg-cover  rounded-l-[20px] lg:hidden z-[100]"
+            : "fixed top-0 right-[-100%] duration-500 ease-in-out bottom-0 h-[100vh] w-[75%] sm:w-[60%] px-5 sm:px-16 md:px-20 pt-3 sm:pt-10 bg-[#F8F8F8] bg-sidenav bg-cover z-30 rounded-l-[20px] lg:hidden z-[100]"
         }
       >
         <div className="flex w-full justify-between items-center relative ">
