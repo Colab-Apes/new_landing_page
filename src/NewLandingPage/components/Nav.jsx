@@ -37,6 +37,15 @@ const Nav = () => {
           className="  w-[4rem]  md:w-[6rem] object-contain"
         />
       </nav>
+      {/* Background Overlay */}
+      <div
+        onClick={() => setopensidenav(false)}
+        className={
+          opensidenav
+            ? "fixed top-0 right-0 bottom-0 h-[100vh] w-full bg-[#000]/[25%] z-30 lg:hidden"
+            : "hidden lg:hidden"
+        }
+      ></div>
       <div
         className={
           opensidenav
@@ -48,7 +57,7 @@ const Nav = () => {
           {/* <img src={logo} alt="" className="object-cover w-[12rem] " /> */}
           <TfiClose
             onClick={() => setopensidenav(false)}
-            className="text-4xl text-black mt-4 top-5 left-3 absolute"
+            className="text-4xl text-black mt-4 top-2 right-3 absolute"
           />
         </div>
 
