@@ -7,7 +7,7 @@ const Nav = () => {
   const [opensidenav, setopensidenav] = useState(false);
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
-      <nav className="lg:flex font-lato fixed  items-center justify-between w-full hidden  py-8">
+      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE] left-0 fixed  items-center justify-between w-full hidden  py-8">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
