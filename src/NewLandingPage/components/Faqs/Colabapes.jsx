@@ -10,7 +10,7 @@ const Colabapes = ({ minus, plus }) => {
       {faqscolabapes.map((item, index) => (
         <div
           key={index}
-          className="border-b border-b-[#999] pb-10 lg:pb-10 mt-10"
+          className="border-b border-b-[#999] pb-10 lg:pb-10 mt-10 "
         >
           <div
             onClick={() => {
@@ -22,7 +22,9 @@ const Colabapes = ({ minus, plus }) => {
             }}
             className="flex cursor-pointer justify-between mb-8 items-center "
           >
-            <p className="text-3xl font-bold  text-[#054E12]">{item.title}</p>
+            <p className="text-3xl font-bold  text-left  text-[#054E12]">
+              {item.title}
+            </p>
             <img
               src={getindex === index ? (openclose ? minus : plus) : plus}
               alt=""

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { faqscommunity } from "./faqsdata";
 
-const Community = ({  minus, plus }) => {
+const Community = ({ minus, plus }) => {
   const [getindex, setgetindex] = useState(0);
 
   const [openclose, setopenclose] = useState(false);
@@ -9,7 +9,10 @@ const Community = ({  minus, plus }) => {
     <div>
       {" "}
       {faqscommunity.map((item, index) => (
-        <div key={index} className="border-b border-b-[#999] pb-10 lg:pb-10 mt-10">
+        <div
+          key={index}
+          className="border-b border-b-[#999] pb-10 lg:pb-10 mt-10"
+        >
           <div
             onClick={() => {
               let val = index;
@@ -20,7 +23,9 @@ const Community = ({  minus, plus }) => {
             }}
             className="flex cursor-pointer justify-between mb-8 items-center "
           >
-            <p className="text-3xl font-bold  text-[#054E12]">{item.title}</p>
+            <p className="text-3xl font-bold  text-left  text-[#054E12]">
+              {item.title}
+            </p>
             <img
               src={getindex === index ? (openclose ? minus : plus) : plus}
               alt=""
