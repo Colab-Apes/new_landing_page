@@ -23,7 +23,7 @@ const Nav = () => {
           </button>
         </div>
       </nav>
-      <nav className="flex font-lato items-center justify-between w-full lg:hidden h-[6rem] md:h-[8rem] ">
+      <nav className="flex font-lato  fixed bg-[#ECF8EE]  left-0 items-center  px-4 justify-between w-full lg:hidden h-[6rem] md:h-[8rem] z-[100]">
         {" "}
         <img
           src={logo}
