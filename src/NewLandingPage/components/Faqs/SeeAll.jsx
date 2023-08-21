@@ -33,7 +33,7 @@ const SeeAll = ({ minus, plus }) => {
               alt=""
               className="cursor-pointer"
             />
-          </div>{" "}
+          </div>
           <p
             className={
               getindex === index && openclose

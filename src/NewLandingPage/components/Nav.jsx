@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/newimages/logo.png";
 import menuicon from "../../assets/svg/menu-icon.svg";
-
+import { TfiClose } from "react-icons/tfi";
 import "../../App.css";
 const Nav = () => {
+  const [opensidenav, setopensidenav] = useState(false);
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
       <nav className="lg:flex font-lato items-center justify-between w-full hidden  py-8">
@@ -24,9 +25,44 @@ const Nav = () => {
       </nav>
       <nav className="flex font-lato items-center justify-between w-full lg:hidden h-[6rem] md:h-[8rem] ">
         {" "}
-        <img src={logo} alt="" className=" w-[16rem] md:w-[18rem] object-contain" />
-        <img src={menuicon} alt="" className="  w-[4rem]  md:w-[6rem] object-contain" />
+        <img
+          src={logo}
+          alt=""
+          className=" w-[16rem] md:w-[18rem] object-contain"
+        />
+        <img
+          onClick={() => setopensidenav(true)}
+          src={menuicon}
+          alt=""
+          className="  w-[4rem]  md:w-[6rem] object-contain"
+        />
       </nav>
+      <div
+        className={
+          opensidenav
+            ? "fixed top-0 right-0 duration-500 ease-in-out bottom-0 h-[100vh] w-[75%] sm:w-[60%] px-5 sm:px-16 md:px-20 pt-3 sm:pt-10 bg-[#F8F8F8] bg-sidenav bg-cover z-30 rounded-l-[20px] lg:hidden"
+            : "fixed top-0 right-[-100%] duration-500 ease-in-out bottom-0 h-[100vh] w-[75%] sm:w-[60%] px-5 sm:px-16 md:px-20 pt-3 sm:pt-10 bg-[#F8F8F8] bg-sidenav bg-cover z-30 rounded-l-[20px] lg:hidden"
+        }
+      >
+        <div className="flex w-full justify-between items-center relative ">
+          {/* <img src={logo} alt="" className="object-cover w-[12rem] " /> */}
+          <TfiClose
+            onClick={() => setopensidenav(false)}
+            className="text-4xl text-black mt-4 top-5 left-3 absolute"
+          />
+        </div>
+
+        <div className="flex flex-col mt-20 gap-y-10">
+          {/* Signup Button - Disabled for now*/}
+          <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" />
+          <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold">
+            Sign up
+          </button>
+          <button className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold">
+            Join waitlist
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
