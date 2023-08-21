@@ -3,6 +3,8 @@ import React from "react";
 import "../../App.css";
 
 import ape from "../../assets/apehead.png";
+
+import apemobile from "../../assets/images/apehead.png";
 import footlogo from "../../assets/footlogo.png";
 
 import facebook from "../../assets/svg/facebook.svg";
@@ -19,7 +21,12 @@ const Foot = () => {
         <img
           src={ape}
           alt=""
-          className="bottom-0 absolute object-contain rounded-l-[10rem] w-[30rem]  lg:block lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] left-[0]  lg:left-0 z-[1] "
+          className="bottom-0 absolute object-contain rounded-l-[10rem] w-[30rem] hidden  lg:block lg:w-[29.2rem] xl:w-[38.7rem] rounded-bl-[15px] lg:rounded-l-[15px] left-[0]  lg:left-0 z-[1] "
+        />
+        <img
+          src={apemobile}
+          alt=""
+          className="bottom-0 absolute object-contain  w-[16rem] lg:hidden  left-[0]  lg:left-0 z-[1] "
         />
         <div className="grid text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-[#fff]/[0.8] pt-20 h-full gap-x-10 gap-y-10 lg:gap-y-0 ">
           <div className="flex flex-col text-2xl  w-full mx-auto   lg:text-2xl text-left z-[3] gap-y-8">
