@@ -57,7 +57,7 @@ const SocialHub = () => {
             <h1 className="text-[#333333] font-semibold text-[4rem] md:text-6xl mb-10">
               Social Hub
             </h1>
-            <p className="text-[#3B513F] font-bold z-[1rem] text-[1.7rem] mb-10">
+            <p className="text-[#3B513F] font-normal z-[1rem] text-[1.7rem] mb-10">
               Connect with like-minded creators and investors in our exclusive
               online community. Showcase your projects, skills, and ideas to
               gain exposure and find potential collaborators

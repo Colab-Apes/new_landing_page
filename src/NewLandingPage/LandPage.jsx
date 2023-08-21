@@ -6,11 +6,11 @@ import SocialHub from "./components/SocialHub";
 import LearningPool from "./components/LearningPool";
 import BuildTheFuture from "./components/BuildTheFuture";
 import ValueStake from "./components/ValueStake";
-import HowItWorks from "./components/HowItWorks";
+import HowItWorks from "./components/Howitworks/HowItWorks";
 import Ready from "./components/Ready";
 import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
 import Foot from "./components/Foot";
-import Faqs from "./components/Faqs";
+import Faqs from "./components/Faqs/Faqs";
 
 const LandPage = () => {
   return (

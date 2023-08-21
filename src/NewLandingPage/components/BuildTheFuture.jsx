@@ -72,7 +72,7 @@ const BuildTheFuture = () => {
             <h1 className="text-[#333333] font-semibold text-[4rem] md:text-6xl mb-10">
               Build The Future
             </h1>
-            <p className="text-[#3B513F] font-bold z-[1rem] text-[1.7rem] mb-10">
+            <p className="text-[#3B513F]  z-[1rem] text-[1.7rem] mb-10">
               Transform your ideas into reality with our Build Feature.
               Collaborate with other talented creators, leverage the power of
               First Principle Thinking, and create innovative projects together
