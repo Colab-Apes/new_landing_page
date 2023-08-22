@@ -20,7 +20,7 @@ const ValueStake = () => {
                 Key Features:
               </p>
               <div className="flex flex-col items-center flex-wrap gap-5">
-                <div className="stuff flex items-center gap-2 bg-[#85FF91] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#85FF91] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={tickCircle} alt="frame" />
                   </div>
@@ -28,7 +28,7 @@ const ValueStake = () => {
                     Smart-contract protocol
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={lock} alt="frame" />
                   </div>
@@ -36,7 +36,7 @@ const ValueStake = () => {
                     Secure funding
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={dollarCircle} alt="frame" />
                   </div>
@@ -44,7 +44,7 @@ const ValueStake = () => {
                     Progress-based payments fraud prevention technology
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#ADE6FF] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#ADE6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={moneys} alt="frame" />
                   </div>
@@ -71,7 +71,7 @@ const ValueStake = () => {
                 Key Features:
               </p>
               <div className="flex items-center flex-wrap gap-5">
-                <div className="stuff flex items-center gap-2 bg-[#85FF91] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#85FF91] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={tickCircle} alt="frame" />
                   </div>
@@ -79,7 +79,7 @@ const ValueStake = () => {
                     Smart-contract protocol
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={lock} alt="frame" />
                   </div>
@@ -87,7 +87,7 @@ const ValueStake = () => {
                     Secure funding
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={dollarCircle} alt="frame" />
                   </div>
@@ -95,7 +95,7 @@ const ValueStake = () => {
                     Progress-based payments fraud prevention technology
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#ADE6FF] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#ADE6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={moneys} alt="frame" />
                   </div>

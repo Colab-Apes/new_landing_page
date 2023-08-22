@@ -30,7 +30,7 @@ const Hero = () => {
               {/* <span className="text-4xl font-light hidden md:inline"></span> */}
             </p>
             <div className="w-[15%] bg-primaryColor h-2 rounded-full mt-8 lg:mt-12 hidden md:block"></div>
-            <h1 className="w-full text-[3.6rem] text-center md:text-left md:text-[3rem]lg:text-[3.8rem] xl:text-[4rem] pt-10 leading-[1.8]  mt-14 text-[#054E12] font-[700] xl:font-[650] ">
+            <h1 className="w-full text-[3.6rem] text-center md:text-left md:text-[3rem]lg:text-[3.8rem] xl:text-[4rem] p leading-[1.8]  mt-14 text-[#054E12] font-[700] xl:font-[650] ">
               Unleash Your Productivity. <br /> Collaborate. Innovate.
             </h1>
             <p className="text-3xl md:text-2xl xl:text-[1.8rem] mt-14 text-[#3B513F]">
