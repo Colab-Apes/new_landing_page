@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import img1 from "../../../assets/ModalImages/sidebar.png";
 import logo from "../../../assets/ModalImages/logo.png";
 
-// import { Lock, Message } from "react-iconly";
+import { Lock, Message } from "react-iconly";
 import google from "../../../assets/ModalImages/social/Google logo.png";
 import facebook from "../../../assets/ModalImages/social/Facbook.png";
 import apple from "../../../assets/ModalImages/social/Vector.svg";
@@ -20,7 +20,7 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? "flex flex-col  w-full  lg:flex-row lg:gap-x-5  justify-center lg:justify-between h-full items-center"
+          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5  justify-center lg:justify-between h-full items-center"
           : "hidden"
       }
     >

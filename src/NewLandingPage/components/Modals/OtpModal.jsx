@@ -3,7 +3,7 @@ import otpmodal from "../../../assets/ModalImages/otpmodal.png";
 import logo from "../../../assets/ModalImages/logo.png";
 import { BsArrowLeft } from "react-icons/bs";
 // import OTPInput from "react-otp-input";
-import OtpInputField from ".";
+import OtpInputField from "../../../components/OtpInputField";
 
 const OtpModal = ({
   openOtpmodalprop,
@@ -53,7 +53,10 @@ const OtpModal = ({
         </button>
         <p className="text-xs">
           Already have an account?
-          <a className="text-[#054E12]" href="/"> Sign In</a>
+          <a className="text-[#054E12]" href="/">
+            {" "}
+            Sign In
+          </a>
         </p>
       </div>
     </div>
