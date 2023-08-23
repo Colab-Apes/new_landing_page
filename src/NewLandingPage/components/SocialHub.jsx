@@ -25,7 +25,7 @@ const SocialHub = () => {
                 Key Features:
               </p>
               <div className="flex  flex-col items-center flex-wrap gap-5 text-[#3B513F] font-bold  ">
-                <div className="stuff flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
+                <div className="flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={frame} alt="frame" />
                   </div>
@@ -33,7 +33,7 @@ const SocialHub = () => {
                     Personal profile
                   </p>
                 </div>
-                <div className="stuff  flex items-center gap-2 bg-[#C8B6FF] px-10 py-5 rounded-[10px]">
+                <div className=" flex items-center gap-2 bg-[#C8B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={monitor} alt="frame" />
                   </div>
@@ -41,7 +41,7 @@ const SocialHub = () => {
                     Project showcase
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFFC84] px-10 py-5 rounded-[10px]">
+                <div className=" flex items-center gap-2 bg-[#FFFC84] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={global} alt="frame" />
                   </div>
@@ -53,7 +53,7 @@ const SocialHub = () => {
             </div>
           </div>
 
-          <div className="feat-info text-center  md:text-left w-full md:w-[40%]">
+          <div className="f text-center  md:text-left w-full md:w-[40%]">
             <h1 className="text-[#333333] font-semibold text-[4rem] md:text-6xl mb-10">
               Social Hub
             </h1>
@@ -67,7 +67,7 @@ const SocialHub = () => {
                 Key Features:
               </p>
               <div className="flex items-center flex-wrap gap-10">
-                <div className="stuff flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
+                <div className=" flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={frame} alt="frame" />
                   </div>
@@ -75,7 +75,7 @@ const SocialHub = () => {
                     Personal profile
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#C8B6FF] px-10 py-5 rounded-[10px]">
+                <div className=" flex items-center gap-2 bg-[#C8B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={monitor} alt="frame" />
                   </div>
@@ -83,7 +83,7 @@ const SocialHub = () => {
                     Project showcase
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFFC84] px-10 py-5 rounded-[10px]">
+                <div className="flex items-center gap-2 bg-[#FFFC84] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={global} alt="frame" />
                   </div>

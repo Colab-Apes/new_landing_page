@@ -40,7 +40,7 @@ const BuildTheFuture = () => {
                     Project collaboration
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#C0FFCE] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#C0FFCE] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={mouseCircle} alt="frame" />
                   </div>
@@ -48,7 +48,7 @@ const BuildTheFuture = () => {
                     Project tracking
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFFB6B] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FFFB6B] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={map} alt="frame" />
                   </div>
@@ -56,7 +56,7 @@ const BuildTheFuture = () => {
                     First principle roadmap
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={locationSlash} alt="frame" />
                   </div>
@@ -82,7 +82,7 @@ const BuildTheFuture = () => {
                 Key Features:
               </p>
               <div className=" flex items-center flex-wrap gap-5">
-                <div className="stuff flex items-center gap-2 bg-[#FFD6BF] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FFD6BF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={repeatCircle} alt="frame" />
                   </div>
@@ -90,7 +90,7 @@ const BuildTheFuture = () => {
                     Project collaboration
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#C0FFCE] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#C0FFCE] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={mouseCircle} alt="frame" />
                   </div>
@@ -98,7 +98,7 @@ const BuildTheFuture = () => {
                     Project tracking
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#FFFB6B] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#FFFB6B] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={map} alt="frame" />
                   </div>
@@ -106,7 +106,7 @@ const BuildTheFuture = () => {
                     First principle roadmap
                   </p>
                 </div>
-                <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-lg">
+                <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
                     <img src={locationSlash} alt="frame" />
                   </div>
