@@ -14,7 +14,7 @@ const Hero = () => {
         //   backgroundImage: `url(${bg1mobile})`,
         // }}
         className={
-          "pb-20 px-4  md:px-10 lg:px-20 pt-28 bg-[url('./assets/bg/bg1mobile.jpg')] md:bg-[url('./assets/bg/bg1desktop.jpg')]"
+          "pb-20 px-4  md:px-10 lg:px-20 pt-10 bg-[url('./assets/bg/bg1mobile.jpg')] md:bg-[url('./assets/bg/bg1desktop.jpg')]"
         }
       >
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
