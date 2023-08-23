@@ -66,7 +66,13 @@ const Nav = ({ changeValue }) => {
         <div className="flex flex-col mt-20 gap-y-10">
           {/* Signup Button - Disabled for now*/}
           <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" />
-          <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold">
+          <button
+            onClick={() => {
+              setopensidenav(false);
+              changeValue(true);
+            }}
+            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold"
+          >
             Sign up
           </button>
           <button className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold">

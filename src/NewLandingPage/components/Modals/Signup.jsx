@@ -21,22 +21,25 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[6rem]  justify-center lg:justify-between h-full items-center"
+          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[6rem] px-4  justify-center lg:justify-between h-full items-center"
           : "hidden"
       }
     >
-      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[40px] ">
-        <img src={img1} alt="" className=" object-fill lg:rounded-[40px] " />
+      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
+        <img src={img1} alt="" className=" object-cover lg:rounded-[40px] " />
       </div>
       <div className="flex flex-col h w-full justify-evenly h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
         <div className=" flex flex-col justify-center items-center">
           <img
             src={logo}
             alt=""
-            className="w-[5rem] sm:w-[6rem] xl:w-[8rem] object-contain "
+            className="w-[12rem] sm:w-[6rem] xl:w-[8.5rem] object-contain "
           />
+          <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
+            Sign up to Get Started
+          </p>
         </div>
-        <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
+        <p className="text-[#555555] font-bold text-lg text-center hidden lg:block mt-0 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
           Sign up to Get Started
         </p>
         <form
@@ -45,7 +48,7 @@ const Signup = ({
             setopensignupmodalprop(false);
             setopenOtpmodalprop(true);
           }}
-          className="w-full  flex flex-col justify-between gap-y-4 mt-2 md:gap-y-4 text-sm"
+          className="w-full  flex flex-col justify-between gap-y-10 mt-2 md:gap-y-4 text-sm"
           action=""
         >
           <div className="relative   ">
@@ -63,7 +66,7 @@ const Signup = ({
             <input
               type="email"
               id="emaile"
-              className="w-full pl-11 h-[3.8rem] text-xl  bg-[#FFFFFF] xl:mt-4 rounded-[5px] font-lato px-10 mt-1 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+              className="w-full pl-11 h-[4.5rem] md:h-[3.8rem] text-xl  bg-[#FFFFFF] xl:mt-4 rounded-[5px] font-lato px-10 mt-1 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
               placeholder="johndoe@email.com"
             />
           </div>
@@ -81,7 +84,7 @@ const Signup = ({
             <input
               type={isPasswordVisible ? "text" : "password"}
               id="password"
-              className="w-full pl-11 h-[3.8rem]  text-xl bg-[#FFFFFF] xl:mt-4 rounded-[5px] px-10 mt-1 border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
+              className="w-full pl-11 h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] xl:mt-4 rounded-[5px] px-10 mt-1 border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
               placeholder="● ● ● ● ● ● "
             />
 
@@ -98,7 +101,7 @@ const Signup = ({
             )}
           </div>
 
-          <div className="flex items-start gap-x-3 mt-0  lg:mt-1 font-normal text-sm xl:text-xl">
+          <div className="flex items-start gap-x-3 mt-0  lg:mt-1 font-normal text-2xl xl:text-xl">
             <input
               type="checkbox"
               className="accent-[#3B8004] hover:accent-[#3B8004] font-lato"
@@ -110,7 +113,7 @@ const Signup = ({
               <span className="underline text-[#3B8004]">Privacy Policy</span>
             </p>
           </div>
-          <button className="font-bold xl:text-xl btngrad rounded-[10px] h-[2.6rem] xl:h-[4rem] lg:mt-3  text-white ">
+          <button className="font-bold xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white ">
             Verify email
           </button>
         </form>{" "}
