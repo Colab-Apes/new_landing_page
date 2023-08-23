@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img1 from "../../../assets/ModalImages/sidebar.png";
-import logo from "../../../assets/ModalImages/logo.png";
+import logo from "../../../assets/newimages/logo.png";
 
 import { Lock, Message } from "react-iconly";
 import google from "../../../assets/ModalImages/social/Google logo.png";
@@ -32,9 +32,9 @@ const Signup = ({
           <img
             src={logo}
             alt=""
-            className="w-[5rem] sm:w-[6rem] object-contain "
+            className="w-[5rem] sm:w-[6rem] xl:w-[15rem] object-contain "
           />
-          <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-1">
+          <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-1 xl:mt-4 xl:text-[1.5rem]">
             Sign up to Get Started
           </p>
         </div>
@@ -56,13 +56,13 @@ const Signup = ({
                 className="inset-y-[2rem] left-1 absolute px-[0.2rem] "
               />
             </span>
-            <label htmlFor="emaile" className="block font-bold">
+            <label htmlFor="emaile" className="block font-bold text-xl">
               Email
             </label>
             <input
               type="email"
               id="emaile"
-              className="w-full py-2 bg-[#FFFFFF] rounded-[5px] font-lato px-8 mt-1 border focus:border-[#3B8004] border-[#999999] focus:outline-none"
+              className="w-full py-4  bg-[#FFFFFF] rounded-[5px] font-lato px-8 mt-1 border focus:border-[#3B8004] border-[#999999] focus:outline-none"
               placeholder="johndoe@email.com"
             />
           </div>
@@ -74,25 +74,25 @@ const Signup = ({
                 className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
               />
             </span>
-            <label htmlFor="password" className="block font-bold">
+            <label htmlFor="password" className="block font-bold text-xl">
               Create password
             </label>
             <input
               type={isPasswordVisible ? "text" : "password"}
               id="password"
-              className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:border-[#3B8004] focus:outline-none"
+              className="w-full py-4 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:border-[#3B8004] focus:outline-none"
               placeholder="● ● ● ● ● ● "
             />
 
             {isPasswordVisible ? (
               <MdOutlineVisibilityOff
                 onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                className="absolute inset-y-[4rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
               />
             ) : (
               <MdOutlineVisibility
                 onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                className="absolute inset-y-[2.5rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
               />
             )}
           </div>

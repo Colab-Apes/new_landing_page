@@ -29,7 +29,7 @@ const Overlay = ({ value, changeValue }) => {
       <div
         className={
           value
-            ? " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-center h-[33rem]  w-full py-4  sm:pb-0 md:py-4  lg:py-4  sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[34.5rem] xl:w-[56rem]   md:w-full      px-4 sm:px-8 md:px-[3rem] opacity-100  relative duration-[800ms] ease-in-out"
+            ? " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-center h-[33rem]  w-full py-4  sm:pb-0 md:py-4  lg:py-4  sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[50rem] xl:w-[80rem]  md:w-full  px-4 sm:px-8 md:px-[3rem] opacity-100  relative duration-[800ms] ease-in-out"
             : " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-center h-[33rem] w-full py-4  sm:pb-0  md:py-4 lg:py-4 sm:h-[35rem]  lg:h-[32rem] lg:w-[54rem] xl:h-[34.5rem] xl:w-[56rem]   px-4 sm:px-8 md:px-[3rem] opacity-0  relative duration-[100ms] ease-in-out"
         }
       >
@@ -45,7 +45,7 @@ const Overlay = ({ value, changeValue }) => {
             setopenverifiedmodal(false);
             setopenOtpmodal(false);
           }}
-          className="text-2xl lg:text-xl xl:text-lg text-[#999999] font-bold cursor-pointer absolute right-6 top-6  md:top-8 lg:top-6 md:right-8 lg:right-10 "
+          className="text-2xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer absolute right-6 top-6  md:top-8 lg:top-6 md:right-8 lg:right-10 "
         />
 
         <Signup
