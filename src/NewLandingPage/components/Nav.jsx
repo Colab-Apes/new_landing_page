@@ -3,7 +3,7 @@ import logo from "../../assets/newimages/logo.png";
 import menuicon from "../../assets/svg/menu-icon.svg";
 import { TfiClose } from "react-icons/tfi";
 import "../../App.css";
-const Nav = () => {
+const Nav = ({ changeValue }) => {
   const [opensidenav, setopensidenav] = useState(false);
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
@@ -15,7 +15,10 @@ const Nav = () => {
           <p>Create project</p>
         </div>
         <div className="flex gap-10">
-          <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold">
+          <button
+            onClick={() => changeValue(true)}
+            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold"
+          >
             Sign up
           </button>
           <button className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold">
@@ -24,7 +27,6 @@ const Nav = () => {
         </div>
       </nav>
       <nav className="flex font-lato fixed bg-[#ECF8EE]/[20%]  left-0 items-center  px-4 justify-between w-full lg:hidden h-[6rem] md:h-[8rem] z-[90]">
-        {" "}
         <img
           src={logo}
           alt=""

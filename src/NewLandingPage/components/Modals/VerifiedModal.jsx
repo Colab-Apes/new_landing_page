@@ -1,13 +1,13 @@
 import React from "react";
 // import img from "../../assets/ModalImages/authbg.png";
-import verifiedmodal from "../../assets/ModalImages/verifiedmodal.png";
-import logo from "../../assets/ModalImages/logo.png";
+import verifiedmodal from "../../../assets/ModalImages/verifiedmodal.png";
+import logo from "../../../assets/ModalImages/logo.png";
 
 const VerifiedModal = ({ openverifiedmodalprop }) => {
   return (
     <div
       className={
-        openverifiedmodalprop ? "grid lg:grid-cols-2 gap-x-10  " : "hidden"
+        openverifiedmodalprop ? "grid lg:grid-cols-2 gap-x-10" : "hidden"
       }
     >
       <img

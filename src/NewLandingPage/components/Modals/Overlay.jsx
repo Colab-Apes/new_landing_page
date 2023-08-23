@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Signup from "./Signup";
 import OtpModal from "./OtpModal";
-import img from "../../assets/ModalImages/authbg.png";
+import img from "../../../assets/ModalImages/authbg.png";
 
 import { TfiClose } from "react-icons/tfi";
 import VerifiedModal from "./VerifiedModal";

@@ -11,12 +11,26 @@ import Ready from "./components/Ready";
 import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
 import Foot from "./components/Foot";
 import Faqs from "./components/Faqs/Faqs";
+import Overlay from "./components/Modals/Overlay";
 
 const LandPage = () => {
+  const [isModal, setisModal] = useState(false);
+
+  useEffect(() => {
+    const safeDocument = typeof document !== "undefined" ? document : {};
+    const { body } = safeDocument;
+    if (isModal) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "";
+    }
+  }, [isModal]);
+
   return (
     <div className=" font-lato">
+      <Overlay value={isModal} changeValue={setisModal} />
       {/* Nav */}
-      <Nav />
+      <Nav changeValue={setisModal} />
       {/* Hero */}
       <Hero />
       {/* SocialHub */}

@@ -19,7 +19,6 @@ const SeeAll = ({ minus, plus }) => {
               setgetindex(index);
               let val = index;
               val === index ? setopenclose(!openclose) : "";
-
               console.log("getindex" + getindex);
               console.log("index" + index);
             }}

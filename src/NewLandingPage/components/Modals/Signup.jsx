@@ -20,7 +20,7 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? "flex flex-col  w-full  lg:flex-row lg:gap-x-5  justify-center lg:justify-between h-full items-center   "
+          ? "flex flex-col  w-full  lg:flex-row lg:gap-x-5  justify-center lg:justify-between h-full items-center"
           : "hidden"
       }
     >
