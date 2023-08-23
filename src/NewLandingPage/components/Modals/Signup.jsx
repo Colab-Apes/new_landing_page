@@ -48,7 +48,7 @@ const Signup = ({
             setopensignupmodalprop(false);
             setopenOtpmodalprop(true);
           }}
-          className="w-full  flex flex-col justify-between gap-y-10 mt-2 md:gap-y-4 text-sm"
+          className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 text-sm"
           action=""
         >
           <div className="relative   ">
@@ -66,8 +66,9 @@ const Signup = ({
             <input
               type="email"
               id="emaile"
-              className="w-full pl-11 h-[4.5rem] md:h-[3.8rem] text-xl  bg-[#FFFFFF] xl:mt-4 rounded-[5px] font-lato px-10 mt-1 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+              className="w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
               placeholder="johndoe@email.com"
+              required
             />
           </div>
           <div className="relative   md:mt-0 lg:mt-4">
@@ -84,8 +85,9 @@ const Signup = ({
             <input
               type={isPasswordVisible ? "text" : "password"}
               id="password"
-              className="w-full pl-11 h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] xl:mt-4 rounded-[5px] px-10 mt-1 border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
+              className="w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
               placeholder="● ● ● ● ● ● "
+              required
             />
 
             {isPasswordVisible ? (
@@ -113,30 +115,30 @@ const Signup = ({
               <span className="underline text-[#3B8004]">Privacy Policy</span>
             </p>
           </div>
-          <button className="font-bold xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white ">
+          <button className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white ">
             Verify email
           </button>
         </form>{" "}
-        <p className="text-[#999999] text-center text-sm mt-4 lg:text-lg">
+        <p className="text-[#999999] text-lg text-center mt-8 lg:mt-4 lg:text-lg">
           Or Continue with
         </p>
         <div className="flex flex-col w-full  md:mt-0 lg:mt-4">
           <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-0  xl:gap-x-6 lg:mt-0">
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+            <div className="flex justify-center cursor-pointer items-center h-[4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border xl:border-2 only:border-solid border-[#DDDDDD] rounded-[10px]">
               <img src={google} alt="" className="w-[1.6rem] object-contain" />
             </div>{" "}
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]   sm:w-[6rem] border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+            <div className="flex justify-center cursor-pointer items-center h-[4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]   sm:w-[6rem] border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
               <img
                 src={facebook}
                 alt=""
                 className="w-[1.6rem] object-contain"
               />
             </div>{" "}
-            <div className="flex justify-center  cursor-pointer items-center h-[2.4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+            <div className="flex justify-center  cursor-pointer items-center h-[4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
               <img src={apple} alt="" className="w-[1.6rem] object-contain" />
             </div>
           </div>
-          <div className="mt-2  md:mt-8 lg:mt-4 xl:mt-6 text-sm">
+          <div className="mt-20  text-lg   md:mt-8 lg:mt-4 xl:mt-6 ">
             <p className="flex justify-center items-center text-center lg:text-lg">
               <span className="text-[#999999]">Already have an account?</span>
               <p

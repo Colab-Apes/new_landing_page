@@ -22,14 +22,14 @@ const Overlay = ({ value, changeValue }) => {
     <div
       className={
         value
-          ? "bg-[#000]/[25%] fixed h-screen z-[120] xl:px-[18vw]  w-full   px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
+          ? "bg-[#000]/[25%] fixed h-screen z-[120] xl:px-[18vw]  w-full   px-8 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
           : "bg-[#000]/[25%] fixed h-screen w-full z-[-100] opacity-0 px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato  duration-300 ease-in-out"
       }
     >
       <div
         className={
           value
-            ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee min-h-[60rem] r  w-full py-0  sm:pb-0 md:py-4  lg:py-4   sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[86vh] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3rem]  relative duration-[800ms] ease-in-out"
+            ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4  lg:py-4   sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[86vh] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3rem]  relative duration-[800ms] ease-in-out"
             : " rounded-2xl lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-center h-[33rem] w-full py-4  sm:pb-0  md:py-4 lg:py-4 sm:h-[35rem]  lg:h-[32rem] lg:w-[54rem] xl:h-[34.5rem] xl:w-[56rem]   px-4 sm:px-8 md:px-[3rem] opacity-0  relative duration-[100ms] ease-in-out"
         }
       >
@@ -45,7 +45,7 @@ const Overlay = ({ value, changeValue }) => {
             setopenverifiedmodal(false);
             setopenOtpmodal(false);
           }}
-          className="text-2xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-6 top-6  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
+          className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
         />
 
         <Signup
