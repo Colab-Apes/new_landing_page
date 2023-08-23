@@ -98,7 +98,7 @@ const Signup = ({
             )}
           </div>
 
-          <div className="flex items-start gap-x-3 mt-0  lg:mt-4 font-normal text-sm">
+          <div className="flex items-start gap-x-3 mt-0  lg:mt-4 font-normal text-sm xl:text-xl">
             <input
               type="checkbox"
               className="accent-[#3B8004] hover:accent-[#3B8004] font-lato"
@@ -110,7 +110,7 @@ const Signup = ({
               <span className="underline text-[#3B8004]">Privacy Policy</span>
             </p>
           </div>
-          <button className="font-semibold btngrad rounded-[10px] h-[2.6rem] lg:mt-4  text-white ">
+          <button className="font-bold xl:text-xl btngrad rounded-[10px] h-[2.6rem] xl:h-[4rem] lg:mt-4  text-white ">
             Verify email
           </button>
         </form>{" "}
