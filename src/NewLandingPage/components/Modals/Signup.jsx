@@ -20,10 +20,8 @@ const Signup = ({
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   const formik = useFormik({
     initialValues: {
-      firstname: "",
-      lastname: "",
-      email: "",
-      message: "",
+      e_mail: "",
+      password: "",
     },
     validationSchema: signupValidation,
     onSubmit: (values) => {
@@ -60,6 +58,7 @@ const Signup = ({
             e.preventDefault();
             setopensignupmodalprop(false);
             setopenOtpmodalprop(true);
+            formik.handleSubmit();
           }}
           className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 text-sm"
           action=""
@@ -78,11 +77,22 @@ const Signup = ({
             </label>
             <input
               type="email"
-              id="emaile"
-              className="w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+              id="e_mail"
+              className={
+                formik.errors.e_mail && formik.touched.e_mail
+                  ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
+                  : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+              }
               placeholder="johndoe@email.com"
-              required
+              onChange={formik.handleChange}
+              value={formik.values.e_mail}
+              onBlur={formik.handleBlur}
             />
+            {formik.errors.e_mail && formik.touched.e_mail ? (
+              <p className="text-red-500 text-xl">{formik.errors.e_mail}</p>
+            ) : (
+              ""
+            )}
           </div>
           <div className="relative   md:mt-0 lg:mt-4">
             <span>
@@ -98,9 +108,15 @@ const Signup = ({
             <input
               type={isPasswordVisible ? "text" : "password"}
               id="password"
-              className="w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
-              placeholder="● ● ● ● ● ● "
-              required
+              className={
+                formik.errors.password && formik.touched.password
+                  ? "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-red-500 focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                  : "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
+              }
+              placeholder="● ● ● ● ● ● ●"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+              onBlur={formik.handleBlur}
             />
 
             {isPasswordVisible ? (
@@ -113,6 +129,11 @@ const Signup = ({
                 onClick={() => setisPasswordVisible(!isPasswordVisible)}
                 className="absolute inset-y-[3.6rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
               />
+            )}
+            {formik.errors.password && formik.touched.password ? (
+              <p className="text-red-500 text-xl ">{formik.errors.password}</p>
+            ) : (
+              ""
             )}
           </div>
 
