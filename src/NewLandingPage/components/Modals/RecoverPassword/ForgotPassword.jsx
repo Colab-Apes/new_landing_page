@@ -2,7 +2,7 @@ import React from "react";
 
 import password from "../../../../assets/ModalImages/password.png";
 import logo from "../../../../assets/ModalImages/logo.png";
-import { Message } from "react-iconly";
+// import { Message } from "react-iconly";
 const ForgotPassword = ({ forgotpasswordprop, setforgotpasswordprop }) => {
   return (
     <div
