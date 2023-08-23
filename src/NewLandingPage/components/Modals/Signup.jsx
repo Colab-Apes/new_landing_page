@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img1 from "../../../assets/ModalImages/sidebar.png";
-import logo from "../../../assets/newimages/logo.png";
+import logo from "../../../assets/ModalImages/logo.png";
 
 import { Lock, Message } from "react-iconly";
 import google from "../../../assets/ModalImages/social/Google logo.png";
@@ -25,7 +25,7 @@ const Signup = ({
           : "hidden"
       }
     >
-      <div className="w-full h-full lg:flex  justify-center hidden   lg:py-5 lg:rounded-[40px] ">
+      <div className="w-full h-full lg:flex  justify-center hidden   lg:py-5  lg:rounded-[40px] ">
         <img src={img1} alt="" className=" object-cover lg:rounded-[40px] " />
       </div>
       <div className="flex flex-col  w-full justify-evenly h-full items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
@@ -33,9 +33,9 @@ const Signup = ({
           <img
             src={logo}
             alt=""
-            className="w-[5rem] sm:w-[6rem] xl:w-[15rem] object-contain "
+            className="w-[5rem] sm:w-[6rem] xl:w-[10rem] object-contain "
           />
-          <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-1 xl:mt-4 xl:text-[1.5rem]">
+          <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-1 xl:mt-10 xl:text-[1.5rem]">
             Sign up to Get Started
           </p>
         </div>

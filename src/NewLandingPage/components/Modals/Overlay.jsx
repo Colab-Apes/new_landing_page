@@ -22,21 +22,21 @@ const Overlay = ({ value, changeValue }) => {
     <div
       className={
         value
-          ? "bg-[#000]/[25%] fixed h-screen z-[120]   w-full   px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
+          ? "bg-[#000]/[25%] fixed h-screen z-[120] xl:px-[20vw]  w-full   px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
           : "bg-[#000]/[25%] fixed h-screen w-full z-[-100] opacity-0 px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato  duration-300 ease-in-out"
       }
     >
       <div
         className={
           value
-            ? " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee h-[33rem]  w-full py-4  sm:pb-0 md:py-4  lg:py-4  sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[52rem] xl:w-[78rem]  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-10  relative duration-[800ms] ease-in-out"
+            ? " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee h-[33rem]  w-full py-4  sm:pb-0 md:py-4  lg:py-4  sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[58rem] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-10  relative duration-[800ms] ease-in-out"
             : " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-center h-[33rem] w-full py-4  sm:pb-0  md:py-4 lg:py-4 sm:h-[35rem]  lg:h-[32rem] lg:w-[54rem] xl:h-[34.5rem] xl:w-[56rem]   px-4 sm:px-8 md:px-[3rem] opacity-0  relative duration-[100ms] ease-in-out"
         }
       >
         <img
           src={img}
           alt=""
-          className="bg-cover h-full w-full fixed top-0 left-0 z-[-1]  rounded-2xl lg:rounded-[40px] hidden lg:block"
+          className="bg-cover h-full  w-full fixed top-0 left-0 z-[-1]  rounded-2xl lg:rounded-[40px] hidden lg:block"
         />
         <TfiClose
           onClick={() => {
@@ -45,7 +45,7 @@ const Overlay = ({ value, changeValue }) => {
             setopenverifiedmodal(false);
             setopenOtpmodal(false);
           }}
-          className="text-2xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer absolute right-6 top-6  md:top-8 lg:top-6 md:right-8 lg:right-10 "
+          className="text-2xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer absolute right-6 top-6  md:top-8 lg:top-6 xl:top-10 md:right-8 lg:right-10 "
         />
 
         <Signup
