@@ -23,7 +23,7 @@ const Overlay = ({ value, changeValue }) => {
       className={
         value
           ? "bg-[#000]/[25%] fixed h-screen z-[120]   w-full   px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
-          : "bg-[#000]/[25%] fixed h-screen w-full z-[-1] px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato  duration-300 ease-in-out"
+          : "bg-[#000]/[25%] fixed h-screen w-full z-[-100] opacity-0 px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato  duration-300 ease-in-out"
       }
     >
       <div
