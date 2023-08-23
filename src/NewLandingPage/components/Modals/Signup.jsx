@@ -21,7 +21,7 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5  justify-center lg:justify-between h-full items-center"
+          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[5.6rem]  justify-center lg:justify-between h-full items-center"
           : "hidden"
       }
     >
@@ -54,7 +54,7 @@ const Signup = ({
               <Message
                 set="curved"
                 primaryColor="#999999"
-                className="inset-y-[2.5rem] left-1 absolute px-[0.2rem] "
+                className="inset-y-[3.5rem] left-1 absolute px-[0.2rem] "
               />
             </span>
             <label htmlFor="emaile" className="block font-bold text-xl">
@@ -63,7 +63,7 @@ const Signup = ({
             <input
               type="email"
               id="emaile"
-              className="w-full py-4  bg-[#FFFFFF] rounded-[5px] font-lato px-10 mt-1 border focus:border-[#3B8004] border-[#999999] focus:outline-none"
+              className="w-full pl-11 h-[3.8rem] text-xl  bg-[#FFFFFF] xl:mt-4 rounded-[5px] font-lato px-10 mt-1 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
               placeholder="johndoe@email.com"
             />
           </div>
@@ -72,7 +72,7 @@ const Signup = ({
               <Lock
                 set="curved"
                 primaryColor="#999999"
-                className="absolute inset-y-[2.5rem] left-1 px-[0.2rem]"
+                className="absolute inset-y-[3.5rem] left-1 px-[0.2rem]"
               />
             </span>
             <label htmlFor="password" className="block font-bold text-xl">
@@ -81,24 +81,24 @@ const Signup = ({
             <input
               type={isPasswordVisible ? "text" : "password"}
               id="password"
-              className="w-full py-4 bg-[#FFFFFF] rounded-[5px] px-10 mt-1 border border-[#999999] focus:border-[#3B8004] focus:outline-none"
+              className="w-full pl-11 h-[3.8rem]  text-xl bg-[#FFFFFF] xl:mt-4 rounded-[5px] px-10 mt-1 border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
               placeholder="● ● ● ● ● ● "
             />
 
             {isPasswordVisible ? (
               <MdOutlineVisibilityOff
                 onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2.5rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
+                className="absolute inset-y-[3.6rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
               />
             ) : (
               <MdOutlineVisibility
                 onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2.5rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
+                className="absolute inset-y-[3.6rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
               />
             )}
           </div>
 
-          <div className="flex items-start gap-x-3 mt-0  lg:mt-4 font-normal text-sm xl:text-xl">
+          <div className="flex items-start gap-x-3 mt-0  lg:mt-2 font-normal text-sm xl:text-xl">
             <input
               type="checkbox"
               className="accent-[#3B8004] hover:accent-[#3B8004] font-lato"
@@ -114,23 +114,27 @@ const Signup = ({
             Verify email
           </button>
         </form>{" "}
-        <p className="text-[#999999] text-center text-sm mt-2">
+        <p className="text-[#999999] text-center text-sm mt-2 lg:text-base">
           Or Continue with
         </p>
         <div className="flex flex-col w-full  md:mt-0 lg:mt-0">
-          <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-0  lg:mt-0">
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-full  sm:w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
-              <img src={google} alt="" />
+          <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-0  xl:gap-x-6 lg:mt-0">
+            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+              <img src={google} alt="" className="w-[1.6rem] object-contain" />
             </div>{" "}
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-full  sm:w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
-              <img src={facebook} alt="" />
+            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]   sm:w-[6rem] border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+              <img
+                src={facebook}
+                alt=""
+                className="w-[1.6rem] object-contain"
+              />
             </div>{" "}
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-full  sm:w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
-              <img src={apple} alt="" />
+            <div className="flex justify-center  cursor-pointer items-center h-[2.4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+              <img src={apple} alt="" className="w-[1.6rem] object-contain" />
             </div>
           </div>
           <div className="mt-2  md:mt-8 lg:mt-4 text-sm">
-            <p className=" text-center">
+            <p className="flex justify-center text-center lg:text-base">
               <span className="text-[#999999]">Already have an account?</span>
               <p
                 onClick={() => {
