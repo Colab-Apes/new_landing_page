@@ -22,14 +22,14 @@ const Overlay = ({ value, changeValue }) => {
     <div
       className={
         value
-          ? "bg-[#000]/[25%] fixed h-screen z-[120] xl:px-[20vw]  w-full   px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
+          ? "bg-[#000]/[25%] fixed h-screen z-[120] xl:px-[18vw]  w-full   px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
           : "bg-[#000]/[25%] fixed h-screen w-full z-[-100] opacity-0 px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato  duration-300 ease-in-out"
       }
     >
       <div
         className={
           value
-            ? " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee h-[33rem]  w-full py-4  sm:pb-0 md:py-4  lg:py-4  sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[58rem] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-10  relative duration-[800ms] ease-in-out"
+            ? " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee h-[33rem]  w-full py-4  sm:pb-0 md:py-4  lg:py-4  sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[89vh] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-20  relative duration-[800ms] ease-in-out"
             : " rounded-2xl lg:rounded-[40px] z-[120]   bg-[#F5FFF7] flex items-center justify-center h-[33rem] w-full py-4  sm:pb-0  md:py-4 lg:py-4 sm:h-[35rem]  lg:h-[32rem] lg:w-[54rem] xl:h-[34.5rem] xl:w-[56rem]   px-4 sm:px-8 md:px-[3rem] opacity-0  relative duration-[100ms] ease-in-out"
         }
       >

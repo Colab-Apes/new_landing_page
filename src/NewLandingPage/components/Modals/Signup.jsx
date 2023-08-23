@@ -21,31 +21,31 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[5.6rem]  justify-center lg:justify-between h-full items-center"
+          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[6rem]  justify-center lg:justify-between h-full items-center"
           : "hidden"
       }
     >
-      <div className="w-full h-full lg:flex  justify-center hidden   lg:py-5  lg:rounded-[40px] ">
-        <img src={img1} alt="" className=" object-cover lg:rounded-[40px] " />
+      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[40px] ">
+        <img src={img1} alt="" className=" object-fill lg:rounded-[40px] " />
       </div>
-      <div className="flex flex-col  w-full justify-evenly h-full items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
+      <div className="flex flex-col h w-full justify-evenly h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
         <div className=" flex flex-col justify-center items-center">
           <img
             src={logo}
             alt=""
-            className="w-[5rem] sm:w-[6rem] xl:w-[10rem] object-contain "
+            className="w-[5rem] sm:w-[6rem] xl:w-[8rem] object-contain "
           />
-          <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-1 xl:mt-10 xl:text-[1.5rem]">
-            Sign up to Get Started
-          </p>
         </div>
+        <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
+          Sign up to Get Started
+        </p>
         <form
           onSubmit={(e) => {
             e.preventDefault();
             setopensignupmodalprop(false);
             setopenOtpmodalprop(true);
           }}
-          className="w-full relative flex flex-col justify-between gap-y-4 mt-2 md:gap-y-4 text-sm"
+          className="w-full  flex flex-col justify-between gap-y-4 mt-2 md:gap-y-4 text-sm"
           action=""
         >
           <div className="relative   ">
@@ -98,7 +98,7 @@ const Signup = ({
             )}
           </div>
 
-          <div className="flex items-start gap-x-3 mt-0  lg:mt-2 font-normal text-sm xl:text-xl">
+          <div className="flex items-start gap-x-3 mt-0  lg:mt-1 font-normal text-sm xl:text-xl">
             <input
               type="checkbox"
               className="accent-[#3B8004] hover:accent-[#3B8004] font-lato"
@@ -106,18 +106,18 @@ const Signup = ({
             <p className="text-[#999999]">
               By registering, you are agreeing with our{" "}
               <span className="underline text-[#3B8004]">Terms of Use </span>
-              and{" "}
+              and
               <span className="underline text-[#3B8004]">Privacy Policy</span>
             </p>
           </div>
-          <button className="font-bold xl:text-xl btngrad rounded-[10px] h-[2.6rem] xl:h-[4rem] lg:mt-4  text-white ">
+          <button className="font-bold xl:text-xl btngrad rounded-[10px] h-[2.6rem] xl:h-[4rem] lg:mt-3  text-white ">
             Verify email
           </button>
         </form>{" "}
-        <p className="text-[#999999] text-center text-sm mt-2 lg:text-base">
+        <p className="text-[#999999] text-center text-sm mt-4 lg:text-lg">
           Or Continue with
         </p>
-        <div className="flex flex-col w-full  md:mt-0 lg:mt-0">
+        <div className="flex flex-col w-full  md:mt-0 lg:mt-4">
           <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-0  xl:gap-x-6 lg:mt-0">
             <div className="flex justify-center cursor-pointer items-center h-[2.4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border-2 border-solid border-[#DDDDDD] rounded-[10px]">
               <img src={google} alt="" className="w-[1.6rem] object-contain" />
@@ -133,8 +133,8 @@ const Signup = ({
               <img src={apple} alt="" className="w-[1.6rem] object-contain" />
             </div>
           </div>
-          <div className="mt-2  md:mt-8 lg:mt-4 text-sm">
-            <p className="flex justify-center text-center lg:text-base">
+          <div className="mt-2  md:mt-8 lg:mt-4 xl:mt-6 text-sm">
+            <p className="flex justify-center items-center text-center lg:text-lg">
               <span className="text-[#999999]">Already have an account?</span>
               <p
                 onClick={() => {
