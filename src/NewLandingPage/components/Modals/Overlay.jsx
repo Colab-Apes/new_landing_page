@@ -29,8 +29,8 @@ const Overlay = ({ value, changeValue }) => {
       <div
         className={
           value
-            ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4  lg:py-4   sm:h-[35rem] lg:h-[32rem] lg:w-[54rem] xl:h-[86vh] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3rem]  relative duration-[800ms] ease-in-out"
-            : " rounded-2xl lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-center h-[33rem] w-full py-4  sm:pb-0  md:py-4 lg:py-4 sm:h-[35rem]  lg:h-[32rem] lg:w-[54rem] xl:h-[34.5rem] xl:w-[56rem]   px-4 sm:px-8 md:px-[3rem] opacity-0  relative duration-[100ms] ease-in-out"
+            ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4  lg:py-4   sm:min-h-[35rem] lg:min-h-[32rem] lg:w-[54rem] xl:min-h-[86vh] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3rem]  relative duration-[800ms] ease-in-out"
+            : ""
         }
       >
         <img

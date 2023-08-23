@@ -8,6 +8,8 @@ import facebook from "../../../assets/ModalImages/social/Facbook.png";
 import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
+import { useFormik } from "formik";
+import { signupValidation } from "../../../Validation/signupValidation";
 
 const Signup = ({
   setopenOtpmodalprop,
@@ -16,7 +18,18 @@ const Signup = ({
   setsigninmodalprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
-
+  const formik = useFormik({
+    initialValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: signupValidation,
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
   return (
     <div
       className={
@@ -35,11 +48,11 @@ const Signup = ({
             alt=""
             className="w-[12rem] sm:w-[6rem] xl:w-[8.5rem] object-contain "
           />
-          <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
+          <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-5 xl:text-[1.5rem]">
             Sign up to Get Started
           </p>
         </div>
-        <p className="text-[#555555] font-bold text-lg text-center hidden lg:block mt-0 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
+        <p className="text-[#555555] font-bold  text-lg text-center hidden lg:block mt-0 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
           Sign up to Get Started
         </p>
         <form
