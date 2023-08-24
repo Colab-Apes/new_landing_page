@@ -18,11 +18,9 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
           : "hidden"
       }
     >
-      <img
-        src={img1}
-        alt=""
-        className=" object-cover hidden lg:block lg:h-[30rem] xl:h-[30rem] rounded-2xl"
-      />
+      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
+        <img src={img1} alt="" className=" object-cover lg:rounded-[40px] " />
+      </div>
       <div className="flex flex-col items-center w-[19rem] h-[30rem] md:w-full md:h-full">
         <img
           src={logo}
@@ -50,12 +48,12 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
                 className="inset-y-[2rem] left-1 absolute px-[0.2rem] "
               />
             </span>
-            <label htmlFor="email" className="block font-bold">
+            <label htmlFor="e_mail" className="block font-bold">
               Email
             </label>
             <input
               type="email"
-              id="email"
+              id="e_mail"
               className="w-full py-2 bg-[#FFFFFF] rounded-[5px] font-lato px-8 mt-1 border border-[#999999] focus:outline-none"
               placeholder="johndoe@email.com"
             />

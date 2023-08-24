@@ -13,7 +13,6 @@ const OTPInputField = ({ length }) => {
       newOtp[index] = "";
       setOtp(newOtp);
     } else if (value.length === 1 && /^\d+$/.test(value)) {
-    
       const newOtp = [...otp];
       newOtp[index] = value;
       setOtp(newOtp);
@@ -46,24 +45,30 @@ const OTPInputField = ({ length }) => {
     }
   };
   return (
-    <div className="flex justify-center items-center">
-      {otp.map((value, index) => (
-        <div className="relative" key={index}>
-          <input
-            type="text"
-            className="w-16 h-11 border-[2px] rounded-md text-center mx-2 focus:outline-none border-[#999] focus:border-[#4EAF00]"
-            value={value}
-            maxLength="1"
-            onChange={(e) => handleInputChange(index, e)}
-            onPaste={(e) => handleInputPaste(e)}
-            onKeyDown={(e) => handleKeyDown(e, index)}
-            ref={(input) => (otpInputRefs.current[index] = input)}
-          />
-          {!value && (
-            <div className="absolute left-[50%]  right-[50%] w-[2rem]  translate-x-[-50%]  translate-y-[-50%] bottom-2 bg-[#999999] h-[1.2px] "></div>
-          )}
-        </div>
-      ))}
+    <div className="w-full">
+      {" "}
+      <p className="text-[#333] text-lg text-left w-full mt-10 font-bold">
+        Enter Code
+      </p>
+      <div className="flex justify-between w-full mt-6 ">
+        {otp.map((value, index) => (
+          <div className="relative" key={index}>
+            <input
+              type="text"
+              className="w-[6.7rem] h-[4rem] text-xl border-[1px] rounded-md text-center  focus:outline-none border-[#999] focus:border-[#4EAF00]"
+              value={value}
+              maxLength="1"
+              onChange={(e) => handleInputChange(index, e)}
+              onPaste={(e) => handleInputPaste(e)}
+              onKeyDown={(e) => handleKeyDown(e, index)}
+              ref={(input) => (otpInputRefs.current[index] = input)}
+            />
+            {!value && (
+              <div className="absolute left-[50%]  right-[50%] w-[2rem]  translate-x-[-50%]  translate-y-[-50%] bottom-2 bg-[#999999] h-[1.2px] "></div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

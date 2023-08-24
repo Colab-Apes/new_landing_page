@@ -14,7 +14,8 @@ const Overlay = ({ value, changeValue }) => {
   // const [success, setsuccess] = useState(true);
   // const [resetpassword, setresetpassword] = useState(false);
   const [forgotpassword, setforgotpassword] = useState(false);
-  const [openOtpmodal, setopenOtpmodal] = useState(false);
+  const [openOtpmodal, setopenOtpmodal] = useState(true);
+
   const [openverifiedmodal, setopenverifiedmodal] = useState(false);
   const [opensignupmodal, setopensignupmodal] = useState(true);
 
@@ -48,12 +49,12 @@ const Overlay = ({ value, changeValue }) => {
           className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
         />
 
-        <Signup
+        {/* <Signup
           setopenOtpmodalprop={setopenOtpmodal}
           setopensignupmodalprop={setopensignupmodal}
           opensignupmodalprop={opensignupmodal}
           setsigninmodalprop={setsigninmodal}
-        />
+        /> */}
         <OtpModal
           openOtpmodalprop={openOtpmodal}
           setopenOtpmodalprop={setopenOtpmodal}

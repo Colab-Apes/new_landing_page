@@ -4,6 +4,7 @@ import logo from "../../../assets/ModalImages/logo.png";
 import { BsArrowLeft } from "react-icons/bs";
 // import OTPInput from "react-otp-input";
 import OtpInputField from "../../../components/OtpInputField";
+import "../../../App.css";
 
 const OtpModal = ({
   openOtpmodalprop,
@@ -15,49 +16,69 @@ const OtpModal = ({
     <div
       className={
         openOtpmodalprop
-          ? "flex flex-col  w-full lg:grid lg:grid-cols-2 gap-x-10"
+          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[6rem] px-4  justify-center lg:justify-between lg:items-start h-full items-center"
           : "hidden"
       }
     >
-      <img
-        src={otpmodal}
-        alt=""
-        className=" object-cover hidden lg:block lg:h-[30rem] xl:h-[30rem] rounded-2xl"
-      />
-      <div className="flex flex-col items-center w-[19rem] relative h-[30rem] md:w-full md:h-full">
+      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
         <img
-          src={logo}
+          src={otpmodal}
           alt=""
-          className="w-[5rem] sm:w-[6rem] object-contain "
+          className=" object-cover lg:rounded-[40px] "
         />
+      </div>
+      <div className="flex flex-col h w-full justify-evenly h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
+        <div className=" flex flex-col justify-center items-center">
+          <img
+            src={logo}
+            alt=""
+            className="w-[12rem] sm:w-[6rem] xl:w-[8.5rem] object-contain "
+          />
+          <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-5 xl:text-[1.5rem]">
+            Verify Email
+          </p>
+        </div>
 
-        <BsArrowLeft className="mt-3 cursor-pointer text-xl absolute left-1 top-[4.1rem] " />
-        <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-2 w-full">
-          Verify Email
-        </p>
-
-        <div className="mt-4 text-[#3B8004] text-sm font-semibold">
+        <div className="flex justify-between w-full items-center mt-4">
+          {" "}
+          <BsArrowLeft className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.3rem]" />
+          <p className="text-[#555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
+            Verify Email
+          </p>
+          <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">dfgsfgdfgsdf</p>
+        </div>
+        <div className=" text-[#3B8004] text-xl font-semibold mt-20">
           Enter 4 - digit code sent to johndoe@email.com
         </div>
 
         <OtpInputField length={4} />
-
+        <div className="w-full text-[#999] text-center text-xl  mt-4">
+          Resend code after <span className="text-[#3B8004]">0:59 s</span>
+        </div>
         <button
           onClick={() => {
             setopenOtpmodalprop(false);
             setopenverifiedmodalprop(true);
           }}
-          className="font-semibold bg-gradient-to-bl from-[#054E12] to-[#3B8004] w-full rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-4  text-white "
+          className="font-semibold btngrad w-full rounded-[10px] h-[3.8rem] mt-6 md:mt-8 lg:mt-8 text-xl  text-white "
         >
-          Verify email
+          Verify
         </button>
-        <p className="text-xs">
-          Already have an account?
-          <a className="text-[#054E12]" href="/">
-            {" "}
-            Sign In
-          </a>
-        </p>
+        <div className="mt-20  text-lg   md:mt-8 lg:mt-4 xl:mt-6 ">
+          <p className="flex justify-center items-center text-center lg:text-lg">
+            <span className="text-[#999999]">Already have an account?</span>
+            <p
+              onClick={() => {
+                setopensignupmodalprop(false);
+                setsigninmodalprop(true);
+              }}
+              className="text-[#054E12] font-bold cursor-pointer ml-1"
+              href="/"
+            >
+              Sign In
+            </p>
+          </p>
+        </div>
       </div>
     </div>
   );

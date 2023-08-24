@@ -9,7 +9,8 @@ import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
 import { useFormik } from "formik";
-import { signupValidation } from "../../../Validation/signupValidation";
+
+import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
 
 const Signup = ({
   setopenOtpmodalprop,
@@ -18,16 +19,11 @@ const Signup = ({
   setsigninmodalprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
-  const formik = useFormik({
-    initialValues: {
-      e_mail: "",
-      password: "",
-    },
-    validationSchema: signupValidation,
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
+  const { formik } = useSignupHooks(
+    setopensignupmodalprop,
+    setopenOtpmodalprop
+  );
+
   return (
     <div
       className={
@@ -56,8 +52,6 @@ const Signup = ({
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            setopensignupmodalprop(false);
-            setopenOtpmodalprop(true);
             formik.handleSubmit();
           }}
           className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 text-sm"
@@ -72,24 +66,24 @@ const Signup = ({
                 className="inset-y-[3.5rem] left-1 absolute px-[0.2rem] "
               />
             </span>
-            <label htmlFor="emaile" className="block font-bold text-xl">
+            <label htmlFor="e_mail" className="block font-bold text-xl">
               Email
             </label>
             <input
               type="email"
-              id="e_mail"
+              id="email"
               className={
-                formik.errors.e_mail && formik.touched.e_mail
+                formik.errors.email && formik.touched.email
                   ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
                   : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
               }
               placeholder="johndoe@email.com"
               onChange={formik.handleChange}
-              value={formik.values.e_mail}
+              value={formik.values.email}
               onBlur={formik.handleBlur}
             />
-            {formik.errors.e_mail && formik.touched.e_mail ? (
-              <p className="text-red-500 text-xl">{formik.errors.e_mail}</p>
+            {formik.errors.email && formik.touched.email ? (
+              <p className="text-red-500 text-xl">{formik.errors.email}</p>
             ) : (
               ""
             )}
@@ -140,8 +134,18 @@ const Signup = ({
           <div className="flex items-start gap-x-3 mt-0  lg:mt-1 font-normal text-2xl xl:text-xl">
             <input
               type="checkbox"
-              className="accent-[#3B8004] hover:accent-[#3B8004] font-lato"
+              id="termsAndConditions"
+              className={
+                formik.errors.termsAndConditions &&
+                formik.errors.termsAndConditions
+                  ? "accent-[#3B8004] border border-red-500 hover:accent-[#3B8004] font-lato"
+                  : "accent-[#3B8004]  hover:accent-[#3B8004] font-lato"
+              }
+              onChange={formik.handleChange}
+              checked={formik.values.termsAndConditions}
+              onBlur={formik.handleBlur}
             />
+
             <p className="text-[#999999]">
               By registering, you are agreeing with our{" "}
               <span className="underline text-[#3B8004]">Terms of Use </span>
@@ -149,7 +153,18 @@ const Signup = ({
               <span className="underline text-[#3B8004]">Privacy Policy</span>
             </p>
           </div>
-          <button className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white ">
+          {formik.errors.termsAndConditions &&
+          formik.touched.termsAndConditions ? (
+            <p className="text-red-500 text-xl ">
+              {formik.errors.termsAndConditions}
+            </p>
+          ) : (
+            ""
+          )}
+          <button
+            type="submit"
+            className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white "
+          >
             Verify email
           </button>
         </form>{" "}

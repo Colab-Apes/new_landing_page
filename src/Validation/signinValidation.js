@@ -1,5 +1,5 @@
 import * as yup from "yup";
-export const signupValidation = yup.object().shape({
+export const siginValidation = yup.object().shape({
   email: yup
     .string()
     .email("please enter a valid email")
