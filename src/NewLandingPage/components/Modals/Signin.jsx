@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 
-import img1 from "../../assets/ModalImages/signin.png";
-import logo from "../../assets/ModalImages/logo.png";
+import img1 from "../../../assets/ModalImages/signin.png";
+import logo from "../../../assets/ModalImages/logo.png";
 
 import { Lock, Message } from "react-iconly";
-import google from "../../assets/ModalImages/social/Google logo.png";
-import facebook from "../../assets/ModalImages/social/Facbook.png";
-import apple from "../../assets/ModalImages/social/Vector.svg";
+import google from "../../../assets/ModalImages/social/Google logo.png";
+import facebook from "../../../assets/ModalImages/social/Facbook.png";
+import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
+import "../../../App.css";
 const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   return (
@@ -69,7 +70,7 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
             </span>
             <div className="flex justify-between items-center ">
               {" "}
-              <label htmlFor="password" className=" font-bold block">
+              <label htmlFor="p_assword" className=" font-bold block">
                 Password
               </label>
               <button className="text-[#3B8004] font-semibold">
@@ -79,7 +80,7 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
             </div>
             <input
               type={isPasswordVisible ? "text" : "password"}
-              id="password"
+              id="p_assword"
               className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
               placeholder="● ● ● ● ● ● "
             />
@@ -97,7 +98,7 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
             )}
           </div>
 
-          <button className="font-semibold bg-gradient-to-bl from-[#054E12]  to-[#3B8004] rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-6  text-white ">
+          <button className="font-semibold btngrad  rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-6  text-white ">
             Sign In
           </button>
         </form>{" "}
