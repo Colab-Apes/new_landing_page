@@ -10,6 +10,7 @@ const OtpModal = ({
   openOtpmodalprop,
   setopenOtpmodalprop,
   setopenverifiedmodalprop,
+  setopensignupmodalprop,
 }) => {
   // const [otp, setOtp] = useState("");
   return (
@@ -34,20 +35,23 @@ const OtpModal = ({
             alt=""
             className="w-[12rem] sm:w-[6rem] xl:w-[8.5rem] object-contain "
           />
-          <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-5 xl:text-[1.5rem]">
-            Verify Email
-          </p>
         </div>
 
         <div className="flex justify-between w-full items-center mt-4">
           {" "}
-          <BsArrowLeft className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.3rem]" />
+          <BsArrowLeft
+            onClick={() => {
+              setopenOtpmodalprop(false);
+              setopensignupmodalprop(true);
+            }}
+            className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.1rem]"
+          />
           <p className="text-[#555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
             Verify Email
           </p>
           <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">dfgsfgdfgsdf</p>
         </div>
-        <div className=" text-[#3B8004] text-xl font-semibold mt-20">
+        <div className=" text-[#3B8004] text-xl font-semibold mt-12">
           Enter 4 - digit code sent to johndoe@email.com
         </div>
 

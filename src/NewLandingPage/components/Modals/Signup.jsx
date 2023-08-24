@@ -162,7 +162,7 @@ const Signup = ({
             ""
           )}
           <button
-            type="submit"
+            // type="submit"
             className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white "
           >
             Verify email
