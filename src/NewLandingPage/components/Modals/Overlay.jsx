@@ -23,14 +23,14 @@ const Overlay = ({ value, changeValue }) => {
     <div
       className={
         value
-          ? "bg-[#000]/[25%] fixed h-screen z-[120] xl:px-[18vw]  w-full   px-8 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
+          ? "bg-[#000]/[25%] fixed h-screen z-[120] lg:px-[10vw] xl:px-[19vw]  w-full   px-8 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
           : "bg-[#000]/[25%] fixed h-screen w-full z-[-100] opacity-0 px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato  duration-300 ease-in-out"
       }
     >
       <div
         className={
           value
-            ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4  lg:py-4   sm:min-h-[35rem] lg:min-h-[32rem] lg:w-[54rem] xl:min-h-[86vh] xl:w-full  md:w-full  px-4 sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3rem]  relative duration-[800ms] ease-in-out"
+            ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-betwee min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4     sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
             : ""
         }
       >

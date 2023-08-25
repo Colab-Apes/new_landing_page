@@ -47,7 +47,7 @@ const OTPInputField = ({ length }) => {
   return (
     <div className="w-full">
       {" "}
-      <p className="text-[#333] text-lg text-left w-full mt-10 font-bold">
+      <p className="text-[#333] text-lg text-left w-full mt-6 font-bold">
         Enter Code
       </p>
       <div className="flex justify-between w-full mt-6 ">

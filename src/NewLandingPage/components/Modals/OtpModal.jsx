@@ -17,19 +17,19 @@ const OtpModal = ({
     <div
       className={
         openOtpmodalprop
-          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[6rem] px-4  justify-center lg:justify-between lg:items-start h-full items-center"
+          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4  justify-normal lg:justify-between lg:items-start h-full  "
           : "hidden"
       }
     >
-      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
+      <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
         <img
           src={otpmodal}
           alt=""
           className=" object-cover lg:rounded-[40px] "
         />
       </div>
-      <div className="flex flex-col h w-full justify-evenly h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
-        <div className=" flex flex-col justify-center items-center">
+      <div className="flex flex-col  w-full  lg:justify-normal h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full   lg:gap-4 px-10">
+        <div className=" flex flex-col justify-center items-center ">
           <img
             src={logo}
             alt=""
@@ -37,7 +37,7 @@ const OtpModal = ({
           />
         </div>
 
-        <div className="flex justify-between w-full items-center mt-4">
+        <div className="flex justify-between w-full items-center mt-0">
           {" "}
           <BsArrowLeft
             onClick={() => {
@@ -51,7 +51,7 @@ const OtpModal = ({
           </p>
           <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">dfgsfgdfgsdf</p>
         </div>
-        <div className=" text-[#3B8004] text-xl font-semibold mt-12">
+        <div className=" text-[#3B8004] text-xl font-semibold mt-6">
           Enter 4 - digit code sent to johndoe@email.com
         </div>
 
@@ -64,7 +64,7 @@ const OtpModal = ({
             setopenOtpmodalprop(false);
             setopenverifiedmodalprop(true);
           }}
-          className="font-semibold btngrad w-full rounded-[10px] h-[3.8rem] mt-6 md:mt-8 lg:mt-8 text-xl  text-white "
+          className="font-semibold btngrad w-full rounded-[10px] h-[3.8rem] mt-6 md:mt-8 lg:mt-4 text-xl  text-white "
         >
           Verify
         </button>

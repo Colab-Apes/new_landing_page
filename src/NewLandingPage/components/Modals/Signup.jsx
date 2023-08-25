@@ -8,8 +8,6 @@ import facebook from "../../../assets/ModalImages/social/Facbook.png";
 import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
-import { useFormik } from "formik";
-
 import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
 
 const Signup = ({
@@ -28,25 +26,25 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[6rem] px-4  justify-center lg:justify-between h-full items-center"
+          ? "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
           : "hidden"
       }
     >
-      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
-        <img src={img1} alt="" className=" object-cover lg:rounded-[40px] " />
+      <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
+        <img src={img1} alt="" className="lg:rounded-[40px] object-cover" />
       </div>
-      <div className="flex flex-col h w-full justify-evenly h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
+      <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
         <div className=" flex flex-col justify-center items-center">
           <img
             src={logo}
             alt=""
-            className="w-[12rem] sm:w-[6rem] xl:w-[8.5rem] object-contain "
+            className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
           />
-          <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-5 xl:text-[1.5rem]">
+          <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-6 xl:text-[1.5rem]">
             Sign up to Get Started
           </p>
         </div>
-        <p className="text-[#555555] font-bold  text-lg text-center hidden lg:block mt-0 md:mt-4 lg:mt-1 xl:mt-5 xl:text-[1.5rem]">
+        <p className="text-[#555555] font-bold  text-lg text-center hidden lg:block mt-0 md:mt-4 lg:mt-1 xl:mt-8 xl:text-[1.5rem]">
           Sign up to Get Started
         </p>
         <form
@@ -54,7 +52,7 @@ const Signup = ({
             e.preventDefault();
             formik.handleSubmit();
           }}
-          className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 text-sm"
+          className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 lg: text-sm px-10"
           action=""
         >
           <div className="relative   ">
@@ -116,12 +114,12 @@ const Signup = ({
             {isPasswordVisible ? (
               <MdOutlineVisibilityOff
                 onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[3.6rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
+                className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
               />
             ) : (
               <MdOutlineVisibility
                 onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[3.6rem] right-1 px-[0.2rem] text-4xl text-[#333333]"
+                className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
               />
             )}
             {formik.errors.password && formik.touched.password ? (
@@ -148,19 +146,27 @@ const Signup = ({
 
             <p className="text-[#999999]">
               By registering, you are agreeing with our{" "}
-              <span className="underline text-[#3B8004]">Terms of Use </span>
+              <span className="underline text-[#3B8004] ml-1">
+                Terms of Use{" "}
+              </span>
               and
-              <span className="underline text-[#3B8004]">Privacy Policy</span>
+              <span className="underline text-[#3B8004] ml-1">
+                Privacy Policy
+              </span>
             </p>
           </div>
-          {formik.errors.termsAndConditions &&
-          formik.touched.termsAndConditions ? (
-            <p className="text-red-500 text-xl ">
-              {formik.errors.termsAndConditions}
-            </p>
-          ) : (
-            ""
-          )}
+
+          <p
+            className={
+              formik.errors.termsAndConditions &&
+              formik.touched.termsAndConditions
+                ? "text-red-500 text-xl"
+                : "opacity-0"
+            }
+          >
+            {formik.errors.termsAndConditions}
+          </p>
+
           <button
             // type="submit"
             className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white "
@@ -171,19 +177,19 @@ const Signup = ({
         <p className="text-[#999999] text-lg text-center mt-8 lg:mt-4 lg:text-lg">
           Or Continue with
         </p>
-        <div className="flex flex-col w-full  md:mt-0 lg:mt-4">
-          <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-0  xl:gap-x-6 lg:mt-0">
-            <div className="flex justify-center cursor-pointer items-center h-[4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border xl:border-2 only:border-solid border-[#DDDDDD] rounded-[10px]">
+        <div className="flex flex-col w-full  md:mt-0 lg:mt-4 px-10">
+          <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-4  xl:gap-x-6 lg:mt-0">
+            <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full bg-[#F8F8F8]   border lg:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
               <img src={google} alt="" className="w-[1.6rem] object-contain" />
             </div>{" "}
-            <div className="flex justify-center cursor-pointer items-center h-[4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]   sm:w-[6rem] border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+            <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full  bg-[#F8F8F8]     border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
               <img
                 src={facebook}
                 alt=""
                 className="w-[1.6rem] object-contain"
               />
             </div>{" "}
-            <div className="flex justify-center  cursor-pointer items-center h-[4rem] xl:h-[3.6rem] xl:w-full w-full bg-[#F8F8F8]  sm:w-[6rem] border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+            <div className="flex justify-center  cursor-pointer items-center h-[3.6rem]  w-full bg-[#F8F8F8]  border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
               <img src={apple} alt="" className="w-[1.6rem] object-contain" />
             </div>
           </div>
