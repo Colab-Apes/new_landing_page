@@ -18,8 +18,6 @@ const Community = ({ minus, plus }) => {
               let val = index;
               val === index ? setopenclose(!openclose) : "";
               setgetindex(val);
-              console.log("getindex" + getindex);
-              console.log("index" + index);
             }}
             className="flex cursor-pointer justify-between mb-8 items-center "
           >

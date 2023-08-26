@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
-      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[20%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
+      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[50%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
