@@ -7,12 +7,18 @@ import { TfiClose } from "react-icons/tfi";
 import VerifiedModal from "./VerifiedModal";
 import ForgotPassword from "./RecoverPassword/ForgotPassword";
 import Signin from "./Signin";
-import OverlayHooks from "../../Hooks/OverlayHooks";
 // import ResetPassword from "./RecoverPassword/ResetPassword";
 // import Success from "./RecoverPassword/Success";
 
 const Overlay = ({ value, changeValue }) => {
-  const hooks = OverlayHooks();
+  const [signinmodal, setsigninmodal] = useState(false);
+  const [success, setsuccess] = useState(false);
+  const [resetpassword, setresetpassword] = useState(false);
+  const [forgotpassword, setforgotpassword] = useState(false);
+  const [openOtpmodal, setopenOtpmodal] = useState(false);
+  const [openverifiedmodal, setopenverifiedmodal] = useState(false);
+  const [opensignupmodal, setopensignupmodal] = useState(true);
+
   return (
     <div
       className={
@@ -33,39 +39,41 @@ const Overlay = ({ value, changeValue }) => {
           alt=""
           className="bg-cover h-full  w-full fixed top-0 left-0 z-[-1]  rounded-2xl lg:rounded-[40px] hidden lg:block"
         />
-        <TfiClose
+        {/* <TfiClose
           onClick={() => {
-            hooks.changeValue(false);
-            hooks.setopensignupmodal(true);
-            hooks.setopenverifiedmodal(false);
-            hooks.setopenOtpmodal(false);
-            hooks.setsigninmodal(false);
+            changeValue(false);
+            setopensignupmodal(true);
+            setopenverifiedmodal(false);
+            setopenOtpmodal(false);
+            setsigninmodal(false);
           }}
           className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
-        />
+        /> */}
 
         <Signup
-          setopenOtpmodalprop={hooks.setopenOtpmodal}
-          setopensignupmodalprop={hooks.setopensignupmodal}
-          opensignupmodalprop={hooks.opensignupmodal}
-          setsigninmodalprop={hooks.setsigninmodal}
+          setopenOtpmodalprop={setopenOtpmodal}
+          setopensignupmodalprop={setopensignupmodal}
+          opensignupmodalprop={opensignupmodal}
+          setsigninmodalprop={setsigninmodal}
+          changeValueprop={changeValue}
+          setopenverifiedmodalprop={setopenverifiedmodal}
         />
         <OtpModal
-          openOtpmodalprop={hooks.openOtpmodal}
-          setopenOtpmodalprop={hooks.setopenOtpmodal}
-          setopensignupmodalprop={hooks.setopensignupmodal}
-          setopenverifiedmodalprop={hooks.setopenverifiedmodal}
+          openOtpmodalprop={openOtpmodal}
+          setopenOtpmodalprop={setopenOtpmodal}
+          setopensignupmodalprop={setopensignupmodal}
+          setopenverifiedmodalprop={setopenverifiedmodal}
         />
         <VerifiedModal
-          setopenOtpmodalprop={hooks.setopenOtpmodal}
-          setopensignupmodalprop={hooks.setopensignupmodal}
-          setopenverifiedmodalprop={hooks.setopenverifiedmodal}
-          openverifiedmodalprop={hooks.openverifiedmodal}
+          setopenOtpmodalprop={setopenOtpmodal}
+          setopensignupmodalprop={setopensignupmodal}
+          setopenverifiedmodalprop={setopenverifiedmodal}
+          openverifiedmodalprop={openverifiedmodal}
         />
         <ForgotPassword
-          forgotpasswordprop={hooks.forgotpassword}
-          setforgotpasswordprop={hooks.setforgotpassword}
-          setsigninmodalprop={hooks.setsigninmodal}
+          forgotpasswordprop={forgotpassword}
+          setforgotpasswordprop={setforgotpassword}
+          setsigninmodalprop={setsigninmodal}
         />
         {/* <ResetPassword
           resetpasswordprop={resetpassword}
@@ -73,8 +81,8 @@ const Overlay = ({ value, changeValue }) => {
         /> */}
         {/* <Success setsuccessprop={setsuccess} successprop={success} /> */}
         <Signin
-          setsigninmodalprop={hooks.setsigninmodal}
-          signinmodalprop={hooks.signinmodal}
+          setsigninmodalprop={setsigninmodal}
+          signinmodalprop={signinmodal}
         />
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const OverlayHooks = () => {
+  const [isModal, setisModal] = useState(false);
   const [signinmodal, setsigninmodal] = useState(false);
   const [success, setsuccess] = useState(true);
   const [resetpassword, setresetpassword] = useState(false);
@@ -9,6 +10,8 @@ const OverlayHooks = () => {
   const [openverifiedmodal, setopenverifiedmodal] = useState(false);
   const [opensignupmodal, setopensignupmodal] = useState(true);
   return {
+    isModal,
+    setisModal,
     signinmodal,
     setsigninmodal,
     success,

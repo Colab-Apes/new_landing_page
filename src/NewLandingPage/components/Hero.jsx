@@ -7,6 +7,7 @@ import emoji from "../../assets/svg/emoji.svg";
 
 import "../../App.css";
 const Hero = () => {
+  
   return (
     <div>
       <section

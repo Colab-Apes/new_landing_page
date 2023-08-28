@@ -3,8 +3,10 @@ import logo from "../../assets/newimages/logo.png";
 import menuicon from "../../assets/svg/menu-icon.svg";
 import { TfiClose } from "react-icons/tfi";
 import "../../App.css";
+import OverlayHooks from "../Hooks/OverlayHooks";
 const Nav = ({ changeValue }) => {
   const [opensidenav, setopensidenav] = useState(false);
+  const hooks = OverlayHooks();
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
       <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[20%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
@@ -16,7 +18,10 @@ const Nav = ({ changeValue }) => {
         </div>
         <div className="flex gap-10">
           <button
-            onClick={() => changeValue(true)}
+            onClick={() => {
+              hooks.setopensignupmodal(true);
+              changeValue(true);
+            }}
             className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold"
           >
             Sign up

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import img1 from "../../../assets/ModalImages/sidebar.png";
 import logo from "../../../assets/ModalImages/logo.png";
-
+import { TfiClose } from "react-icons/tfi";
 import { Lock, Message } from "react-iconly";
 import google from "../../../assets/ModalImages/social/Google logo.png";
 import facebook from "../../../assets/ModalImages/social/Facbook.png";
@@ -9,45 +9,45 @@ import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
 import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
-import OverlayHooks from "../../Hooks/OverlayHooks";
-import { TfiClose } from "react-icons/tfi";
 
 const Signup = ({
   setopenOtpmodalprop,
   setopensignupmodalprop,
   opensignupmodalprop,
   setsigninmodalprop,
+  changeValueprop,
+  setopenverifiedmodalprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   const { formik } = useSignupHooks(
     setopensignupmodalprop,
     setopenOtpmodalprop
   );
-  const hooks = OverlayHooks();
+
   return (
     <div
       className={
         opensignupmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120] w-full   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r   py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[1rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
-      <TfiClose
-        onClick={() => {
-          hooks.changeValue(false);
-          hooks.setopensignupmodal(true);
-          hooks.setopenverifiedmodal(false);
-          hooks.setopenOtpmodal(false);
-          hooks.setsigninmodal(false);
-        }}
-        className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
-      />
-
       <div
         className={
-          "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0 py-10 xl:py-0  justify-center lg:justify-between h-full items-center"
+          "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
         }
       >
+        <TfiClose
+          onClick={() => {
+            changeValueprop(false);
+            setopensignupmodalprop(true);
+            setopenverifiedmodalprop(false);
+            setopenOtpmodalprop(false);
+            setsigninmodalprop(false);
+          }}
+          className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
+        />
+
         <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
           <img src={img1} alt="" className="lg:rounded-[40px] object-cover" />
         </div>
