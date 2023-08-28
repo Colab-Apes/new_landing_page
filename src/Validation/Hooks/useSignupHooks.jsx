@@ -13,7 +13,7 @@ export const useSignupHooks = (setopensignupmodalprop, setopenOtpmodalprop) => {
     validationSchema: signupValidation,
     onSubmit: (values) => {
       axios
-        .post(`${link}`, {
+        .post(`${link}/auth/signup`, {
           firstName: "Anslem",
           lastName: "Kelechi",
           email: "dev@colabapes.com",

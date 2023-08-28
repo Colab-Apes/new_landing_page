@@ -14,12 +14,14 @@ const VerifiedModal = ({
     <div
       className={
         openverifiedmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
-          : "hidden"
+        ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
+        : "hidden"
       }
     >
+      <div className="bg-[#C26AAA] blur-[150px] h-[24rem] left-0  top-0 rounded-full w-[24rem] absolute z-10"></div>
+      <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div className={"grid lg:grid-cols-2 gap-x-10"}>
-        <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
+        <div className="w-full h-full lg:flex z-[200] justify-center hidden   lg:rounded-[50px] ">
           <img
             src={verifiedmodal}
             alt=""
@@ -43,7 +45,7 @@ const VerifiedModal = ({
                 setopensignupmodalprop(false);
                 setopenverifiedmodalprop(false);
               }}
-              className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.1rem]"
+              className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.3rem]"
             />
             <p className="text-[#555] font-bold text-2xl lg:text-[1.8rem] text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
               You’re Verified!

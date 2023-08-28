@@ -32,9 +32,11 @@ const Signup = ({
           : "hidden"
       }
     >
+      <div className="bg-[#C26AAA] blur-[150px] h-[24rem] left-0  top-0 rounded-full w-[24rem] absolute z-10"></div>
+      <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div
         className={
-          "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
+          "flex flex-col z-[120]  w-full   lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
         }
       >
         <TfiClose
@@ -73,7 +75,7 @@ const Signup = ({
             className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 lg: text-sm px-10"
             action=""
           >
-            <div className="relative   ">
+            <div className="relative ">
               <span>
                 {" "}
                 <Message

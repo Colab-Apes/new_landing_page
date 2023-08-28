@@ -9,117 +9,129 @@ import facebook from "../../../assets/ModalImages/social/Facbook.png";
 import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
+import { useSigninHook } from "../../../Validation/Hooks/useSigninHook";
 const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
+  const { formik } = useSigninHook();
   return (
     <div
       className={
         signinmodalprop
-          ? "flex flex-col  w-full lg:grid lg:grid-cols-2 gap-x-10"
+          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
-      <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
-        <img src={img1} alt="" className=" object-cover lg:rounded-[40px] " />
-      </div>
-      <div className="flex flex-col items-center w-[19rem] h-[30rem] md:w-full md:h-full">
-        <img
-          src={logo}
-          alt=""
-          className="w-[5rem] sm:w-[6rem] object-contain "
-        />
-        <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-2">
-          Welcome Back!
-        </p>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            // setopensignupmodalprop(false);
-            // setopenOtpmodalprop(true);
-          }}
-          className="w-full relative flex flex-col  justify-evenly   text-sm"
-          action=""
-        >
-          <div className="relative  mt-4 md:mt-8 lg:mt-4">
-            <span>
-              {" "}
-              <Message
-                set="curved"
-                primaryColor="#999999"
-                className="inset-y-[2rem] left-1 absolute px-[0.2rem] "
-              />
-            </span>
-            <label htmlFor="e_mail" className="block font-bold">
-              Email
-            </label>
-            <input
-              type="email"
-              id="e_mail"
-              className="w-full py-2 bg-[#FFFFFF] rounded-[5px] font-lato px-8 mt-1 border border-[#999999] focus:outline-none"
-              placeholder="johndoe@email.com"
-            />
-          </div>
-
-          <div className="relative  mt-4 md:mt-8 lg:mt-4">
-            <span>
-              <Lock
-                set="curved"
-                primaryColor="#999999"
-                className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
-              />
-            </span>
-            <div className="flex justify-between items-center ">
-              {" "}
-              <label htmlFor="p_assword" className=" font-bold block">
-                Password
-              </label>
-              <button className="text-[#3B8004] font-semibold">
+      <div className="bg-[#C26AAA] blur-[150px] h-[24rem] left-0  top-0 rounded-full w-[24rem] absolute z-10"></div>
+      <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
+      <div
+        className={
+          "flex flex-col  w-full lg:grid lg:grid-cols-2 gap-x-10 z-[200]"
+        }
+      >
+        <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
+          <img src={img1} alt="" className=" object-cover lg:rounded-[40px] " />
+        </div>
+        <div className="flex flex-col items-center w-[19rem] h-[30rem] md:w-full md:h-full">
+          <img
+            src={logo}
+            alt=""
+            className="w-[5rem] sm:w-[6rem] object-contain "
+          />
+          <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-2">
+            Welcome Back!
+          </p>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              // setopensignupmodalprop(false);
+              // setopenOtpmodalprop(true);
+            }}
+            className="w-full relative flex flex-col  justify-evenly   text-sm"
+            action=""
+          >
+            <div className="relative  mt-4 md:mt-8 lg:mt-4">
+              <span>
                 {" "}
-                Forgot password?
-              </button>
-            </div>
-            <input
-              type={isPasswordVisible ? "text" : "password"}
-              id="p_assword"
-              className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
-              placeholder="● ● ● ● ● ● "
-            />
-
-            {isPasswordVisible ? (
-              <MdOutlineVisibilityOff
-                onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                <Message
+                  set="curved"
+                  primaryColor="#999999"
+                  className="inset-y-[2rem] left-1 absolute px-[0.2rem] "
+                />
+              </span>
+              <label htmlFor="e_mail" className="block font-bold">
+                Email
+              </label>
+              <input
+                type="email"
+                id="e_mail"
+                className="w-full py-2 bg-[#FFFFFF] rounded-[5px] font-lato px-8 mt-1 border border-[#999999] focus:outline-none"
+                placeholder="johndoe@email.com"
               />
-            ) : (
-              <MdOutlineVisibility
-                onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
-              />
-            )}
-          </div>
-
-          <button className="font-semibold btngrad  rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-6  text-white ">
-            Sign In
-          </button>
-        </form>{" "}
-        <div className="flex flex-col w-full mt-4 md:mt-8 lg:mt-4">
-          <p className="text-[#999999] text-center text-sm">Or Continue with</p>
-          <div className="flex justify-evenly mt-4">
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
-              <img src={google} alt="" />
-            </div>{" "}
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
-              <img src={facebook} alt="" />
-            </div>{" "}
-            <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
-              <img src={apple} alt="" />
             </div>
-          </div>
-          <div className="mt-6  md:mt-8 lg:mt-4 text-sm">
-            <p className=" text-center">
-              <span className="text-[#999999]">Already have an account?</span>
-              <button className="text-[#054E12] font-bold"> Sign Up</button>
+
+            <div className="relative  mt-4 md:mt-8 lg:mt-4">
+              <span>
+                <Lock
+                  set="curved"
+                  primaryColor="#999999"
+                  className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
+                />
+              </span>
+              <div className="flex justify-between items-center ">
+                {" "}
+                <label htmlFor="p_assword" className=" font-bold block">
+                  Password
+                </label>
+                <button className="text-[#3B8004] font-semibold">
+                  {" "}
+                  Forgot password?
+                </button>
+              </div>
+              <input
+                type={isPasswordVisible ? "text" : "password"}
+                id="p_assword"
+                className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
+                placeholder="● ● ● ● ● ● "
+              />
+
+              {isPasswordVisible ? (
+                <MdOutlineVisibilityOff
+                  onClick={() => setisPasswordVisible(!isPasswordVisible)}
+                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                />
+              ) : (
+                <MdOutlineVisibility
+                  onClick={() => setisPasswordVisible(!isPasswordVisible)}
+                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                />
+              )}
+            </div>
+
+            <button className="font-semibold btngrad  rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-6  text-white ">
+              Sign In
+            </button>
+          </form>{" "}
+          <div className="flex flex-col w-full mt-4 md:mt-8 lg:mt-4">
+            <p className="text-[#999999] text-center text-sm">
+              Or Continue with
             </p>
+            <div className="flex justify-evenly mt-4">
+              <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
+                <img src={google} alt="" />
+              </div>{" "}
+              <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
+                <img src={facebook} alt="" />
+              </div>{" "}
+              <div className="flex justify-center cursor-pointer items-center h-[2.4rem] w-[6rem] border border-solid border-[#DDDDDD] rounded-[10px]">
+                <img src={apple} alt="" />
+              </div>
+            </div>
+            <div className="mt-6  md:mt-8 lg:mt-4 text-sm">
+              <p className=" text-center">
+                <span className="text-[#999999]">Already have an account?</span>
+                <button className="text-[#054E12] font-bold"> Sign Up</button>
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ const OtpModal = ({
     <div
       className={
         openOtpmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120] w-full   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r   py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[1rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
@@ -32,27 +32,26 @@ const OtpModal = ({
         }}
         className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
       />
+      <div className="bg-[#C26AAA] blur-[150px] h-[24rem] left-0  top-0 rounded-full w-[24rem] absolute z-10"></div>
+      <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div
         className={
-          "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4  justify-normal lg:justify-between lg:items-start h-full mt-10 "
+          "flex flex-col  w-full lg:grid lg:grid-cols-2 gap-x-10 z-[200]"
         }
       >
-        <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
+        <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
           <img
             src={otpmodal}
             alt=""
             className=" object-cover lg:rounded-[40px] "
           />
         </div>
-        <div className="flex flex-col  w-full  lg:justify-normal h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full   lg:gap-4 px-10">
-          <div className=" flex flex-col justify-center items-center ">
-            <img
-              src={logo}
-              alt=""
-              className="w-[12rem] sm:w-[6rem] xl:w-[8.5rem] object-contain "
-            />
-          </div>
-
+        <div className="flex flex-col items-center w-[19rem] h-[30rem] md:w-full md:h-full">
+          <img
+            src={logo}
+            alt=""
+            className="w-[5rem] sm:w-[6rem] object-contain "
+          />
           <div className="flex justify-between w-full items-center mt-0">
             {" "}
             <BsArrowLeft
@@ -60,7 +59,7 @@ const OtpModal = ({
                 setopenOtpmodalprop(false);
                 setopensignupmodalprop(true);
               }}
-              className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.1rem]"
+              className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.3rem]"
             />
             <p className="text-[#555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
               Verify Email
