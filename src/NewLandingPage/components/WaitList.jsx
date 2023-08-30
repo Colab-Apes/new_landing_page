@@ -2,8 +2,11 @@ import React from "react";
 
 import { TfiClose } from "react-icons/tfi";
 import { TypeAnimation } from "react-type-animation";
+import { RiErrorWarningLine } from "react-icons/ri";
+import { IoIosClose } from "react-icons/io";
 import box from "../../assets/container.png";
 import WaitLiskHook from "../Hooks/WaitLiskHook";
+import { ClipLoader } from "react-spinners";
 import "../../App.css";
 const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
   const { email, setemail, setsuccess, success, submitEmail, load } =
@@ -77,13 +80,15 @@ const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
                 // Success Message
                 <div
                   className={
-                    "w-[92%] lg:w-[22rem] duration-500 origin-left scale-x-[92%] lg:scale-x-[22rem] md:px-10 h-[4.5rem] border-main border-4 text-white bg-main/[50%] rounded-[20px] flex items-center text-center justify-center"
+                    "w-[92%] md:w-[40rem] xl:w-full duration-500 origin-left scale-x-[92%] lg:scale-x-[22rem] md:px-10 h-[6rem] border-[#054E12] border-2 text-white  bg-[#054E12]/[50%] rounded-[20px] flex items-center text-center justify-center "
                   }
                 >
-                  <RiErrorWarningLine className="text-2xl mr-3" />
-                  <p className="md:text-lg mr-3">Successfully submitted!</p>
+                  <RiErrorWarningLine className="text-2xl lg:text-4xl mr-3" />
+                  <p className="md:text-lg lg:text-xl xl:text-2xl mr-3">
+                    Successfully submitted!
+                  </p>
                   <IoIosClose
-                    className="text-2xl cursor-pointer"
+                    className="text-2xl  lg:text-5xl cursor-pointer"
                     onClick={() => setsuccess(false)}
                   />
                 </div>
