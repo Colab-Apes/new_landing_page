@@ -5,9 +5,9 @@ export const signupValidation = yup.object().shape({
     .email("Please enter a valid email")
     .required("Please fill up this field"),
 
-  termsAndConditions: yup
-    .bool()
-    .oneOf([true], "You need to accept the terms and conditions"),
+  // termsAndConditions: yup
+  //   .bool()
+  //   .oneOf([true], "You need to accept the terms and conditions"),
 
   password: yup
     .string()

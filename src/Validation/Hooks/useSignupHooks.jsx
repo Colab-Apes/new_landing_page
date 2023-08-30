@@ -2,34 +2,48 @@ import { useFormik } from "formik";
 import { signupValidation } from "../signupValidation";
 import axios from "axios";
 import { link } from "../Link";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export const useSignupHooks = (setopensignupmodalprop, setopenOtpmodalprop) => {
+  const [isLoading, setisLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
-      termsAndConditions: false,
+      // termsAndConditions: false,
     },
     validationSchema: signupValidation,
     onSubmit: (values) => {
+      setisLoading(true);
       axios
         .post(`${link}/auth/signup`, {
-          firstName: "Anslem",
-          lastName: "Kelechi",
-          email: "dev@colabapes.com",
-          username: "jack345",
-          password: "John4321#",
+          email: values.email,
+          password: values.password,
         })
         .then((res) => {
           console.log(res);
+          setisLoading(false);
+          toast.success("Successful", {
+            position: "top-center",
+            autoClose: 2000,
+            toastId: 2,
+            theme: "colored",
+          });
+          setopensignupmodalprop(false);
+          setopenOtpmodalprop(true);
         })
         .catch((e) => {
           console.log(e);
+          setisLoading(false);
+          toast.error("An error occurred", {
+            position: "top-center",
+            autoClose: 2000,
+            toastId: 2,
+            theme: "colored",
+          });
         });
-      console.log(values);
-      setopensignupmodalprop(false);
-      setopenOtpmodalprop(true);
     },
   });
-  return { formik };
+  return { formik, isLoading };
 };

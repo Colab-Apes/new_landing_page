@@ -36,7 +36,7 @@ const OtpModal = ({
       <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div
         className={
-          "flex flex-col  w-full lg:grid lg:grid-cols-2 gap-x-10 z-[200]"
+          "flex flex-col w-full lg:grid lg:grid-cols-2 gap-x-10 z-[200] "
         }
       >
         <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
@@ -47,11 +47,13 @@ const OtpModal = ({
           />
         </div>
         <div className="flex flex-col items-center w-[19rem] h-[30rem] md:w-full md:h-full">
-          <img
-            src={logo}
-            alt=""
-            className="w-[5rem] sm:w-[6rem] object-contain "
-          />
+          <div className=" flex flex-col justify-center items-center">
+            <img
+              src={logo}
+              alt=""
+              className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+            />
+          </div>
           <div className="flex justify-between w-full items-center mt-0">
             {" "}
             <BsArrowLeft

@@ -1,24 +1,21 @@
 import { useFormik } from "formik";
-import { signupValidation } from "../signupValidation";
 import axios from "axios";
 import { link } from "../Link";
+import { siginValidation } from "../signinValidation";
 
 export const useSigninHook = (setopensignupmodalprop, setopenOtpmodalprop) => {
+  
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
-      termsAndConditions: false,
     },
-    validationSchema: signupValidation,
+    validationSchema: siginValidation,
     onSubmit: (values) => {
       axios
         .post(`${link}/auth/login`, {
-          firstName: "Anslem",
-          lastName: "Kelechi",
-          email: "dev@colabapes.com",
-          username: "jack345",
-          password: "John4321#",
+          email: values.email,
+          password: values.password,
         })
         .then((res) => {
           console.log(res);

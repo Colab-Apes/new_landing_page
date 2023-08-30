@@ -9,6 +9,7 @@ import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
 import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
+import { ClipLoader } from "react-spinners";
 
 const Signup = ({
   setopenOtpmodalprop,
@@ -19,7 +20,8 @@ const Signup = ({
   setopenverifiedmodalprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
-  const { formik } = useSignupHooks(
+
+  const { formik, isLoading } = useSignupHooks(
     setopensignupmodalprop,
     setopenOtpmodalprop
   );
@@ -28,7 +30,7 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] w-full py-0  sm:pb-0 md:py-4  sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
@@ -36,7 +38,7 @@ const Signup = ({
       <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div
         className={
-          "flex flex-col z-[120]  w-full   lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
+          "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
         }
       >
         <TfiClose
@@ -53,7 +55,7 @@ const Signup = ({
         <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
           <img src={img1} alt="" className="lg:rounded-[40px] object-cover" />
         </div>
-        <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
+        <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
           <div className=" flex flex-col justify-center items-center">
             <img
               src={logo}
@@ -72,7 +74,7 @@ const Signup = ({
               e.preventDefault();
               formik.handleSubmit();
             }}
-            className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 lg: text-sm px-10"
+            className="w-full  flex flex-col  justify-between gap-y-8 mt-2 md:gap-y-4 lg: text-sm px-10"
             action=""
           >
             <div className="relative ">
@@ -156,14 +158,14 @@ const Signup = ({
                 type="checkbox"
                 id="termsAndConditions"
                 className={
-                  formik.errors.termsAndConditions &&
-                  formik.errors.termsAndConditions
-                    ? "accent-[#3B8004] border border-red-500 hover:accent-[#3B8004] font-lato"
-                    : "accent-[#3B8004]  hover:accent-[#3B8004] font-lato"
+                  // formik.errors.termsAndConditions &&
+                  // formik.errors.termsAndConditions
+                  //? "accent-[#3B8004] border border-red-500 hover:accent-[#3B8004] font-lato"
+                  "accent-[#3B8004]  hover:accent-[#3B8004] font-lato"
                 }
-                onChange={formik.handleChange}
-                checked={formik.values.termsAndConditions}
-                onBlur={formik.handleBlur}
+                // onChange={formik.handleChange}
+                // checked={formik.values.termsAndConditions}
+                // onBlur={formik.handleBlur}
               />
 
               <p className="text-[#999999]">
@@ -178,7 +180,7 @@ const Signup = ({
               </p>
             </div>
 
-            <p
+            {/* <p
               className={
                 formik.errors.termsAndConditions &&
                 formik.touched.termsAndConditions
@@ -187,13 +189,22 @@ const Signup = ({
               }
             >
               {formik.errors.termsAndConditions}
-            </p>
+            </p> */}
 
             <button
               // type="submit"
-              className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white "
+              className="font-bold  text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white "
             >
-              Verify email
+              {isLoading ? (
+                <ClipLoader
+                  color="#fff"
+                  className="right-5 text-2xl  inset-y-4  "
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              ) : (
+                " Verify email"
+              )}
             </button>
           </form>{" "}
           <p className="text-[#999999] text-lg text-center mt-8 lg:mt-4 lg:text-lg">
