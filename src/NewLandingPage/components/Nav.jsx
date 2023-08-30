@@ -4,6 +4,7 @@ import menuicon from "../../assets/svg/menu-icon.svg";
 import { TfiClose } from "react-icons/tfi";
 import "../../App.css";
 import WaitList from "./WaitList";
+import { useEffect } from "react";
 
 const Nav = () => {
   const [opensidenav, setopensidenav] = useState(false);
@@ -14,6 +15,10 @@ const Nav = () => {
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  // useEffect(() => {}, []);
+  setTimeout(() => {
+    setopenjoinwaitlist(true);
+  }, 15000);
 
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
@@ -37,6 +42,7 @@ const Nav = () => {
             // onClick={scrollToSection}
             onClick={() => {
               setopenjoinwaitlist(true);
+              // scrollToSection();
             }}
           >
             Join waitlist

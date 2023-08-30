@@ -30,13 +30,7 @@ const WaitLiskHook = () => {
       axios
         .post(
           "https://co-backend-production.up.railway.app/api/v1/mail/subscribe",
-          { email },
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-            withCredentials: true,
-          }
+          { email }
         )
         .then((response) => {
           console.log(response);
