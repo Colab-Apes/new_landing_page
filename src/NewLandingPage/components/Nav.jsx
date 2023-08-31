@@ -15,7 +15,7 @@ const Nav = () => {
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  // useEffect(() => {}, []);
+  useEffect(() => {}, []);
   setTimeout(() => {
     setopenjoinwaitlist(true);
   }, 15000);
@@ -93,7 +93,15 @@ const Nav = () => {
           <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold">
             Sign up
           </button>
-          <button className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold">
+          <button
+            onClick={() => {
+              setopensidenav(false);
+              setopenjoinwaitlist(true);
+
+              // scrollToSection();
+            }}
+            className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
+          >
             Join waitlist
           </button>
         </div>

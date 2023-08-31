@@ -22,7 +22,7 @@ const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
     >
       <div
         className={
-          " rounded-[20px] lg:rounded-[50px] bg-[url('./assets/waitlist1.png')]  z-[120] bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] w-full py-0  sm:pb-0 md:py-4  sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[50rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] "
+          " rounded-[20px] lg:rounded-[50px] lg:bg-[url('./assets/waitlist1.png')] bg-no-repeat  z-[120] px-4 bg-[#F5FFF7] flex items-center justify-between min-h-[0rem] w-full py-20  sm:pb-0 md:py-4  sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[50rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] "
         }
       >
         <TfiClose
@@ -32,19 +32,19 @@ const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
           className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
         />
 
-        <div className="grid lg:flex mt-4 lg:mt-0 h-[75vh] lg:h-[80vh]  lg:w-full  justify-between items-center justify-items-center">
+        <div className="grid lg:flex mt-0 lg:mt-0 md:h-[75vh] lg:h-full  lg:w-full  justify-between items-center justify-items-center">
           <div className="flex flex-col lg:min-h-[30vh] justify-between sm:justify-around ">
             {/* Heading */}
             <div className="flex items-center gap-x-4">
-              <p className="text-[#054E12] text-lg md:text-2xl lg:text-lg xl:text-xl font-bold">
+              <p className="text-[#054E12] text-xl md:text-2xl lg:text-lg xl:text-xl font-bold">
                 Coming soon
               </p>
               <div className="bg-[#3B8004] sm:w-[10rem] w-[3rem] xl:w-[6rem]  rounded-[30px] h-[0.2rem]"></div>
             </div>
 
             {/* Animated Text */}
-            <TypeAnimation
-              className="text-[1.5rem] text-[#054E12] leading-[1.7] md:leading-[1.7] text-left lg:leading-[1.5] w-full sm:w-[33rem] md:w-[40rem] lg:w-[30rem] xl:w-[35rem] h-[8rem] sm:h-[12.6rem]  md:h-[11rem] xl:h-[16rem] xl:leading-[1.6] sm:text-[1.9rem] md:text-4xl lg:text-[2rem] xl:text-[2.5rem] xl:mt-10 mt-4 lg:mt-2 font-bold"
+            {/* <TypeAnimation
+              className="text-[2.8rem] text-[#054E12] leading-[1.7] md:leading-[1.7] text-left lg:leading-[1.5] w-full sm:w-[33rem] md:w-[40rem] lg:w-[30rem] xl:w-[35rem] h-[10rem] sm:h-[12.6rem]  md:h-[11rem] xl:h-[16rem] xl:leading-[1.6] sm:text-[1.9rem] md:text-4xl lg:text-[2rem] xl:text-[2.5rem] xl:mt-10 mt-4 lg:mt-2 font-bold"
               sequence={[
                 // Same substring at the start will only be typed once, initially
                 "Unlock Your Digital Team: Find, Collaborate, and Build the Future Together",
@@ -61,12 +61,16 @@ const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
               speed={62.5}
               repeat={Infinity}
               color="#054E12"
-            />
+            /> */}
+            <p className="text-[2.8rem] text-[#054E12] leading-[1.7] md:leading-[1.7] text-left lg:leading-[1.5] w-full sm:w-[33rem] md:w-[40rem] lg:w-[30rem] xl:w-[35rem] sm:h-[12.6rem]  md:h-[11rem] xl:h-[16rem] xl:leading-[1.6] sm:text-[1.9rem] md:text-4xl lg:text-[2rem] xl:text-[2.5rem] xl:mt-10 mt-4 lg:mt-2 font-bold">
+              Unlock Your Digital Team: Find, Collaborate, and Build the Future
+              Together
+            </p>
             {/* Hero Image (hidden on lg and larger screens) */}
             <img
               src={box}
               alt=""
-              className="w-[80%] sm:w-[27rem] object-contain lg:hidden mx-auto lg:mx-0  mt-8 sm:mt-4 "
+              className="w-[65%] sm:w-[27rem] object-contain lg:hidden mx-auto lg:mx-0   mt-20 mb-20 sm:mt-4 "
               loading="lazy"
             />
 
@@ -120,7 +124,13 @@ const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
                 </div>
               )}
             </div>
+            {/* <p className="text-[2rem] text-[#F5FFF7]">
+              {" "}
+              Unlock Your Digital Team: Find, Collaborate, and Build the Future
+              Together",
+            </p> */}
           </div>
+
           <img
             src={box}
             alt=""
