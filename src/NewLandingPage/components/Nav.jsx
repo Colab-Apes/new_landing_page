@@ -3,18 +3,30 @@ import logo from "../../assets/newimages/logo.png";
 import menuicon from "../../assets/svg/menu-icon.svg";
 import { TfiClose } from "react-icons/tfi";
 import "../../App.css";
+import WaitList from "./WaitList";
+import { useEffect } from "react";
 
 const Nav = () => {
   const [opensidenav, setopensidenav] = useState(false);
+  const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
   const scrollToSection = () => {
-    const targetSection = document.getElementById('newsletter');
+    const targetSection = document.getElementById("newsletter");
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+      targetSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setopenjoinwaitlist(true);
+    }, 15000);
+  }, []);
 
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
+      <WaitList
+        openjoinwaitlistmodal={openjoinwaitlist}
+        setopenjoinwaitlistmodal={setopenjoinwaitlist}
+      />
       <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[50%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
@@ -26,9 +38,13 @@ const Nav = () => {
           <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold">
             Sign up
           </button>
-          <button 
+          <button
             className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
-            onClick={scrollToSection}
+            // onClick={scrollToSection}
+            onClick={() => {
+              setopenjoinwaitlist(true);
+              // scrollToSection();
+            }}
           >
             Join waitlist
           </button>
@@ -78,7 +94,15 @@ const Nav = () => {
           <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold">
             Sign up
           </button>
-          <button className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold">
+          <button
+            onClick={() => {
+              setopensidenav(false);
+              setopenjoinwaitlist(true);
+
+              // scrollToSection();
+            }}
+            className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
+          >
             Join waitlist
           </button>
         </div>
