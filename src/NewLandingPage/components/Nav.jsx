@@ -15,10 +15,11 @@ const Nav = () => {
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  useEffect(() => {}, []);
-  setTimeout(() => {
-    setopenjoinwaitlist(true);
-  }, 15000);
+  useEffect(() => {
+    setTimeout(() => {
+      setopenjoinwaitlist(true);
+    }, 15000);
+  }, []);
 
   return (
     <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
