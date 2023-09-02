@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import { Faqs, HowItWorks, BuildTheFuture, Foot, Hero, JoinOurNewsLetter, LearningPool, Ready, SocialHub, ValueStake } from "./sections";
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import SocialHub from "./components/SocialHub";
-import LearningPool from "./components/LearningPool";
-import BuildTheFuture from "./components/BuildTheFuture";
-import ValueStake from "./components/ValueStake";
-import HowItWorks from "./components/Howitworks/HowItWorks";
-import Ready from "./components/Ready";
-import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
-import Foot from "./components/Foot";
-import Faqs from "./components/Faqs/Faqs";
 import Overlay from "./components/Modals/Overlay";
 
 const LandPage = () => {

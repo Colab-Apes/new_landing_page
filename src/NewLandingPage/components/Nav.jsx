@@ -11,12 +11,7 @@ const Nav = ({ changeValue }) => {
   const [opensidenav, setopensidenav] = useState(false);
   const hooks = OverlayHooks();
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
-  const scrollToSection = () => {
-    const targetSection = document.getElementById("newsletter");
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
   useEffect(() => {
     setTimeout(() => {
       setopenjoinwaitlist(true);
@@ -24,7 +19,7 @@ const Nav = ({ changeValue }) => {
   }, []);
 
   return (
-    <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
+    <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
       <WaitList
         openjoinwaitlistmodal={openjoinwaitlist}
         setopenjoinwaitlistmodal={setopenjoinwaitlist}
@@ -48,10 +43,8 @@ const Nav = ({ changeValue }) => {
           </button>
           <button
             className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
-            // onClick={scrollToSection}
             onClick={() => {
               setopenjoinwaitlist(true);
-              // scrollToSection();
             }}
           >
             Join waitlist
@@ -120,7 +113,7 @@ const Nav = ({ changeValue }) => {
           </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
