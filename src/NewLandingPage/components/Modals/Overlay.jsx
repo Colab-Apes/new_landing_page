@@ -23,7 +23,7 @@ const Overlay = ({ value, changeValue }) => {
     <div
       className={
         value
-          ? "bg-[#000]/[25%] fixed h-screen z-[120] lg:px-[10vw] xl:px-[19vw]  w-full   px-8 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out "
+          ? "bg-[#000]/[25%] fixed h-screen z-[120] lg:px-[10vw] xl:px-[19vw] w-full    px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out"
           : "bg-[#000]/[25%] fixed h-screen w-full z-[-100] opacity-0 px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato  duration-300 ease-in-out"
       }
     >
@@ -34,11 +34,11 @@ const Overlay = ({ value, changeValue }) => {
       //     : ""
       // }
       >
-        <img
+        {/* <img
           src={img}
           alt=""
           className="bg-cover h-full  w-full fixed top-0 left-0 z-[-1]  rounded-2xl lg:rounded-[40px] hidden lg:block"
-        />
+        /> */}
         {/* <TfiClose
           onClick={() => {
             changeValue(false);
@@ -83,6 +83,11 @@ const Overlay = ({ value, changeValue }) => {
         <Signin
           setsigninmodalprop={setsigninmodal}
           signinmodalprop={signinmodal}
+          setopenOtpmodalprop={setopenOtpmodal}
+          setopensignupmodalprop={setopensignupmodal}
+          opensignupmodalprop={opensignupmodal}
+          changeValueprop={changeValue}
+          setopenverifiedmodalprop={setopenverifiedmodal}
         />
       </div>
     </div>

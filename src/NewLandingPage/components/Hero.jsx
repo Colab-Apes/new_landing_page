@@ -3,9 +3,10 @@ import herobg from "../../assets/newimages/bg.png";
 import frame1 from "../../assets/frame1.png";
 import frame2 from "../../assets/frame2.png";
 import frame3 from "../../assets/frame3.png";
-import emoji from "../../assets/svg/emoji.svg";
+import emoji from "../../assets/svg/emoji.png";
 
 import "../../App.css";
+
 const Hero = () => {
   
   return (
@@ -50,7 +51,7 @@ const Hero = () => {
                 className="text-3xl text-[#054E12] font-bold  border-b-2 border-primaryColor"
                 href="#"
               >
-                See how it works
+                Scroll for more info
               </a>
             </div>
           </div>
@@ -86,7 +87,7 @@ const Hero = () => {
                 className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
                 href="#"
               >
-                See how it works
+                Scroll for more info
               </a>
             </div>
           </div>

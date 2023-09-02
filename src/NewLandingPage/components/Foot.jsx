@@ -31,7 +31,7 @@ const Foot = () => {
         <div className="grid text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-[#fff]/[0.8] pt-20 h-full gap-x-10 gap-y-10 lg:gap-y-0 ">
           <div className="flex flex-col text-2xl  w-full mx-auto   lg:text-2xl text-left z-[3] gap-y-8">
             <p className="text-3xl font-bold ">Co_lab Apes</p>
-            <p className="lg:mt-4 mt-2 text-2xl">About Us</p>
+            {/* <p className="lg:mt-4 mt-2 text-2xl">About Us</p> */}
             <p className="">About Us</p>
             <p className="">Privacy policy</p>
             <p className="">Terms of Use</p> <p className="">Legal</p>
@@ -71,13 +71,19 @@ const Foot = () => {
                 <img src={facebook} alt="Facebook" className="w-full" />
               </div>
               <div className="social-img">
-                <img src={insta} alt="Insta" className="w-full" />
+                <a href="https://www.instagram.com/co_labapes/" target={"_blank"}>
+                  <img src={insta} alt="Insta" className="w-full" />
+                </a>
               </div>
               <div className="social-img">
-                <img src={twitter} alt="Twitter" className="w-full" />
+                <a href="https://twitter.com/Co_labApes" target={"_blank"}>
+                  <img src={twitter} alt="Twitter" className="w-full" />
+                </a>
               </div>
               <div className="social-img">
-                <img src={linkedin} alt="Linkedin" className="w-full" />
+                <a href="https://www.linkedin.com/company/colab-apes/" target={"_blank"}>
+                  <img src={linkedin} alt="Linkedin" className="w-full" />
+                </a>
               </div>
             </div>
             <button className=" font-[700] w-full lg:w-fit lg:text-3xl lg:px-12 py-6 text-xl  lg:py-8 mt-8 lg:mt-20 z-[3] text-[#054E12] bg-white rounded-[15px] lg:rounded-[30px] font-lato xl:mt-20">

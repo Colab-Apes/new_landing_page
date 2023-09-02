@@ -1,6 +1,14 @@
 import React from "react";
 import "../../App.css";
+
 const Ready = () => {
+  const scrollToSection = () => {
+    const targetSection = document.getElementById('newsletter');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <div>
       <div className=" mt-64 lg:mt-36 relative z-10 px-4 w-full  md:px-14 lg:px-20 ">
@@ -16,7 +24,10 @@ const Ready = () => {
             <button className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-lg  lg:rounded-[20px]">
               Get Started
             </button>
-            <button className=" bg-white text-2xl text-black mt-8 lg:mt-0 w-full lg:w-[17rem]  py-8 lg:py-10  font-bold  rounded-lg lg:rounded-[20px] shadow-md">
+            <button 
+              className=" bg-white text-2xl text-black mt-8 lg:mt-0 w-full lg:w-[17rem]  py-8 lg:py-10  font-bold  rounded-lg lg:rounded-[20px] shadow-md"
+              onClick={scrollToSection}
+            >
               Join the wait list
             </button>
           </div>
