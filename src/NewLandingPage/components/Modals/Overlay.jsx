@@ -8,6 +8,7 @@ import VerifiedModal from "./VerifiedModal";
 import ForgotPassword from "./RecoverPassword/ForgotPassword";
 import Signin from "./Signin";
 import ResetPassword from "./RecoverPassword/ResetPassword";
+import Success from "./RecoverPassword/Success";
 // import ResetPassword from "./RecoverPassword/ResetPassword";
 // import Success from "./RecoverPassword/Success";
 
@@ -78,8 +79,15 @@ const Overlay = ({ value, changeValue }) => {
       <ResetPassword
         resetpasswordprop={resetpassword}
         setresetpasswordprop={setresetpassword}
+        setsuccessprop={setsuccess}
+        changeValueprop={changeValue}
       />
-      {/* <Success setsuccessprop={setsuccess} successprop={success} /> */}
+      <Success
+        setsuccessprop={setsuccess}
+        successprop={success}
+        changeValueprop={changeValue}
+        setopensignupmodalprop={setopensignupmodal}
+      />
       <Signin
         setsigninmodalprop={setsigninmodal}
         signinmodalprop={signinmodal}
@@ -90,6 +98,7 @@ const Overlay = ({ value, changeValue }) => {
         changeValueprop={changeValue}
         setopenverifiedmodalprop={setopenverifiedmodal}
       />
+      
     </div>
   );
 };

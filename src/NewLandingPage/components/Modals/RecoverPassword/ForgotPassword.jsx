@@ -70,7 +70,7 @@ const ForgotPassword = ({
             </p>
           </div>
           <div className="flex"> </div>
-          <div className="mt-6 lg:mt-20 text-[#3B8004] text-2xl  lg:text-3xl font-bold">
+          <div className="mt-6 lg:mt-20 text-[#3B8004] text-2xl  lg:text-2xl font-bold">
             Enter you email address
           </div>
           <form
