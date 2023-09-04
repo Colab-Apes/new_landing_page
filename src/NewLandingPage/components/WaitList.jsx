@@ -1,7 +1,7 @@
 import React from "react";
 
 import { TfiClose } from "react-icons/tfi";
-import { TypeAnimation } from "react-type-animation";
+
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoIosClose } from "react-icons/io";
 import box from "../../assets/container.png";
