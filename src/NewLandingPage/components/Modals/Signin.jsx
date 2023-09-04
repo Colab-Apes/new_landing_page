@@ -25,7 +25,7 @@ const Signin = ({
     <div
       className={
         signinmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120]  min-w-[30rem]  bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[3.13rem] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-[40rem] py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-[67.9rem]  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
@@ -113,7 +113,14 @@ const Signin = ({
                 <label htmlFor="password" className=" font-bold block">
                   Password
                 </label>
-                <button className="text-[#3B8004] font-semibold">
+                <button 
+                  className="text-[#3B8004] font-semibold text-[1.25rem]"
+                  onClick={() => {
+                    setsigninmodalprop(false);
+                    setforgotpasswordprop(true);
+                  }}
+                  type="button"
+                >
                   {" "}
                   Forgot password?
                 </button>
