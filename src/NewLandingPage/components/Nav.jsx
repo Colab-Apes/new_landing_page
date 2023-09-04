@@ -4,16 +4,28 @@ import menuicon from "../../assets/svg/menu-icon.svg";
 import { TfiClose } from "react-icons/tfi";
 import "../../App.css";
 import OverlayHooks from "../Hooks/OverlayHooks";
-import WaitList from "./Modals/WaitList";
+import WaitList from "./WaitList";
+import { useEffect } from "react";
+
 const Nav = ({ changeValue }) => {
   const [openwaitlist, setopenwaitlist] = useState(false);
   const [opensidenav, setopensidenav] = useState(false);
   const hooks = OverlayHooks();
+  const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setopenjoinwaitlist(true);
+    }, 15000);
+  }, []);
+
   return (
-    <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
-      {/* overlay fot auth */}
-      <WaitList openjoinwaitlistmodal={openwaitlist} />
-      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[20%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
+    <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
+      <WaitList
+        openjoinwaitlistmodal={openjoinwaitlist}
+        setopenjoinwaitlistmodal={setopenjoinwaitlist}
+      />
+      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[50%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
@@ -31,10 +43,10 @@ const Nav = ({ changeValue }) => {
             Sign up
           </button>
           <button
-            onClick={() => {
-              setopenwaitlist("");
-            }}
             className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
+            onClick={() => {
+              setopenjoinwaitlist(true);
+            }}
           >
             Join waitlist
           </button>
@@ -89,12 +101,20 @@ const Nav = ({ changeValue }) => {
           >
             Sign up
           </button>
-          <button className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold">
+          <button
+            onClick={() => {
+              setopensidenav(false);
+              setopenjoinwaitlist(true);
+
+              // scrollToSection();
+            }}
+            className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
+          >
             Join waitlist
           </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

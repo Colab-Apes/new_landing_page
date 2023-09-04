@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { faqscolabapes } from "./faqsdata";
+import React, { useState } from "react";
+import { faqsseeall } from "./faqsdata";
 
-const Colabapes = ({ minus, plus }) => {
+const SeeAll = ({ minus, plus }) => {
   const [getindex, setgetindex] = useState(0);
 
   const [openclose, setopenclose] = useState(false);
+
   return (
     <div>
-      {faqscolabapes.map((item, index) => (
+      {" "}
+      {faqsseeall.map((item, index) => (
         <div
           key={index}
-          className="border-b border-b-[#999] pb-10 lg:pb-10 mt-10 "
+          className="border-b border-b-[#999] pb-10 lg:pb-10 mt-10"
         >
           <div
             onClick={() => {
+              setgetindex(index);
               let val = index;
               val === index ? setopenclose(!openclose) : "";
-              setgetindex(index);
-              console.log("getindex" + getindex);
-              console.log("index" + index);
             }}
             className="flex cursor-pointer justify-between mb-8 items-center "
           >
-            <p className="text-3xl font-bold  text-left  text-[#054E12]">
+            <p className="text-3xl font-bold  text-left text-[#054E12]">
               {item.title}
             </p>
             <img
@@ -30,7 +30,7 @@ const Colabapes = ({ minus, plus }) => {
               alt=""
               className="cursor-pointer"
             />
-          </div>{" "}
+          </div>
           <p
             className={
               getindex === index && openclose
@@ -45,5 +45,4 @@ const Colabapes = ({ minus, plus }) => {
     </div>
   );
 };
-
-export default Colabapes;
+export default SeeAll;

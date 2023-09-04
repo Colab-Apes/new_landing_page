@@ -30,8 +30,8 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] w-full py-0  sm:pb-0 md:py-4  sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
-          : "hidden"
+          ? " rounded-[20px] lg:rounded-[3.13rem] w-full z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r   py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
+          : "hidden w-full"
       }
     >
       <div className="bg-[#C26AAA] blur-[150px] h-[24rem] left-0  top-0 rounded-full w-[24rem] absolute z-10"></div>
@@ -52,21 +52,25 @@ const Signup = ({
           className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
         />
 
-        <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
-          <img src={img1} alt="" className="lg:rounded-[40px] object-cover" />
+        <div className="w-full h-full lg:block  hidden  lg:rounded-[1.56rem] ">
+          <img
+            src={img1}
+            alt=""
+            className="lg:rounded-[1.56rem] object-cover"
+          />
         </div>
-        <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
-          <div className=" flex flex-col justify-center items-center">
+        <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
+          <div className=" flex flex-col justify-center items-center mt-[4rem]">
             <img
               src={logo}
               alt=""
-              className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+              className="w-[12rem] sm:w-[6.25rem] lg:w-[8.7rem] object-contain "
             />
-            <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-6 xl:text-[1.5rem]">
+            {/* <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-6 xl:text-[1.5rem]">
               Sign up to Get Started
-            </p>
+            </p> */}
           </div>
-          <p className="text-[#555555] font-bold  text-lg text-center hidden lg:block mt-0 md:mt-4 lg:mt-1 xl:mt-8 xl:text-[1.5rem]">
+          <p className="text-[#555] font-bold text-[1.67rem] sm:hidden text-center mt-6 md:mt-4 lg:mt-[1.69rem] mb-0">
             Sign up to Get Started
           </p>
           <form
@@ -74,7 +78,7 @@ const Signup = ({
               e.preventDefault();
               formik.handleSubmit();
             }}
-            className="w-full  flex flex-col  justify-between gap-y-8 mt-2 md:gap-y-4 lg: text-sm px-10"
+            className="w-full  flex flex-col justify-between gap-y-8 mt-8 md:gap-y-4 lg: text-sm px-10"
             action=""
           >
             <div className="relative ">
@@ -86,7 +90,10 @@ const Signup = ({
                   className="inset-y-[3.5rem] left-1 absolute px-[0.2rem] "
                 />
               </span>
-              <label htmlFor="e_mail" className="block font-bold text-xl">
+              <label
+                htmlFor="e_mail"
+                className="text-[#333] block font-bold text-xl"
+              >
                 Email
               </label>
               <input
@@ -95,7 +102,7 @@ const Signup = ({
                 className={
                   formik.errors.email && formik.touched.email
                     ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
-                    : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+                    : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-3  focus:border-[#3B8004] border-[#999999] focus:outline-none"
                 }
                 placeholder="johndoe@email.com"
                 onChange={formik.handleChange}
@@ -116,7 +123,10 @@ const Signup = ({
                   className="absolute inset-y-[3.5rem] left-1 px-[0.2rem]"
                 />
               </span>
-              <label htmlFor="password" className="block font-bold text-xl">
+              <label
+                htmlFor="password"
+                className="text-[#333] block font-bold text-xl"
+              >
                 Create password
               </label>
               <input
@@ -212,25 +222,25 @@ const Signup = ({
           </p>
           <div className="flex flex-col w-full  md:mt-0 lg:mt-4 px-10">
             <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-4  xl:gap-x-6 lg:mt-0">
-              <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full bg-[#F8F8F8]   border lg:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+              <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full bg-[#F8F8F8]   border lg:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
                 <img
                   src={google}
                   alt=""
                   className="w-[1.6rem] object-contain"
                 />
               </div>{" "}
-              <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full  bg-[#F8F8F8]     border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+              <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full  bg-[#F8F8F8]     border xl:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
                 <img
                   src={facebook}
                   alt=""
                   className="w-[1.6rem] object-contain"
                 />
               </div>{" "}
-              <div className="flex justify-center  cursor-pointer items-center h-[3.6rem]  w-full bg-[#F8F8F8]  border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
+              <div className="flex justify-center  cursor-pointer items-center h-[3.6rem]  w-full bg-[#F8F8F8]  border xl:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
                 <img src={apple} alt="" className="w-[1.6rem] object-contain" />
               </div>
             </div>
-            <div className="mt-20  text-lg   md:mt-8 lg:mt-4 xl:mt-6 ">
+            <div className="mt-[1.34rem] mb-[1.28rem] text-lg p-3 md:mt-8 lg:mt-4 xl:mt-6 ">
               <p className="flex justify-center items-center text-center lg:text-lg">
                 <span className="text-[#999999]">Already have an account?</span>
                 <p
