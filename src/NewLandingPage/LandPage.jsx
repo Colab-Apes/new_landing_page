@@ -12,6 +12,7 @@ import JoinOurNewsLetter from "./components/JoinOurNewsLetter";
 import Foot from "./components/Foot";
 import Faqs from "./components/Faqs/Faqs";
 import Overlay from "./components/Modals/Overlay";
+import WaitList from "./components/Modals/WaitList";
 
 const LandPage = () => {
   const [isModal, setisModal] = useState(false);
@@ -26,8 +27,11 @@ const LandPage = () => {
     }
   }, [isModal]);
 
+
   return (
     <div className=" font-lato">
+
+      {/* overlay for auth */}
       <Overlay value={isModal} changeValue={setisModal} />
       {/* Nav */}
       <Nav changeValue={setisModal} />
