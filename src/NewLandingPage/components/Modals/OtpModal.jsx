@@ -18,7 +18,7 @@ const OtpModal = ({
     <div
       className={
         openOtpmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[50rem] mt-64 r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
@@ -36,7 +36,7 @@ const OtpModal = ({
       <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div
         className={
-          "flex flex-col w-full lg:grid lg:grid-cols-2 gap-x-10 z-[200] "
+          "flex flex-col z-[120]  w-full h-full lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-10 lg:px-0   lg:justify-between  lg:items-center"
         }
       >
         <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
@@ -46,7 +46,7 @@ const OtpModal = ({
             className=" object-cover lg:rounded-[40px] "
           />
         </div>
-        <div className="flex flex-col items-center w-[19rem] h-[30rem] md:w-full md:h-full">
+        <div className="flex flex-col items-center w-full h-full gap-x-20 lg:w-[19rem] lg:h-[30rem] md:w-full md:h-full">
           <div className=" flex flex-col justify-center items-center">
             <img
               src={logo}
@@ -61,9 +61,9 @@ const OtpModal = ({
                 setopenOtpmodalprop(false);
                 setopensignupmodalprop(true);
               }}
-              className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.3rem]"
+              className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.6rem] lg:text-[2.3rem]"
             />
-            <p className="text-[#555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
+            <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
               Verify Email
             </p>
             <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">
@@ -75,7 +75,7 @@ const OtpModal = ({
           </div>
 
           <OtpInputField length={4} />
-          <div className="w-full text-[#999] text-center text-xl  mt-4">
+          <div className="w-full text-[#999] text-center text-xl mt-10  lg:mt-4">
             Resend code after <span className="text-[#3B8004]">0:59 s</span>
           </div>
           <button

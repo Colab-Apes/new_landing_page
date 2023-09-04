@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
-import password from "../../../assets/ModalImages/reset.png";
-import logo from "../../../assets/ModalImages/logo.png";
+import reset from "../../../../assets/ModalImages/reset.png";
+import logo from "../../../../assets/ModalImages/logo.png";
 import { Lock } from "react-iconly";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
+import { TfiClose } from "react-icons/tfi";
+import { BsArrowLeft } from "react-icons/bs";
 const ResetPassword = ({ resetpasswordprop, setresetpasswordprop }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   const [isconfirmPasswordVisible, setisconfirmPasswordVisible] =
@@ -12,108 +13,140 @@ const ResetPassword = ({ resetpasswordprop, setresetpasswordprop }) => {
     <div
       className={
         resetpasswordprop
-          ? "flex flex-col  w-full lg:grid lg:grid-cols-2 gap-x-10"
+          ? " rounded-[20px] lg:rounded-[3.13rem] w-full z-[120]   bg-[#F5FFF7] flex lg:items-center justify-between min-h-[47rem] r   py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-full sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
-      <img
-        src={password}
-        alt=""
-        className=" object-cover hidden lg:block lg:h-[30rem] xl:h-[30rem] rounded-2xl"
+      <TfiClose
+        onClick={() => {
+          changeValueprop(false);
+          setopensignupmodalprop(true);
+          setopenverifiedmodalprop(false);
+          setopenOtpmodalprop(false);
+          setsigninmodalprop(false);
+        }}
+        className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[400] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
       />
-      <div className="flex flex-col w-full items-center sm:w-[19rem] h-[30rem] md:w-full md:h-full">
-        <img
-          src={logo}
-          alt=""
-          className="w-[5rem] sm:w-[6rem] object-contain "
-        />
-        <div className="flex">
-          {" "}
-          <p className="text-[#555555] font-bold text-center mt-1 md:mt-4 lg:mt-2">
-            Reset password
-          </p>
-        </div>
-        <div className="mt-6 text-[#3B8004] text-sm font-bold">
-          Reset password to regain access into your account
-        </div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            // setopensignupmodalprop(false);
-            // setopenOtpmodalprop(false);
-            setresetpasswordprop(false);
-          }}
-          className="w-full relative flex flex-col  justify-evenly   text-sm mt-8"
-          action=""
-        >
-          <div className="relative  mt-4 md:mt-8 lg:mt-4">
-            <span>
-              <Lock
-                set="curved"
-                primaryColor="#999999"
-                className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
-              />
-            </span>
-            <label htmlFor="password" className="block font-bold">
-              New password
-            </label>
-            <input
-              type={isPasswordVisible ? "text" : "password"}
-              id="password"
-              className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
-              placeholder="● ● ● ● ● ● "
-            />
+      <div className="bg-[#C26AAA] blur-[150px] h-[24rem] left-0  top-0 rounded-full w-[24rem] absolute z-10"></div>
+      <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
 
-            {isPasswordVisible ? (
-              <MdOutlineVisibilityOff
-                onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
-              />
-            ) : (
-              <MdOutlineVisibility
-                onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
-              />
-            )}
-          </div>
-          <div className="relative  mt-4 md:mt-8 lg:mt-4">
-            <span>
-              <Lock
-                set="curved"
-                primaryColor="#999999"
-                className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
-              />
-            </span>
-            <label htmlFor="password" className="block font-bold">
-              Confirm password
-            </label>
-            <input
-              type={isconfirmPasswordVisible ? "text" : "password"}
-              id="password"
-              className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
-              placeholder="● ● ● ● ● ● "
-            />
+      <div
+        className={
+          "flex flex-col z-[120]  w-full    lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center lg:items-start"
+        }
+      >
+        <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
+          <img src={reset} alt="" className="lg:rounded-[40px] object-cover" />
+        </div>
 
-            {isconfirmPasswordVisible ? (
-              <MdOutlineVisibilityOff
-                onClick={() =>
-                  setisconfirmPasswordVisible(!isconfirmPasswordVisible)
-                }
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
-              />
-            ) : (
-              <MdOutlineVisibility
-                onClick={() =>
-                  setisconfirmPasswordVisible(!isconfirmPasswordVisible)
-                }
-                className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
-              />
-            )}
+        <div className="flex flex-col px-4 lg:px-0  gap-y-4 w-full justify-evenly h-full lg:justify-normal mt-14 lg:mt-0  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
+          <div className=" flex flex-col justify-center items-center">
+            <img
+              src={logo}
+              alt=""
+              className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+            />
           </div>
-          <button className="font-semibold bg-gradient-to-bl from-[#054E12] to-[#3B8004] w-full rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-6  text-white ">
-            Reset
-          </button>
-        </form>
+
+          <div className="flex justify-between w-full items-center mt-0">
+            {" "}
+            <BsArrowLeft
+              onClick={() => {
+                setopenOtpmodalprop(false);
+                setopensignupmodalprop(true);
+              }}
+              className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.6rem] lg:text-[2.3rem]"
+            />
+            <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
+              Reset password
+            </p>
+            <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">
+              dfgsfgdfgsdf
+            </p>
+          </div>
+
+          <div className="mt-6 text-[#3B8004] text-sm font-bold">
+            Reset password to regain access into your account
+          </div>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              // setopensignupmodalprop(false);
+              // setopenOtpmodalprop(false);
+              setresetpasswordprop(false);
+            }}
+            className="w-full relative flex flex-col  justify-evenly   text-sm mt-8"
+            action=""
+          >
+            <div className="relative  mt-4 md:mt-8 lg:mt-4">
+              <span>
+                <Lock
+                  set="curved"
+                  primaryColor="#999999"
+                  className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
+                />
+              </span>
+              <label htmlFor="resetpassword" className="block font-bold">
+                New password
+              </label>
+              <input
+                type={isPasswordVisible ? "text" : "password"}
+                id="resetpassword"
+                className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
+                placeholder="● ● ● ● ● ● "
+              />
+
+              {isPasswordVisible ? (
+                <MdOutlineVisibilityOff
+                  onClick={() => setisPasswordVisible(!isPasswordVisible)}
+                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                />
+              ) : (
+                <MdOutlineVisibility
+                  onClick={() => setisPasswordVisible(!isPasswordVisible)}
+                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                />
+              )}
+            </div>
+            <div className="relative  mt-4 md:mt-8 lg:mt-4">
+              <span>
+                <Lock
+                  set="curved"
+                  primaryColor="#999999"
+                  className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
+                />
+              </span>
+              <label htmlFor="confirmresetpassword" className="block font-bold">
+                Confirm password
+              </label>
+              <input
+                type={isconfirmPasswordVisible ? "text" : "password"}
+                id="confirmresetpassword"
+                className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
+                placeholder="● ● ● ● ● ● "
+              />
+
+              {isconfirmPasswordVisible ? (
+                <MdOutlineVisibilityOff
+                  onClick={() =>
+                    setisconfirmPasswordVisible(!isconfirmPasswordVisible)
+                  }
+                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                />
+              ) : (
+                <MdOutlineVisibility
+                  onClick={() =>
+                    setisconfirmPasswordVisible(!isconfirmPasswordVisible)
+                  }
+                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                />
+              )}
+            </div>
+            <button className="font-semibold bg-gradient-to-bl from-[#054E12] to-[#3B8004] w-full rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-6  text-white ">
+              Reset
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
