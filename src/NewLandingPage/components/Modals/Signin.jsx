@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import img1 from "../../../assets/ModalImages/signin.png";
 import logo from "../../../assets/ModalImages/logo.png";
 
+import { TfiClose } from "react-icons/tfi";
 import { Lock, Message } from "react-iconly";
 import google from "../../../assets/ModalImages/social/Google logo.png";
 import facebook from "../../../assets/ModalImages/social/Facbook.png";
@@ -10,8 +11,15 @@ import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
 import { useSigninHook } from "../../../Validation/Hooks/useSigninHook";
+import OverlayHooks from "../../Hooks/OverlayHooks";
 
-const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
+const Signin = ({ 
+  setopensignupmodalprop, 
+  setforgotpasswordprop, 
+  setsigninmodalprop, 
+  signinmodalprop 
+}) => {
+  const hooks = OverlayHooks();
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   const { formik } = useSigninHook();
   return (
@@ -29,6 +37,13 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
           "flex flex-col  w-full lg:grid lg:grid-cols-2 gap-x-10 z-[200]"
         }
       >
+        <TfiClose
+          onClick={() => {
+            setopensignupmodalprop(true);
+            setsigninmodalprop(false);
+          }}
+          className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
+        />
         <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
           <img src={img1} alt="" className=" object-cover lg:rounded-[20px] " />
         </div>
@@ -44,10 +59,9 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              // setopensignupmodalprop(false);
-              // setopenOtpmodalprop(true);
+              formik.handleSubmit();
             }}
-            className="w-full relative flex flex-col lg:mt-[1.28rem] justify-evenly   text-sm"
+            className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 lg: text-sm px-10"
             action=""
           >
             <div className="relative">
@@ -56,81 +70,132 @@ const Signin = ({ setsigninmodalprop, signinmodalprop }) => {
                 <Message
                   set="curved"
                   primaryColor="#999999"
-                  className="inset-y-[2rem] left-1 absolute px-[0.2rem] "
+                  className="inset-y-[3.5rem] left-1 absolute px-[0.2rem] "
                 />
               </span>
-              <label htmlFor="e_mail" className="text-[#333] block font-bold text-[1.25rem]">
+              <label htmlFor="e_mail" className="text-[#333] block font-bold text-xl">
                 Email
               </label>
               <input
                 type="email"
-                id="e_mail"
-                className="w-[24.3rem] h-[3.13rem] py-2 bg-[#FFFFFF] rounded-[5px] font-lato px-8 mt-4 border border-[#999999] focus:outline-none"
+                id="email"
+                className={
+                  formik.errors.email && formik.touched.email
+                    ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                    : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-3  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+                }
                 placeholder="johndoe@email.com"
+                onChange={formik.handleChange}
+                value={formik.values.email}
+                onBlur={formik.handleBlur}
               />
+              {formik.errors.email && formik.touched.email ? (
+                <p className="text-red-500 text-xl">{formik.errors.email}</p>
+              ) : (
+                ""
+              )}
             </div>
 
-            <div className="relative  mt-4 md:mt-8 lg:mt-4">
+            <div className="relative   md:mt-0 lg:mt-4">
               <span>
                 <Lock
                   set="curved"
                   primaryColor="#999999"
-                  className="absolute inset-y-[2rem] left-1 px-[0.2rem]"
+                  className="absolute inset-y-[3.5rem] left-1 px-[0.2rem]"
                 />
               </span>
               <div className="flex justify-between items-center ">
                 {" "}
-                <label htmlFor="p_assword" className="text-[#333] font-bold block text-[1.25rem]">
+                <label htmlFor="p_assword" className="text-[#333] block font-bold text-xl">
                   Password
                 </label>
-                <button className="text-[#3B8004] font-semibold text-[1.25rem]">
+                <button 
+                  className="text-[#3B8004] font-semibold text-[1.25rem]"
+                  onClick={() => {
+                    setsigninmodalprop(false);
+                    hooks.setforgotpassword(true);
+                  }}
+                  type="button"
+                >
                   {" "}
                   Forgot password?
                 </button>
               </div>
               <input
                 type={isPasswordVisible ? "text" : "password"}
-                id="p_assword"
-                className="w-full py-2 bg-[#FFFFFF] rounded-[5px] px-8 mt-1 border border-[#999999] focus:outline-none"
-                placeholder="● ● ● ● ● ● "
+                id="password"
+                className={
+                  formik.errors.password && formik.touched.password
+                    ? "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-red-500 focus:border-3 focus:border-[#3B8004] focus:outline-none"
+                    : "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-3 focus:border-[#3B8004] focus:outline-none"
+                }
+                placeholder="● ● ● ● ● ● ●"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+                onBlur={formik.handleBlur}
               />
 
               {isPasswordVisible ? (
                 <MdOutlineVisibilityOff
                   onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                  className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333] cursor-pointer"
                 />
               ) : (
                 <MdOutlineVisibility
                   onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                  className="absolute inset-y-[2rem] right-1 px-[0.2rem] text-2xl text-[#333333]"
+                  className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333] cursor-pointer"
                 />
+              )}
+              {formik.errors.password && formik.touched.password ? (
+                <p className="text-red-500 text-xl ">
+                  {formik.errors.password}
+                </p>
+              ) : (
+                ""
               )}
             </div>
 
-            <button className="font-semibold btngrad  rounded-[10px] h-[2.6rem] mt-6 md:mt-8 lg:mt-6  text-white ">
+            <button className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white ">
               Sign In
             </button>
           </form>{" "}
           <div className="flex flex-col w-full mt-4 md:mt-8 lg:mt-6 gap-1">
-            <p className="text-[#999] text-center text-[1.1rem]">
+            <p className="text-[#999999] text-lg text-center mt-8 lg:mt-4 lg:text-lg">
               Or Continue with
             </p>
-            <div className="flex justify-evenly mt-4">
-              <div className="flex justify-center cursor-pointer items-center h-[3.13rem] w-[7.5rem] border border-solid border-[#DDD] rounded-[6px] bg-[#F5FFF7]">
-                <img src={google} alt="" className="w-[1.5rem] h-[1.5rem]"/>
-              </div>{" "}
-              <div className="flex justify-center cursor-pointer items-center h-[3.13rem] w-[7.5rem] border border-solid border-[#DDD] rounded-[6px] bg-[#F5FFF7]">
-                <img src={facebook} alt="" className="w-[1.5rem] h-[1.5rem]"/>
-              </div>{" "}
-              <div className="flex justify-center cursor-pointer items-center h-[3.13rem] w-[7.5rem] border border-solid border-[#DDD] rounded-[6px] bg-[#F5FFF7]">
-                <img src={apple} alt="" className="w-[1.3rem] h-[1.5rem]"/>
+            <div className="flex flex-col w-full  md:mt-0 lg:mt-4 px-10">
+              <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-4  xl:gap-x-6 lg:mt-0">
+                <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full bg-[#F8F8F8]   border lg:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
+                  <img
+                    src={google}
+                    alt=""
+                    className="w-[1.6rem] object-contain"
+                  />
+                </div>{" "}
+                <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full  bg-[#F8F8F8]     border xl:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
+                  <img
+                    src={facebook}
+                    alt=""
+                    className="w-[1.6rem] object-contain"
+                  />
+                </div>{" "}
+                <div className="flex justify-center  cursor-pointer items-center h-[3.6rem]  w-full bg-[#F8F8F8]  border xl:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
+                  <img src={apple} alt="" className="w-[1.6rem] object-contain" />
+                </div>
               </div>
             </div>
-            <div className="mt-6  md:mt-8 lg:mt-4 text-sm">
+            <div className="mt-6  md:mt-8 lg:mt-5 text-sm">
               <p className=" text-center text-[1.20rem]">
                 <span className="text-[#999]">Don't have an account?  </span>
-                <button className="text-[#054E12] font-bold">  Sign Up</button>
+                <button 
+                  onClick={() => {
+                    setsigninmodalprop(false);
+                    setopensignupmodalprop(true);
+                  }}
+                  className="text-[#054E12] font-bold"
+                >  
+                Sign Up
+                </button>
               </p>
             </div>
           </div>
