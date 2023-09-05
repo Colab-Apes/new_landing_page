@@ -34,6 +34,14 @@ const Nav = ({ changeValue }) => {
         </div>
         <div className="flex gap-10">
           <button
+            className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
+            onClick={() => {
+              setopenjoinwaitlist(true);
+            }}
+          >
+            Join waitlist
+          </button>
+          <button
             onClick={() => {
               hooks.setopensignupmodal(true);
               changeValue(true);
@@ -41,14 +49,6 @@ const Nav = ({ changeValue }) => {
             className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold"
           >
             Sign up
-          </button>
-          <button
-            className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
-            onClick={() => {
-              setopenjoinwaitlist(true);
-            }}
-          >
-            Join waitlist
           </button>
         </div>
       </nav>
@@ -92,15 +92,7 @@ const Nav = ({ changeValue }) => {
         <div className="flex flex-col mt-20 gap-y-10">
           {/* Signup Button - Disabled for now*/}
           <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" />
-          <button
-            onClick={() => {
-              setopensidenav(false);
-              changeValue(true);
-            }}
-            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold"
-          >
-            Sign up
-          </button>
+
           <button
             onClick={() => {
               setopensidenav(false);
@@ -111,6 +103,15 @@ const Nav = ({ changeValue }) => {
             className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
           >
             Join waitlist
+          </button>
+          <button
+            onClick={() => {
+              setopensidenav(false);
+              changeValue(true);
+            }}
+            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold"
+          >
+            Sign up
           </button>
         </div>
       </div>
