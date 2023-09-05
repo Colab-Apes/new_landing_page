@@ -4,12 +4,21 @@ import logo from "../../../../assets/ModalImages/logo.png";
 import { Message } from "react-iconly";
 import { TfiClose } from "react-icons/tfi";
 import { BsArrowLeft } from "react-icons/bs";
+import useForgotPasswordHook from "../../../../Validation/Hooks/useForgotPasswordHook";
+import { ClipLoader } from "react-spinners";
 const ForgotPassword = ({
   forgotpasswordprop,
   setforgotpasswordprop,
-  resetpasswordprop,
+
   setresetpasswordprop,
+  setopensignupmodalprop,
+  changeValueprop,
+  setsigninmodalprop,
 }) => {
+  const { formik, isLoading } = useForgotPasswordHook(
+    setforgotpasswordprop,
+    setresetpasswordprop
+  );
   return (
     <div
       className={
@@ -22,9 +31,7 @@ const ForgotPassword = ({
         onClick={() => {
           changeValueprop(false);
           setopensignupmodalprop(true);
-          setopenverifiedmodalprop(false);
-          setopenOtpmodalprop(false);
-          setsigninmodalprop(false);
+          setforgotpasswordprop(false);
         }}
         className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[400] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
       />
@@ -82,7 +89,8 @@ const ForgotPassword = ({
               e.preventDefault();
               // setopensignupmodalprop(false);
               // setopenOtpmodalprop(false);
-              setforgotpasswordprop(false);
+
+              formik.handleSubmit();
             }}
             className="w-full relative flex flex-col lg:px-10 justify-evenly gap-y-8  text-sm"
             action=""
@@ -96,33 +104,57 @@ const ForgotPassword = ({
                   className="inset-y-[3.5rem] left-1 absolute px-[0.2rem] "
                 />
               </span>
-              <label htmlFor="email" className="block font-bold text-lg">
+              <label htmlFor="em_ail" className="block font-bold text-lg">
                 Email
               </label>
               <input
                 type="email"
-                id="email"
-                className="w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                id="em_ail"
+                className={
+                  formik.errors.em_ail && formik.touched.em_ail
+                    ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
+                    : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+                }
                 placeholder="johndoe@email.com"
+                onChange={formik.handleChange}
+                value={formik.values.em_ail}
+                onBlur={formik.handleBlur}
               />
+              {formik.errors.em_ail && formik.touched.em_ail ? (
+                <p className="text-red-500 text-xl">{formik.errors.em_ail}</p>
+              ) : (
+                ""
+              )}
             </div>
             <button
               // type="submit"
-              onClick={() => {
-                setforgotpasswordprop(false);
-                setresetpasswordprop(true);
-              }}
+
               className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-6  text-white "
             >
-              Confirm email
+              {isLoading ? (
+                <ClipLoader
+                  color="#fff"
+                  className="right-5 text-2xl  inset-y-4  "
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              ) : (
+                " Confirm email"
+              )}
             </button>
           </form>
           <p className=" lg:text-xl mt-6 font-semibold text-xl">
             Remember password?
-            <a className="text-[#054E12]" href="/">
-              {" "}
+            <span
+              onClick={() => {
+                setforgotpasswordprop(false);
+                setsigninmodalprop(true);
+              }}
+              className="text-[#054E12] font-bold cursor-pointer ml-1"
+              href="/"
+            >
               Sign In
-            </a>
+            </span>
           </p>
         </div>
       </div>

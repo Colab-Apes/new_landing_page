@@ -10,6 +10,7 @@ import apple from "../../../assets/ModalImages/social/Vector.svg";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import { TfiClose } from "react-icons/tfi";
 import "../../../App.css";
+import { ClipLoader } from "react-spinners";
 import { useSigninHook } from "../../../Validation/Hooks/useSigninHook";
 const Signin = ({
   setopenOtpmodalprop,
@@ -21,7 +22,7 @@ const Signin = ({
   setforgotpasswordprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
-  const { formik } = useSigninHook();
+  const { formik, isLoading } = useSigninHook();
   return (
     <div
       className={
@@ -84,19 +85,19 @@ const Signin = ({
               </label>
               <input
                 type="email"
-                id="email"
+                id="e_mail"
                 className={
-                  formik.errors.email && formik.touched.email
+                  formik.errors.e_mail && formik.touched.e_mail
                     ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
                     : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
                 }
                 placeholder="johndoe@email.com"
                 onChange={formik.handleChange}
-                value={formik.values.email}
+                value={formik.values.e_mail}
                 onBlur={formik.handleBlur}
               />
-              {formik.errors.email && formik.touched.email ? (
-                <p className="text-red-500 text-xl">{formik.errors.email}</p>
+              {formik.errors.e_mail && formik.touched.e_mail ? (
+                <p className="text-red-500 text-xl">{formik.errors.e_mail}</p>
               ) : (
                 ""
               )}
@@ -164,7 +165,16 @@ const Signin = ({
               // type="submit"
               className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] xl:h-[4rem] lg:mt-3  text-white "
             >
-              Verify email
+              {isLoading ? (
+                <ClipLoader
+                  color="#fff"
+                  className="right-5 text-2xl  inset-y-4  "
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              ) : (
+                "Sign In"
+              )}
             </button>
           </form>{" "}
           <div className="flex flex-col w-full mt-4 md:mt-8 lg:mt-4">

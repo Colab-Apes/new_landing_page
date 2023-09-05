@@ -52,7 +52,10 @@ const Success = ({
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
             />
           </div>
-
+          <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
+            Successful
+          </p>
+          {/*  It has back button
           <div className="px-4 flex justify-between w-full items-center mt-0">
             {" "}
             <BsArrowLeft
@@ -68,7 +71,7 @@ const Success = ({
             <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">
               dfgsfgdfgsdf
             </p>
-          </div>
+          </div> */}
           <div className="mt-6 lg:mt-14 text-[#3B8004] text-xl text-center  lg:text-xl font-bold">
             Your password reset is successful You may now Sign In to your
             account

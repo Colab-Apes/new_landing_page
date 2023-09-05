@@ -49,8 +49,11 @@ const ResetPassword = ({
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
             />
           </div>
-
-          <div className="px-4 flex justify-between w-full items-center mt-0">
+          <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
+            Reset password
+          </p>
+          {/* It has back button
+           <div className="px-4 flex justify-between w-full items-center mt-0">
             {" "}
             <BsArrowLeft
               onClick={() => {
@@ -65,7 +68,7 @@ const ResetPassword = ({
             <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">
               dfgsfgdfgsdf
             </p>
-          </div>
+          </div> */}
 
           <div className="mt-6 lg:mt-14 text-[#3B8004] text-xl  lg:text-xl font-bold">
             Reset password to regain access into your account
