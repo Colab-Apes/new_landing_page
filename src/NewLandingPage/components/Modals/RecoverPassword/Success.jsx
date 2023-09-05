@@ -10,6 +10,7 @@ const Success = ({
   successprop,
   changeValueprop,
   setopensignupmodalprop,
+  setsigninmodalprop,
 }) => {
   return (
     <div
@@ -77,6 +78,7 @@ const Success = ({
               // setopenOtpmodalprop(false);
               // setopenverifiedmodalprop(true);
               setsuccessprop(false);
+              setsigninmodalprop(true);
               // setsignin()
             }}
             className="font-bold text-2xl w-full xl:text-xl btngrad rounded-[10px] h-[4rem] mt-20 xl:h-[4rem] lg:mt-6  text-white "
