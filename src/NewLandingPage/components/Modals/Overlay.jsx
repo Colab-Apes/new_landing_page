@@ -9,6 +9,9 @@ import ForgotPassword from "./RecoverPassword/ForgotPassword";
 import Signin from "./Signin";
 import ResetPassword from "./RecoverPassword/ResetPassword";
 import Success from "./RecoverPassword/Success";
+import Step1 from "./ProfileModals/Step1";
+import Step3 from "./ProfileModals/Step3";
+import Step2 from "./ProfileModals/Step2";
 // import ResetPassword from "./RecoverPassword/ResetPassword";
 // import Success from "./RecoverPassword/Success";
 
@@ -20,6 +23,9 @@ const Overlay = ({ value, changeValue }) => {
   const [openOtpmodal, setopenOtpmodal] = useState(false);
   const [openverifiedmodal, setopenverifiedmodal] = useState(false);
   const [opensignupmodal, setopensignupmodal] = useState(true);
+  const [step1, setstep1] = useState(false);
+  const [step2, setstep2] = useState(false);
+  const [step3, setstep3] = useState(false);
 
   return (
     <div
@@ -98,7 +104,9 @@ const Overlay = ({ value, changeValue }) => {
         changeValueprop={changeValue}
         setopenverifiedmodalprop={setopenverifiedmodal}
       />
-      
+      <Step1 opensetstep1modalprop={setstep1} openstep1modalprop={step1} />
+      <Step2 opensetstep2modalprop={setstep2} openstep2modalprop={step2} />
+      <Step3 opensetstep3modalprop={setstep3} openstep3modalprop={step3} />
     </div>
   );
 };
