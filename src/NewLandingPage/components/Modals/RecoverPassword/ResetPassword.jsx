@@ -5,15 +5,22 @@ import { Lock } from "react-iconly";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import { TfiClose } from "react-icons/tfi";
 import { BsArrowLeft } from "react-icons/bs";
+import useResetPassword from "../../../../Validation/Hooks/useResetPassword";
+import { ClipLoader } from "react-spinners";
 const ResetPassword = ({
   resetpasswordprop,
   setresetpasswordprop,
   changeValueprop,
   setsuccessprop,
+  setopensignupmodalprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   const [isconfirmPasswordVisible, setisconfirmPasswordVisible] =
     useState(false);
+  const { formik, isLoading } = useResetPassword(
+    setresetpasswordprop,
+    setsuccessprop
+  );
   return (
     <div
       className={
@@ -25,6 +32,7 @@ const ResetPassword = ({
       <TfiClose
         onClick={() => {
           changeValueprop(false);
+          setresetpasswordprop(false);
           setopensignupmodalprop(true);
         }}
         className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[400] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
@@ -78,7 +86,7 @@ const ResetPassword = ({
               e.preventDefault();
               // setopensignupmodalprop(false);
               // setopenOtpmodalprop(false);
-              setresetpasswordprop(false);
+              formik.handleSubmit();
             }}
             className="w-full relative flex flex-col  justify-evenly lg:px-10  lg:gap-y-3 gap-y-4  text-sm lg:mt-3 mt-10"
             action=""
@@ -99,9 +107,16 @@ const ResetPassword = ({
               </label>
               <input
                 type={isPasswordVisible ? "text" : "password"}
-                id="resetpassword"
-                className="w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
-                placeholder="● ● ● ● ● ● "
+                id="p_assword"
+                className={
+                  formik.errors.p_assword && formik.touched.p_assword
+                    ? "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-red-500 focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                    : "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                }
+                placeholder="● ● ● ● ● ● ●"
+                onChange={formik.handleChange}
+                value={formik.values.p_assword}
+                onBlur={formik.handleBlur}
               />
 
               {isPasswordVisible ? (
@@ -114,6 +129,13 @@ const ResetPassword = ({
                   onClick={() => setisPasswordVisible(!isPasswordVisible)}
                   className="absolute inset-y-[3.5rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
                 />
+              )}
+              {formik.errors.p_assword && formik.touched.p_assword ? (
+                <p className="text-red-500 text-xl ">
+                  {formik.errors.p_assword}
+                </p>
+              ) : (
+                ""
               )}
             </div>
             <div className="relative  mt-4 md:mt-8 lg:mt-4">
@@ -132,9 +154,17 @@ const ResetPassword = ({
               </label>
               <input
                 type={isconfirmPasswordVisible ? "text" : "password"}
-                id="confirmresetpassword"
-                className="w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
-                placeholder="● ● ● ● ● ● "
+                id="confirm_Password"
+                className={
+                  formik.errors.confirm_Password &&
+                  formik.touched.confirm_Password
+                    ? "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-red-500 focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                    : "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                }
+                placeholder="● ● ● ● ● ● ●"
+                onChange={formik.handleChange}
+                value={formik.values.confirm_Password}
+                onBlur={formik.handleBlur}
               />
 
               {isconfirmPasswordVisible ? (
@@ -152,18 +182,33 @@ const ResetPassword = ({
                   className="absolute inset-y-[3.5rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
                 />
               )}
+              {formik.errors.confirm_Password &&
+              formik.touched.confirm_Password ? (
+                <p className="text-red-500 text-xl ">
+                  {formik.errors.confirm_Password}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <button
               // type="submit"
               onClick={() => {
                 // setforgotpasswordprop(false);
                 // setresetpasswordprop(true);
-                setresetpasswordprop(false);
-                setsuccessprop(true);
               }}
               className="font-bold text-2xl xl:text-xl btngrad rounded-[10px] h-[4rem] mt-8 xl:h-[4rem] lg:mt-6  text-white "
             >
-              Reset
+              {isLoading ? (
+                <ClipLoader
+                  color="#fff"
+                  className="right-5 text-2xl  inset-y-4  "
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              ) : (
+                "Reset"
+              )}
             </button>
           </form>
         </div>

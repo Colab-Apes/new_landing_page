@@ -86,6 +86,7 @@ const Overlay = ({ value, changeValue }) => {
         setresetpasswordprop={setresetpassword}
         setsuccessprop={setsuccess}
         changeValueprop={changeValue}
+        setopensignupmodalprop={setopensignupmodal}
       />
       <Success
         setsuccessprop={setsuccess}
