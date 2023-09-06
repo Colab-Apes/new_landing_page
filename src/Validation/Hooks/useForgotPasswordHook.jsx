@@ -21,12 +21,12 @@ const useForgotPasswordHook = (setforgotpasswordprop, setresetpasswordprop) => {
         .then((res) => {
           console.log(res);
           setisLoading(false);
-        //   toast.success("Successful", {
-        //     position: "top-center",
-        //     autoClose: 2000,
-        //     toastId: 2,
-        //     theme: "colored",
-        //   });
+          //   toast.success("Successful", {
+          //     position: "top-center",
+          //     autoClose: 2000,
+          //     toastId: 2,
+          //     theme: "colored",
+          //   });
           setforgotpasswordprop(false);
           setresetpasswordprop(true);
         })

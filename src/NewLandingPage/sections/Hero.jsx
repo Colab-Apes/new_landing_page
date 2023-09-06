@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import herobg from "../../assets/newimages/bg.png";
 import frame1 from "../../assets/frame1.png";
 import frame2 from "../../assets/frame2.png";
@@ -6,9 +6,12 @@ import frame3 from "../../assets/frame3.png";
 import emoji from "../../assets/svg/emoji.png";
 
 import "../../App.css";
+import OverlayHooks from "../Hooks/OverlayHooks";
+import WaitList from "../components/WaitList";
 
 const Hero = () => {
-  
+  const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
+
   return (
     <div>
       <section
@@ -22,6 +25,10 @@ const Hero = () => {
         {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
         <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
 
+        <WaitList
+          openjoinwaitlistmodal={openjoinwaitlist}
+          setopenjoinwaitlistmodal={setopenjoinwaitlist}
+        />
         <div className="hero gap-x-20 lg:pt-[13rem] w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className=" w-full md:w-[70%]  text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
@@ -39,8 +46,13 @@ const Hero = () => {
               Join Co_lab Apes and Bring Your Ideas to Life!
             </p>
             <div className="hidden md:flex flex-col-reverse md:flex-row  lg:gap-12 justify-center md:justify-between lg:justify-normal items-center mt-5 xl:mt-12">
-              <button className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] lg:px-16  md:px-10 md:py-6 lg:py-8 rounded-[18px] text-[12px] lg:text-[16px] text-white ">
-                Get Started
+              <button
+                onClick={() => {
+                  setopenjoinwaitlist(true);
+                }}
+                className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] lg:px-16  md:px-10 md:py-6 lg:py-8 rounded-[18px] text-[12px] lg:text-[16px] text-white "
+              >
+                Join Waitlist
               </button>
               <img
                 className="hidden md:block  object-contain lg:w-[8rem] md:w-[6rem] xl:w-[6.9rem]"
@@ -72,8 +84,13 @@ const Hero = () => {
 
           <div className="hero-cta hc-mobile w-full flex flex-col justify-center  md:hidden mt-4">
             <button className="w-[60%] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 ">
-              <a href="#" className="text-[2rem] font-bold text-white">
-                Get Started
+              <a
+                onClick={() => {
+                  setopenjoinwaitlist(true);
+                }}
+                className="text-[2rem] font-bold text-white"
+              >
+                Join WaitList
               </a>
             </button>
             <div className="flex  items-center justify-center gap-x-10">

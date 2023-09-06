@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Faqs, HowItWorks, BuildTheFuture, Foot, Hero, JoinOurNewsLetter, LearningPool, Ready, SocialHub, ValueStake } from "./sections";
 import Nav from "./components/Nav";
 import Overlay from "./components/Modals/Overlay";
-import WaitList from "./components/Modals/WaitList";
+
 
 const LandPage = () => {
   const [isModal, setisModal] = useState(false);

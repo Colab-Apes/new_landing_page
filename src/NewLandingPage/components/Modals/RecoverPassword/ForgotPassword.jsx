@@ -9,7 +9,6 @@ import { ClipLoader } from "react-spinners";
 const ForgotPassword = ({
   forgotpasswordprop,
   setforgotpasswordprop,
-
   setresetpasswordprop,
   setopensignupmodalprop,
   changeValueprop,
@@ -59,17 +58,16 @@ const ForgotPassword = ({
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
             />
           </div>
-          <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
+          {/* <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">
             Forgot password
-          </p>
-          {/* THIS HAS BACK BUTTON
-          
+          </p> */}
+
           <div className="flex justify-between w-full items-center mt-0">
             {" "}
             <BsArrowLeft
               onClick={() => {
-                setopenOtpmodalprop(false);
-                setopensignupmodalprop(true);
+                setsigninmodalprop(true);
+                setforgotpasswordprop(false);
               }}
               className="mt-3 cursor-pointer text-xl  left-1 top-[4.1rem] text-[2.6rem] lg:text-[2.3rem]"
             />
@@ -79,7 +77,7 @@ const ForgotPassword = ({
             <p className="text-[#F5FFF7] text-[0.4rem] opacity-0">
               dfgsfgdfgsdf
             </p>
-          </div> */}
+          </div>
           <div className="flex"> </div>
           <div className="mt-6 lg:mt-20 text-[#3B8004] text-2xl  lg:text-2xl font-bold">
             Enter you email address
