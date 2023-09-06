@@ -34,7 +34,7 @@ const LandPage = () => {
       {/* Nav */}
       <Nav changeValue={setisModal} />
       {/* Hero */}
-      <Hero changeValue={setisModal} />
+      <Hero />
       {/* SocialHub */}
       <SocialHub />
       {/* Learning Pool */}
