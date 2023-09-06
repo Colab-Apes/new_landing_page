@@ -80,16 +80,14 @@ const Hero = ({ changeValue }) => {
           </div>
 
           <div className="hero-cta hc-mobile w-full flex flex-col justify-center  md:hidden mt-4">
-            <button className="w-[60%] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 ">
-              <a
-                onClick={() => {
-                  hooks.setopensignupmodal(true);
-                  changeValue(true);
-                }}
-                className="text-[2rem] font-bold text-white"
-              >
-                Get Started
-              </a>
+            <button
+              onClick={() => {
+                hooks.setopensignupmodal(true);
+                changeValue(true);
+              }}
+              className="w-[60%] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 "
+            >
+              <a className="text-[2rem] font-bold text-white">Get Started</a>
             </button>
             <div className="flex  items-center justify-center gap-x-10">
               <img
