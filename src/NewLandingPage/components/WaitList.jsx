@@ -16,8 +16,8 @@ const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
     <div
       className={
         openjoinwaitlistmodal
-          ? "bg-[#000]/[25%] fixed h-screen z-[120] lg:px-[10vw] xl:px-[19vw] w-full    px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out"
-          : "bg-[#000]/[25%] fixed h-screen  opacity-0 -z-[120] lg:px-[10vw] xl:px-[19vw] w-full px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out"
+          ? "bg-[#000]/[25%] fixed h-screen top-0 z-[120] lg:px-[10vw] xl:px-[19vw] w-full    px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out"
+          : "bg-[#000]/[25%] fixed h-screen top-0  opacity-0 -z-[120] lg:px-[10vw] xl:px-[19vw] w-full px-4 sm:px-32 md:px-32 left-0 flex justify-center items-center font-lato duration-300 ease-in-out"
       }
     >
       <div
