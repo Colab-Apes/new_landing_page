@@ -9,22 +9,29 @@ import "../../App.css";
 import OverlayHooks from "../Hooks/OverlayHooks";
 import WaitList from "../components/WaitList";
 
-const Hero = ({ changeValue }) => {
-  const hooks = OverlayHooks();
-  const handleClickScroll = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+const Hero = () => {
+  // const [openwaitlist, setopenwaitlist] = useState(false);
+  // const [opensidenav, setopensidenav] = useState(false);
+  // const hooks = OverlayHooks();
+  const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
 
   return (
     <div>
       <section
+        // style={{
+        //   backgroundImage: `url(${bg1mobile})`,
+        // }}
         className={
           "pb-20 px-4  md:px-10 lg:px-20 pt-10 lg:pt-0 bg-[url('./assets/bg/bg1mobile.jpg')] md:bg-[url('./assets/bg/bg1desktop.jpg')]"
         }
       >
+        {/* <div className="z-[-1] absolute w-[387px] h-[324.991px] bg-[#C26AAA] blur-[150px] rounded-[387px] left-[-30rem]"></div>
+        <div className=" absolute z-[-2] w-[200px] h-[649.982px] bg-[#054E12] blur-[350px] rounded-full left-[-30rem]"></div> */}
+
+        <WaitList
+          openjoinwaitlistmodal={openjoinwaitlist}
+          setopenjoinwaitlistmodal={setopenjoinwaitlist}
+        />
         <div className="hero gap-x-20 lg:pt-[13rem] w-full mx-auto flex flex-col md:flex-row justify-evenly md:justify-between items-center">
           <div className=" w-full md:w-[70%]  text-center md:text-left fade-in-left">
             <p className="text-primaryColor mb-7">
@@ -44,12 +51,11 @@ const Hero = ({ changeValue }) => {
             <div className="hidden md:flex flex-col-reverse md:flex-row  lg:gap-12 justify-center md:justify-between lg:justify-normal items-center mt-5 xl:mt-12">
               <button
                 onClick={() => {
-                  hooks.setopensignupmodal(true);
-                  changeValue(true);
+                  setopenjoinwaitlist(true);
                 }}
                 className="btngrad font-bold shadow-[10px_10px_30px_0px_rgba(59,_128,_4,_0.10)] lg:px-16  md:px-10 md:py-6 lg:py-8 rounded-[18px] text-[12px] lg:text-[16px] text-white "
               >
-                Get Started
+                Join Waitlist
               </button>
               <img
                 className="hidden md:block  object-contain lg:w-[8rem] md:w-[6rem] xl:w-[6.9rem]"
@@ -57,8 +63,8 @@ const Hero = ({ changeValue }) => {
                 alt="Emoji next"
               />
               <a
-                className="text-3xl text-[#054E12] font-bold  border-b-2 border-primaryColor cursor-pointer"
-                onClick={() => handleClickScroll("socialhub")}
+                className="text-3xl text-[#054E12] font-bold  border-b-2 border-primaryColor"
+                href="#"
               >
                 Scroll for more info
               </a>
@@ -80,14 +86,15 @@ const Hero = ({ changeValue }) => {
           </div>
 
           <div className="hero-cta hc-mobile w-full flex flex-col justify-center  md:hidden mt-4">
-            <button
-              onClick={() => {
-                hooks.setopensignupmodal(true);
-                changeValue(true);
-              }}
-              className="w-[60%] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 "
-            >
-              <a className="text-[2rem] font-bold text-white">Get Started</a>
+            <button className="w-[60%] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 ">
+              <a
+                onClick={() => {
+                  setopenjoinwaitlist(true);
+                }}
+                className="text-[2rem] font-bold text-white"
+              >
+                Join WaitList
+              </a>
             </button>
             <div className="flex  items-center justify-center gap-x-10">
               <img
@@ -97,8 +104,8 @@ const Hero = ({ changeValue }) => {
               />
 
               <a
-                className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor cursor-pointer"
-                onClick={() => handleClickScroll("socialhub")}
+                className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
+                href="#"
               >
                 Scroll for more info
               </a>

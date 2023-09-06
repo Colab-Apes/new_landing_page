@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import WaitList from "./../components/WaitList";
+
 import "../../App.css";
+import WaitList from "../components/WaitList";
+import OverlayHooks from "../Hooks/OverlayHooks";
 
-const Ready = () => {
+const Ready = ({ changeValue }) => {
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
-
+  const hooks = OverlayHooks();
   return (
     <div>
       <WaitList
@@ -21,7 +23,13 @@ const Ready = () => {
             Explore a World of Possibilities
           </h1>
           <div className="flex flex-col lg:flex-row w-full items-center gap-x-20  justify-center">
-            <button className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-lg  lg:rounded-[20px]">
+            <button
+              onClick={() => {
+                hooks.setopensignupmodal(true);
+                changeValue(true);
+              }}
+              className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-lg  lg:rounded-[20px]"
+            >
               Get Started
             </button>
             <button

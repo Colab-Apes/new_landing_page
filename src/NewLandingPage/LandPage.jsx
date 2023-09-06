@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Faqs, HowItWorks, BuildTheFuture, Foot, Hero, JoinOurNewsLetter, LearningPool, Ready, SocialHub, ValueStake } from "./sections";
+import {
+  Faqs,
+  HowItWorks,
+  BuildTheFuture,
+  Foot,
+  Hero,
+  JoinOurNewsLetter,
+  LearningPool,
+  Ready,
+  SocialHub,
+  ValueStake,
+} from "./sections";
 import Nav from "./components/Nav";
 import Overlay from "./components/Modals/Overlay";
-
 
 const LandPage = () => {
   const [isModal, setisModal] = useState(false);
@@ -17,16 +27,14 @@ const LandPage = () => {
     }
   }, [isModal]);
 
-
   return (
     <div className=" font-lato">
-
       {/* overlay for auth */}
       <Overlay value={isModal} changeValue={setisModal} />
       {/* Nav */}
       <Nav changeValue={setisModal} />
       {/* Hero */}
-      <Hero changeValue={setisModal}/>
+      <Hero changeValue={setisModal} />
       {/* SocialHub */}
       <SocialHub />
       {/* Learning Pool */}
@@ -38,7 +46,7 @@ const LandPage = () => {
       {/* How it works */}
       <HowItWorks />
       {/*Ready to collaborate & Innovation */}
-      <Ready />
+      <Ready changeValue={setisModal} />
       {/*FAQS*/}
       <Faqs />
       {/*Join Our News Letter*/}
