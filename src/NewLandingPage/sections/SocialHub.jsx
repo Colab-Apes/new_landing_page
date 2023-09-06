@@ -10,7 +10,10 @@ const SocialHub = () => {
   return (
     <div>
       {" "}
-      <div className="mt-64 lg:mt-36 px-4  md:px-14 lg:px-20 z-10 relative">
+      <div
+        id="socialhub"
+        className="mt-64 lg:mt-36 px-4  md:px-14 lg:px-20 z-10 relative"
+      >
         <div className="bg-[#054E12] rounded-full h-[400px] w-[400px] blur-[500px] absolute right-[0rem] top-[5rem] flex justify-center items-center">
           {" "}
         </div>

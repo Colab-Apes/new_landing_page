@@ -19,6 +19,7 @@ const Nav = ({ changeValue }) => {
     }, 15000);
   }, []);
 
+
   return (
     <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
       <WaitList

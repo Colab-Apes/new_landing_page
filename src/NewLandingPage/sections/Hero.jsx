@@ -11,6 +11,12 @@ import WaitList from "../components/WaitList";
 
 const Hero = () => {
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
+  const handleClickScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div>
@@ -60,8 +66,8 @@ const Hero = () => {
                 alt="Emoji next"
               />
               <a
-                className="text-3xl text-[#054E12] font-bold  border-b-2 border-primaryColor"
-                href="#"
+                className="text-3xl text-[#054E12] font-bold  border-b-2 border-primaryColor cursor-pointer"
+                onClick={() => handleClickScroll("socialhub")}
               >
                 Scroll for more info
               </a>
@@ -101,8 +107,8 @@ const Hero = () => {
               />
 
               <a
-                className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
-                href="#"
+                className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor cursor-pointer"
+                onClick={() => handleClickScroll("socialhub")}
               >
                 Scroll for more info
               </a>
