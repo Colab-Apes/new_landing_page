@@ -213,7 +213,7 @@ const Signup = ({
                   data-testid="loader"
                 />
               ) : (
-                " Verify email"
+                "Create Account"
               )}
             </button>
           </form>{" "}
