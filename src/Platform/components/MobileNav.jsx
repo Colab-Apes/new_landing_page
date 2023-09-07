@@ -65,7 +65,7 @@ const MobileNav = () => {
 
           <div className="flex flex-col items-center mt-16 px-5 ">
             <img
-              class="w-20 h-20 rounded-full"
+              className="w-32 h-32 rounded-full"
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
               alt="Rounded avatar"
             />
@@ -75,47 +75,47 @@ const MobileNav = () => {
               <p className="font-semibold text-[#4EAF00] text-lg ">Founder</p>
             </div>
 
-            <div className="flex flex-col text-left w-full gap-y-6 mt-8">
-              <div className="flex items-center mt-2">
+            <div className="flex flex-col text-left w-full gap-y-20 mt-20">
+              <div className="flex items-center mt-2 cursor-pointer">
                 <img
                   src={add}
                   alt=""
-                  className="object-contain w-[1.2rem] mr-2"
+                  className="object-contain w-[3rem] mr-4"
                 />
-                <p>Create New Project</p>
+                <p className="text-3xl">Create New Project</p>
               </div>
-              <div className="flex items-center mt-2">
+              <div className="flex items-center mt-2 cursor-pointer">
                 <img
                   src={profile}
                   alt=""
-                  className="object-contain w-[1.2rem] mr-2"
+                  className="object-contain w-[3rem] mr-4"
                 />
-                <p>My Profile</p>
+                <p className="text-3xl">My Profile</p>
               </div>
 
-              <div className="flex items-center mt-2">
+              <div className="flex items-center mt-2 cursor-pointer">
                 <img
                   src={setting}
                   alt=""
-                  className="object-contain w-[1.2rem] mr-2"
+                  className="object-contain w-[3rem] mr-4"
                 />
-                <p>Settings</p>
+                <p className="text-3xl">Settings</p>
               </div>
-              <div className="flex items-center mt-2">
+              <div className="flex items-center mt-2 cursor-pointer">
                 <img
                   src={help}
                   alt=""
-                  className="object-contain w-[1.2rem] mr-2"
+                  className="object-contain w-[3rem] mr-4"
                 />
-                <p>Help</p>
+                <p className="text-3xl">Help</p>
               </div>
-              <div className="flex items-center mt-2">
+              <div className="flex items-center mt-2 cursor-pointer">
                 <img
                   src={signout}
                   alt=""
-                  className="object-contain w-[1.2rem] mr-2"
+                  className="object-contain w-[3rem] mr-4"
                 />
-                <p>Sign Out </p>
+                <p className="text-3xl">Sign Out </p>
               </div>
             </div>
           </div>
