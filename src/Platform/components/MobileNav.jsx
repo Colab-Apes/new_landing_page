@@ -1,4 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import logo from "../../assets/logo.png";
+import sidenavlogo from "../../assets/logo.png";
+import avatar from "../../assets/logo.png";
+
+import {
+  add,
+  award,
+  profile,
+  setting,
+  help,
+  signout,
+} from "../../assets/sidenavimages/BulkImport";
+import { BiMenuAltRight } from "react-icons/bi";
+import { TfiClose } from "react-icons/tfi";
 const MobileNav = () => {
   const [opensidenav, setopensidenav] = useState(false);
 
@@ -50,7 +64,11 @@ const MobileNav = () => {
           </div>
 
           <div className="flex flex-col items-center mt-16 px-5 ">
-            <img src={avatar} alt="" />
+            <img
+              class="w-20 h-20 rounded-full"
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+              alt="Rounded avatar"
+            />
             <p className="font-semibold text-xl mt-1"> Sarah Lopez</p>
             <div className="flex gap-2 rounded-[10px] p-1 px-4 mt-1 items-center bg-[rgba(78,_175,_0,_0.10)]">
               <img src={award} alt="" className="object-contain w-[1.3rem]" />
@@ -74,25 +92,10 @@ const MobileNav = () => {
                 />
                 <p>My Profile</p>
               </div>
+
               <div className="flex items-center mt-2">
                 <img
-                  src={project}
-                  alt=""
-                  className="object-contain w-[1.2rem] mr-2"
-                />
-                <p>My Projects</p>
-              </div>
-              <div className="flex items-center mt-2">
-                <img
-                  src={learning}
-                  alt=""
-                  className="object-contain w-[1.2rem] mr-2"
-                />
-                <p>My Learning Pool</p>
-              </div>
-              <div className="flex items-center mt-2">
-                <img
-                  src={settings}
+                  src={setting}
                   alt=""
                   className="object-contain w-[1.2rem] mr-2"
                 />

@@ -6,15 +6,16 @@ import logo from "../../assets/logo.png";
 import { BsChevronDown } from "react-icons/bs";
 import message from "../../assets/Platform Images/NavImages/message.png";
 import notification from "../../assets/Platform Images/NavImages/notification.png";
+import MobileNav from "./MobileNav";
 const Nav = ({ tabs, checkindex, setcheckindex }) => {
   return (
     <div>
-      <nav className="font-lato lg:px-6 xl:px-10 bg-white z-20 hidden lg:flex justify-between items-center  fixed top-0  h-[9rem] w-full ">
+      <nav className="font-lato lg:px-6 xl:px-10 bg-[#fff] z-20 hidden lg:flex justify-between items-center  fixed top-0  h-[9rem] w-full ">
         <a href="/">
           <img
             src={logo}
             alt=""
-            className="object-contain w-[10rem] md:w-[15rem] lg:w-[14rem]"
+            className="object-contain w-[10rem] md:w-[15rem] lg:w-[14rem] xl:w-[20rem]"
           />
         </a>
         <div className=" z-[20] font-bold flex items-center gap-x-20 text-[24px] text-center mt-8">
@@ -26,8 +27,8 @@ const Nav = ({ tabs, checkindex, setcheckindex }) => {
                 index === checkindex
                   ? `border-b-2  border-b-[#054E12] ${
                       index === 0
-                        ? "w-[4rem]  "
-                        : "w-[10rem] duration-500 ease-linear "
+                        ? "w-[6rem]  "
+                        : "w-[19rem] duration-500 ease-linear "
                     } pb-10 cursor-pointer`
                   : `text-[#33333380]  pb-10 cursor-pointer  border-b-2 duration-200 ease-linear${
                       index === 0 ? "w-[3.7rem]" : "w-[8rem]"
@@ -39,20 +40,33 @@ const Nav = ({ tabs, checkindex, setcheckindex }) => {
           ))}
         </div>
         <div className="flex items-center gap-x-14">
-          <img src={message} alt="" className=" object-contain" />\
-          <img src={notification} alt="" className=" object-contain" />
           <img
-            class="w-20 h-20 rounded-full"
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-            alt="Rounded avatar"
+            src={message}
+            alt=""
+            className=" object-contain cursor-pointer"
           />
+          <img
+            src={notification}
+            alt=""
+            className=" object-contain cursor-pointer"
+          />
+
+          <div className="flex items-center gap-x-4">
+            <img
+              class="w-20 h-20 rounded-full"
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+              alt="Rounded avatar"
+            />
+            <BsChevronDown className="text-2xl" />
+          </div>
           {/* <div className="flex items-center gap-x-4 ">
             <img src={avatar} alt="" />
-            <BsChevronDown />
+            
           </div> */}
         </div>
       </nav>
       {/* <MobileNavComp /> */}
+      <MobileNav />
     </div>
   );
 };
