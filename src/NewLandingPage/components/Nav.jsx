@@ -3,26 +3,25 @@ import logo from "../../assets/newimages/logo.png";
 import menuicon from "../../assets/svg/menu-icon.svg";
 import { TfiClose } from "react-icons/tfi";
 import "../../App.css";
+import OverlayHooks from "../Hooks/OverlayHooks";
 import WaitList from "./WaitList";
 import { useEffect } from "react";
 
-const Nav = () => {
+const Nav = ({ changeValue }) => {
+  const [openwaitlist, setopenwaitlist] = useState(false);
   const [opensidenav, setopensidenav] = useState(false);
+  const hooks = OverlayHooks();
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
-  const scrollToSection = () => {
-    const targetSection = document.getElementById("newsletter");
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+
   useEffect(() => {
     setTimeout(() => {
       setopenjoinwaitlist(true);
     }, 15000);
   }, []);
 
+
   return (
-    <div className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
+    <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
       <WaitList
         openjoinwaitlistmodal={openjoinwaitlist}
         setopenjoinwaitlistmodal={setopenjoinwaitlist}
@@ -35,23 +34,26 @@ const Nav = () => {
           <p>Create project</p>
         </div>
         <div className="flex gap-10">
-          <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold">
-            Sign up
-          </button>
           <button
             className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
-            // onClick={scrollToSection}
             onClick={() => {
               setopenjoinwaitlist(true);
-              // scrollToSection();
             }}
           >
             Join waitlist
           </button>
+          <button
+            onClick={() => {
+              hooks.setopensignupmodal(true);
+              changeValue(true);
+            }}
+            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold"
+          >
+            Sign up
+          </button>
         </div>
       </nav>
       <nav className="flex font-lato fixed bg-[#ECF8EE]/[20%]  left-0 items-center  px-4 justify-between w-full lg:hidden h-[6rem] md:h-[8rem] z-[90]">
-        {" "}
         <img
           src={logo}
           alt=""
@@ -91,9 +93,7 @@ const Nav = () => {
         <div className="flex flex-col mt-20 gap-y-10">
           {/* Signup Button - Disabled for now*/}
           <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" />
-          <button className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold">
-            Sign up
-          </button>
+
           <button
             onClick={() => {
               setopensidenav(false);
@@ -105,9 +105,18 @@ const Nav = () => {
           >
             Join waitlist
           </button>
+          <button
+            onClick={() => {
+              setopensidenav(false);
+              changeValue(true);
+            }}
+            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold"
+          >
+            Sign up
+          </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

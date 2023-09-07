@@ -2,10 +2,10 @@ import React from "react";
 
 import "../../App.css";
 
-import ape from "../../assets/apehead.png";
+import ape from "../../assets/footlogo/footlogo.png";
 
-import apemobile from "../../assets/images/apehead.png";
-import footlogo from "../../assets/footlogo.png";
+import apemobile from "../../assets/footlogo/footlogo.png";
+import footlogo from "../../assets/footlogo/whitelogo.png";
 
 import facebook from "../../assets/svg/facebook.svg";
 import insta from "../../assets/svg/insta.svg";
@@ -17,7 +17,7 @@ const Foot = () => {
   return (
     <div className="px-4  md:px-14 lg:px-20 mt-64 lg:mt-36">
       {" "}
-      <footer className="mt-36   pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4 z-[1]  xl:px-24">
+      <footer className="mt-36   pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4  z-[1]  xl:px-24">
         <img
           src={ape}
           alt=""
@@ -26,25 +26,25 @@ const Foot = () => {
         <img
           src={apemobile}
           alt=""
-          className="bottom-0 absolute object-contain  w-[16rem] lg:hidden  left-[0]  lg:left-0 z-[1] "
+          className="bottom-0 absolute object-contain  w-[24rem] lg:hidden  left-[0]  lg:left-0 z-[1] "
         />
-        <div className="grid text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-[#fff]/[0.8] pt-20 h-full gap-x-10 gap-y-10 lg:gap-y-0 ">
+        <div className="grid text-[2rem] grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 z-[10] text-[#fff]/[0.8] pt-20  h-full gap-x-10 gap-y-10 lg:gap-y-0 ">
           <div className="flex flex-col text-2xl  w-full mx-auto   lg:text-2xl text-left z-[3] gap-y-8">
-            <p className="text-3xl font-bold ">Co_lab Apes</p>
+            <p className="text-3xl font-bold  text-[#fff] ">Co_lab Apes</p>
             {/* <p className="lg:mt-4 mt-2 text-2xl">About Us</p> */}
             <p className="">About Us</p>
             <p className="">Privacy policy</p>
             <p className="">Terms of Use</p> <p className="">Legal</p>
           </div>
           <div className="flex flex-col w-full mx-auto  text-2xl lg:text-2xl text-left z-[3] gap-y-6 pl-20">
-            <p className="text-3xl font-bold">Features</p>
+            <p className="text-3xl font-bold text-[#fff] ">Features</p>
             <p className="lg:mt-4 mt-2">Home</p>
             <p className="">Top 10 projects</p>
             <p className="">Learning pool</p> <p className="">Join </p>
             <p className="">Create project</p>
           </div>
           <div className="flex flex-col w-full mx-auto text-2xl lg:text-2xl text-left z-[3] gap-y-6">
-            <p className="text-3xl font-bold">Learning pool</p>
+            <p className="text-3xl font-bold text-[#fff] ">Learning pool</p>
             <p className="lg:mt-4 mt-2">Analytics</p>
             <p className="">Artificial intelligence</p>{" "}
             <p className="">Animation </p>
@@ -54,16 +54,35 @@ const Foot = () => {
             <p className="">Video editting</p>
             <p className="">3D modelling</p>
           </div>
-          <div className="flex flex-col items-center lg:items-center  z-[3] text-sm">
+          <div className="flex mt-20 lg:mt-0 flex-col items-center lg:items-center  z-[3] text-sm">
             <img
               src={footlogo}
               alt=""
-              className="z-[2] w-[10rem] object-contain"
+              className="z-[2] w-[rem] object-contain"
             />
-            <p className="mt-5 text-[12px] font-semibold xl:font-bold xl:text-2xl xl:mt-12">
+            <h1 className="text-3xl text-[#fff] flex items-center font-bold mt-4 ">
+              <p className="mr-2"> Co_lab </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="16"
+                viewBox="0 0 15 16"
+                fill="none"
+              >
+                <path
+                  d="M9.60198 0.419922L14.8722 15.2172H11.0209L7.57495 5.08208L4.12901 15.4199H0.0749512L5.54792 0.419922H9.60198Z"
+                  fill="white"
+                />
+              </svg>
+              <p className="ml-2"> pes</p>
+            </h1>
+            <p className="text-xs mt-3 xl:mt-2 text-[#fff] ">
+              BUILDING TOMORROW TOGETHER
+            </p>
+            <p className="mt-5 text-[#fff]  text-[12px] font-semibold xl:font-bold xl:text-2xl xl:mt-8">
               help@colabapes.com
             </p>
-            <div className="socials flex items-center justify-end gap-5 mt-5">
+            <div className="socials flex items-center justify-end gap-5 mt-8 lg:mt-5 ">
               <div className="social-img">
                 <img src={youtube} alt="Youtube" className="w-full" />
               </div>
@@ -71,7 +90,10 @@ const Foot = () => {
                 <img src={facebook} alt="Facebook" className="w-full" />
               </div>
               <div className="social-img">
-                <a href="https://www.instagram.com/co_labapes/" target={"_blank"}>
+                <a
+                  href="https://www.instagram.com/co_labapes/"
+                  target={"_blank"}
+                >
                   <img src={insta} alt="Insta" className="w-full" />
                 </a>
               </div>
@@ -81,7 +103,10 @@ const Foot = () => {
                 </a>
               </div>
               <div className="social-img">
-                <a href="https://www.linkedin.com/company/colab-apes/" target={"_blank"}>
+                <a
+                  href="https://www.linkedin.com/company/colab-apes/"
+                  target={"_blank"}
+                >
                   <img src={linkedin} alt="Linkedin" className="w-full" />
                 </a>
               </div>

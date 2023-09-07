@@ -1,7 +1,7 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+
 const WaitLiskHook = () => {
   const [success, setsuccess] = useState(false);
   const [load, setload] = useState(false);

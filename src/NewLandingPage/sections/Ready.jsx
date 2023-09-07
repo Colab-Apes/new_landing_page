@@ -1,16 +1,18 @@
-import React from "react";
-import "../../App.css";
+import React, { useState } from "react";
 
-const Ready = () => {
-  const scrollToSection = () => {
-    const targetSection = document.getElementById('newsletter');
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  
+import "../../App.css";
+import WaitList from "../components/WaitList";
+import OverlayHooks from "../Hooks/OverlayHooks";
+
+const Ready = ({ changeValue }) => {
+  const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
+  const hooks = OverlayHooks();
   return (
     <div>
+      <WaitList
+        openjoinwaitlistmodal={openjoinwaitlist}
+        setopenjoinwaitlistmodal={setopenjoinwaitlist}
+      />
       <div className=" mt-64 lg:mt-36 relative z-10 px-4 w-full  md:px-14 lg:px-20 ">
         <div className=" px-10 text-center text-5xl text-[#333] font-bold mb-5 md:mb-20  xl:mb-0 ">
           Ready to collaborate & Innovate
@@ -21,14 +23,22 @@ const Ready = () => {
             Explore a World of Possibilities
           </h1>
           <div className="flex flex-col lg:flex-row w-full items-center gap-x-20  justify-center">
-            <button className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-lg  lg:rounded-[20px]">
+            <button
+              onClick={() => {
+                hooks.setopensignupmodal(true);
+                changeValue(true);
+              }}
+              className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-lg  lg:rounded-[20px]"
+            >
               Get Started
             </button>
-            <button 
+            <button
               className=" bg-white text-2xl text-black mt-8 lg:mt-0 w-full lg:w-[17rem]  py-8 lg:py-10  font-bold  rounded-lg lg:rounded-[20px] shadow-md"
-              onClick={scrollToSection}
+              onClick={() => {
+                setopenjoinwaitlist(true);
+              }}
             >
-              Join the wait list
+              Join the waitlist
             </button>
           </div>
         </div>
