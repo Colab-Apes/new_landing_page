@@ -65,7 +65,7 @@ const MobileNav = () => {
 
           <div className="flex flex-col items-center mt-16 px-5 ">
             <img
-              className="w-32 h-32 rounded-full"
+              className="w-52 h-52 rounded-full"
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
               alt="Rounded avatar"
             />

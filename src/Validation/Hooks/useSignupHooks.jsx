@@ -4,8 +4,10 @@ import axios from "axios";
 import { link } from "../Link";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export const useSignupHooks = (setopensignupmodalprop, setopenOtpmodalprop) => {
+  const navigate = useNavigate();
   const [isLoading, setisLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -27,8 +29,10 @@ export const useSignupHooks = (setopensignupmodalprop, setopenOtpmodalprop) => {
             toastId: 2,
             theme: "colored",
           });
-          setopensignupmodalprop(false);
-          setopenOtpmodalprop(true);
+          // setopensignupmodalprop(false);
+          // setopenOtpmodalprop(true);
+          localStorage.setItem("LoggedIntoken", res.data.token.toString());
+          navigate("/home");
         })
         .catch((e) => {
           console.log(e);

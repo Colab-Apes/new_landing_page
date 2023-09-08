@@ -18,7 +18,7 @@ const OtpModal = ({
     <div
       className={
         openOtpmodalprop
-          ? " rounded-[20px] lg:rounded-[50px] z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[50rem] mt-64 r  w-full py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[3.13rem] z-[120] mt-20 lg:mt-0   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-[40rem] py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-[67.9rem]  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
@@ -36,17 +36,19 @@ const OtpModal = ({
       <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div
         className={
-          "flex flex-col z-[120]  w-full h-full lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-10 lg:px-0   lg:justify-between  lg:items-center"
+          "flex flex-col z-[120]  w-full   lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center lg:items-start "
         }
       >
-        <div className="w-full h-full lg:flex  justify-center hidden   lg:rounded-[50px] ">
+        <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
           <img
             src={otpmodal}
             alt=""
-            className=" object-cover lg:rounded-[40px] "
+            className="lg:rounded-[40px] object-cover"
           />
         </div>
-        <div className="flex flex-col items-center w-full h-full gap-x-20 lg:w-[19rem] lg:h-[30rem] md:w-full md:h-full">
+        <div className="flex flex-col items-center lg:justify-start w-full h-full gap-x-20 lg:gap-x-0  md:w-full md:h-full">
+          {/* <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full "> */}
+          {/* <div className=" flex flex-col justify-center items-center"> */}
           <div className=" flex flex-col justify-center items-center">
             <img
               src={logo}
