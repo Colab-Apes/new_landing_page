@@ -11,7 +11,12 @@ const Nav = ({ tabs, checkindex, setcheckindex }) => {
   return (
     <div>
       <nav className="font-lato lg:px-6 xl:px-10 bg-[#fff] z-20 hidden lg:flex justify-between items-center  fixed top-0  h-[9rem] w-full ">
-        <a href="/">
+        <a
+          href="/"
+          onClick={() => {
+            localStorage.removeItem("LoggedIntoken");
+          }}
+        >
           <img
             src={logo}
             alt=""
