@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import img1 from "../../../assets/ModalImages/signin.png";
 import logo from "../../../assets/ModalImages/logo.png";
@@ -12,6 +12,7 @@ import { TfiClose } from "react-icons/tfi";
 import "../../../App.css";
 import { ClipLoader } from "react-spinners";
 import { useSigninHook } from "../../../Validation/Hooks/useSigninHook";
+import { useNavigate } from "react-router-dom";
 const Signin = ({
   setopenOtpmodalprop,
   setopensignupmodalprop,
@@ -23,6 +24,15 @@ const Signin = ({
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   const { formik, isLoading } = useSigninHook();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scroll({ top: 0, left: 0 });
+    const val = localStorage.getItem("LoggedIntoken");
+    if (val) {
+      navigate("/home");
+    }
+  });
   return (
     <div
       className={
