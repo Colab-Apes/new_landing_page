@@ -52,7 +52,9 @@ const LandPage = () => {
       {/*Join Our News Letter*/}
       <JoinOurNewsLetter />
       {/* Footer */}
-      <Foot />
+      <div className="px-4  md:px-14 lg:px-20">
+        <Foot />
+      </div>
     </div>
   );
 };

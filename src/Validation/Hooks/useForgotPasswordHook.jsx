@@ -48,6 +48,7 @@ const useForgotPasswordHook = (setforgotpasswordprop, setresetpasswordprop) => {
               theme: "colored",
             });
           }
+        
         });
     },
   });

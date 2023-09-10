@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import sidenavlogo from "../../assets/logo.png";
-import avatar from "../../assets/logo.png";
-
+// import avatar from "../../assets/logo.png";
 import {
   add,
   award,

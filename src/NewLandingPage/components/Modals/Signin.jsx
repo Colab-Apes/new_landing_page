@@ -37,7 +37,7 @@ const Signin = ({
     <div
       className={
         signinmodalprop
-          ? " rounded-[20px] lg:rounded-[3.13rem] z-[120] mt-20 lg:mt-0   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-[40rem] py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-[67.9rem]  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[50px] z-[120] mt-20 lg:mt-0   bg-[#F5FFF7] flex items-center justify-between min-h-[63rem] r  w-[40rem] py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-[67.9rem]  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
@@ -59,8 +59,8 @@ const Signin = ({
           "flex flex-col z-[120]  w-full   lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
         }
       >
-        <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
-          <img src={img1} alt="" className="lg:rounded-[40px] object-cover" />
+        <div className="w-full h-full lg:block  hidden  lg:rounded-[25px] ">
+          <img src={img1} alt="" className="lg:rounded-[25px] object-cover" />
         </div>
         <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
           <div className=" flex flex-col justify-center items-center">
