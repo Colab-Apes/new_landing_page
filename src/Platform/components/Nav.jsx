@@ -46,12 +46,12 @@ const Nav = ({ tabs, checkindex, setcheckindex }) => {
         </div>
         <div className="flex items-center gap-x-14">
           <img
-            src={message}
+            src={notification}
             alt=""
             className=" object-contain cursor-pointer"
           />
           <img
-            src={notification}
+            src={message}
             alt=""
             className=" object-contain cursor-pointer"
           />
