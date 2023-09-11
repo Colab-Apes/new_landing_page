@@ -56,7 +56,7 @@ const Signin = ({
 
       <div
         className={
-          "flex flex-col z-[120]  w-full   lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
+          "flex flex-col z-[120]  w-full   lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center lg:items-start"
         }
       >
         <div className="w-full h-full lg:block  hidden  lg:rounded-[25px] ">
@@ -70,7 +70,7 @@ const Signin = ({
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
             />
           </div>
-          <p className="text-[#555555] font-bold text-center text-xl mt-1 md:mt-4 lg:mt-2">
+          <p className="text-[#555555] font-bold text-center text-xl lg:text-2xl mt-1 md:mt-4 lg:mt-6">
             Welcome Back!
           </p>
           <form
@@ -78,7 +78,7 @@ const Signin = ({
               e.preventDefault();
               formik.handleSubmit();
             }}
-            className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 lg: text-sm px-10"
+            className="w-full  flex flex-col justify-between gap-y-8 mt-2 md:gap-y-4 lg:mt-8 text-sm px-10 lg:px-14"
             action=""
           >
             <div className="relative ">
@@ -87,7 +87,7 @@ const Signin = ({
                 <Message
                   set="curved"
                   primaryColor="#999999"
-                  className="inset-y-[3.5rem] left-1 absolute px-[0.2rem] "
+                  className="inset-y-[3.5rem] lg:inset-y-[3rem] left-1 absolute px-[0.2rem] "
                 />
               </span>
               <label htmlFor="e_mail" className="block font-bold text-xl">
@@ -98,8 +98,8 @@ const Signin = ({
                 id="e_mail"
                 className={
                   formik.errors.e_mail && formik.touched.e_mail
-                    ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
-                    : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
+                    ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 lg::mt-2 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
+                    : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 lg:mt-2 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
                 }
                 placeholder="johndoe@email.com"
                 onChange={formik.handleChange}
@@ -117,7 +117,7 @@ const Signin = ({
                 <Lock
                   set="curved"
                   primaryColor="#999999"
-                  className="absolute inset-y-[3.5rem] left-1 px-[0.2rem]"
+                  className="absolute inset-y-[3.5rem] lg:inset-y-[3rem] left-1 px-[0.2rem]"
                 />
               </span>
               <div className="flex text-xl justify-between items-center ">
@@ -142,8 +142,8 @@ const Signin = ({
                 id="password"
                 className={
                   formik.errors.password && formik.touched.password
-                    ? "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-red-500 focus:border-2 focus:border-[#3B8004] focus:outline-none"
-                    : "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 xl:mt-4 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                    ? "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 lg:mt-2 rounded-[5px] px-10  border  border-red-500 focus:border-2 focus:border-[#3B8004] focus:outline-none"
+                    : "w-full pl-14 lg:pl-11  h-[4.5rem] md:h-[3.8rem]  text-xl bg-[#FFFFFF] mt-4 lg:mt-2 rounded-[5px] px-10  border  border-[#999999] focus:border-2 focus:border-[#3B8004] focus:outline-none"
                 }
                 placeholder="● ● ● ● ● ● ●"
                 onChange={formik.handleChange}
@@ -191,7 +191,7 @@ const Signin = ({
             <p className="text-[#999999] text-lg text-center mt-8 lg:mt-4 lg:text-lg">
               Or Continue with
             </p>
-            <div className="flex flex-col w-full  md:mt-0 lg:mt-4 px-10">
+            <div className="flex flex-col w-full  md:mt-0 lg:mt-4 px-10 lg:px-14">
               <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-4  xl:gap-x-6 lg:mt-0">
                 <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full bg-[#F8F8F8]   border lg:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
                   <img

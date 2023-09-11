@@ -69,7 +69,7 @@ const Signup = ({
             <img
               src={logo}
               alt=""
-              className="w-[12rem] sm:w-[6.25rem] lg:w-[8.7rem] object-contain "
+              className="w-[12rem] sm:w-[6.25rem] lg:w-[10rem] object-contain "
             />
             {/* <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-6 xl:text-[1.5rem]">
               Sign up to Get Started
