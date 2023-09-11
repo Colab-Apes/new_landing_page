@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../../../assets/ModalImages/sidebar.png";
 import logo from "../../../assets/ModalImages/logo.png";
 import { TfiClose } from "react-icons/tfi";
@@ -10,6 +10,7 @@ import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
 import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
 import { ClipLoader } from "react-spinners";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = ({
   setopenOtpmodalprop,
@@ -20,7 +21,15 @@ const Signup = ({
   setopenverifiedmodalprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scroll({ top: 0, left: 0 });
+    const val = localStorage.getItem("LoggedIntoken");
+    if (val) {
+      navigate("/home");
+    }
+  });
   const { formik, isLoading } = useSignupHooks(
     setopensignupmodalprop,
     setopenOtpmodalprop
@@ -180,13 +189,13 @@ const Signup = ({
 
               <p className="text-[#999999]">
                 By registering, you are agreeing with our{" "}
-                <span className="underline text-[#3B8004] ml-1">
+                <Link to={"/termsofuse"} className="underline text-[#3B8004] ml-1">
                   Terms of Use{" "}
-                </span>
+                </Link>
                 and
-                <span className="underline text-[#3B8004] ml-1">
+                <Link to={"/privacypolicy"} className="underline text-[#3B8004] ml-1">
                   Privacy Policy
-                </span>
+                </Link>
               </p>
             </div>
 

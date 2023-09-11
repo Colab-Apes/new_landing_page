@@ -4,8 +4,10 @@ import { link } from "../Link";
 import { siginValidation } from "../signinValidation";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export const useSigninHook = (setopensignupmodalprop, setopenOtpmodalprop) => {
+  const navigate = useNavigate();
   const [isLoading, setisLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -31,6 +33,8 @@ export const useSigninHook = (setopensignupmodalprop, setopenOtpmodalprop) => {
           });
           // setopensignupmodalprop(false);
           // setopenOtpmodalprop(true);
+          localStorage.setItem("LoggedIntoken", res.data.token.toString());
+          navigate("/home");
         })
         .catch((e) => {
           console.log(e);
