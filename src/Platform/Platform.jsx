@@ -10,13 +10,8 @@ const Platform = () => {
   const { tabs, checkindex, setcheckindex } = TabHook();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scroll({ top: 0, left: 0 });
-    const val = localStorage.getItem("LoggedIntoken");
-    if (!val) {
-      navigate("/");
-    }
-  });
+  
+
   
   return (
     <div className=" bg-[#fff]">

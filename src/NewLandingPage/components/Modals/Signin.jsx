@@ -98,7 +98,7 @@ const Signin = ({
                 id="e_mail"
                 className={
                   formik.errors.e_mail && formik.touched.e_mail
-                    ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 lg::mt-2 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
+                    ? "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 lg:mt-2 rounded-[5px] font-lato px-10 border border-red-500  focus:border-2    focus:outline-none"
                     : "w-full pl-14 lg:pl-11 h-[4.5rem] md:h-[3.8rem] text-xl   bg-[#FFFFFF] mt-4 lg:mt-2 rounded-[5px] font-lato px-10 border focus:border-2  focus:border-[#3B8004] border-[#999999] focus:outline-none"
                 }
                 placeholder="johndoe@email.com"
