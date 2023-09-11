@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from 'react-router-dom';
 
 import "../../App.css";
 
@@ -32,9 +32,10 @@ const Foot = () => {
           <div className="flex flex-col text-2xl  w-full mx-auto   lg:text-2xl text-left z-[3] gap-y-8">
             <p className="text-3xl font-bold  text-[#fff] ">Co_lab Apes</p>
             {/* <p className="lg:mt-4 mt-2 text-2xl">About Us</p> */}
-            <p className="">About Us</p>
-            <p className="">Privacy policy</p>
-            <p className="">Terms of Use</p> <p className="">Legal</p>
+            <Link to="/" className="">About Us</Link>
+            <Link to="/privacypolicy" className="">Privacy policy</Link>
+            <Link to="/termsofuse" className="">Terms of Use</Link> 
+            <Link to="/legal" className="">Legal</Link>
           </div>
           <div className="flex flex-col w-full mx-auto  text-2xl lg:text-2xl text-left z-[3] gap-y-6 pl-20">
             <p className="text-3xl font-bold text-[#fff] ">Features</p>
