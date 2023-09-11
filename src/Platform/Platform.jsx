@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 const Platform = () => {
   const { tabs, checkindex, setcheckindex } = TabHook();
   const navigate = useNavigate();
+
   useEffect(() => {
     window.scroll({ top: 0, left: 0 });
     const val = localStorage.getItem("LoggedIntoken");
@@ -16,6 +17,7 @@ const Platform = () => {
       navigate("/");
     }
   });
+  
   return (
     <div className=" bg-[#fff]">
       <Nav tabs={tabs} checkindex={checkindex} setcheckindex={setcheckindex} />
