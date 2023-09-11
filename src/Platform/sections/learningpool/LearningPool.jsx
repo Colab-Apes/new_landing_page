@@ -1,14 +1,5 @@
 import Learn from "./components/Learn";
-import {
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-} from "./assets/BulkImport";
+import { img1, img2, img3, img4, img5, img6, img7, img8 } from "./assets/BulkImport";
 
 const LearningPool = () => {
   return (
@@ -30,7 +21,7 @@ const LearningPool = () => {
         <Learn image={img4} name="Coding" />
         <Learn image={img5} name="Data Science" />
         <Learn image={img6} name="Content Writing" />
-        <Learn image={img7} name="Video Editting" />
+        <Learn image={img7} name="Video Editing" />
         <Learn image={img8} name="3D Modelling" />
         <Learn image={img1} name="Analytics" />
         <Learn image={img2} name="Artificial Intelligence" />
@@ -38,7 +29,7 @@ const LearningPool = () => {
         <Learn image={img4} name="Coding" />
         <Learn image={img5} name="Data Science" />
         <Learn image={img6} name="Content Writing" />
-        <Learn image={img7} name="Video Editting" />
+        <Learn image={img7} name="Video Editing" />
         <Learn image={img8} name="3D Modelling" />
         <Learn image={img1} name="Analytics" />
         <Learn image={img2} name="Artificial Intelligence" />
