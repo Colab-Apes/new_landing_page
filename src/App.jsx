@@ -1,6 +1,6 @@
 import LandPage from "./NewLandingPage/LandPage";
 import { ToastContainer } from "react-toastify";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Platform from "./Platform/Platform";
 import ProtectedRoute from "./Validation/ProtectedRoute";
@@ -18,6 +18,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
   );
