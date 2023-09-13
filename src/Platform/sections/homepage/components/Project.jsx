@@ -5,7 +5,9 @@ import info from "../assets/icons/info.svg";
 import hand from "../assets/icons/group-3.svg";
 import like from "../assets/icons/like.svg";
 import "../../../../App.css";
+import { useState } from "react";
 const Project = ({ image, name, creator }) => {
+  const [opendetails, setopendetails] = useState(false);
   return (
     <div className=" w-full  font-lato flex flex-col  shadow-[3px_15px_50px_0px_rgba(5,78,18,0.10)] hover:shadow-sm cursor-pointer ease-out hover:duration-200 min-h-[34rem] sm:min-h-[26rem] relative md:min-h-[36rem] lg:min-h-[30rem] xl:min-h-[52rem] rounded-[30px] pb-8">
       <img src={image} alt="" className="object-cover w-full " />
@@ -19,22 +21,30 @@ const Project = ({ image, name, creator }) => {
             />
             <p className="font-bold text-xl xl:text-[24px]">{name}</p>
           </div>
-          {/* <div className="flex gap-x-3">
+          <div
+            className={
+              opendetails
+                ? "absolute top-56 rounded-[20px] right-5 shadow-[15px_15px_50px_0px_rgba(5,_78,_18,_0.10)]  h-[280px] w-[242px] z-10 bg-[#fff]"
+                : "hidden"
+            }
+          >
             <img
-              src={group}
-              alt=""
-              className="object-contain  sm:w-[1.9rem]  w-[1rem] lg:w-[1.2rem] xl:w-[1.5rem]"
+              className="w-[80px] h-[80px] -mt-[3rem] mx-auto rounded-full border  border-[#fff] shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]"
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+              alt="Rounded avatar"
             />
-            <p className="text-[#999] font-semibold sm:text-base lg:text-base xl:text-[16px]">
-              Multiple owners
+            <p className=" text-[#054E12] text-[20px] font-bold text-center mt-10">
+              {creator}
             </p>
-          </div> */}
+            <p className="text-center text-[#555]">@templetonpeck</p>
+          </div>
           {creator !== "Multiple owners" ? (
             <div className="flex gap-x-3 items-center">
               <img
                 className="w-[20px] h-[20px] rounded-full border-[2px]  border-[#fff] shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]"
                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
                 alt="Rounded avatar"
+                onMouseOver={() => setopendetails(!opendetails)}
               />
               <p className="text-[#999] font-semibold sm:text-base lg:text-base xl:text-[16px]">
                 {creator}
