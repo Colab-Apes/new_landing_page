@@ -15,20 +15,28 @@ const HomePage = () => {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 mt-[2.44rem] sm:mt-20 lg:mt-[6rem] gap-y-10 sm:gap-y-20 sm:gap-x-10 md:gap-10 lg:gap-y-10  lg:gap-x-4  xl:gap-x-6 xl:gap-y-10   mx-auto w-full ">
-        <Project image={img1} name="Mobile game" />
-        <Project image={img2} name="Product design" />
-        <Project image={img3} name="Video game" />
-        <Project image={img4} name="Data analysis" />
-        <Project image={img1} name="Mobile game" />
-        <Project image={img2} name="Product design" />
-        <Project image={img3} name="Video game" />
-        <Project image={img4} name="Data analysis" />{" "}
-        <Project image={img1} name="Mobile game" />
-        <Project image={img2} name="Product design" />
-        <Project image={img3} name="Video game" />
-        <Project image={img4} name="Data analysis" />
+        <Project image={img1} name="Mobile game" creator="Templeton Peck" />
+        <Project image={img2} name="Product design" creator="Multiple owners" />
+        <Project image={img3} name="Video game" creator="Mercy Torello" />
+        <Project
+          image={img4}
+          name="Data analysis"
+          creator="Multiple owners"
+        />{" "}
+        <Project image={img1} name="Mobile game" creator="Templeton Peck" />
+        <Project image={img2} name="Product design" creator="Multiple owners" />
+        <Project image={img3} name="Video game" creator="Mercy Torello" />
+        <Project
+          image={img4}
+          name="Data analysis"
+          creator="Multiple owners"
+        />{" "}
+        <Project image={img1} name="Mobile game" creator="Templeton Peck" />
+        <Project image={img2} name="Product design" creator="Multiple owners" />
+        <Project image={img3} name="Video game" creator="Mercy Torello" />
+        <Project image={img4} name="Data analysis" creator="Multiple owners" />
       </div>
-      
+
       <div className="w-full flex justify-center items-center  mt-10 mb-10">
         <button className="h-[2rem] mx-auto  w-[8rem] sm:h-[3rem] sm:w-[12rem] lg:h-[2.6rem] lg:w-[8rem] xl:h-[3rem] xl:w-[10rem] xl:text-xl border border-solid border-[#999] text-[#999] rounded-[15px] font-bold ">
           Load more...

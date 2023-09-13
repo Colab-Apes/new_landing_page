@@ -8,11 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const Platform = () => {
   const { tabs, checkindex, setcheckindex } = TabHook();
-  const navigate = useNavigate();
-
-  
-
-  
+  const navigate = useNavigate();  
   return (
     <div className=" bg-[#fff]">
       <Nav tabs={tabs} checkindex={checkindex} setcheckindex={setcheckindex} />
