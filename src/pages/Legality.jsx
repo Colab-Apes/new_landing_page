@@ -80,7 +80,9 @@ const Legality = () => {
           responsibly and in compliance with these terms.
         </p>
       </section>
-      <Foot />
+      <div className="px-4  md:px-14 lg:px-[10.25rem]">
+        <Foot />
+      </div>
     </main>
   );
 };

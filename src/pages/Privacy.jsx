@@ -101,7 +101,9 @@ const Privacy = () => {
           Thank you for choosing Co_lab Apes for your collaborative endeavors.
         </p>
       </section>
+      <div className="px-4  md:px-14 lg:px-[10.25rem]">
       <Foot />
+      </div>
     </main>
   );
 };
