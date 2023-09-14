@@ -21,15 +21,7 @@ const Signup = ({
   setopenverifiedmodalprop,
 }) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scroll({ top: 0, left: 0 });
-    const val = localStorage.getItem("LoggedIntoken");
-    if (val) {
-      navigate("/home");
-    }
-  });
   const { formik, isLoading } = useSignupHooks(
     setopensignupmodalprop,
     setopenOtpmodalprop
@@ -39,7 +31,7 @@ const Signup = ({
     <div
       className={
         opensignupmodalprop
-          ? " rounded-[20px] lg:rounded-[3.13rem] w-full z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[50rem] r   py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[0rem]  relative duration-[800ms] ease-in-out"
+          ? " rounded-[20px] lg:rounded-[50px] w-full z-[120]   bg-[#F5FFF7] flex items-center justify-between min-h-[50rem] r   py-0  sm:pb-0 md:py-4      sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[54rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[3.5rem] opacity-100 xl:py-[0rem]  relative duration-[800ms] ease-in-out"
           : "hidden"
       }
     >
@@ -47,7 +39,7 @@ const Signup = ({
       <div className="bg-[#054E12] blur-[500px] h-[50rem] left-0  top-0 rounded-full w-[50rem] absolute -z-10"></div>
       <div
         className={
-          "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center"
+          "flex flex-col z-[120]  w-full  lg:flex-row lg:gap-x-5 xl:gap-x-[2rem] px-4 lg:px-0  justify-center lg:justify-between h-full items-center lg:items-start"
         }
       >
         <TfiClose
@@ -61,25 +53,21 @@ const Signup = ({
           className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
         />
 
-        <div className="w-full h-full lg:block  hidden  lg:rounded-[1.56rem] ">
-          <img
-            src={img1}
-            alt=""
-            className="lg:rounded-[1.56rem] object-cover"
-          />
+        <div className="w-full h-full lg:block  hidden  lg:rounded-[25px] ">
+          <img src={img1} alt="" className="lg:rounded-[25px] object-cover" />
         </div>
         <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
-          <div className=" flex flex-col justify-center items-center mt-[4rem]">
+          <div className=" flex flex-col justify-center items-center mt-[4rem] lg:mt-0">
             <img
               src={logo}
               alt=""
-              className="w-[12rem] sm:w-[6.25rem] lg:w-[8.7rem] object-contain "
+              className="w-[12rem] sm:w-[6.25rem] lg:w-[8rem] object-contain "
             />
-            {/* <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden xl:mt-6 xl:text-[1.5rem]">
+            <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden">
               Sign up to Get Started
-            </p> */}
+            </p>
           </div>
-          <p className="text-[#555] font-bold text-[1.67rem] sm:hidden text-center mt-6 md:mt-4 lg:mt-[1.69rem] mb-0">
+          <p className="text-[#555] font-bold text-[1.2rem]  hidden lg:block  text-center mt-6 md:mt-4 lg:mt-[1.2rem] mb-0">
             Sign up to Get Started
           </p>
           <form
@@ -87,7 +75,7 @@ const Signup = ({
               e.preventDefault();
               formik.handleSubmit();
             }}
-            className="w-full  flex flex-col justify-between gap-y-8 mt-8 md:gap-y-4 lg: text-sm px-10"
+            className="w-full  flex flex-col justify-between gap-y-8 mt-8 lg:mt-4  md:gap-y-4 lg: text-sm px-10 lg:px-14"
             action=""
           >
             <div className="relative ">
@@ -226,10 +214,10 @@ const Signup = ({
               )}
             </button>
           </form>{" "}
-          <p className="text-[#999999] text-lg text-center mt-8 lg:mt-4 lg:text-lg">
+          <p className="text-[#999999] text-lg text-center mt-8 lg:mt-3 lg:text-lg">
             Or Continue with
           </p>
-          <div className="flex flex-col w-full  md:mt-0 lg:mt-4 px-10">
+          <div className="flex flex-col w-full  md:mt-0 lg:mt-3 px-10 lg:px-14">
             <div className="flex justify-evenly mt-4 w-full gap-x-4 lg:gap-x-4  xl:gap-x-6 lg:mt-0">
               <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full bg-[#F8F8F8]   border lg:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
                 <img
@@ -249,7 +237,7 @@ const Signup = ({
                 <img src={apple} alt="" className="w-[1.6rem] object-contain" />
               </div>
             </div>
-            <div className="mt-[1.34rem] mb-[1.28rem] text-lg p-3 md:mt-8 lg:mt-4 xl:mt-6 ">
+            <div className="mt-[1.34rem] mb-[1.28rem] text-lg p-3 md:mt-8 lg:mt-2 ">
               <p className="flex justify-center items-center text-center lg:text-lg">
                 <span className="text-[#999999]">Already have an account?</span>
                 <p
