@@ -7,8 +7,12 @@ import like from "../assets/icons/like.svg";
 import "../../../../App.css";
 import { useState } from "react";
 import SingleFounder from "./SingleFounder";
+import MultiFounders from "./MultiFounders";
 const Project = ({ image, name, creator }) => {
-  const [opendetails, setopendetails] = useState(false);
+  const [opendetailssinglefounder, setopendetailssinglefounder] =
+    useState(false);
+  const [opendetailsmultiplefounders, setopendetailsmultiplefounders] =
+    useState(false);
   return (
     <div className=" w-full  font-lato flex flex-col  shadow-[3px_15px_50px_0px_rgba(5,78,18,0.10)] hover:shadow-sm cursor-pointer ease-out hover:duration-200 min-h-[34rem] sm:min-h-[26rem] relative md:min-h-[36rem] lg:min-h-[30rem] xl:min-h-[52rem] rounded-[30px] pb-8">
       <img src={image} alt="" className="object-cover w-full " />
@@ -22,14 +26,20 @@ const Project = ({ image, name, creator }) => {
             />
             <p className="font-bold text-xl xl:text-[24px]">{name}</p>
           </div>
-        <SingleFounder creator={creator} opendetails={opendetails}/>
+
           {creator !== "Multiple owners" ? (
             <div className="flex gap-x-3 items-center">
+              <SingleFounder
+                creator={creator}
+                opendetails={opendetailssinglefounder}
+              />
               <img
                 className="w-[20px] h-[20px] rounded-full border-[2px]  border-[#fff] shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]"
                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
                 alt="Rounded avatar"
-                onMouseOver={() => setopendetails(!opendetails)}
+                onMouseOver={() =>
+                  setopendetailssinglefounder(!opendetailssinglefounder)
+                }
               />
               <p className="text-[#999] font-semibold sm:text-base lg:text-base xl:text-[16px]">
                 {creator}
@@ -37,7 +47,15 @@ const Project = ({ image, name, creator }) => {
             </div>
           ) : (
             <div className="flex gap-x-3 items-center">
-              <div class="flex  -space-x-4 shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]  rounded-full bg-transparent">
+              <MultiFounders
+                opendetailsmultiplefounders={opendetailsmultiplefounders}
+              />
+              <div
+                onMouseOver={() =>
+                  setopendetailsmultiplefounders(!opendetailsmultiplefounders)
+                }
+                className="flex  -space-x-4 shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]  rounded-full bg-transparent"
+              >
                 <img
                   class="w-[20px] h-[20px] border-[2px]  border-[#fff] border-white  rounded-full "
                   src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"

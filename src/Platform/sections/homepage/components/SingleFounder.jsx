@@ -8,7 +8,7 @@ const SingleFounder = ({ creator, opendetails }) => {
     <div
       className={
         opendetails
-          ? "absolute top-56 rounded-[20px] right-5 shadow-[15px_15px_50px_0px_rgba(5,_78,_18,_0.10)] px-10  h-[280px] w-[242px] z-10 bg-[#fff]"
+          ? "absolute top-56 rounded-[20px] right-5 shadow-[15px_15px_50px_0px_rgba(5,_78,_18,_0.10)] px-10 pb-8 min-h-[280px] w-[242px] z-10 bg-[#fff] flex flex-col gap-y-2"
           : "hidden"
       }
     >
@@ -17,7 +17,7 @@ const SingleFounder = ({ creator, opendetails }) => {
         src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
         alt="Rounded avatar"
       />
-      <p className=" text-[#054E12] text-[20px] font-bold text-center mt-10">
+      <p className=" text-[#054E12] text-[20px] font-bold text-center mt-5">
         {creator}
       </p>
       <p className="text-center text-[12px] font-bold text-[#555]">
@@ -31,7 +31,7 @@ const SingleFounder = ({ creator, opendetails }) => {
         <img src={award} alt="" />
         <p className="text-[#4EAF00] font-[700] text-[10px]">Founder</p>
       </div>
-      <div className="flex justify-around items-center">
+      <div className="flex justify-around items-center mt-10">
         <p className="flex flex-col">
           <span className=" text-[#333] text-[15px] font-bold">5</span>
           <span className="text-[#555] text-[10px] font-medium">Projects</span>
@@ -48,16 +48,19 @@ const SingleFounder = ({ creator, opendetails }) => {
           <span className="text-[#555] text-[10px] font-medium">Following</span>
         </p>
       </div>
-      <button className="w-full rounded-[15px] flex items-center justify-center gap-x-2 shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10);] bg-[#999] text-white  font-bold text-[14px] py-[10px] ">
+      <button className="w-full rounded-[15px] flex items-center justify-center gap-x-2 shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10);] bg-[#999] text-white mt-4  font-bold text-[14px] py-[10px] ">
         <img src={following} alt="" />
         Following
       </button>
-      <div className="bg-red-500 text-[2rem]">
-        sdfasdfasdfa{" "}
-        <img src={polygon} alt="" className="object-contain w-[50rem]" />
-      </div>
+      {/* <div className=" w-0 h-0 border-t-transparent border-b-transparent border-t-[25px] border-solid border-b-[25px] border-r-[50px] ">
+        {" "}
+      </div> */}
     </div>
   );
 };
 
 export default SingleFounder;
+// height: 0;
+// 	border-top: 25px solid transparent;
+// 	border-right: 50px solid #555;
+// 	border-bottom: 25px solid transparent;
