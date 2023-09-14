@@ -6,6 +6,7 @@ import hand from "../assets/icons/group-3.svg";
 import like from "../assets/icons/like.svg";
 import "../../../../App.css";
 import { useState } from "react";
+import SingleFounder from "./SingleFounder";
 const Project = ({ image, name, creator }) => {
   const [opendetails, setopendetails] = useState(false);
   return (
@@ -21,23 +22,7 @@ const Project = ({ image, name, creator }) => {
             />
             <p className="font-bold text-xl xl:text-[24px]">{name}</p>
           </div>
-          <div
-            className={
-              opendetails
-                ? "absolute top-56 rounded-[20px] right-5 shadow-[15px_15px_50px_0px_rgba(5,_78,_18,_0.10)]  h-[280px] w-[242px] z-10 bg-[#fff]"
-                : "hidden"
-            }
-          >
-            <img
-              className="w-[80px] h-[80px] -mt-[3rem] mx-auto rounded-full border  border-[#fff] shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]"
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-              alt="Rounded avatar"
-            />
-            <p className=" text-[#054E12] text-[20px] font-bold text-center mt-10">
-              {creator}
-            </p>
-            <p className="text-center text-[#555]">@templetonpeck</p>
-          </div>
+        <SingleFounder creator={creator} opendetails={opendetails}/>
           {creator !== "Multiple owners" ? (
             <div className="flex gap-x-3 items-center">
               <img
