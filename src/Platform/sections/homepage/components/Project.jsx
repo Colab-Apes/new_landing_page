@@ -29,48 +29,51 @@ const Project = ({ image, name, creator }) => {
 
           {creator !== "Multiple owners" ? (
             <div className="flex gap-x-3 items-center">
-              <SingleFounder
-                creator={creator}
-                opendetails={opendetailssinglefounder}
-              />
-              <img
-                className="w-[20px] h-[20px] rounded-full border-[2px]  border-[#fff] shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                alt="Rounded avatar"
-                onMouseOver={() =>
-                  setopendetailssinglefounder(!opendetailssinglefounder)
-                }
-              />
+              <div
+                onMouseEnter={() => setopendetailssinglefounder(true)}
+                onMouseLeave={() => setopendetailssinglefounder(false)}
+              >
+                <SingleFounder
+                  creator={creator}
+                  opendetails={opendetailssinglefounder}
+                />
+                <img
+                  className="w-[20px] h-[20px] rounded-full border-[2px]  border-[#fff] shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                  alt="Rounded avatar"
+                />
+              </div>
               <p className="text-[#999] font-semibold sm:text-base lg:text-base xl:text-[16px]">
                 {creator}
               </p>
             </div>
           ) : (
             <div className="flex gap-x-3 items-center">
-              <MultiFounders
-                opendetailsmultiplefounders={opendetailsmultiplefounders}
-              />
               <div
-                onMouseOver={() =>
-                  setopendetailsmultiplefounders(!opendetailsmultiplefounders)
-                }
-                className="flex  -space-x-4 shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]  rounded-full bg-transparent"
+                className="s"
+                onMouseEnter={() => setopendetailsmultiplefounders(true)}
+                onMouseLeave={() => setopendetailsmultiplefounders(false)}
               >
-                <img
-                  class="w-[20px] h-[20px] border-[2px]  border-[#fff] border-white  rounded-full "
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                  alt=""
+                <MultiFounders
+                  opendetailsmultiplefounders={opendetailsmultiplefounders}
                 />
-                <img
-                  class="w-[20px] h-[20px] border-[2px]  border-[#fff] rounded-full"
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                  alt=""
-                />
-                <img
-                  class="w-[20px] h-[20px] border-[2px]  border-[#fff] rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                />
+                <div className="flex  -space-x-4 shadow-[0px_4px_4px_0px_rgba(59,_128,_4,_0.20)]  rounded-full bg-transparent">
+                  <img
+                    class="w-[20px] h-[20px] border-[2px]  border-[#fff] border-white  rounded-full "
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    class="w-[20px] h-[20px] border-[2px]  border-[#fff] rounded-full"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    class="w-[20px] h-[20px] border-[2px]  border-[#fff] rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
               </div>
               <p className="text-[#999] font-semibold sm:text-base lg:text-base xl:text-[16px]">
                 {creator}
