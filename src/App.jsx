@@ -4,6 +4,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Platform from "./Platform/Platform";
 import ProtectedRoute from "./Validation/ProtectedRoute";
+import { Legality, Privacy, TermsOfUse } from "./pages";
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +21,10 @@ function App() {
           }
         />
         <Route path="*" element={<Navigate to="/" />} />
+
+        <Route path="/legal" element={<Legality />} />
+        <Route path="/privacypolicy" element={<Privacy />} />
+        <Route path="/termsofuse" element={<TermsOfUse />} />
       </Routes>
     </div>
   );

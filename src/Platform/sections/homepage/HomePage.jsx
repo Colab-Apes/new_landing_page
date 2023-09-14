@@ -36,8 +36,8 @@ const HomePage = () => {
         <Project image={img3} name="Video game" creator="Mercy Torello" />
         <Project image={img4} name="Data analysis" creator="Multiple owners" />
       </div>
-
-      <div className="w-full flex justify-center items-center  mt-10 mb-10">
+      
+      <div className=" w-full flex justify-center items-center  mt-10 mb-10 ">
         <button className="h-[2rem] mx-auto  w-[8rem] sm:h-[3rem] sm:w-[12rem] lg:h-[2.6rem] lg:w-[8rem] xl:h-[3rem] xl:w-[10rem] xl:text-xl border border-solid border-[#999] text-[#999] rounded-[15px] font-bold ">
           Load more...
         </button>

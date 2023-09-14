@@ -10,6 +10,7 @@ import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import "../../../App.css";
 import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
 import { ClipLoader } from "react-spinners";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = ({
   setopenOtpmodalprop,
@@ -176,13 +177,13 @@ const Signup = ({
 
               <p className="text-[#999999]">
                 By registering, you are agreeing with our{" "}
-                <span className="underline text-[#3B8004] ml-1">
+                <Link to={"/termsofuse"} className="underline text-[#3B8004] ml-1">
                   Terms of Use{" "}
-                </span>
+                </Link>
                 and
-                <span className="underline text-[#3B8004] ml-1">
+                <Link to={"/privacypolicy"} className="underline text-[#3B8004] ml-1">
                   Privacy Policy
-                </span>
+                </Link>
               </p>
             </div>
 
