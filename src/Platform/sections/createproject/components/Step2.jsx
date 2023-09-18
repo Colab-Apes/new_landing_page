@@ -1,4 +1,5 @@
 import React from "react";
+import img1 from "../assets/circle.svg";
 import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
 import "../../../../App.css";
@@ -17,11 +18,11 @@ const Step2 = ({ setopenstep2, openstep2, setopenstep3 }) => {
         </div>{" "}
         <div className="w-[14rem] bg-[#555] h-[2px]"></div>
         <div className="relative flex flex-col  ">
-          <img src={img2} alt="" className="" />
-          <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
+          <img src={img1} alt="" className="" />
+          <p className="text-[36px] text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
             2
           </p>
-          <p className="absolute gap-x-2 flex -bottom-10 -left-10  text-[#555] text-[16px] font-normal ">
+          <p className="absolute gap-x-2 flex -bottom-10 -left-10  text-[#054E12] text-[16px] font-bold ">
             <span>Face</span> <span>of</span>
             <span>Project</span>
           </p>
