@@ -154,12 +154,12 @@ const Signin = ({
               {isPasswordVisible ? (
                 <MdOutlineVisibilityOff
                   onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                  className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
+                  className="absolute inset-y-[3rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
                 />
               ) : (
                 <MdOutlineVisibility
                   onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                  className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
+                  className="absolute inset-y-[3rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
                 />
               )}
               {formik.errors.password && formik.touched.password ? (
