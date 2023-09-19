@@ -3,7 +3,7 @@ import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
 import "../../../../App.css";
 import { IoMdCheckmark } from "react-icons/io";
-const Step3 = ({openstep3}) => {
+const Step3 = ({ openstep3 }) => {
   return (
     <div className={openstep3 ? "" : "hidden"}>
       <div className={"flex items-center mt-10 w-full"}>
@@ -20,7 +20,7 @@ const Step3 = ({openstep3}) => {
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
           <IoMdCheckmark className="text-[#fff] text-[36px] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold" />
-          <p className="absolute gap-x-2 flex -bottom-10 -left-10  text-[#555] text-[16px] font-normal ">
+          <p className="absolute gap-x-2 flex -bottom-10 -left-10  text-[#054E12] text-[16px] font-bold ">
             <span>Face</span> <span>of</span>
             <span>Project</span>
           </p>

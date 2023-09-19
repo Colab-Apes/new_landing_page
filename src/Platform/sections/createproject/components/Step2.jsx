@@ -117,8 +117,8 @@ const Step2 = ({ setopenstep2, openstep2, setopenstep3 }) => {
           </button>
           <button
             onClick={() => {
-              setopenstep1(false);
-              setopenstep2(true);
+              setopenstep2(false);
+              setopenstep3(true);
             }}
             className="rounded-[30px] text-[#fff] font-bold text-[20px] btngrad h-[80px] w-[206px] bg-[5px_10px_30px_0px_rgba(59,_128,_4,_0,_10)]"
           >
