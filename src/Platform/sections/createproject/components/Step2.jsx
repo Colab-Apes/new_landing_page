@@ -16,7 +16,7 @@ const Step2 = ({ setopenstep2, openstep2, setopenstep3 }) => {
             Project <span>Information</span>
           </p>
         </div>{" "}
-        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
         <div className="relative flex flex-col  ">
           <img src={img1} alt="" className="" />
           <p className="text-[36px] text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -27,7 +27,7 @@ const Step2 = ({ setopenstep2, openstep2, setopenstep3 }) => {
             <span>Project</span>
           </p>
         </div>
-        <div className="w-[14rem] bg-[#999] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
         <div className="relative flex flex-col ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">

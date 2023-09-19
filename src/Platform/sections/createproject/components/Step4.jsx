@@ -26,7 +26,7 @@ const Step4 = ({ openstep4, setopenstep4, setopenstep5 }) => {
             <span>Project</span>
           </p>
         </div>
-        <div className="w-[14rem] bg-[#999] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
         <div className="relative flex flex-col ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -35,7 +35,7 @@ const Step4 = ({ openstep4, setopenstep4, setopenstep5 }) => {
             Analysis
           </p>
         </div>
-        <div className="w-[14rem] bg-[#999] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
         <div className="relative flex flex-col ">
           <img src={img1} alt="" className="" />
           <p className="text-[36px] text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -45,7 +45,7 @@ const Step4 = ({ openstep4, setopenstep4, setopenstep5 }) => {
             Investments
           </p>
         </div>
-        <div className="w-[14rem] bg-[#999] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[30px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">

@@ -48,7 +48,11 @@ const CreateProject = () => {
           openstep5={openstep5}
           setopenstep6={setopenstep6}
         />
-        <Step6 setopenstep6={setopenstep6} openstep6={openstep6} />
+        <Step6
+          setopenstep5={setopenstep5}
+          setopenstep6={setopenstep6}
+          openstep6={openstep6}
+        />
       </div>
     </div>
   );
