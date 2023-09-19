@@ -1,9 +1,10 @@
 import React from "react";
+import img1 from "../assets/circle.svg";
 import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
 import "../../../../App.css";
 import { IoMdCheckmark } from "react-icons/io";
-const Step3 = ({ openstep3 }) => {
+const Step3 = ({ openstep3,setopenstep3,setopenstep4 }) => {
   return (
     <div className={openstep3 ? "" : "hidden"}>
       <div className={"flex items-center mt-10 w-full"}>
@@ -27,11 +28,11 @@ const Step3 = ({ openstep3 }) => {
         </div>
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
         <div className="relative flex flex-col ">
-          <img src={img2} alt="" className="" />
-          <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
+          <img src={img1} alt="" className="" />
+          <p className="text-[36px] text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
             3
           </p>
-          <p className="absolute -bottom-10   text-[#555] text-[16px] font-normal ">
+          <p className="absolute -bottom-10    text-[#054E12] text-[16px] font-bold">
             Analysis
           </p>
         </div>
@@ -156,8 +157,8 @@ const Step3 = ({ openstep3 }) => {
           </button>
           <button
             onClick={() => {
-              setopenstep1(false);
-              setopenstep2(true);
+              setopenstep3(false);
+              setopenstep4(true);
             }}
             className="rounded-[30px] text-[#fff] font-bold text-[20px] btngrad h-[80px] w-[206px] bg-[5px_10px_30px_0px_rgba(59,_128,_4,_0,_10)]"
           >
