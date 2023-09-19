@@ -32,18 +32,22 @@ const CreateProject = () => {
           setopenstep2={setopenstep2}
           openstep2={openstep2}
           setopenstep3={setopenstep3}
+          setopenstep1={setopenstep1}
         />
         <Step3
           setopenstep3={setopenstep3}
           openstep3={openstep3}
           setopenstep4={setopenstep4}
+          setopenstep2={setopenstep2}
         />
         <Step4
           setopenstep4={setopenstep4}
           openstep4={openstep4}
           setopenstep5={setopenstep5}
+          setopenstep3={setopenstep3}
         />
         <Step5
+          setopenstep4={setopenstep4}
           setopenstep5={setopenstep5}
           openstep5={openstep5}
           setopenstep6={setopenstep6}

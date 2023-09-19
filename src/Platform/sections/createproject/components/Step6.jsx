@@ -152,6 +152,7 @@ const Step6 = ({ openstep6, setopenstep6, setopenstep5}) => {
           <button onClick={() => {
               setopenstep6(false);
               setopenstep5(true);
+              scrollTo(0, 0);
             }} className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]">
             Cancel
           </button>

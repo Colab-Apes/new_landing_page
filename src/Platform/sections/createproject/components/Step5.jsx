@@ -150,17 +150,21 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
           </div>{" "}
         </div>
         <div className="w-full mt-20 flex justify-between items-center col-span-2">
-          <button  onClick={() => {
+          <button
+            onClick={() => {
               setopenstep5(false);
               setopenstep4(true);
-            }} className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]">
+              scrollTo(0, 0);
+            }}
+            className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]"
+          >
             Cancel
           </button>
           <button
             onClick={() => {
               setopenstep5(false);
               setopenstep6(true);
-              scrollTo(0,0)
+              scrollTo(0, 0);
             }}
             className="rounded-[30px] text-[#fff] font-bold text-[20px] btngrad h-[80px] w-[206px] bg-[5px_10px_30px_0px_rgba(59,_128,_4,_0,_10)]"
           >

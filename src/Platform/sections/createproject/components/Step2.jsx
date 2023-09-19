@@ -4,7 +4,7 @@ import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
 import "../../../../App.css";
 import { IoMdCheckmark } from "react-icons/io";
-const Step2 = ({ setopenstep2, openstep2, setopenstep3 }) => {
+const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
   return (
     <div className={openstep2 ? "" : "hidden"}>
       <div className={"flex items-center mt-10 w-full"}>
@@ -112,13 +112,21 @@ const Step2 = ({ setopenstep2, openstep2, setopenstep3 }) => {
           />
         </div>
         <div className="w-full mt-20 flex justify-between items-center col-span-2">
-          <button className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]">
+          <button
+            onClick={() => {
+              setopenstep2(false);
+              setopenstep1(true);
+              scrollTo(0, 0);
+            }}
+            className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]"
+          >
             Cancel
           </button>
           <button
             onClick={() => {
               setopenstep2(false);
               setopenstep3(true);
+              scrollTo(0, 0);
             }}
             className="rounded-[30px] text-[#fff] font-bold text-[20px] btngrad h-[80px] w-[206px] bg-[5px_10px_30px_0px_rgba(59,_128,_4,_0,_10)]"
           >
