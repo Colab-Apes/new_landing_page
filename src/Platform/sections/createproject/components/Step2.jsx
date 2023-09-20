@@ -102,14 +102,18 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             500 words maximum
           </span>
         </div>{" "}
-        <div className="flex flex-col w-full text-[#999] gap-y-4">
-          <label htmlFor="">Give your project a name</label>
-          <textarea
-            name=""
-            placeholder="Type name"
-            id=""
-            className="focus:outline-none pl-2 text-[#999] bg-[#fff]/[20%] py-4   border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
-          />
+        <div className="w-full gap-y-4 ">
+          <label htmlFor="" className="text-[#999]">
+            Give your project a name
+          </label>
+          <div className=" bg-[#fff]/[20%]   border-2 rounded-[10px] text-[16px] font-bold h-[10rem] flex justify-end  border-[#999]/[0.5]  flex-col w-full  ">
+            <input
+              name=""
+              placeholder="Type name"
+              id=""
+              className="focus:outline-none pl-2 text-[#999] bg-[#fff]/[20%] py-2 rounded-b-[10px]  text-[16px] font-bold  "
+            />
+          </div>
         </div>
         <div className="w-full mt-20 flex justify-between items-center col-span-2">
           <button
