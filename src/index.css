@@ -75,3 +75,14 @@ body {
 li {
   list-style-type:  disc;
 }
+
+/* In your CSS file or component styles */
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+} */
+
+/* For Firefox */
+/* input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+} */
