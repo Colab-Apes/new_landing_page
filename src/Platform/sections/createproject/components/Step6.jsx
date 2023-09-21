@@ -2,9 +2,11 @@ import React from "react";
 import img1 from "../assets/circle.svg";
 import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
+import badge from "../assets/founderbadge.svg";
+import { PiShareFat } from "react-icons/pi";
 import "../../../../App.css";
 import { IoMdCheckmark } from "react-icons/io";
-const Step6 = ({ openstep6, setopenstep6, setopenstep5}) => {
+const Step6 = ({ openstep6, setopenstep6, setopenstep5 }) => {
   return (
     <div className={openstep6 ? "" : "hidden"}>
       <div className={"flex items-center mt-10 w-full"}>
@@ -64,23 +66,57 @@ const Step6 = ({ openstep6, setopenstep6, setopenstep5}) => {
           </p>
         </div>
       </div>
-      <div className=" grid lg:grid-cols-2 mt-32 gap-x-20 gap-y-10">
-      <div className="s">
-        img
-      </div>
-  
+      <div className=" flex flex-col  mt-64 gap-x-10 gap-y-10">
+        <div className="flex">
+          <div className="w-full">
+            <p className="text-[#4EAF00] text-[16px] font-[900]">
+              Congratulations !
+            </p>
+            <p className="text-[#555] text-[16px] font-bold">
+              Here’s your founder’s badge
+            </p>
+            <img src={badge} alt="" />
+          </div>
+          <div className="flex flex-col ">
+            <div className="p-[20px]  bg-[#F8F8F8] rounded-[10px]">
+              <p className="text-[16px] font-[900] text-[#333]">
+                Recruiting members
+              </p>
+
+              <p className="text-[#555] text-[16px] font-bold mt-8">
+                it’s vital to the project's future development to secure a good
+                team that works well together. To ensure this, we use the
+                existing user base and their profile data to find suitable
+                matches in hobbies and interest to find the right team fit.
+              </p>
+
+              <p className="text-[#555] text-[16px] font-bold mt-8">
+                Remote work also introduces many challenges when it comes to
+                consistency and quality of work, we aim to fix this by giving
+                equity to the recruited founders. Not only will this give a
+                sense of ownership, but can be used to lower costs further to
+                build, increasing return on investment.
+              </p>
+            </div>
+            <button className="rounded-[30px] w-[206px] mt-10 h-[80px] border  border-[#999] text-[#fff] flex  justify-center gap-x-2 items-center ">
+              <PiShareFat className="text-3xl text-[#333]" />
+              <p className="text-[#333] text-[14px] font-bold">Share project</p>
+            </button>
+          </div>
+        </div>
+
         <div className="w-full mt-20 flex justify-between items-center col-span-2">
-          <button onClick={() => {
+          <button
+            onClick={() => {
               setopenstep6(false);
               setopenstep5(true);
               scrollTo(0, 0);
-            }} className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]">
+            }}
+            className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]"
+          >
             Cancel
           </button>
-          <button
-            
-            className="rounded-[30px] text-[#fff] font-bold text-[20px] btngrad h-[80px] w-[206px] bg-[5px_10px_30px_0px_rgba(59,_128,_4,_0,_10)]"
-          >
+          <button className="rounded-[30px] text-[#fff] font-bold text-[20px] btngrad h-[80px] w-[206px] bg-[5px_10px_30px_0px_rgba(59,_128,_4,_0,_10)]">
             {" "}
             Next
           </button>
