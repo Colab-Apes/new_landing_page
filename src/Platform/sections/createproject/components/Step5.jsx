@@ -2,6 +2,8 @@ import React from "react";
 import img1 from "../assets/circle.svg";
 import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
+import upload from "../assets/upload.svg";
+import { GoArrowRight } from "react-icons/go";
 import "../../../../App.css";
 import { IoMdCheckmark } from "react-icons/io";
 const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
@@ -16,7 +18,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Project <span>Information</span>
           </p>
         </div>{" "}
-        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
         <div className="relative flex flex-col  ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -26,7 +28,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             <span>Project</span>
           </p>
         </div>
-        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
         <div className="relative flex flex-col ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -35,7 +37,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Analysis
           </p>
         </div>
-        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
         <div className="relative flex flex-col ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -44,7 +46,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Investments
           </p>
         </div>
-        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
         <div className="relative flex flex-col  ">
           <img src={img1} alt="" className="" />
           <p className="text-[30px]  text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -54,7 +56,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Documents
           </p>
         </div>
-        <div className="w-[14rem] bg-[#555] h-[2px]"></div>
+        <div className="w-[14rem] bg-[#999] h-[2px]"></div>
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -65,89 +67,55 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
           </p>
         </div>
       </div>
-      <div className=" grid lg:grid-cols-2 mt-32 gap-x-20 gap-y-10">
-        <div className="flex flex-col w-full text-[#999] gap-y-4">
-          <label htmlFor="">
-            Are you looking to create a product or service?
+      <div className=" grid lg:grid-cols-2 mt-32 gap-x-20 gap-y-20">
+        <div className="py-[20px] leading-[24px] px-[10px] rounded-[10px] bg-[#F8F8F8] text-[#555] text-[16px] font-bold">
+          Congratulations on the first step to building your first project with
+          Co_lab Apes, just a few more steps, then you would be on the
+          recruitment process. The “Co” in Colab_Apes stands for cooperation, we
+          believe teamwork is vital to creating anything of significant value -
+          all build on the platform, most from a team.
+        </div>
+        <div className="py-[20px] leading-[24px] px-[10px] rounded-[10px] h-fit bg-[#F8F8F8] text-[#555] text-[16px] font-bold">
+          As the first founder of this project, you are the team lead. this is a
+          big responsibility, but we got your back and will help you become a
+          pro in no time.
+        </div>
+        <div className="flex flex-col w-full text-[#999] gap-y-4 ">
+          <label htmlFor="" className="text-[16px] text-[#999] font-bold">
+            When will you start the initial first step of the project?
           </label>
           <select
             name=""
             id=""
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4   border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+            className="focus:outline-none bg-[#fff]/[20%] py-4   border-2 text-[#333] rounded-[10px] text-[16px] font-bold px-4  border-[#999]/[0.5]"
           >
-            <option value="volvo">Choose One</option>
+            <option value="volvo">Before recruitment</option>
             <option value="saab">Saab</option>
           </select>
+          <div>
+            <p className="text-[#4EAF00] font-bold text-[16px] mt-8 ">
+              Don’t have business or operaional plan document?
+            </p>
+            <button className="flex justify-around mt-8 h-[50px] w-[45%] rounded-[10px] border-2 border-[#999]/[0.5] items-center gap-x-2">
+              <p className="text-[#333] font-bold text-[16px]">
+                Formulate one here
+              </p>
+              <GoArrowRight className="text-3xl " />
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col w-full text-[#999] gap-y-4 ">
-          <label htmlFor="">Product / Service type?</label>
-          <select
-            name=""
-            id=""
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4   border-2 rounded-[10px] text-[16px] font-bold px-4  border-[#999]/[0.5]"
-          >
-            <option value="volvo">Choose One</option>
-            <option value="saab">Saab</option>
-          </select>
-        </div>
-        <div className="flex flex-col w-full gap-y-4 text-[#999]">
-          <label htmlFor="">How many roles would your project require?</label>
-          <div className="flex items-center justify-between bg-[#ddd]/[0.2] rounded-[10px] h-[50px] px-8">
-            <p className="text-[#333] text-[16px] font-bold">Typist</p>
-            <div className="cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="23"
-                height="26"
-                viewBox="0 0 23 26"
-                fill="none"
-              >
-                <path
-                  d="M20.054 9.88281C20.054 20.295 21.5527 25.0015 11.4719 25.0015C1.3899 25.0015 2.91957 20.295 2.91957 9.88281"
-                  stroke="#FF7B7B"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M21.9703 5.89062H1"
-                  stroke="#FF7B7B"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15.932 5.88953C15.932 5.88953 16.6183 1 11.484 1C6.35083 1 7.03714 5.88953 7.03714 5.88953"
-                  stroke="#FF7B7B"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+        <div className="gap-y-4 flex flex-col">
+          <label className="text-[16px] text-[#999]  font-bold" htmlFor="">
+            Upload Business or Operational plan
+          </label>
+          <div className="border-2  rounded-[10px] border-dashed px-[19px] py-[23px]">
+            <div className=" rounded-[10px] py-[33px] w-full gap-[10px] flex flex-col items-center justify-center bg-[#F8F8F8]">
+              <img src={upload} alt="" />
+              <p className="text-[#555] font-bold text-[16px]">
+                Upload .pdf, .jpg, .PNG files
+              </p>
             </div>
           </div>
-          <div className="border-2 border-solid  origin-left  duration-500 relative lg:w-full border-[#999]/[50%] bg-[#fff]/[20%]  h-[60px] flex  0 items-center  mt-10 rounded-[10px] lg:rounded-[10px] w-full">
-            <div className="input h-full w-full pr-32 pl-2">
-              <input
-                type="email"
-                // onChange={(e) => setemail(e.target.value)}
-                // value={email}
-                className="text-[16px] bg-transparent  w-full md:w-[40rem] lg:w-full p-0 outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999]   h-full"
-                placeholder="Type role..."
-              />
-            </div>
-
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                submitEmail();
-                console.log("ecco");
-              }}
-              className=" absolute shadow-[15px_15px_50px_0px_rgba(0,_0,_0,_0.05)]  px-12 btngrad py-6 lg:py-[10px] lg:px-[20px] lg:text-[1.4rem] rounded-[8px] lg:rounded-[15px] text-3xl text-white right-2 font-bold"
-            >
-              Add
-            </button>
-          </div>{" "}
         </div>
         <div className="w-full mt-20 flex justify-between items-center col-span-2">
           <button
