@@ -28,7 +28,7 @@ const Project = ({ image, name, creator }) => {
           </div>
 
           {creator !== "Multiple owners" ? (
-            <div className="flex gap-x-3 items-center">
+            <div className="flex gap-x-3 items-center ">
               <div
                 onMouseEnter={() => setopendetailssinglefounder(true)}
                 onMouseLeave={() => setopendetailssinglefounder(false)}

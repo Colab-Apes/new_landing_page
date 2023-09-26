@@ -11,7 +11,7 @@ const MultiFounders = ({ opendetailsmultiplefounders }) => {
     <div
       className={
         opendetailsmultiplefounders
-          ? "absolute top-20 rounded-[20px] -left-20 shadow-[15px_15px_50px_0px_rgba(5,_78,_18,_0.10)] px-6 pb-8 min-h-[280px] w-[242px] z-10 bg-[#fff] flex flex-col gap-y-2"
+          ? "absolute hidden lg:flex top-20 rounded-[20px] -left-20 shadow-[15px_15px_50px_0px_rgba(5,_78,_18,_0.10)] px-6 pb-8 min-h-[280px] w-[242px] z-10 bg-[#fff]  flex-col gap-y-2"
           : "hidden"
       }
     >
