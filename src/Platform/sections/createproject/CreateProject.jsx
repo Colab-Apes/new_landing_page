@@ -19,7 +19,7 @@ const CreateProject = () => {
   const [openstep6, setopenstep6] = useState(false);
   return (
     <div className="font-lato">
-      <div className="w-full mt-8 lg:mt-0 py-32 shadow-[-5px_15px_50px_0px_rgba(5,_78,_18,_0.05)] min-h-[32rem] bg-white rounded-[30px] px-60">
+      <div className="w-full mt-[8rem] lg:mt-0 py-32 shadow-[-5px_15px_50px_0px_rgba(5,_78,_18,_0.05)] min-h-[32rem] bg-white rounded-[30px] px-60">
         <p className="text-[#333] xl:text-[40px] font-bold">
           Create new project
         </p>

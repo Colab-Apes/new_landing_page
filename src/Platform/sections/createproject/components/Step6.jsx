@@ -20,7 +20,7 @@ const Step6 = ({ openstep6, setopenstep6, setopenstep5 }) => {
         </div>{" "}
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
         <div className="relative flex flex-col  ">
-          <img src={img3} alt="" className="w-full object-scale-down" />
+          <img src={img3} alt="" className="w-full obje1ct-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
           <IoMdCheckmark className="text-[#fff] text-[36px] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold" />
           <p className="absolute gap-x-2 flex -bottom-10 -left-10  text-[#054E12] text-[16px] font-bold ">
