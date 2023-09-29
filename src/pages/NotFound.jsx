@@ -16,7 +16,7 @@ const NotFound = () => {
         <img
           src={circlegreen}
           alt=""
-          className="absolute top-[40rem] left-[100rem] w-[1.2rem] object-contain "
+          className="absolute top-[40rem] left-[96rem] w-[1.2rem] object-contain "
         />
         <img
           src={circlegreen}
@@ -49,9 +49,24 @@ const NotFound = () => {
           className="absolute bottom-[2rem] left-[60rem] w-[1.2rem] object-contain "
         />
         <img
+          src={circlewhite}
+          alt=""
+          className="absolute bottom-[20rem] left-[59rem] w-[1.2rem] object-contain "
+        />
+        <img
           src={plus}
           alt=""
           className="absolute top-[5rem] left-[60rem] w-[2rem] object-contain"
+        />
+        <img
+          src={plus}
+          alt=""
+          className="absolute top-[25rem] left-[52.4rem] z-20 w-[2rem] object-contain"
+        />
+        <img
+          src={plus}
+          alt=""
+          className="absolute bottom-[10rem] right-[45rem] z-20 w-[2rem] object-contain"
         />
         <img
           src={plus}
@@ -62,6 +77,11 @@ const NotFound = () => {
           src={plus1}
           alt=""
           className="absolute w-[2rem] bottom-[10rem]  left-[40rem]"
+        />
+        <img
+          src={plus1}
+          alt=""
+          className="absolute w-[2rem] top-[22rem]  right-[52rem]"
         />
         <div className="absolute top-20 left-32">
           <div className="bg-[#c26AAA] absolute translate-x-[-50%] translate-y-[50%] top-[-20%] blur-[90px] left-[66%]  rounded-full  w-[200px] h-[200px]"></div>
