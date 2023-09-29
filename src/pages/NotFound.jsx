@@ -13,7 +13,7 @@ const NotFound = () => {
           <img src={logo} alt="" className="w-[20vw] object-contain" />{" "}
         </div>
         {/* <img src={circle} alt="" className="absolute top-3 w-[2rem] object-contain"/> */}
-        <img
+        {/* <img
           src={circlegreen}
           alt=""
           className="absolute top-[40rem] left-[96rem] w-[1.2rem] object-contain "
@@ -82,7 +82,7 @@ const NotFound = () => {
           src={plus1}
           alt=""
           className="absolute w-[2rem] top-[22rem]  right-[52rem]"
-        />
+        /> */}
         <div className="absolute top-20 left-32">
           <div className="bg-[#c26AAA] absolute translate-x-[-50%] translate-y-[50%] top-[-20%] blur-[90px] left-[66%]  rounded-full  w-[200px] h-[200px]"></div>
           <div className="h-[400px] w-[400px] rounded-full bg-[#054E12] blur-[200px]"></div>
