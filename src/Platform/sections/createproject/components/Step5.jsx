@@ -122,10 +122,10 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Upload Business or Operational plan
           </label>
           <div className="flex flex-col py-[1.44rem] px-[1.19rem] rounded-[0.625rem] border-[0.3rem] border-dashed ">
-              <label for="business-plan" className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[0.625rem] cursor-pointer bg-[#F8F8F8] dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+              <label for="business-plan" className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[0.625rem] cursor-pointer bg-[#F8F8F8]  hover:bg-gray-100  ">
                   <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
                     <img src={upload} alt="" />
-                    <p className="text-lg text-[#555] dark:text-gray-400"><span className="font-semibold">Upload .pdf, .jpg, .PNG files</span></p>
+                    <p className="text-lg text-[#555] "><span className="font-semibold">Upload .pdf, .jpg, .PNG files</span></p>
                   </div>
                   <input id="business-plan" type="file" className="hidden" />
               </label>
@@ -149,11 +149,11 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Upload Project photo
           </label>
           <div className="flex flex-col items-center justify-center w-[22.63rem] h-[19.69rem] rounded-[2.5rem] border-[0.3rem] border-dashed ">
-              <label for="project-image" className="flex flex-col rounded-[0.625rem] cursor-pointer bg-[#F8F8F8] dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+              <label for="project-image" className="flex flex-col rounded-[0.625rem] cursor-pointer bg-[#F8F8F8] ">
                 <div className="flex flex-col items-center justify-center gap-[4.12rem] ">
                   <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
                     <img src={upload} alt="" />
-                    <p className="text-lg text-[#555] dark:text-gray-400"><span className="font-semibold">Upload a .jpg or .PNG file</span></p>
+                    <p className="text-lg text-[#555]"><span className="font-semibold">Upload a .jpg or .PNG file</span></p>
                   </div>
                   <div>
                     <p className=" text-[#054E12] font-lato font-bold ">This would appear on your project cover</p>
