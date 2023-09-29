@@ -12,7 +12,7 @@ export const signupValidation = yup.object().shape({
   password: yup
     .string()
     .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&])[A-Za-z\d@$!%*?&#]{8,}$/,
       "Ensure passsword minimum have at least one uppercase letter, one lowercase letter, one number and one special character"
     )
     .required("Please fill up this field"),

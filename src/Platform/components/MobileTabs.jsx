@@ -1,6 +1,6 @@
 const MobileTabs = ({ tabs, checkindex, setcheckindex }) => {
   return (
-    <div className="h-[5rem] shadowformobiletabs text-2xl sm:text-2xl flex items-center justify-evenly w-full mx-auto bg-white rounded-[10px] shad lg:hidden ">
+    <div className="h-[5rem] translate-x-[-50%] z-[10] top-[12%] left-[50%] translate-y-[-50%] fixed  right-2 mb-20 shadowformobiletabs text-2xl sm:text-2xl flex items-center justify-evenly w-full mx-auto bg-white rounded-[10px] shad lg:hidden ">
       {tabs.map((tab, index) => (
         <p
           onClick={() => setcheckindex(index)}
