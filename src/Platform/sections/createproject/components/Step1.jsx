@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import img1 from "../assets/circle.svg";
 import img2 from "../assets/circle2.svg";
@@ -6,14 +6,10 @@ import img3 from "../assets/circle3.svg";
 
 import "../../../../App.css";
 
-
 const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   return (
     <div className={openstep1 ? "" : "hidden"}>
-
-      
       <div className={"flex items-center mt-10 w-full"}>
-
         <div className="relative flex flex-col  ">
           <img src={img1} alt="" className="w-full object-scale-down" />
           <p className="text-[36px] text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -23,9 +19,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             Project <span>Information</span>
           </p>
         </div>{" "}
-
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -36,9 +30,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             <span>Project</span>
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -48,9 +40,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             Analysis
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -60,9 +50,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             Investments
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[30px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -72,9 +60,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             Documents
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -84,7 +70,6 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             Finish
           </p>
         </div>
-
       </div>
 
       <div className=" grid lg:grid-cols-2 mt-48 gap-x-20 gap-y-20">
@@ -102,7 +87,9 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
           </select>
         </div>
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
-          <label htmlFor="" className="text-[#999] text-[16px] font-bold">Product / Service type?</label>
+          <label htmlFor="" className="text-[#999] text-[16px] font-bold">
+            Product / Service type?
+          </label>
           <select
             name=""
             id=""
@@ -113,7 +100,9 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
           </select>
         </div>
         <div className="flex flex-col w-full gap-y-4 text-[#999]">
-          <label htmlFor="" className="text-[#999] text-[16px] font-bold">Which roles would your project require?</label>
+          <label htmlFor="" className="text-[#999] text-[16px] font-bold">
+            Which roles would your project require?
+          </label>
           <div className="flex items-center justify-between bg-[#ddd]/[0.2] rounded-[10px] h-[50px] px-8">
             <p className="text-[#333] text-[16px] font-bold">Typist</p>
             <div className="cursor-pointer">
@@ -185,7 +174,10 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
         </div>
 
         <div className="w-full mt-32 flex justify-between items-center col-span-2">
-          <Link to="/home" className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]">
+          <Link
+            to="/home"
+            className="flex justify-center items-center rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]"
+          >
             Cancel
           </Link>
           <button
