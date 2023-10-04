@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { link } from "../Link";
-import { createPojectValidation } from "../../../validation/valid.js";
+import { createPojectValidation } from "../../validation/valid.js";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
