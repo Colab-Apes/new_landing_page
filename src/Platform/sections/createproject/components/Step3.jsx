@@ -16,10 +16,7 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
 
   return (
     <div className={openstep3 ? "" : "hidden"}>
-
-
       <div className={"flex items-center mt-10 w-full"}>
-
         <div className="relative flex flex-col  ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -27,7 +24,7 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
           <p className="absolute gap-x-1 flex -bottom-14 -left-10 text-[#054E12] text-[16px] font-bold ">
             Project <span>Information</span>
           </p>
-        </div>{" "}
+        </div>
 
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
 

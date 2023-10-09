@@ -5,8 +5,10 @@ import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
 
 import "../../../../App.css";
+import useStep1 from "./hooks/useStep1";
 
 const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
+  const { formik1 } = useStep1();
   return (
     <div className={openstep1 ? "" : "hidden"}>
       <div className={"flex items-center mt-10 w-full"}>
@@ -79,12 +81,20 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
           </label>
           <select
             name=""
-            id=""
+            id="audience"
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+            onChange={formik1.handleChange}
+            value={formik1.values.audience}
+            onBlur={formik1.handleBlur}
           >
             <option value="volvo">Choose one</option>
             <option value="saab">Saab</option>
           </select>
+          {formik1.errors.audience && formik1.touched.audience ? (
+            <p className="text-red-500 text-xl">{formik1.errors.audience}</p>
+          ) : (
+            ""
+          )}
         </div>
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">
@@ -94,10 +104,18 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             name=""
             id=""
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5  border-2 rounded-[10px] text-[16px] font-bold border-[#999]/[0.5]"
+            onChange={formik1.handleChange}
+            value={formik1.values.audience}
+            onBlur={formik1.handleBlur}
           >
             <option value="volvo">Choose one</option>
             <option value="saab">Saab</option>
           </select>
+          {formik1.errors.audience && formik1.touched.audience ? (
+            <p className="text-red-500 text-xl">{formik1.errors.audience}</p>
+          ) : (
+            ""
+          )}
         </div>
         <div className="flex flex-col w-full gap-y-4 text-[#999]">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">

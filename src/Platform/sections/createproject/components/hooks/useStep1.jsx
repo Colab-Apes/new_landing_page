@@ -43,7 +43,9 @@ const useStep1 = () => {
         .catch((e) => {});
     },
   });
-  return { formik };
+  const formik1 = formik;
+
+  return { formik1 };
 };
 
 export default useStep1;
