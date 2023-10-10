@@ -21,12 +21,12 @@ const Nav = ({ changeValue }) => {
 
 
   return (
-    <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
+    <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20 ">
       <WaitList
         openjoinwaitlistmodal={openjoinwaitlist}
         setopenjoinwaitlistmodal={setopenjoinwaitlist}
       />
-      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[50%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
+      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[50%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4 animate-fade-down animate-duration-[1000ms] animate-ease-in-out ">
         <img src={logo} alt="" />
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
@@ -35,7 +35,7 @@ const Nav = ({ changeValue }) => {
         </div>
         <div className="flex gap-10">
           <button
-            className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
+            className="px-[8px] text-[#054E12] py-[12px] text-[17px] font-bold hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
             onClick={() => {
               setopenjoinwaitlist(true);
             }}
@@ -47,12 +47,15 @@ const Nav = ({ changeValue }) => {
               hooks.setopensignupmodal(true);
               changeValue(true);
             }}
-            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold"
+            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1 rounded-[20px] font-bold hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
           >
             Sign up
           </button>
         </div>
       </nav>
+
+
+      {/* MOBILE */}
       <nav className="flex font-lato fixed bg-[#ECF8EE]/[20%]  left-0 items-center  px-4 justify-between w-full lg:hidden h-[6rem] md:h-[8rem] z-[90]">
         <img
           src={logo}

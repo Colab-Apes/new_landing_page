@@ -1,5 +1,5 @@
 import React from "react";
-import feature2 from "../../assets/feature2.png";
+import feature2 from "../../assets/feature2.webp";
 import userTag from "../../assets/svg/user-tag.svg";
 import layer from "../../assets/svg/layer.svg";
 import video from "../../assets/svg/video.svg";
@@ -14,7 +14,7 @@ const LearningPool = () => {
         <div className="w-[400px] h-[400px] hidden lg:block top-[-3rem] lg:left-[-20rem] absolute bg-[#054E12] blur-[250px] rounded-[607px]  "></div>
         <div className="feature_content flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
-            <img className="w-[100%]" src={feature2} alt="Feature Frame" />
+            <img className="w-[100%]" src={feature2} alt="Feature Frame" loading="lazy"/>
             <div className=" lg:hidden text-center">
               <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">
                 Key Features:
@@ -22,7 +22,7 @@ const LearningPool = () => {
               <div className="flex  flex-col items-center flex-wrap gap-5 text-[#3B513F] font-bold  ">
                 <div className="flex items-center gap-2 bg-[#7BFF88] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={layer} alt="frame" />
+                    <img src={layer} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Categorised courses
@@ -30,7 +30,7 @@ const LearningPool = () => {
                 </div>
                 <div className=" flex items-center gap-2 bg-[#A3E3FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={userTag} alt="frame" />
+                    <img src={userTag} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Expert instructors
@@ -38,7 +38,7 @@ const LearningPool = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-[#FFE0A5] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={people} alt="frame" />
+                    <img src={people} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Interactive learning environment
@@ -46,7 +46,7 @@ const LearningPool = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-[#FFB3F3] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={video} alt="frame" />
+                    <img src={video} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Live sessions
@@ -72,7 +72,7 @@ const LearningPool = () => {
               <div className="flex items-center flex-wrap gap-5">
                 <div className=" flex items-center gap-2 bg-[#7BFF88] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={layer} alt="frame" />
+                    <img src={layer} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F]  font-bold">
                     Categorised courses
@@ -80,7 +80,7 @@ const LearningPool = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-[#A3E3FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={userTag} alt="frame" />
+                    <img src={userTag} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F]  font-bold">
                     Expert instructors
@@ -88,7 +88,7 @@ const LearningPool = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-[#FFE0A5] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={people} alt="frame" />
+                    <img src={people} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F]  font-bold">
                     Interactive learning environment
@@ -97,7 +97,7 @@ const LearningPool = () => {
                
                 <div className="flex items-center gap-2 bg-[#FFFC84] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={video} alt="frame" />
+                    <img src={video} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F]  font-bold">
                     Live sessions

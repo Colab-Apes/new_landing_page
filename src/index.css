@@ -4,14 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
 :root {
   --primary-color: #054e12;
   --green1: #007d16;
@@ -75,14 +67,3 @@ body {
 li {
   list-style-type:  disc;
 }
-
-/* In your CSS file or component styles */
-/* input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-} */
-
-/* For Firefox */
-/* input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-clear-button {
-  display: none;
-} */

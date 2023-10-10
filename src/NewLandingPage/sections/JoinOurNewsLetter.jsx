@@ -67,7 +67,7 @@ const JoinOurNewsLetter = () => {
                     submitEmail();
                     console.log("ecco");
                   }}
-                  className=" absolute shadow-[15px_15px_50px_0px_rgba(0,_0,_0,_0.05)]  px-12 btngrad py-6 lg:py-6 lg:text-[1.4rem] rounded-[8px] lg:rounded-[15px] text-3xl text-white right-2 font-bold"
+                  className=" absolute shadow-[15px_15px_50px_0px_rgba(0,_0,_0,_0.05)]  px-12 btngrad py-6 lg:py-6 lg:text-[1.4rem] rounded-[8px] lg:rounded-[15px] text-3xl text-white right-2 font-bold hover:animate-pulse click:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
                 >
                   Subscribe
                 </button>

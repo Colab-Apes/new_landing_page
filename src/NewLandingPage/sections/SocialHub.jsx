@@ -1,5 +1,5 @@
 import React from "react";
-import feature1 from "../../assets/feature1.png";
+import feature1 from "../../assets/feature1.webp";
 
 import frame from "../../assets/svg/frame.svg";
 import monitor from "../../assets/svg/monitor.svg";
@@ -22,7 +22,7 @@ const SocialHub = () => {
         <div className="feature_content flex flex-col-reverse md:flex-row items-center md:gap-24 xl:gap-x-32">
           <div className="feat-image">
             <div className="py-5 hidden lg:block bg-[#3F8004]  h-[58px] w-[75px] absolute -z-10 top-24 left-[69.2rem] "></div>
-            <img className="w-[100%] " src={feature1} alt="Feature Frame" />
+            <img className="w-[100%] " src={feature1} alt="Feature Frame" loading="lazy"/>
             <div className="lg:hidden text-center">
               <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">
                 Key Features:
@@ -30,7 +30,7 @@ const SocialHub = () => {
               <div className="flex  flex-col items-center flex-wrap gap-5 text-[#3B513F] font-bold  ">
                 <div className="flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={frame} alt="frame" />
+                    <img src={frame} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Personal profile
@@ -38,7 +38,7 @@ const SocialHub = () => {
                 </div>
                 <div className=" flex items-center gap-2 bg-[#C8B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={monitor} alt="frame" />
+                    <img src={monitor} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Project showcase
@@ -46,7 +46,7 @@ const SocialHub = () => {
                 </div>
                 <div className=" flex items-center gap-2 bg-[#FFFC84] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={global} alt="frame" />
+                    <img src={global} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Networking opportunity
@@ -72,7 +72,11 @@ const SocialHub = () => {
               <div className="flex items-center flex-wrap gap-10">
                 <div className=" flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={frame} alt="frame" />
+                    <img 
+                      src={frame} 
+                      alt="frame" 
+                      loading="lazy"
+                    />
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Personal profile
@@ -80,7 +84,7 @@ const SocialHub = () => {
                 </div>
                 <div className=" flex items-center gap-2 bg-[#C8B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={monitor} alt="frame" />
+                    <img src={monitor} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Project showcase
@@ -88,7 +92,7 @@ const SocialHub = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-[#FFFC84] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={global} alt="frame" />
+                    <img src={global} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Networking opportunity

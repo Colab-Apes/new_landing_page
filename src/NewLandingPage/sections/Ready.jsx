@@ -28,12 +28,12 @@ const Ready = ({ changeValue }) => {
                 hooks.setopensignupmodal(true);
                 changeValue(true);
               }}
-              className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-[15px]  lg:rounded-[20px]"
+              className="  text-2xl text-white w-full lg:w-[17rem]  py-8 lg:py-10  btngrad font-bold rounded-[15px]  lg:rounded-[20px] hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
             >
               Get Started
             </button>
             <button
-              className=" bg-white text-2xl text-black mt-8 lg:mt-0 w-full lg:w-[17rem] py-8 lg:py-10  font-bold  rounded-[15px] lg:rounded-[20px] shadow-md"
+              className=" bg-white text-2xl text-black mt-8 lg:mt-0 w-full lg:w-[17rem] py-8 lg:py-10  font-bold  rounded-[15px] lg:rounded-[20px] shadow-md hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
               onClick={() => {
                 setopenjoinwaitlist(true);
               }}

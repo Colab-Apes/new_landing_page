@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/logo.png";
-import sidenavlogo from "../../assets/logo.png";
-// import avatar from "../../assets/logo.png";
+import logo from "../../assets/logo.webp";
 import {
   add,
   award,
@@ -52,7 +50,7 @@ const MobileNav = () => {
           {/* <div className="blur-[250px] bg-[rgba(194,_106,_170,_0.30)] absolute h-20 w-20"></div> */}
           <div className="flex w-full justify-between items-center mt-3 ">
             <img
-              src={sidenavlogo}
+              src={logo}
               alt=""
               className="object-contain scale-75 z-[90] w-[30rem]"
             />

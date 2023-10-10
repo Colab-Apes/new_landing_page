@@ -1,8 +1,9 @@
-import React from 'react'
-
 const ComingSoon = () => {
+
   return (
-    <div>ComingSoon</div>
+    <section className=" h-[58rem] ">
+
+    </section>
   )
 }
 

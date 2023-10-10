@@ -27,7 +27,7 @@ const Faqs = () => {
                 className={
                   getindex === index
                     ? "bg-[#E9F6EC] btngrad text-white font-bold text-2xl text-[#054E12] rounded-[15px] py-6 w-[10rem] lg:py-[16px] lg:w-[14rem] "
-                    : "bg-[#E9F6EC] font-bold text-2xl text-[#054E12] rounded-[15px] py-6 w-[10rem] lg:py-[16px] lg:w-[14rem] "
+                    : "bg-[#E9F6EC] font-bold text-2xl text-[#054E12] rounded-[15px] py-6 w-[10rem] lg:py-[16px] lg:w-[14rem] hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
                 }
               >
                 {item}
@@ -59,18 +59,6 @@ const Faqs = () => {
               plus={plus}
             />
           )}
-          {/* <div className="flex justify-between mt-20  items-center border-b border-b-[#999] pb-10 lg:pb-32">
-            <p className="text-3xl font-bold  text-[#054E12]">
-              Is Co_lab Apes free to join?
-            </p>
-            <img src={plus} alt="" className="cursor-pointer" />
-          </div>
-          <div className="flex mt-20 justify-between items-center ">
-            <p className="text-3xl font-bold  text-[#054E12]">
-              Why should I join Co_lab Apes?
-            </p>
-            <img src={plus} alt="" className="cursor-pointer" />
-          </div> */}
         </div>
       </div>
     </div>

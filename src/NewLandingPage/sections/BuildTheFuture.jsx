@@ -1,5 +1,5 @@
 import React from "react";
-import feature3 from "../../assets/feature3.png";
+import feature3 from "../../assets/feature3.webp";
 import map from "../../assets/svg/map.svg";
 import repeatCircle from "../../assets/svg/repeat-circle.svg";
 import locationSlash from "../../assets/svg/location-slash.svg";
@@ -26,6 +26,7 @@ const BuildTheFuture = () => {
               className="w-full h-full object-contain  "
               src={feature3}
               alt="Feature Frame"
+              loading="lazy"
             />
             <div className=" lg:hidden  text-center">
               <p className="text-[#3B513F] text-[2rem] xl:text-[1.5rem] mb-5 font-bold">
@@ -34,7 +35,7 @@ const BuildTheFuture = () => {
               <div className="flex  flex-col items-center flex-wrap gap-5 text-[#3B513F] font-bold  ">
                 <div className="stuff flex items-center gap-2 bg-[#F2B6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={repeatCircle} alt="frame" />
+                    <img src={repeatCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Project collaboration
@@ -42,7 +43,7 @@ const BuildTheFuture = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#C0FFCE] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={mouseCircle} alt="frame" />
+                    <img src={mouseCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Project tracking
@@ -50,7 +51,7 @@ const BuildTheFuture = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFFB6B] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={map} alt="frame" />
+                    <img src={map} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     First principle roadmap
@@ -58,7 +59,7 @@ const BuildTheFuture = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={locationSlash} alt="frame" />
+                    <img src={locationSlash} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Virtual shared workspace
@@ -84,7 +85,7 @@ const BuildTheFuture = () => {
               <div className=" flex items-center flex-wrap gap-5">
                 <div className="stuff flex items-center gap-2 bg-[#FFD6BF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={repeatCircle} alt="frame" />
+                    <img src={repeatCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Project collaboration
@@ -92,7 +93,7 @@ const BuildTheFuture = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#C0FFCE] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={mouseCircle} alt="frame" />
+                    <img src={mouseCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Project tracking
@@ -100,7 +101,7 @@ const BuildTheFuture = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFFB6B] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={map} alt="frame" />
+                    <img src={map} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     First principle roadmap
@@ -108,7 +109,7 @@ const BuildTheFuture = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#BBD2FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={locationSlash} alt="frame" />
+                    <img src={locationSlash} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Virtual shared workspace

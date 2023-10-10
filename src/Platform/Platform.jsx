@@ -1,14 +1,17 @@
-import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { CreateProject, HomePage, LearningPool, Project } from "./sections";
+import { ComingSoon } from "../pages";
 import { Foot } from "../NewLandingPage/sections";
 import TabHook from "./Hooks/TabHook";
 import MobileTabs from "./components/MobileTabs";
 import Nav from "./components/Nav";
-import { CreateProject, HomePage, LearningPool, Project } from "./sections";
-import { useNavigate } from "react-router-dom";
+
 
 const Platform = () => {
   const { tabs, checkindex, setcheckindex } = TabHook();
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
+
   return (
     <div className=" bg-[#fff]">
       <Nav tabs={tabs} checkindex={checkindex} setcheckindex={setcheckindex} />
@@ -22,7 +25,8 @@ const Platform = () => {
         {checkindex === 0 ? (
           <HomePage />
         ) : checkindex === 1 ? (
-          <LearningPool />
+          // <LearningPool />
+          <ComingSoon />
         ) : (
           <CreateProject />
         )}

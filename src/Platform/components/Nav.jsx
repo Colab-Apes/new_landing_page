@@ -1,8 +1,5 @@
 import React from "react";
-// import { BiMenuAltRight } from "react-icons/bi";
-import logo from "../../assets/logo.png";
-// import icon from "../../assets/homepageicons/images/group-50.svg";
-// import avatar from "../../assets/homepageicons/images/avatar.png";
+import logo from "../../assets/logo.webp";
 import { BsChevronDown } from "react-icons/bs";
 import message from "../../assets/Platform Images/NavImages/message.png";
 import notification from "../../assets/Platform Images/NavImages/notification.png";

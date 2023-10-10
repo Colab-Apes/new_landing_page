@@ -3,7 +3,7 @@ import dollarCircle from "../../assets/svg/dollar-circle.svg";
 import lock from "../../assets/svg/lock.svg";
 import moneys from "../../assets/svg/moneys.svg";
 import tickCircle from "../../assets/svg/tick-circle.svg";
-import feature4 from "../../assets/feature4.png";
+import feature4 from "../../assets/feature4.webp";
 
 const ValueStake = () => {
   return (
@@ -14,7 +14,7 @@ const ValueStake = () => {
         <div className="bg-[#C26AAA] hidden lg:block bottom-[-6rem] z-[-1] blur-[150px] rounded-full h-[200px] w-[200px] absolute"></div>
         <div className=" flex flex-col-reverse md:flex-row-reverse items-center md:gap-24">
           <div className="feat-image">
-            <img className="w-[100%]" src={feature4} alt="Feature Frame" />
+            <img className="w-[100%]" src={feature4} alt="Feature Frame" loading="lazy"/>
             <div className="key-features lg:hidden kf-mobile text-center">
               <p className="text-[#3B513F] text-[1.5rem] mb-5 font-bold">
                 Key Features:
@@ -22,7 +22,7 @@ const ValueStake = () => {
               <div className="flex flex-col items-center flex-wrap gap-5">
                 <div className="stuff flex items-center gap-2 bg-[#85FF91] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={tickCircle} alt="frame" />
+                    <img src={tickCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Smart-contract protocol
@@ -30,7 +30,7 @@ const ValueStake = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={lock} alt="frame" />
+                    <img src={lock} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Secure funding
@@ -38,7 +38,7 @@ const ValueStake = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={dollarCircle} alt="frame" />
+                    <img src={dollarCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.4rem] text-[#3B513F] font-bold">
                     Fraud prevention technology
@@ -46,7 +46,7 @@ const ValueStake = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#ADE6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={moneys} alt="frame" />
+                    <img src={moneys} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.7rem] text-[#3B513F] font-bold">
                     Investor pooling
@@ -73,7 +73,7 @@ const ValueStake = () => {
               <div className="flex items-center flex-wrap gap-5">
                 <div className="stuff flex items-center gap-2 bg-[#85FF91] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={tickCircle} alt="frame" />
+                    <img src={tickCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Smart-contract protocol
@@ -81,7 +81,7 @@ const ValueStake = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FF88EC] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={lock} alt="frame" />
+                    <img src={lock} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Secure funding
@@ -89,7 +89,7 @@ const ValueStake = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#FFDFA0] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={dollarCircle} alt="frame" />
+                    <img src={dollarCircle} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Fraud prevention technology
@@ -97,7 +97,7 @@ const ValueStake = () => {
                 </div>
                 <div className="stuff flex items-center gap-2 bg-[#ADE6FF] px-10 py-5 rounded-[10px]">
                   <div className="icon">
-                    <img src={moneys} alt="frame" />
+                    <img src={moneys} alt="frame" loading="lazy"/>
                   </div>
                   <p className="text-[1.25rem] text-[#3B513F] font-bold">
                     Investor pooling
