@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
 
-import "../../App.css";
-
-import ape from "../../assets/footlogo/footlogo.png";
-
-import apemobile from "../../assets/footlogo/footlogo.png";
-import footlogo from "../../assets/footlogo/whitelogo.png";
+import ape from "../../assets/footlogo/footlogo.webp";
+import apemobile from "../../assets/footlogo/footlogo.webp";
+import footlogo from "../../assets/footlogo/whitelogo.webp";
 
 import facebook from "../../assets/svg/facebook.svg";
 import insta from "../../assets/svg/insta.svg";
 import linkedin from "../../assets/svg/linkedin.svg";
 import twitter from "../../assets/svg/twitter.svg";
 import youtube from "../../assets/svg/youtube.svg";
+
+import "../../App.css";
 
 const Foot = () => {
   return (

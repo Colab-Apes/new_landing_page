@@ -1,13 +1,18 @@
 import React from "react";
 
 import { TfiClose } from "react-icons/tfi";
-
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoIosClose } from "react-icons/io";
-import box from "../../assets/container.png";
-import WaitLiskHook from "../Hooks/WaitLiskHook";
 import { ClipLoader } from "react-spinners";
+
+import box from "../../assets/container.webp";
+
+import WaitLiskHook from "../Hooks/WaitLiskHook";
+
 import "../../App.css";
+
+
+
 const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
   const { email, setemail, setsuccess, success, submitEmail, load } =
     WaitLiskHook();
@@ -22,7 +27,7 @@ const WaitList = ({ openjoinwaitlistmodal, setopenjoinwaitlistmodal }) => {
     >
       <div
         className={
-          " rounded-[20px] lg:rounded-[50px] lg:bg-[url('./assets/waitlist1.png')] bg-no-repeat  z-[120] px-4 bg-[#F5FFF7] flex items-center justify-between min-h-[0rem] w-full py-20  sm:pb-0 md:py-4  sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[50rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] "
+          " rounded-[20px] lg:rounded-[50px] lg:bg-[url('./assets/waitlist1.webp')] bg-no-repeat  z-[120] px-4 bg-[#F5FFF7] flex items-center justify-between min-h-[0rem] w-full py-20  sm:pb-0 md:py-4  sm:min-h-[35rem] lg:min-h-[32rem] lg:w-full  xl:min-h-[50rem] xl:h-[] lg:p-[3rem]  xl:w-full  md:w-ful sm:px-8 md:px-[3rem] xl:px-[5rem] opacity-100 xl:py-[3.5rem]  relative duration-[800ms] "
         }
       >
         <TfiClose

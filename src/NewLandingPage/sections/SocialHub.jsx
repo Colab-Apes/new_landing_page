@@ -1,10 +1,9 @@
-import React from "react";
 import feature1 from "../../assets/feature1.webp";
-
 import frame from "../../assets/svg/frame.svg";
 import monitor from "../../assets/svg/monitor.svg";
-
 import global from "../../assets/svg/global.svg";
+
+
 
 const SocialHub = () => {
   return (

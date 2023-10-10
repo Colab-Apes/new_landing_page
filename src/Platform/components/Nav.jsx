@@ -1,9 +1,13 @@
-import React from "react";
-import logo from "../../assets/logo.webp";
 import { BsChevronDown } from "react-icons/bs";
-import message from "../../assets/Platform Images/NavImages/message.png";
-import notification from "../../assets/Platform Images/NavImages/notification.png";
+
+import logo from "../../assets/logo.webp";
+import message from "../../assets/Platform Images/NavImages/message.webp";
+import notification from "../../assets/Platform Images/NavImages/notification.webp";
+
 import MobileNav from "./MobileNav";
+
+
+
 const Nav = ({ tabs, checkindex, setcheckindex }) => {
   return (
     <div>
@@ -18,6 +22,7 @@ const Nav = ({ tabs, checkindex, setcheckindex }) => {
             src={logo}
             alt=""
             className="object-contain w-[10rem] md:w-[15rem] lg:w-[14rem] xl:w-[20rem]"
+            loading="lazy"
           />
         </a>
         <div className=" z-[20] font-bold flex items-center gap-x-20 text-[24px] text-center mt-8">
@@ -46,11 +51,13 @@ const Nav = ({ tabs, checkindex, setcheckindex }) => {
             src={notification}
             alt=""
             className=" object-contain cursor-pointer"
+            loading="lazy"
           />
           <img
             src={message}
             alt=""
             className=" object-contain cursor-pointer"
+            loading="lazy"
           />
 
           <div className="flex items-center gap-x-4">
@@ -58,6 +65,7 @@ const Nav = ({ tabs, checkindex, setcheckindex }) => {
               className="w-20 h-20 rounded-full"
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
               alt="Rounded avatar"
+              loading="lazy"
             />
             <BsChevronDown className="text-2xl" />
           </div>

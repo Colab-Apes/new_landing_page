@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import "../../../App.css";
+import { useState } from "react";
+
 import minus from "../../../assets/icons/minus.svg";
 import plus from "../../../assets/icons/plus.svg";
 import Community from "./Community";
 import Colabapes from "./Colabapes";
 import SeeAll from "./SeeAll";
+
+import "../../../App.css";
+
+
 
 const Faqs = () => {
   const [arr, setarr] = useState(["Co_lab Apes", "Community", "See All"]);

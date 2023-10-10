@@ -1,4 +1,3 @@
-import React from "react";
 import feature3 from "../../assets/feature3.webp";
 import map from "../../assets/svg/map.svg";
 import repeatCircle from "../../assets/svg/repeat-circle.svg";

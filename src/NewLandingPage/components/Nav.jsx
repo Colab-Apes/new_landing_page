@@ -1,14 +1,17 @@
-import React, { useState } from "react";
-import logo from "../../assets/newimages/logo.png";
-import menuicon from "../../assets/svg/menu-icon.svg";
+import { useState, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
-import "../../App.css";
+
 import OverlayHooks from "../Hooks/OverlayHooks";
 import WaitList from "./WaitList";
-import { useEffect } from "react";
+
+import logo from "../../assets/newimages/logo.webp";
+import menuicon from "../../assets/svg/menu-icon.svg";
+
+import "../../App.css";
+
+
 
 const Nav = ({ changeValue }) => {
-  const [openwaitlist, setopenwaitlist] = useState(false);
   const [opensidenav, setopensidenav] = useState(false);
   const hooks = OverlayHooks();
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
@@ -16,7 +19,7 @@ const Nav = ({ changeValue }) => {
   useEffect(() => {
     setTimeout(() => {
       setopenjoinwaitlist(true);
-    }, 15000);
+    }, 30000);
   }, []);
 
 
@@ -61,12 +64,14 @@ const Nav = ({ changeValue }) => {
           src={logo}
           alt=""
           className=" w-[16rem] md:w-[18rem] object-contain"
+          loading="lazy"
         />
         <img
           onClick={() => setopensidenav(true)}
           src={menuicon}
           alt=""
           className="  w-[4rem]  md:w-[6rem] object-contain"
+          loading="lazy"
         />
       </nav>
       {/* Background Overlay */}
@@ -86,7 +91,6 @@ const Nav = ({ changeValue }) => {
         }
       >
         <div className="flex w-full justify-between items-center relative ">
-          {/* <img src={logo} alt="" className="object-cover w-[12rem] " /> */}
           <TfiClose
             onClick={() => setopensidenav(false)}
             className="text-4xl text-black mt-4 top-2 right-3 absolute"
@@ -95,7 +99,7 @@ const Nav = ({ changeValue }) => {
 
         <div className="flex flex-col mt-20 gap-y-10">
           {/* Signup Button - Disabled for now*/}
-          <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" />
+          <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" loading="lazy"/>
 
           <button
             onClick={() => {

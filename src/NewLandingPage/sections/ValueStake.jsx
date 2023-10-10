@@ -1,4 +1,3 @@
-import React from "react";
 import dollarCircle from "../../assets/svg/dollar-circle.svg";
 import lock from "../../assets/svg/lock.svg";
 import moneys from "../../assets/svg/moneys.svg";

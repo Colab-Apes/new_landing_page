@@ -1,4 +1,3 @@
-import React from "react";
 import feature2 from "../../assets/feature2.webp";
 import userTag from "../../assets/svg/user-tag.svg";
 import layer from "../../assets/svg/layer.svg";

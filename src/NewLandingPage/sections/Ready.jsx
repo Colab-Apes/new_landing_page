@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-import "../../App.css";
 import WaitList from "../components/WaitList";
 import OverlayHooks from "../Hooks/OverlayHooks";
+
+import "../../App.css";
+
+
 
 const Ready = ({ changeValue }) => {
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
