@@ -17,7 +17,7 @@ const Hero = () => {
     <div>
       <section
         className={
-          " h-screen pb-20 px-4  md:px-10 lg:px-20 pt-10 lg:pt-0 bg-[url('./assets/bg/bg1mobile.jpg')] md:bg-[url('./assets/bg/bg1desktop.jpg')]"
+          " h-screen pb-20 px-4  md:px-10 lg:px-20 pt-10 lg:pt-0 bg-[url('./assets/bg/bg1mobile.webp')] md:bg-[url('./assets/bg/bg1desktop.webp')]"
         }
         style={{
           backgroundPosition: "bottom",
