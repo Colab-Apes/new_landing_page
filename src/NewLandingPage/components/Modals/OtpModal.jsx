@@ -1,12 +1,16 @@
-import React from "react";
-import otpmodal from "../../../assets/ModalImages/otpmodal.png";
-import logo from "../../../assets/ModalImages/logo.png";
-import { BsArrowLeft } from "react-icons/bs";
-// import OTPInput from "react-otp-input";
+import otpmodal from "../../../assets/ModalImages/otpmodal.webp";
+import logo from "../../../assets/ModalImages/logo.webp";
 import OtpInputField from "../../../components/OtpInputField";
-import "../../../App.css";
+
+import { BsArrowLeft } from "react-icons/bs";
 import { TfiClose } from "react-icons/tfi";
+
 import OverlayHooks from "../../Hooks/OverlayHooks";
+
+import "../../../App.css";
+
+
+
 const OtpModal = ({
   openOtpmodalprop,
   setopenOtpmodalprop,
@@ -44,16 +48,16 @@ const OtpModal = ({
             src={otpmodal}
             alt=""
             className="lg:rounded-[40px] object-cover"
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col items-center lg:justify-start w-full h-full gap-x-20 lg:gap-x-0  md:w-full md:h-full">
-          {/* <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full "> */}
-          {/* <div className=" flex flex-col justify-center items-center"> */}
           <div className=" flex flex-col justify-center items-center">
             <img
               src={logo}
               alt=""
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+              loading="lazy"
             />
           </div>
           <div className="flex justify-between w-full items-center mt-0">

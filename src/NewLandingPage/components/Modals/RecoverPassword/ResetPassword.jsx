@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import reset from "../../../../assets/ModalImages/reset.png";
-import logo from "../../../../assets/ModalImages/logo.png";
+import { useState } from "react";
 import { Lock } from "react-iconly";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 import { TfiClose } from "react-icons/tfi";
-import { BsArrowLeft } from "react-icons/bs";
-import useResetPassword from "../../../../Validation/Hooks/useResetPassword";
 import { ClipLoader } from "react-spinners";
+
+import reset from "../../../../assets/ModalImages/reset.webp";
+import logo from "../../../../assets/ModalImages/logo.webp";
+
+import useResetPassword from "../../../../Validation/Hooks/useResetPassword";
+
+
+
 const ResetPassword = ({
   resetpasswordprop,
   setresetpasswordprop,
@@ -46,7 +50,7 @@ const ResetPassword = ({
         }
       >
         <div className="w-full h-full lg:block  hidden  lg:rounded-[50px] ">
-          <img src={reset} alt="" className="lg:rounded-[40px] object-cover" />
+          <img src={reset} alt="" className="lg:rounded-[40px] object-cover" loading="lazy" />
         </div>
 
         <div className="flex flex-col px-4 lg:px-0   gap-y-4 w-full justify-evenly h-full lg:justify-normal mt-14 lg:mt-0  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
@@ -55,6 +59,7 @@ const ResetPassword = ({
               src={logo}
               alt=""
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+              loading="lazy"
             />
           </div>
           <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">

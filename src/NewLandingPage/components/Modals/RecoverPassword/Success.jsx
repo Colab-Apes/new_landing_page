@@ -1,9 +1,9 @@
-import React from "react";
-
-import success from "../../../../assets/ModalImages/success.png";
-import logo from "../../../../assets/ModalImages/logo.png";
 import { TfiClose } from "react-icons/tfi";
-import { BsArrowLeft } from "react-icons/bs";
+
+import success from "../../../../assets/ModalImages/success.webp";
+import logo from "../../../../assets/ModalImages/logo.webp";
+
+
 
 const Success = ({
   setsuccessprop,
@@ -41,6 +41,7 @@ const Success = ({
             src={success}
             alt=""
             className="lg:rounded-[40px] object-cover"
+            loading="lazy"
           />
         </div>
 
@@ -50,6 +51,7 @@ const Success = ({
               src={logo}
               alt=""
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+              loading="lazy"
             />
           </div>
           <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">

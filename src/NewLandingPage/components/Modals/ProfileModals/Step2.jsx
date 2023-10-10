@@ -1,14 +1,13 @@
-import React from "react";
-import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
-import "../../../../App.css";
-import { useSignupHooks } from "../../../../Validation/Hooks/useSignupHooks";
-import { ClipLoader } from "react-spinners";
-import { TfiClose } from "react-icons/tfi";
-import logo from "../../../../assets/ModalImages/logo1.png";
-import bio from "../../../../assets/ModalImages/bio.png";
-import { Lock, Message } from "react-iconly";
-import { BsArrowLeft } from "react-icons/bs";
 import { IoIosCheckmark } from "react-icons/io";
+import { TfiClose } from "react-icons/tfi";
+
+import logo from "../../../../assets/ModalImages/logo1.webp";
+import bio from "../../../../assets/ModalImages/bio.webp";
+
+import "../../../../App.css";
+
+
+
 const Step2 = ({ openstep2modalprop }) => {
   return (
     <div
@@ -33,7 +32,7 @@ const Step2 = ({ openstep2modalprop }) => {
           className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
         />
         <div className="w-full h-full lg:block  hidden  lg:rounded-[1.56rem] ">
-          <img src={bio} alt="" className="lg:rounded-[1.56rem] object-cover" />
+          <img src={bio} alt="" className="lg:rounded-[1.56rem] object-cover" loading="lazy" />
         </div>
         <div className="flex flex-col px-4 lg:px-10   gap-y-4 w-full justify-evenly items-center lg:items-start  h-full lg:justify-normal mt-14 lg:mt-0    sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
           <div className=" flex flex-col justify-center items-center ">
@@ -41,6 +40,7 @@ const Step2 = ({ openstep2modalprop }) => {
               src={logo}
               alt=""
               className="w-[2rem] sm:w-[6rem] lg:w-[10rem] object-contain "
+              loading="lazy"
             />
           </div>
 
