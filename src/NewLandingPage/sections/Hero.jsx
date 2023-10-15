@@ -93,6 +93,36 @@ const Hero = () => {
               />
             </div>
           </FadeIn>
+          
+          {/* <FadeIn delay={0.4} direction="right"> */}
+            <div className="hero-cta hc-mobile w-full flex flex-col justify-center  md:hidden mt-4">
+              <button className=" w-[29rem] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 ">
+                <a
+                  onClick={() => {
+                    setopenjoinwaitlist(true);
+                  }}
+                  className="text-[2rem] font-bold text-white"
+                >
+                  Join Waitlist
+                </a>
+              </button>
+              <div className="flex  items-center justify-center gap-x-10">
+                <img
+                  className="w-[7.5rem] object-contain"
+                  src={emoji}
+                  alt="Emoji next"
+                  loading="lazy"
+                />
+
+                <a
+                  className="text-[2.2rem]  text-[#054E12] font-bold text-primaryColor border-b border-primaryColor"
+                  href="#"
+                >
+                  Scroll for more info
+                </a>
+              </div>
+            </div>
+          {/* </FadeIn> */}
         </div>
       </section>
     </div>
