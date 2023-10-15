@@ -20,7 +20,7 @@ const JoinOurNewsLetter = () => {
       <FadeIn delay={0.6} direction="right">
         <div className="relative mt-64 lg:mt-36 px-4   md:px-14 lg:px-20  mx-auto">
           <div className="absolute hidden lg:block z-[-1] blur-[150px] bottom-[-20rem] right-[2rem] w-[200px] h-[210px] bg-[#C26AAA] rounded-[400px]"></div>
-          <div className="title text-center text-5xl text-[#3B8004] font-bold ">
+          <div className="title text-center text-5xl text-[#333] font-[900] ">
             Join Our Newsletter
           </div>
           <div className=" flex flex-col justify-start md:justify-center items-center mt-20 lg:mt-10 bg-transparent   h-[80%] lg:w-[80%] mx-auto   p-0 md:p-14 xl:p-0">
@@ -56,7 +56,7 @@ const JoinOurNewsLetter = () => {
                     type="email"
                     onChange={(e) => setemail(e.target.value)}
                     value={email}
-                    className="text-3xl bg-transparent  w-full md:w-[40rem] xl:w-[45rem] p-0 outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999]"
+                    className="text-3xl bg-transparent  w-full md:w-[40rem] xl:w-[45rem] p-0 pl-[1.5rem] outline-none border-none bg-none placeholder:font-bold placeholder:text-[#999]"
                     placeholder="enter your email address..."
                   />
                 </div>

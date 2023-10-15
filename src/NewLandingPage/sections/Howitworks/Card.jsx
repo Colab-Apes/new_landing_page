@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ img, title, details }) => {
   return (
-    <div className="flex mt-10 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-10  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] py-10 px-10  min-h-full pb-20  lg:h-[25rem] lg:w-[50%]  ">
+    <div className="flex mt-10 lg:mt-0  items-start gap-x-20 rounded-[20px] pb-26  lg:pb-10  shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)] bg-[#D5EEDA] lg:bg-[#ECF8EE] py-10 px-10  min-h-full pb-20  lg:h-[25rem] lg:w-[50%]  ">
       <img src={img} alt="One" className="w-[6.2rem] object-contain" />
 
       <div className=" mt-7">
