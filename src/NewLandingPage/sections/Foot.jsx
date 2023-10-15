@@ -21,7 +21,7 @@ const Foot = () => {
     <section className=" mt-64 lg:mt-36">
       <FadeIn delay={0.6} direction="top">
         {" "}
-        <footer className=" mt-36 pb-2 px-10 lg:px-10 w-full rounded-[15px] graid relative mb-4  z-[1] xl:px-24 animate-fade-up animate-duration-[2000ms] animate-ease-in-out ">
+        <footer className=" mt-36 pb-2 px-10 lg:px-10 w-full rounded-[15px] graid relative mb-4 z-[1] xl:pr-[6.94rem] xl:pl-[7.47rem] animate-fade-up animate-duration-[2000ms] animate-ease-in-out ">
           <img
             src={ape}
             alt=""
@@ -79,7 +79,7 @@ const Foot = () => {
                     fill="white"
                   />
                 </svg>
-                <p className="ml-2"> pes</p>
+                <p className="ml-1">pes</p>
               </h1>
               <p className="text-xs mt-3 xl:mt-2 text-[#fff] ">
                 BUILDING TOMORROW TOGETHER
@@ -116,7 +116,7 @@ const Foot = () => {
                   </a>
                 </div>
               </div>
-              <button className=" font-[700] w-full lg:w-fit lg:text-3xl lg:px-12 py-6 text-xl  lg:py-8 mt-8 lg:mt-20 z-[3] text-[#054E12] bg-white rounded-[15px] lg:rounded-[30px] font-lato xl:mt-20">
+              <button className=" font-[700] w-full lg:w-fit lg:text-3xl lg:px-12 py-6 text-xl  lg:py-8 mt-8 lg:mt-20 z-[3] text-[#054E12] bg-white rounded-[15px] lg:rounded-[1.875rem] font-lato xl:mt-20">
                 Contact Us
               </button>
             </div>
