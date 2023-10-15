@@ -19,7 +19,7 @@ const Faqs = () => {
 
   return (
     <section className="font-lato px-4 p  md:px-14 lg:px-20 mt-64 lg:mt-36 relative">
-      <FadeIn delay={0.6} direction="left">
+      {/* <FadeIn delay={0.6} direction="left"> */}
         <div className="title mt-36 text-center  text-5xl lg:text-6xl ext-[#333] lg:text-[#3B8004] font-bold mb-20">
           Frequently Asked Questions
         </div>
@@ -69,7 +69,7 @@ const Faqs = () => {
             )}
           </div>
         </div>
-      </FadeIn>
+      {/* </FadeIn> */}
     </section>
   );
 };

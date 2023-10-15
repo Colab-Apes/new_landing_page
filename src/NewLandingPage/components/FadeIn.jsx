@@ -22,6 +22,7 @@ const FadeIn = ({ children, delay, direction, fullWidth, padding }) => {
       className={`${fullWidth ? "w-full" : "w-auto"} ${
         padding ? "px-10" : "px-0"
        }  `}
+      // style={{ maxWidth: '100%', overflowX: 'hidden' }}
     >
       <motion.div
         variants={{

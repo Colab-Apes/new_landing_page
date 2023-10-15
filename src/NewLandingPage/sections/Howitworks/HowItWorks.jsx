@@ -12,7 +12,7 @@ const HowItWorks = () => {
   return (
     <section>
       {" "}
-      <FadeIn delay={0.6} direction="left">
+      <FadeIn delay={0.6} direction="top">
         <div className=" py-40 lg:mt-36 z-10 w-full bg-no-repeat bg-[url('./assets/bg/bg.webp')]  mx-auto px-4   md:px-14 lg:px-32 xl:px-60 relative">
           <div className="w-full text-center text-5xl text-[#333] font-bold lg:mb-36">
             How It Works

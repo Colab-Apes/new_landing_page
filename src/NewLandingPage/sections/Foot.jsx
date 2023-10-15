@@ -10,6 +10,8 @@ import linkedin from "../../assets/svg/linkedin.svg";
 import twitter from "../../assets/svg/twitter.svg";
 import youtube from "../../assets/svg/youtube.svg";
 
+import FadeIn from "../components/FadeIn";
+
 import "../../App.css";
 
 
@@ -17,8 +19,9 @@ import "../../App.css";
 const Foot = () => {
   return (
     <section className=" mt-64 lg:mt-36">
+      <FadeIn delay={0.6} direction="top">
         {" "}
-        <footer className="mt-36   pb-2 px-10 lg:px-10 w-full rounded-[15px]  graid relative mb-4  z-[1]  xl:px-24 animate-fade-up animate-duration-[2000ms] animate-ease-in-out">
+        <footer className=" mt-36 pb-2 px-10 lg:px-10 w-full rounded-[15px] graid relative mb-4  z-[1] xl:px-24 animate-fade-up animate-duration-[2000ms] animate-ease-in-out ">
           <img
             src={ape}
             alt=""
@@ -117,11 +120,7 @@ const Foot = () => {
                 Contact Us
               </button>
             </div>
-            <div
-              className="h-[0.1px] rounded w-full bg-[#999] z-[3] col-span-2 lg:col-span-4
-        xl:col-span-4 
-        lg:mt-14 "
-            ></div>
+            <div className="h-[0.1px] rounded w-full bg-[#999] z-[3] col-span-2 lg:col-span-4 xl:col-span-4 lg:mt-14 "></div>
             <div className="col-span-2 lg:col-span-4 flex justify-center items-center  z-[3] lg:mt-8 mb-2">
               <div className="flex items-center">
                 {" "}
@@ -147,6 +146,7 @@ const Foot = () => {
             </div>
           </div>
         </footer>
+      </FadeIn>
     </section>
   );
 };
