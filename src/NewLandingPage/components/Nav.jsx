@@ -50,6 +50,7 @@ const Nav = ({ changeValue }) => {
               hooks.setopensignupmodal(true);
               changeValue(true);
             }}
+            disabled
             className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1 rounded-[20px] font-bold hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
           >
             Sign up
@@ -117,6 +118,7 @@ const Nav = ({ changeValue }) => {
               setopensidenav(false);
               changeValue(true);
             }}
+            disabled
             className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold"
           >
             Sign up
