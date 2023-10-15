@@ -3,7 +3,7 @@ import { img1, img2, img3, img4, img5, img6, img7, img8 } from "./assets/BulkImp
 
 const LearningPool = () => {
   return (
-    <div className=" mt-[2.75rem] lg:mt-[4.13rem] px-[0.13rem] ">
+    <div className=" mt-[8rem] lg:mt-[4.13rem] px-[0.13rem] ">
       {" "}
       <p className="text-left font-lato text-[#333] mt-4 ">
         <p className=" text-[2.95rem] sm:text-3xl lg:text-[5.3rem] font-semibold">

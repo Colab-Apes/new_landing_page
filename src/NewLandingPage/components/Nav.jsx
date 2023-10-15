@@ -1,14 +1,17 @@
-import React, { useState } from "react";
-import logo from "../../assets/newimages/logo.png";
-import menuicon from "../../assets/svg/menu-icon.svg";
+import { useState, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
-import "../../App.css";
+
 import OverlayHooks from "../Hooks/OverlayHooks";
 import WaitList from "./WaitList";
-import { useEffect } from "react";
+
+import logo from "../../assets/newimages/logo.webp";
+import menuicon from "../../assets/svg/menu-icon.svg";
+
+import "../../App.css";
+
+
 
 const Nav = ({ changeValue }) => {
-  const [openwaitlist, setopenwaitlist] = useState(false);
   const [opensidenav, setopensidenav] = useState(false);
   const hooks = OverlayHooks();
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
@@ -16,18 +19,18 @@ const Nav = ({ changeValue }) => {
   useEffect(() => {
     setTimeout(() => {
       setopenjoinwaitlist(true);
-    }, 15000);
+    }, 30000);
   }, []);
 
 
   return (
-    <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20">
+    <header className="w-full bg-[#ECF8EE] px-4 md:px-14  lg:px-20 ">
       <WaitList
         openjoinwaitlistmodal={openjoinwaitlist}
         setopenjoinwaitlistmodal={setopenjoinwaitlist}
       />
-      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[50%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4">
-        <img src={logo} alt="" />
+      <nav className="lg:flex z-[100] font-lato px-4 md:px-14  lg:px-20 bg-[#ECF8EE]/[50%] left-0 fixed  items-center justify-between w-full hidden  py-8 lg:py-4 animate-fade-down animate-duration-[1000ms] animate-ease-in-out ">
+        <img src={logo} alt="" loading="lazy"/>
         <div className="flex items-center gap-x-10 text-[#555] font-bold text-[20px]">
           <p>Projects</p>
           <p>Learning pool</p>
@@ -35,7 +38,7 @@ const Nav = ({ changeValue }) => {
         </div>
         <div className="flex gap-10">
           <button
-            className="px-[8px] text-[#054E12] py-[12px] text-[17px]  font-bold"
+            className="px-[8px] text-[#054E12] py-[12px] text-[17px] font-bold hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
             onClick={() => {
               setopenjoinwaitlist(true);
             }}
@@ -47,24 +50,28 @@ const Nav = ({ changeValue }) => {
               hooks.setopensignupmodal(true);
               changeValue(true);
             }}
-            disabled
-            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[20px] font-bold"
+            className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1 rounded-[20px] font-bold hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
           >
             Sign up
           </button>
         </div>
       </nav>
+
+
+      {/* MOBILE */}
       <nav className="flex font-lato fixed bg-[#ECF8EE]/[20%]  left-0 items-center  px-4 justify-between w-full lg:hidden h-[6rem] md:h-[8rem] z-[90]">
         <img
           src={logo}
           alt=""
           className=" w-[16rem] md:w-[18rem] object-contain"
+          loading="lazy"
         />
         <img
           onClick={() => setopensidenav(true)}
           src={menuicon}
           alt=""
           className="  w-[4rem]  md:w-[6rem] object-contain"
+          loading="lazy"
         />
       </nav>
       {/* Background Overlay */}
@@ -84,7 +91,6 @@ const Nav = ({ changeValue }) => {
         }
       >
         <div className="flex w-full justify-between items-center relative ">
-          {/* <img src={logo} alt="" className="object-cover w-[12rem] " /> */}
           <TfiClose
             onClick={() => setopensidenav(false)}
             className="text-4xl text-black mt-4 top-2 right-3 absolute"
@@ -93,7 +99,7 @@ const Nav = ({ changeValue }) => {
 
         <div className="flex flex-col mt-20 gap-y-10">
           {/* Signup Button - Disabled for now*/}
-          <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" />
+          <img src={logo} alt="" className="object-contain w-[17rem] mx-auto" loading="lazy"/>
 
           <button
             onClick={() => {
@@ -111,7 +117,6 @@ const Nav = ({ changeValue }) => {
               setopensidenav(false);
               changeValue(true);
             }}
-            disabled
             className="px-[20px] py-[12px] text-[17px] text-white md:bg-green2 btngrad  bg-green1  rounded-[15px] font-bold"
           >
             Sign up

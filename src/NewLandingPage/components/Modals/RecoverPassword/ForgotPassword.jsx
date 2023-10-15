@@ -1,11 +1,15 @@
-import React from "react";
-import password from "../../../../assets/ModalImages/password.png";
-import logo from "../../../../assets/ModalImages/logo.png";
+import password from "../../../../assets/ModalImages/password.webp";
+import logo from "../../../../assets/ModalImages/logo.webp";
+
 import { Message } from "react-iconly";
 import { TfiClose } from "react-icons/tfi";
 import { BsArrowLeft } from "react-icons/bs";
-import useForgotPasswordHook from "../../../../Validation/Hooks/useForgotPasswordHook";
 import { ClipLoader } from "react-spinners";
+
+import useForgotPasswordHook from "../../../../Validation/Hooks/useForgotPasswordHook";
+
+
+
 const ForgotPassword = ({
   forgotpasswordprop,
   setforgotpasswordprop,
@@ -47,6 +51,7 @@ const ForgotPassword = ({
             src={password}
             alt=""
             className="lg:rounded-[40px] object-cover"
+            loading="lazy"
           />
         </div>
 
@@ -56,6 +61,7 @@ const ForgotPassword = ({
               src={logo}
               alt=""
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+              loading="lazy"
             />
           </div>
           {/* <p className="text-[#555] font-bold text-3xl text-center mt-6 md:mt-4 lg:mt-1  xl:mt-5 xl:text-[1.5rem]">

@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
-
-import img1 from "../../../assets/ModalImages/signin.png";
-import logo from "../../../assets/ModalImages/logo.png";
-
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
+import { useSigninHook } from "../../../Validation/Hooks/useSigninHook";
 import { Lock, Message } from "react-iconly";
+import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
+import { TfiClose } from "react-icons/tfi";
+
+import img1 from "../../../assets/ModalImages/signin.webp";
+import logo from "../../../assets/ModalImages/logo.webp";
 import google from "../../../assets/ModalImages/social/Google logo.png";
 import facebook from "../../../assets/ModalImages/social/Facbook.png";
 import apple from "../../../assets/ModalImages/social/Vector.svg";
-import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
-import { TfiClose } from "react-icons/tfi";
+
 import "../../../App.css";
-import { ClipLoader } from "react-spinners";
-import { useSigninHook } from "../../../Validation/Hooks/useSigninHook";
-import { useNavigate } from "react-router-dom";
+
+
+
 const Signin = ({
   setopenOtpmodalprop,
   setopensignupmodalprop,
@@ -60,7 +63,7 @@ const Signin = ({
         }
       >
         <div className="w-full h-full lg:block  hidden  lg:rounded-[25px] ">
-          <img src={img1} alt="" className="lg:rounded-[25px] object-cover" />
+          <img src={img1} alt="" className="lg:rounded-[25px] object-cover" loading="lazy" />
         </div>
         <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
           <div className=" flex flex-col justify-center items-center">
@@ -68,6 +71,7 @@ const Signin = ({
               src={logo}
               alt=""
               className="w-[12rem] sm:w-[6rem] lg:w-[8.7rem] object-contain "
+              loading="lazy"
             />
           </div>
           <p className="text-[#555555] font-bold text-center text-xl lg:text-2xl mt-1 md:mt-4 lg:mt-6">
@@ -154,12 +158,12 @@ const Signin = ({
               {isPasswordVisible ? (
                 <MdOutlineVisibilityOff
                   onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                  className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
+                  className="absolute inset-y-[3rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
                 />
               ) : (
                 <MdOutlineVisibility
                   onClick={() => setisPasswordVisible(!isPasswordVisible)}
-                  className="absolute inset-y-[3.6rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
+                  className="absolute inset-y-[3rem] right-4 px-[0.2rem] text-4xl text-[#333333]"
                 />
               )}
               {formik.errors.password && formik.touched.password ? (
@@ -198,6 +202,7 @@ const Signin = ({
                     src={google}
                     alt=""
                     className="w-[1.6rem] object-contain"
+                    loading="lazy"
                   />
                 </div>{" "}
                 <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full  bg-[#F8F8F8]     border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
@@ -205,6 +210,7 @@ const Signin = ({
                     src={facebook}
                     alt=""
                     className="w-[1.6rem] object-contain"
+                    loading="lazy"
                   />
                 </div>{" "}
                 <div className="flex justify-center  cursor-pointer items-center h-[3.6rem]  w-full bg-[#F8F8F8]  border xl:border-2 border-solid border-[#DDDDDD] rounded-[10px]">
@@ -212,6 +218,7 @@ const Signin = ({
                     src={apple}
                     alt=""
                     className="w-[1.6rem] object-contain"
+                    loading="lazy"
                   />
                 </div>
               </div>

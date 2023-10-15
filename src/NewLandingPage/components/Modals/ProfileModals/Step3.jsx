@@ -1,15 +1,14 @@
-import React from "react";
-import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
-import "../../../../App.css";
-import { useSignupHooks } from "../../../../Validation/Hooks/useSignupHooks";
-import { ClipLoader } from "react-spinners";
-import { TfiClose } from "react-icons/tfi";
-import logo from "../../../../assets/ModalImages/logo1.png";
-import bio from "../../../../assets/ModalImages/bio.png";
-import { Lock, Message } from "react-iconly";
-import { BsArrowLeft } from "react-icons/bs";
+import logo from "../../../../assets/ModalImages/logo1.webp";
+import bio from "../../../../assets/ModalImages/bio.webp";
+import profile from "../../../../assets/ModalImages/frame.webp";
+
 import { IoIosCheckmark } from "react-icons/io";
-import profile from "../../../../assets/ModalImages/frame.png";
+import { TfiClose } from "react-icons/tfi";
+
+import "../../../../App.css";
+
+
+
 const Step3 = ({ opensetstep3modalprop, openstep3modalprop }) => {
   return (
     <div
@@ -34,7 +33,7 @@ const Step3 = ({ opensetstep3modalprop, openstep3modalprop }) => {
           className="text-3xl lg:text-xl xl:text-3xl text-[#999999] font-bold cursor-pointer z-[200] absolute right-12 top-16  md:top-8 lg:top-10 xl:right-28 xl:top-14 md:right-8 lg:right-10 "
         />
         <div className="w-full h-full lg:block  hidden  lg:rounded-[1.56rem] ">
-          <img src={bio} alt="" className="lg:rounded-[1.56rem] object-cover" />
+          <img src={bio} alt="" className="lg:rounded-[1.56rem] object-cover" loading="lazy" />
         </div>
         <div className="flex flex-col px-4 lg:px-10   gap-y-4 w-full justify-evenly items-center lg:items-start  h-full lg:justify-normal mt-14 lg:mt-0    sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
           <div className=" flex flex-col justify-center items-center ">
@@ -42,6 +41,7 @@ const Step3 = ({ opensetstep3modalprop, openstep3modalprop }) => {
               src={logo}
               alt=""
               className="w-[2rem] sm:w-[6rem] lg:w-[10rem] object-contain "
+              loading="lazy"
             />
           </div>
 
@@ -100,7 +100,7 @@ const Step3 = ({ opensetstep3modalprop, openstep3modalprop }) => {
 
             <div className="w-full px-10 gap-y-6 flex-col flex items-center">
               <div className="h-[10rem] w-[10rem] rounded-full flex justify-center items-center bg-[#F3FEF4]">
-                <img src={profile} alt="" />
+                <img src={profile} alt="" loading="lazy"/>
               </div>
               <button className="rounded-[10px] py-[0.8rem] px-[1.4rem]  border border-[#999] bg-[#E9F6EC] text-[#555]">
                 Upload Profile Photo

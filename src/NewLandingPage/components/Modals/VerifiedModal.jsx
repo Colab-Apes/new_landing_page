@@ -1,9 +1,12 @@
-import React from "react";
-// import img from "../../assets/ModalImages/authbg.png";
-import verifiedmodal from "../../../assets/ModalImages/verifiedmodal.png";
-import logo from "../../../assets/ModalImages/logo.png";
+import verifiedmodal from "../../../assets/ModalImages/verifiedmodal.webp";
+import logo from "../../../assets/ModalImages/logo.webp";
+
 import { BsArrowLeft } from "react-icons/bs";
+
 import "../../../App.css";
+
+
+
 const VerifiedModal = ({
   openverifiedmodalprop,
   setopenOtpmodalprop,
@@ -30,6 +33,7 @@ const VerifiedModal = ({
             src={verifiedmodal}
             alt=""
             className=" object-cover lg:rounded-[40px] "
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col gap-y-6  lg:gap-y-0 w-full justify-evenly lg:justify-normal h-full  items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
@@ -38,6 +42,7 @@ const VerifiedModal = ({
               src={logo}
               alt=""
               className="w-[12rem] sm:w-[6rem] xl:w-[8.5rem] object-contain "
+              loading="lazy"
             />
           </div>
 

@@ -4,14 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
 :root {
   --primary-color: #054e12;
   --green1: #007d16;
@@ -69,4 +61,9 @@ body {
 
 .fade-in-left {
   animation: fadeInLeft 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+li {
+  list-style-type:  disc;
 }

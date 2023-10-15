@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from "react";
-import img1 from "../../../assets/ModalImages/sidebar.png";
-import logo from "../../../assets/ModalImages/logo.png";
-import { TfiClose } from "react-icons/tfi";
+import { useState } from "react";
+import { ClipLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 import { Lock, Message } from "react-iconly";
+import { TfiClose } from "react-icons/tfi";
+import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
+
+import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
+
+import img1 from "../../../assets/ModalImages/sidebar.webp";
+import logo from "../../../assets/ModalImages/logo.webp";
+
 import google from "../../../assets/ModalImages/social/Google logo.png";
 import facebook from "../../../assets/ModalImages/social/Facbook.png";
 import apple from "../../../assets/ModalImages/social/Vector.svg";
-import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
+
 import "../../../App.css";
-import { useSignupHooks } from "../../../Validation/Hooks/useSignupHooks";
-import { ClipLoader } from "react-spinners";
-import { Link, useNavigate } from "react-router-dom";
+
+
 
 const Signup = ({
   setopenOtpmodalprop,
@@ -54,7 +60,7 @@ const Signup = ({
         />
 
         <div className="w-full h-full lg:block  hidden  lg:rounded-[25px] ">
-          <img src={img1} alt="" className="lg:rounded-[25px] object-cover" />
+          <img src={img1} alt="" className="lg:rounded-[25px] object-cover" loading="lazy" />
         </div>
         <div className="flex flex-col  w-full justify-evenly h-full lg:justify-normal   items-center  sm:w-[19rem] lg:w-full lg:h-full md:w-full md:h-full ">
           <div className=" flex flex-col justify-center items-center mt-[4rem] lg:mt-0">
@@ -62,6 +68,7 @@ const Signup = ({
               src={logo}
               alt=""
               className="w-[12rem] sm:w-[6.25rem] lg:w-[8rem] object-contain "
+              loading="lazy"
             />
             <p className="text-[#555555] font-bold text-2xl text-center mt-6 md:mt-4 lg:mt-1 lg:hidden">
               Sign up to Get Started
@@ -224,6 +231,7 @@ const Signup = ({
                   src={google}
                   alt=""
                   className="w-[1.6rem] object-contain"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="flex justify-center cursor-pointer items-center h-[3.6rem] w-full  bg-[#F8F8F8]     border xl:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
@@ -231,10 +239,11 @@ const Signup = ({
                   src={facebook}
                   alt=""
                   className="w-[1.6rem] object-contain"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="flex justify-center  cursor-pointer items-center h-[3.6rem]  w-full bg-[#F8F8F8]  border xl:border-2 border-solid border-[#DDDDDD] rounded-[6px]">
-                <img src={apple} alt="" className="w-[1.6rem] object-contain" />
+                <img src={apple} alt="" className="w-[1.6rem] object-contain" loading="lazy" />
               </div>
             </div>
             <div className="mt-[1.34rem] mb-[1.28rem] text-lg p-3 md:mt-8 lg:mt-2 ">
