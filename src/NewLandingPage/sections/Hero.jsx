@@ -94,7 +94,7 @@ const Hero = () => {
             </div>
           </FadeIn>
           
-          {/* <FadeIn delay={0.4} direction="right"> */}
+          <FadeIn delay={0.4} direction="right">
             <div className="hero-cta hc-mobile w-full flex flex-col justify-center  md:hidden mt-4">
               <button className=" w-[29rem] mx-auto  btngrad px-10 py-7 rounded-[15px] mb-10 ">
                 <a
@@ -122,7 +122,7 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-          {/* </FadeIn> */}
+          </FadeIn>
         </div>
       </section>
     </div>
