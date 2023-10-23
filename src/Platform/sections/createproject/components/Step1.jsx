@@ -98,6 +98,22 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
         </div>
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">
+            Which roles would your project require?
+          </label>
+          <div className="flex flex-col">
+            <p className="ss">Recommended roles</p>
+            <div className="flex gap-x-20">
+              <div className="p-10 bg-[#4EAF00] flex items-center rounded-xl">
+                <p className="text-[#fff]">Brand designer</p>
+              </div>
+              <div className="p-10 bg-[#4EAF00] flex items-center rounded-xl">
+                <p className="text-[#fff]">Brand designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col w-full text-[#999] gap-y-4 ">
+          <label htmlFor="" className="text-[#999] text-[16px] font-bold">
             Product / Service type?
           </label>
           <select
@@ -177,18 +193,6 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
               Add
             </button>
           </div>{" "}
-        </div>
-
-        <div className="flex flex-col w-full text-[#999] gap-y-4">
-          <label htmlFor="" className="text-[#999] text-[16px] font-bold">
-            Other
-          </label>
-          <input
-            type="text"
-            placeholder="Other..."
-            id=""
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
-          />
         </div>
 
         <div className="w-full mt-32 flex justify-between items-center col-span-2">

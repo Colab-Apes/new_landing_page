@@ -1,5 +1,5 @@
 import * as yup from "yup";
-export const createPojectValidation = yup.object().shape({
+export const createPojectValidationstep1 = yup.object().shape({
   project_type: yup.string().required("Please fill up this field"),
   type: yup.string().required("Please fill up this field"),
   title: yup.string().required("Please fill up this field"),

@@ -12,7 +12,7 @@ export const createPojectValidation = yup.object().shape({
   timeline: yup.string().required("Please fill up this field"),
   plan_money: yup.string().required("Please fill up this field"),
   expected_date: yup.string().required("Please fill up this field"),
-  is_initial_investment: yup.booleanN().required("Please fill up this field"),
+  is_initial_investment: yup.boolean().required("Please fill up this field"),
   raise_funds: yup.string().required("Please fill up this field"),
   desired_funds: yup.string().required("Please fill up this field"),
   initial_step: yup.string().required("Please fill up this field"),

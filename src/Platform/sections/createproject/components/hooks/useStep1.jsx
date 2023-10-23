@@ -1,11 +1,11 @@
 import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
-import { link } from "../Link";
 import { createPojectValidation } from "../../validation/valid.js";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { createPojectValidationstep1 } from "../../validation/step1.js";
 
 const useStep1 = () => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const useStep1 = () => {
       business_plan_doc: "",
       business_project_photo: "",
     },
-    validationSchema: siginValidation,
+    validationSchema: createPojectValidationstep1,
     onSubmit: (values) => {
       setisLoading(true);
       axios
