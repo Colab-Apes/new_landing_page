@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Platform from "./Platform/Platform";
 import ProtectedRoute from "./Validation/ProtectedRoute";
 import { Legality, Privacy, TermsOfUse } from "./pages";
+import Project from "./Platform/sections/project/Project";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           }
         />
         <Route path="*" element={<NotFound />} />
+
+        <Route path="/project" element={<Project />} />
 
         <Route path="/legal" element={<Legality />} />
         <Route path="/privacypolicy" element={<Privacy />} />

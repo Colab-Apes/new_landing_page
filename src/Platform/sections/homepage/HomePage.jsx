@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Project from "./components/Project";
 import { img1, img2, img3, img4 } from "./assets/images/BullkImport";
 
@@ -15,7 +17,9 @@ const HomePage = () => {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 mt-[2.44rem] sm:mt-20 lg:mt-[6rem] gap-y-10 sm:gap-y-20 sm:gap-x-10 md:gap-10 lg:gap-y-10  lg:gap-x-4  xl:gap-x-6 xl:gap-y-10   mx-auto w-full ">
-        <Project image={img1} name="Mobile game" creator="Templeton Peck" />
+        <Link to="/project">
+          <Project image={img1} name="Mobile game" creator="Templeton Peck" />
+        </Link>
         <Project image={img2} name="Product design" creator="Multiple owners" />
         <Project image={img3} name="Video game" creator="Mercy Torello" />
         <Project
