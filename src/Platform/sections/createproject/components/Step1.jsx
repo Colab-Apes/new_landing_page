@@ -101,10 +101,11 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             Which roles would your project require?
           </label>
           <div className="flex flex-col">
-            <p className="ss">Recommended roles</p>
+            <p className="font-bold first-letter:">Recommended roles</p>
             <div className="flex gap-x-20">
               <div className="p-10 bg-[#4EAF00] flex items-center rounded-xl">
                 <p className="text-[#fff]">Brand designer</p>
+                <img src={cancel} alt="" />
               </div>
               <div className="p-10 bg-[#4EAF00] flex items-center rounded-xl">
                 <p className="text-[#fff]">Brand designer</p>
