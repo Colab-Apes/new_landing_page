@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import flag from '../assets/flag.svg';
-import arrow from '../assets/arrow.svg';
-import dot from '../assets/dot.svg'
+import flag from '../assets/Header/flag.svg';
+import arrow from '../assets/Header/arrow.svg';
+import dot from '../assets/Header/dot.svg'
 import { img1 } from "../../homepage/assets/images/BullkImport";
 
 const Header = () => {
