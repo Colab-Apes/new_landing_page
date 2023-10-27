@@ -11,7 +11,7 @@ import arrowRight from "../assets/arrow-right.svg";
 import "../../../../App.css";
 import useStep1 from "./hooks/useStep1";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   const { formik1 } = useStep1();
@@ -49,6 +49,20 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
       updatedRoles.splice(index, 1);
       return updatedRoles;
     });
+  };
+
+  const divRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (divRef.current) {
+      divRef.current.scrollLeft -= 100;
+    }
+  };
+
+  const scrollRight = () => {
+    if (divRef.current) {
+      divRef.current.scrollLeft += 100;
+    }
   };
   return (
     <div className={openstep1 ? "" : "hidden"}>
@@ -194,9 +208,10 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
               <img
                 src={arrowLeft}
                 alt=""
-                className="absolute left-[-30px] top-0 bottom-0 my-auto"
+                className="absolute left-[-30px] top-0 bottom-0 my-auto pointer"
+                onClick={scrollLeft}
               />
-              <div className="flex flex-nowrap gap-x-3 overflow-auto  remove-scrollbar">
+              <div className="flex flex-nowrap gap-x-3 overflow-auto  remove-scrollbar " ref={divRef}>
                 {allRoles.map((item, index) => (
                   <div
                     className="px-6 py-12 bg-[#F8F8F8] flex items-center justify-between rounded-[20px] flex-none w-[205px]"
@@ -221,7 +236,8 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
               <img
                 src={arrowRight}
                 alt=""
-                className="absolute right-[-30px] top-0 bottom-0 my-auto"
+                className="absolute right-[-30px] top-0 bottom-0 my-auto pointer"
+                onClick={scrollRight}
               />
             </div>
           </div>
