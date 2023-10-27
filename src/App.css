@@ -16,10 +16,11 @@ body {
   max-width: 90%;
   margin: 0 auto;
 } */
-.graid{
+.graid {
   background: linear-gradient(224deg, #054E12 0%, #3B8004 100%);
 
 }
+
 /* .features {
   align-self: center;
   padding: 7rem 3rem;
@@ -47,16 +48,17 @@ body {
   }
 } */
 /* # sourceMappingURL=App.css.map */
-.btngrad{
+.btngrad {
   background: #007D16 linear-gradient(218deg, #007D16 0%, #4BA900 100%);
   /* background-image: url("./assets/ellipse.svg"); */
 
 }
 
-.view:hover{
+.view:hover {
   background: #007D16 linear-gradient(218deg, #007D16 0%, #4BA900 100%);
 }
-.shadowformobiletabs{
+
+.shadowformobiletabs {
   box-shadow: 0px 0px 0px 0px rgba(2, 130, 26, 0.10), 0px 2px 4px 0px rgba(2, 130, 26, 0.10), 0px 7px 7px 0px rgba(2, 130, 26, 0.09), 0px 16px 10px 0px rgba(2, 130, 26, 0.05), 0px 29px 11px 0px rgba(2, 130, 26, 0.01), 0px 45px 13px 0px rgba(2, 130, 26, 0.00);
 
 }
@@ -64,4 +66,31 @@ body {
 
 .learnbgstep {
   background-image: url(./Platform/sections/createproject/assets/circle.svg);
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.remove-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.image-drop-sm,
+.image-drop-lg {
+  border: 2px dashed rgba(153, 153, 153, 0.50);
+}
+
+.image-drop-sm {
+  border-radius: 40px;
+  padding: 20px;
+}
+
+.image-drop-lg {
+  border-radius: 10px;
+  padding: 23px 19px;
 }

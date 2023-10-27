@@ -6,9 +6,18 @@ import img3 from "../assets/circle3.svg";
 import remove from "../assets/remove.svg";
 
 import "../../../../App.css";
+import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
 
 
 const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
+  const options = [
+    { value: "only me", label: "Only me" },
+    { value: "multiple owners", label: "Multiple owners" },
+  ];
+
+  const handleSelect = (selectedOption) => {
+    console.log(selectedOption);
+  };
 
   return (
     <div className={openstep2 ? "" : "hidden"}>
@@ -89,7 +98,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
       </div>
 
 
-      <div className=" grid lg:grid-cols-2 mt-48 gap-x-20 gap-y-20">
+      <div className=" grid lg:grid-cols-2 mt-48 gap-x-20 gap-y-10">
 
         <div className="flex flex-col w-full text-[#999] gap-y-4">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">Give your project a title</label>
@@ -103,15 +112,13 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
 
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">Number of owners</label>
-          <select
-            name=""
-            id=""
-            placeholder="Select number of owners"
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4   border-2 rounded-[10px] text-[16px] font-bold px-4  border-[#999]/[0.5]"
-          >
-            <option value="volvo">Select number of owners</option>
-            <option value="saab">Saab</option>
-          </select>
+          <ReusableDropdown
+              name=""
+              id=""
+              options={options}
+              onSelect={handleSelect}
+              defaultText={"Select number of owners"}
+            />
         </div>
         <div className="w-full flex flex-col gap-y-4 ">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">

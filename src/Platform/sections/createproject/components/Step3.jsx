@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 
 import img1 from "../assets/circle.svg";
@@ -10,9 +10,30 @@ import remove from "../assets/remove.svg";
 
 import "../../../../App.css";
 
-
 const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
   const ref = useRef();
+
+  const [targetAudience, setTargetAudience] = useState([
+    "Non-binary",
+    "Teenagers",
+    "Texas",
+  ]);
+  const [targetInput, setTargetInput] = useState("");
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && targetInput.trim() !== "") {
+      setTargetAudience([...targetAudience, targetInput]);
+      setTargetInput(" ");
+    }
+  };
+
+  const handleRemoveAudience = (index) => {
+    setTargetAudience((prevAudience) => {
+      const updatedAudience = [...prevAudience];
+      updatedAudience.splice(index, 1);
+      return updatedAudience;
+    });
+  };
 
   return (
     <div className={openstep3 ? "" : "hidden"}>
@@ -39,7 +60,7 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
         </div>
 
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-        
+
         <div className="relative flex flex-col ">
           <img src={img1} alt="" className="" />
           <p className="text-[36px] text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -85,12 +106,9 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
             Finish
           </p>
         </div>
-
       </div>
 
-
-      <div className=" grid lg:grid-cols-2 mt-48 gap-x-20 gap-y-32">
-
+      <div className=" grid lg:grid-cols-2 mt-48 gap-x-20 gap-y-10">
         <div className="w-full flex flex-col gap-y-4 ">
           <label className="text-[#999] text-[16px] font-bold" htmlFor="">
             Who are your target audience?
@@ -98,20 +116,37 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
           <div className=" bg-[#fff]/[20%]   border-2 rounded-[10px] text-[16px] font-bold h-[10rem] px-4 flex relative border-[#999]/[0.5]  flex-col w-full  ">
             <input
               name=""
-              placeholder="|"
+              // placeholder="|"
               id=""
-              className="focus:outline-none absolute bottom-0 pl-4 text-[#999] bg-[#fff] w-full py-1 left-0 rounded-b-[10px]  text-[12px] font-bold  "
+              className="focus:outline-none absolute bottom-0 pl-4 text-[#999] bg-[#fff] w-full py-4 left-0 rounded-b-[10px]  text-[16px] font-bold  "
+              onKeyDown={handleKeyDown}
+              onChange={(e) => {
+                setTargetInput(e.target.value);
+              }}
             />
 
-            <div className="flex flex-wrap mt-3 gap-5 overflow-y-auto">
-              <div className="bg-[#F8F8F8] rounded-[5px] flex items-center  py-2 gap-10 px-4">
-                <span className="text-[16px] font-bold">Non-binary</span>
-                <img src={remove} alt="" />
-              </div>
-              <div className="bg-[#F8F8F8] rounded-[5px] flex items-center  py-2 gap-10 px-4">
+            <div className="flex flex-wrap mt-2 gap-5 overflow-y-auto">
+              {targetAudience.map((item, index) => (
+                <div
+                  className="bg-[#F8F8F8] rounded-[5px] flex items-center  py-2 gap-10 px-4"
+                  key={index}
+                >
+                  <span className="text-[16px] font-bold">{item}</span>
+                  <img
+                    src={remove}
+                    alt=""
+                    onClick={() => {
+                      handleRemoveAudience(index);
+                    }}
+                    className="pointer"
+                  />
+                </div>
+              ))}
+
+              {/* <div className="bg-[#F8F8F8] rounded-[5px] flex items-center  py-2 gap-10 px-4">
                 <span className="text-[16px] font-bold">Teenagers</span>
                 <img src={remove} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -162,6 +197,9 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
             id=""
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 w-full rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
           />
+          <div>
+            
+          </div>
         </div>
 
         <div className="flex flex-col  w-full text-[#999] gap-y-4">
@@ -203,9 +241,7 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
             Save & Continue
           </button>
         </div>
-
       </div>
-
     </div>
   );
 };

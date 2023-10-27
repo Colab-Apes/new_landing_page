@@ -75,6 +75,9 @@ body {
 li {
   list-style-type:  disc;
 }
+.pointer{
+  cursor: pointer;
+}
 
 /* In your CSS file or component styles */
 /* input[type="date"]::-webkit-calendar-picker-indicator {

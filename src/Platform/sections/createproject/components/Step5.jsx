@@ -7,9 +7,19 @@ import img3 from "../assets/circle3.svg";
 import upload from "../assets/upload.svg";
 
 import "../../../../App.css";
+import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
 
 
 const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
+
+  const options = [
+    { value: "Before recruitment", label: "Before Recruitment" },
+    { value: "Before recruitment", label: "Before Recruitment" },
+  ];
+
+  const handleSelect = (selectedOption) => {
+    console.log(selectedOption);
+  };
   
   return (
     <div className={openstep5 ? "" : "hidden"}>
@@ -97,7 +107,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
           all build on the platform, most from a team.
         </div>
 
-        <div className="py-[20px] leading-[24px] px-[10px] rounded-[10px] h-fit bg-[#F8F8F8] text-[#555] text-[16px] font-bold">
+        <div className="py-[20px] leading-[24px] px-[20px] rounded-[10px] h-fit bg-[#F8F8F8] text-[#555] text-[16px] font-bold">
           As the first founder of this project, you are the team lead. This is a
           big responsibility, but we got your back and will help you become a
           pro in no time.
@@ -107,25 +117,32 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
           <label htmlFor="" className="text-[16px] text-[#999] font-bold">
             When will you start the initial step of the project?
           </label>
-          <select
+          {/* <select
             name=""
             id=""
             className="focus:outline-none bg-[#fff]/[20%] py-4 px-5 border-2 text-[#333] rounded-[10px] text-[16px] font-bold border-[#999]/[0.5]"
           >
             <option value="volvo">Before recruitment</option>
             <option value="saab">Saab</option>
-          </select>
+          </select> */}
+          <ReusableDropdown
+          name=""
+          id=""
+          options={options}
+          onSelect={handleSelect}
+          defaultText={"Choose one"}
+          />
         </div>
 
         <div className="gap-y-4 flex flex-col">
           <label className="text-[16px] text-[#999]  font-bold" htmlFor="">
             Upload Business or Operational plan
           </label>
-          <div className="flex flex-col py-[1.44rem] px-[1.19rem] rounded-[0.625rem] border-[0.3rem] border-dashed ">
-              <label for="business-plan" className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[0.625rem] cursor-pointer bg-[#F8F8F8]  hover:bg-gray-100  ">
+          <div className="flex flex-col image-drop-lg ">
+              <label for="business-plan" className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[10px] cursor-pointer bg-[#F8F8F8]  hover:bg-gray-100  ">
                   <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
                     <img src={upload} alt="" />
-                    <p className="text-lg text-[#555] "><span className="font-semibold">Upload .pdf, .jpg, .PNG files</span></p>
+                    <p className="text-[16px] text-[#555] "><span className="font-semibold">Upload .pdf, .jpg, .PNG files</span></p>
                   </div>
                   <input id="business-plan" type="file" className="hidden" />
               </label>
@@ -148,15 +165,15 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
           <label className="text-[16px] text-[#999]  font-bold" htmlFor="">
             Upload Project photo
           </label>
-          <div className="flex flex-col items-center justify-center w-[22.63rem] h-[19.69rem] rounded-[2.5rem] border-[0.3rem] border-dashed ">
-              <label for="project-image" className="flex flex-col rounded-[0.625rem] cursor-pointer bg-[#F8F8F8] ">
-                <div className="flex flex-col items-center justify-center gap-[4.12rem] ">
+          <div className="flex flex-col items-center justify-center image-drop-sm w-[322px]">
+              <label for="project-image" className="flex flex-col rounded-[30px] cursor-pointer bg-[#F8F8F8] ">
+                <div className="flex flex-col items-center justify-center gap-[4.12rem] h-[260px] px-14">
                   <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
                     <img src={upload} alt="" />
-                    <p className="text-lg text-[#555]"><span className="font-semibold">Upload a .jpg or .PNG file</span></p>
+                    <p className="text-[16px] font-bold text-[#555]">Upload a .jpg or .PNG file</p>
                   </div>
                   <div>
-                    <p className=" text-[#054E12] font-lato font-bold ">This would appear on your project cover</p>
+                    <p className="text-[#054E12] font-lato font-bold text-[14px] text-center mt-10">This would appear on your project cover</p>
                   </div>
                 </div>
                 <input id="project-image" type="file" className="hidden" />
