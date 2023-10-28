@@ -205,7 +205,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             </label>
             <div className="flex flex-col">
               <p className="font-bold text-[#333] text-[16px] pb-[14px]">
-                Recommended roles
+                All roles
               </p>
               <div className="flex flex-nowrap gap-x-3 overflow-auto remove-scrollbar">
                 {roles.map((item, index) => (
@@ -232,7 +232,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
 
           <div className="flex flex-col w-full gap-y-5 text-[#999]">
             <label htmlFor="" className="text-[#333] text-[16px] font-bold">
-              All roles
+              Recommended roles
             </label>
             <div className="relative">
               <img
