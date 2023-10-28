@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { IoMdCheckmark } from "react-icons/io";
 
 import img1 from "../assets/circle.svg";
@@ -8,9 +10,14 @@ import "../../../../App.css";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
 
 const Step4 = ({ openstep4, setopenstep4, setopenstep5, setopenstep3 }) => {
+
+  const [selectedOption, setSelectedOption] = useState("");
+
   const initialInvestmentOptions = ["Yes", "No"];
+
   const handleSelectInvestmentOption = (selectedOption) => {
     console.log(selectedOption);
+    setSelectedOption(selectedOption)
   };
 
   return (
@@ -108,7 +115,8 @@ const Step4 = ({ openstep4, setopenstep4, setopenstep5, setopenstep3 }) => {
             onSelect={handleSelectInvestmentOption}
             defaultText={"Choose one"}
           />{" "}
-          <div className="bg-[#F8F8F8] gap-[20px] flex flex-col  rounded-[10px] p-[20px]">
+          { selectedOption === "Yes" ?
+            <div className="bg-[#F8F8F8] gap-[20px] flex flex-col  rounded-[10px] p-[20px]">
             <p className="text-[#555]  text-[16px] font-bold">How much?</p>
             <input
               type="text"
@@ -118,6 +126,19 @@ const Step4 = ({ openstep4, setopenstep4, setopenstep5, setopenstep3 }) => {
               // placeholder="$ 10,000"
             />
           </div>
+          :
+          ""
+          }
+          {/* <div className="bg-[#F8F8F8] gap-[20px] flex flex-col  rounded-[10px] p-[20px]">
+            <p className="text-[#555]  text-[16px] font-bold">How much?</p>
+            <input
+              type="text"
+              // onChange={(e) => setemail(e.target.value)}
+              // value={email}
+              className="text-[16px] bg-transparent  w-full md:w-[40rem] lg:w-full px-5 outline-none border-2 rounded-[10px] border-[#999]/[0.5] placeholder:font-bold text-[#333] font-bold h-[50px] "
+              // placeholder="$ 10,000"
+            />
+          </div> */}
         </div>
 
         <div className="w-full mt-20 flex justify-between items-center col-span-2">
