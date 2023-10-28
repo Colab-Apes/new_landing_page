@@ -19,7 +19,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   //todo: move to a data file
-  const options = ["Product", "Service", "Other"];
+  const options = ["Product", "Service"];
   const productServiceOptions = {
     Product: [
       "Web Comics",
@@ -172,45 +172,20 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
           </div>
 
           <div className="flex flex-col w-full text-[#999] gap-y-5 ">
-            {selectedOption === "Other" ? (
-              <>
-                <label htmlFor="" className="text-[#999] text-[16px] font-bold">
-                  Other
-                </label>
-                <input
-                  name=""
-                  placeholder="Specify..."
-                  id=""
-                  className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
-                />
-                {formik1.errors.audience && formik1.touched.audience ? (
-                  <p className="text-red-500 text-xl">
-                    {formik1.errors.audience}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </>
+            <label htmlFor="" className="text-[#999] text-[16px] font-bold">
+              {selectedOption || " Product / Service type?"}
+            </label>
+            <ReusableDropdown
+              name=""
+              id="audience"
+              options={productServiceOptions[selectedOption]}
+              onSelect={handleSelect}
+              defaultText={"Select one..."}
+            />
+            {formik1.errors.audience && formik1.touched.audience ? (
+              <p className="text-red-500 text-xl">{formik1.errors.audience}</p>
             ) : (
-              <>
-                <label htmlFor="" className="text-[#999] text-[16px] font-bold">
-                  {selectedOption || " Product / Service type?"}
-                </label>
-                <ReusableDropdown
-                  name=""
-                  id="audience"
-                  options={productServiceOptions[selectedOption]}
-                  onSelect={handleSelect}
-                  defaultText={"Select one..."}
-                />
-                {formik1.errors.audience && formik1.touched.audience ? (
-                  <p className="text-red-500 text-xl">
-                    {formik1.errors.audience}
-                  </p>
-                ) : (
-                  ""
-                )}
-              </>
+              ""
             )}
           </div>
         </div>
@@ -290,6 +265,17 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
                 onClick={scrollRight}
               />
             </div>
+          </div>
+          <div className="flex flex-col w-full text-[#999] gap-y-5 mt-[20px]">
+            <label htmlFor="" className="text-[#333] text-[16px] font-bold">
+              Other
+            </label>
+            <input
+              name=""
+              placeholder="Specify..."
+              id=""
+              className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+            />
           </div>
         </div>
       </div>

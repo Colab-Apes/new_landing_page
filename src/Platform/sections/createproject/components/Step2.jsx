@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 
 import img1 from "../assets/circle.svg";
@@ -10,9 +11,27 @@ import ReusableDropdown from "../../../../components/ResuasbleDropDown/Resusable
 
 const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
   const options = ["Only me", "Multiple owners"];
+  const [objectiveInput, setObjectiveInput] = useState("");
+  const [objectives, setObjectives] = useState([]);
+  const [outcomeInput, setOutcomeInput] = useState("");
+  const [outcomes, setOutcomes] = useState([]);
 
   const handleSelect = (selectedOption) => {
     console.log(selectedOption);
+  };
+
+  const handleAddObjective = (e) => {
+    if (e.key === "Enter" && objectiveInput.trim() !== "") {
+      setObjectives([...objectives, objectiveInput]);
+      setObjectiveInput(" ");
+    }
+  };
+
+  const handleAddOutcome = (e) => {
+    if (e.key === "Enter" && outcomeInput.trim() !== "") {
+      setOutcomes([...outcomes, outcomeInput]);
+      setOutcomeInput(" ");
+    }
   };
 
   return (
@@ -108,12 +127,32 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             Objectives
           </label>
           <div className=" bg-[#fff]/[20%]   border-2 rounded-[10px] text-[16px] font-medium min-h-[13rem] py-6 px-14 text-[#555]  border-[#999]/[0.5]   w-full  ">
-            <ul className="text-[#999]">
-              <li>Objective 1</li>
-              <li>Objective 2</li>
-              <li>Objective 3</li>
-              <li>Objective 4</li>
+            <ul
+              className={`${
+                objectives.length > 0 ? "text-[#333]" : "text-[#999]"
+              } `}
+            >
+              {objectives.length > 0 ? (
+                objectives.map((objective) => <li>{objective}</li>)
+              ) : (
+                <>
+                  <li>Objective 1</li>
+                  <li>Objective 2</li>
+                  <li>Objective 3</li>
+                  <li>Objective 4</li>
+                </>
+              )}
             </ul>
+            <input
+              name=""
+              id=""
+              placeholder="Start typing to add objective"
+              className="focus:outline-none text-[#333] bg-[#fff] w-full py-4 rounded-b-[10px]  text-[16px]   "
+              onKeyDown={handleAddObjective}
+              onChange={(e) => {
+                setObjectiveInput(e.target.value);
+              }}
+            />
           </div>
         </div>
         <div className="w-full flex flex-col gap-y-4 ">
@@ -121,12 +160,32 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             Expected outcomes
           </label>
           <div className=" bg-[#fff]/[20%] border-2 rounded-[10px] text-[16px] font-medium min-h-[13rem] py-6 px-14 text-[#555]  border-[#999]/[0.5]  w-full">
-            <ul className="text-[#999] ">
-              <li>Outcome 1</li>
-              <li>Outcome 2</li>
-              <li>Outcome 3</li>
-              <li>Outcome 4</li>
+            <ul
+              className={`${
+                outcomes.length > 0 ? "text-[#333]" : "text-[#999]"
+              } `}
+            >
+              {outcomes.length > 0 ? (
+                outcomes.map((outcome) => <li>{outcome}</li>)
+              ) : (
+                <>
+                  <li>Outcome 1</li>
+                  <li>Outcome 2</li>
+                  <li>Outcome 3</li>
+                  <li>Outcome 4</li>
+                </>
+              )}
             </ul>
+            <input
+              name=""
+              id=""
+              placeholder="Start typing to add outcome"
+              className="focus:outline-none text-[#333] bg-[#fff] w-full py-4 rounded-b-[10px]  text-[16px]   "
+              onKeyDown={handleAddOutcome}
+              onChange={(e) => {
+                setOutcomeInput(e.target.value);
+              }}
+            />
           </div>
         </div>
         <div className="flex flex-col  w-full text-[#999] gap-y-4">
