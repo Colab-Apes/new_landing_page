@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import img1 from "../assets/circle.svg";
@@ -11,17 +12,38 @@ import arrowRight from "../assets/arrow-right.svg";
 import "../../../../App.css";
 import useStep1 from "./hooks/useStep1";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
-import { useRef, useState } from "react";
+
 
 const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   const { formik1 } = useStep1();
 
+    const [selectedOption, setSelectedOption] = useState("")
+
   //todo: move to a data file
-  const options = [
-    { value: "product", label: "Product" },
-    { value: "service", label: "Service" },
-    { value: "other", label: "Other" },
-  ];
+  const options = ["Product", "Service", "Other"];
+  const productServiceOptions = {
+    Product: [
+      "Web Comics",
+      "Novels",
+      "Book",
+      "Animation",
+      "Softwares",
+      "Games",
+      "Podcast",
+      "Music",
+      "Web Art",
+    ],
+    Service: [
+      "Video Editing",
+      "Software Creation",
+      "Picture Editing",
+      "Animation Services",
+      "Website Creation",
+      "Marketing",
+      "Cyber Security",
+      "Consulting",
+    ],
+  };
   const allRoles = [
     "Brand designer",
     "Digital marketer",
@@ -37,6 +59,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   //logic
   const handleSelect = (selectedOption) => {
     console.log(selectedOption);
+    setSelectedOption(selectedOption)
   };
 
   const handleAddRole = (role) => {
@@ -156,7 +179,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             <ReusableDropdown
               name=""
               id="audience"
-              options={options}
+              options={productServiceOptions[selectedOption]}
               onSelect={handleSelect}
               defaultText={"Select one..."}
             />
@@ -211,7 +234,10 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
                 className="absolute left-[-30px] top-0 bottom-0 my-auto pointer"
                 onClick={scrollLeft}
               />
-              <div className="flex flex-nowrap gap-x-3 overflow-auto  remove-scrollbar " ref={divRef}>
+              <div
+                className="flex flex-nowrap gap-x-3 overflow-auto  remove-scrollbar "
+                ref={divRef}
+              >
                 {allRoles.map((item, index) => (
                   <div
                     className="px-6 py-12 bg-[#F8F8F8] flex items-center justify-between rounded-[20px] flex-none w-[205px]"

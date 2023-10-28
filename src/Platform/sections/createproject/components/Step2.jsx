@@ -8,12 +8,8 @@ import remove from "../assets/remove.svg";
 import "../../../../App.css";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
 
-
 const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
-  const options = [
-    { value: "only me", label: "Only me" },
-    { value: "multiple owners", label: "Multiple owners" },
-  ];
+  const options = ["Only me", "Multiple owners"];
 
   const handleSelect = (selectedOption) => {
     console.log(selectedOption);
@@ -21,10 +17,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
 
   return (
     <div className={openstep2 ? "" : "hidden"}>
-
-      
       <div className={"flex items-center mt-10 w-full"}>
-
         <div className="relative flex flex-col  ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -33,9 +26,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             Project <span>Information</span>
           </p>
         </div>{" "}
-
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img1} alt="" className="" />
           <p className="text-[36px] text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -46,9 +37,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             <span>Project</span>
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-
         <div className="relative flex flex-col ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -58,9 +47,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             Analysis
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -70,9 +57,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             Investments
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[30px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -82,9 +67,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             Documents
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -94,14 +77,13 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             Finish
           </p>
         </div>
-
       </div>
 
-
       <div className=" grid lg:grid-cols-2 mt-48 gap-x-20 gap-y-10">
-
         <div className="flex flex-col w-full text-[#999] gap-y-4">
-          <label htmlFor="" className="text-[#999] text-[16px] font-bold">Give your project a title</label>
+          <label htmlFor="" className="text-[#999] text-[16px] font-bold">
+            Give your project a title
+          </label>
           <input
             name=""
             placeholder="Type title"
@@ -109,16 +91,17 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
           />
         </div>
-
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
-          <label htmlFor="" className="text-[#999] text-[16px] font-bold">Number of owners</label>
+          <label htmlFor="" className="text-[#999] text-[16px] font-bold">
+            Number of owners
+          </label>
           <ReusableDropdown
-              name=""
-              id=""
-              options={options}
-              onSelect={handleSelect}
-              defaultText={"Select number of owners"}
-            />
+            name=""
+            id=""
+            options={options}
+            onSelect={handleSelect}
+            defaultText={"Select number of owners"}
+          />
         </div>
         <div className="w-full flex flex-col gap-y-4 ">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">
@@ -147,7 +130,9 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
           </div>
         </div>
         <div className="flex flex-col  w-full text-[#999] gap-y-4">
-          <label htmlFor="" className="text-[#999] text-[16px] font-bold">Give an overview of your project</label>
+          <label htmlFor="" className="text-[#999] text-[16px] font-bold">
+            Give an overview of your project
+          </label>
           <input
             name=""
             placeholder="Project overview"
@@ -158,7 +143,6 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             500 words maximum
           </span>
         </div>{" "}
-
         <div className="w-full mt-20 flex justify-between items-center col-span-2">
           <button
             onClick={() => {

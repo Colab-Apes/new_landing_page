@@ -18,7 +18,7 @@ const ReusableDropdown = ({ options, onSelect, defaultText }) => {
         className={`selected-option focus:outline-none  bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5] flex justify-between ${selectedOption.label ? "text-[#333]" : "text-[#999]" }`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selectedOption.label || defaultText}
+        {selectedOption || defaultText}
         <img src={arrowDown} alt="" />
       </div>
       <ul
@@ -26,13 +26,13 @@ const ReusableDropdown = ({ options, onSelect, defaultText }) => {
           isOpen ? "open" : "hidden"
         }`}
       >
-        {options.map((option) => (
+        {options && options.map((option) => (
           <li
-            key={option.value}
+            key={option}
             className="option p-3 rounded-[8px] hover:bg-[#E8F5EA]"
             onClick={() => handleOptionClick(option)}
           >
-            {option.label}
+            {option}
           </li>
         ))}
       </ul>

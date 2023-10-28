@@ -8,10 +8,7 @@ import "../../../../App.css";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
 
 const Step4 = ({ openstep4, setopenstep4, setopenstep5, setopenstep3 }) => {
-  const initialInvestmentOptions = [
-    { value: "yes", label: "Yes" },
-    { value: "no", label: "No" },
-  ];
+  const initialInvestmentOptions = ["Yes", "No"];
   const handleSelectInvestmentOption = (selectedOption) => {
     console.log(selectedOption);
   };

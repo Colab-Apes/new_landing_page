@@ -9,24 +9,16 @@ import upload from "../assets/upload.svg";
 import "../../../../App.css";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
 
-
 const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
-
-  const options = [
-    { value: "Before recruitment", label: "Before Recruitment" },
-    { value: "Before recruitment", label: "Before Recruitment" },
-  ];
+  const options = ["Before Recruitment", "Before Recruitment"];
 
   const handleSelect = (selectedOption) => {
     console.log(selectedOption);
   };
-  
+
   return (
     <div className={openstep5 ? "" : "hidden"}>
-
-
       <div className={"flex items-center mt-10 w-full"}>
-
         <div className="relative flex flex-col  ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -35,9 +27,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Project <span>Information</span>
           </p>
         </div>{" "}
-
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -47,9 +37,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             <span>Project</span>
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-
         <div className="relative flex flex-col ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -58,9 +46,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Analysis
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-
         <div className="relative flex flex-col ">
           <img src={img3} alt="" className="w-full object-scale-down" />
           {/* <GrCheckmark color="white" className="text-[#fff] text-[36px]" /> */}
@@ -69,9 +55,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Investments
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#054E12] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img1} alt="" className="" />
           <p className="text-[30px]  text-[#054E12] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -81,9 +65,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Documents
           </p>
         </div>
-
         <div className="w-[14rem] bg-[#999] h-[2px]"></div>
-
         <div className="relative flex flex-col  ">
           <img src={img2} alt="" className="" />
           <p className="text-[36px] text-[#999] absolute translate-x-[-50%] translate-y-[-50%] left-[50%]  top-[50%] font-bold">
@@ -93,12 +75,9 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Finish
           </p>
         </div>
-
       </div>
 
-
       <div className=" grid lg:grid-cols-2 mt-48 gap-x-20 gap-y-20">
-
         <div className="py-[20px] leading-[24px] px-[10px] rounded-[10px] bg-[#F8F8F8] text-[#555] text-[16px] font-bold">
           Congratulations on the first step to building your first project with
           Co_lab Apes, just a few more steps, then you would be on the
@@ -126,11 +105,11 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             <option value="saab">Saab</option>
           </select> */}
           <ReusableDropdown
-          name=""
-          id=""
-          options={options}
-          onSelect={handleSelect}
-          defaultText={"Choose one"}
+            name=""
+            id=""
+            options={options}
+            onSelect={handleSelect}
+            defaultText={"Choose one"}
           />
         </div>
 
@@ -139,14 +118,21 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Upload Business or Operational plan
           </label>
           <div className="flex flex-col image-drop-lg ">
-              <label for="business-plan" className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[10px] cursor-pointer bg-[#F8F8F8]  hover:bg-gray-100  ">
-                  <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
-                    <img src={upload} alt="" />
-                    <p className="text-[16px] text-[#555] "><span className="font-semibold">Upload .pdf, .jpg, .PNG files</span></p>
-                  </div>
-                  <input id="business-plan" type="file" className="hidden" />
-              </label>
-          </div> 
+            <label
+              for="business-plan"
+              className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[10px] cursor-pointer bg-[#F8F8F8]  hover:bg-gray-100  "
+            >
+              <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
+                <img src={upload} alt="" />
+                <p className="text-[16px] text-[#555] ">
+                  <span className="font-semibold">
+                    Upload .pdf, .jpg, .PNG files
+                  </span>
+                </p>
+              </div>
+              <input id="business-plan" type="file" className="hidden" />
+            </label>
+          </div>
         </div>
 
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
@@ -166,19 +152,26 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Upload Project photo
           </label>
           <div className="flex flex-col items-center justify-center image-drop-sm w-[322px]">
-              <label for="project-image" className="flex flex-col rounded-[30px] cursor-pointer bg-[#F8F8F8] ">
-                <div className="flex flex-col items-center justify-center gap-[4.12rem] h-[260px] px-14">
-                  <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
-                    <img src={upload} alt="" />
-                    <p className="text-[16px] font-bold text-[#555]">Upload a .jpg or .PNG file</p>
-                  </div>
-                  <div>
-                    <p className="text-[#054E12] font-lato font-bold text-[14px] text-center mt-10">This would appear on your project cover</p>
-                  </div>
+            <label
+              for="project-image"
+              className="flex flex-col rounded-[30px] cursor-pointer bg-[#F8F8F8] "
+            >
+              <div className="flex flex-col items-center justify-center gap-[4.12rem] h-[260px] px-14">
+                <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
+                  <img src={upload} alt="" />
+                  <p className="text-[16px] font-bold text-[#555]">
+                    Upload a .jpg or .PNG file
+                  </p>
                 </div>
-                <input id="project-image" type="file" className="hidden" />
-              </label>
-          </div> 
+                <div>
+                  <p className="text-[#054E12] font-lato font-bold text-[14px] text-center mt-10">
+                    This would appear on your project cover
+                  </p>
+                </div>
+              </div>
+              <input id="project-image" type="file" className="hidden" />
+            </label>
+          </div>
 
           {/* <div className="border-2  rounded-[10px] border-dashed px-[19px] py-[23px]">
             <div className=" rounded-[10px] py-[33px] w-full gap-[10px] flex flex-col items-center justify-center bg-[#F8F8F8]">
@@ -213,10 +206,7 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
             Save & Continue
           </button>
         </div>
-
       </div>
-
-
     </div>
   );
 };
