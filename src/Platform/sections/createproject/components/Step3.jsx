@@ -1,17 +1,22 @@
 import { useRef, useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import "../../../../components/CalendarStyle.css";
 
 import img1 from "../assets/circle.svg";
 import img2 from "../assets/circle2.svg";
 import img3 from "../assets/circle3.svg";
-import dateicon from "../assets/dateicon.svg";
-import editicon from "../assets/editicon.svg";
+// import dateicon from "../assets/dateicon.svg";
+// import editicon from "../assets/editicon.svg";
 import remove from "../assets/remove.svg";
 
 import "../../../../App.css";
+import CustomCalendarInput from "../../../../components/CustomCalenderInput/CustomCalendarInput";
 
 const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
   const ref = useRef();
+  const [startDate, setStartDate] = useState(new Date());
 
   const [targetAudience, setTargetAudience] = useState([
     "Non-binary",
@@ -173,16 +178,11 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
           >
             Expected start date
           </label>
-          <input
-            name=""
-            type="date"
-            placeholder="MM/DD/YYYY"
-            id="dateInput"
-            ref={ref}
-            onchange={(e) => console.log(e.target.value)}
-            onfocus={() => (ref.current.type = "date")}
-            onblur={() => (ref.current.type = "text")}
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+         
+          <ReactDatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            customInput={<CustomCalendarInput />}
           />
         </div>
 
@@ -190,16 +190,12 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
           <label className="text-[#999] text-[16px] font-bold" htmlFor="">
             Expected finishing date
           </label>
-          <input
-            name=""
-            type="date"
-            placeholder="MM/DD/YYYY"
-            id=""
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 w-full rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+          <ReactDatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            customInput={<CustomCalendarInput />}
           />
-          <div>
-            
-          </div>
+          <div></div>
         </div>
 
         <div className="flex flex-col  w-full text-[#999] gap-y-4">
