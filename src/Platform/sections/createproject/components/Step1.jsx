@@ -17,6 +17,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   const { formik1 } = useStep1();
 
   const [selectedOption, setSelectedOption] = useState("");
+  const [otherRole, setOtherRole] = useState("");
 
   //todo: move to a data file
   const options = ["Product", "Service"];
@@ -71,6 +72,13 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
       updatedRoles.splice(index, 1);
       return updatedRoles;
     });
+  };
+
+  const handlOtherRole = (e) => {
+    if (e.key === "Enter" && otherRole.trim() !== "") {
+      handleAddRole(otherRole)
+     e.target.value = ""
+    }
   };
 
   const divRef = useRef(null);
@@ -275,6 +283,10 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
               placeholder="Specify..."
               id=""
               className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+              onKeyDown={handlOtherRole}
+              onChange={(e)=>{
+                setOtherRole(e.target.value)
+              }}
             />
           </div>
         </div>

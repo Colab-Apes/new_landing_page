@@ -23,14 +23,14 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
   const handleAddObjective = (e) => {
     if (e.key === "Enter" && objectiveInput.trim() !== "") {
       setObjectives([...objectives, objectiveInput]);
-      setObjectiveInput(" ");
+      se.target.value = ""
     }
   };
 
   const handleAddOutcome = (e) => {
     if (e.key === "Enter" && outcomeInput.trim() !== "") {
       setOutcomes([...outcomes, outcomeInput]);
-      setOutcomeInput(" ");
+      e.target.value = ""
     }
   };
 

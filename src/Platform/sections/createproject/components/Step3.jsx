@@ -28,7 +28,7 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && targetInput.trim() !== "") {
       setTargetAudience([...targetAudience, targetInput]);
-      setTargetInput(" ");
+      e.target.value = ""
     }
   };
 
