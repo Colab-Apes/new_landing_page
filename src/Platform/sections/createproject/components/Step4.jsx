@@ -8,17 +8,54 @@ import img3 from "../assets/circle3.svg";
 
 import "../../../../App.css";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
+import { useCreateProject } from "../../../../context/CreateProject";
 
 const Step4 = ({ openstep4, setopenstep4, setopenstep5, setopenstep3 }) => {
-
-  const [selectedOption, setSelectedOption] = useState("");
+  const { setFormData } = useCreateProject();
+  const [raiseFunds, setRaiseFunds] = useState("");
 
   const initialInvestmentOptions = ["Yes", "No"];
 
   const handleSelectInvestmentOption = (selectedOption) => {
     console.log(selectedOption);
-    setSelectedOption(selectedOption)
+    // setIntialInvestment(selectedOption)
+    if(selectedOption === "Yes"){
+      setFormData((prev) => ({
+        ...prev,
+        is_initial_investment: true,
+      }));
+    }
+    else{
+      setFormData((prev) => ({
+        ...prev,
+        is_initial_investment: false,
+      }));
+    }
   };
+
+  const handleRaiseFunds = (selectedOption) => {
+    console.log(selectedOption);
+    setRaiseFunds(selectedOption)
+    if(selectedOption === "Yes"){
+      setFormData((prev) => ({
+        ...prev,
+        raise_funds: true,
+      }));
+    }
+    else{
+      setFormData((prev) => ({
+        ...prev,
+        raise_funds: false,
+      }));
+    }
+  };
+
+  const handleDesiredFunds = (e)=>{
+    setFormData((prev) => ({
+      ...prev,
+      desired_funds: e.target.value,
+    }));
+  }
 
   return (
     <div className={openstep4 ? "" : "hidden"}>
@@ -112,15 +149,15 @@ const Step4 = ({ openstep4, setopenstep4, setopenstep5, setopenstep3 }) => {
             name=""
             id=""
             options={initialInvestmentOptions}
-            onSelect={handleSelectInvestmentOption}
+            onSelect={handleRaiseFunds}
             defaultText={"Choose one"}
           />{" "}
-          { selectedOption === "Yes" ?
+          { raiseFunds === "Yes" ?
             <div className="bg-[#F8F8F8] gap-[20px] flex flex-col  rounded-[10px] p-[20px]">
             <p className="text-[#555]  text-[16px] font-bold">How much?</p>
             <input
               type="text"
-              // onChange={(e) => setemail(e.target.value)}
+              onChange={handleDesiredFunds}
               // value={email}
               className="text-[16px] bg-transparent  w-full md:w-[40rem] lg:w-full px-5 outline-none border-2 rounded-[10px] border-[#999]/[0.5] placeholder:font-bold text-[#333] font-bold h-[50px] "
               // placeholder="$ 10,000"

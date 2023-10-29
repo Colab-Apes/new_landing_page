@@ -10,6 +10,7 @@ export default function CustomCalendarInput({ value, onClick }) {
           className="border-none focus:outline-none w-full relative"
           value={value}
           onClick={onClick}
+          readOnly
         //   width={150}
         />
         <div className='absolute right-5 top-4 z-0'>

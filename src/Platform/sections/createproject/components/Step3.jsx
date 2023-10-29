@@ -13,10 +13,14 @@ import remove from "../assets/remove.svg";
 
 import "../../../../App.css";
 import CustomCalendarInput from "../../../../components/CustomCalenderInput/CustomCalendarInput";
+import { useCreateProject } from "../../../../context/CreateProject";
 
 const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
   const ref = useRef();
+  const { setFormData } = useCreateProject();
+
   const [startDate, setStartDate] = useState(new Date());
+  const [finishDate, setFinishDate] = useState(new Date());
 
   const [targetAudience, setTargetAudience] = useState([
     "Non-binary",
@@ -28,7 +32,11 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && targetInput.trim() !== "") {
       setTargetAudience([...targetAudience, targetInput]);
-      e.target.value = ""
+      e.target.value = "";
+      setFormData((prev) => ({
+        ...prev,
+        audience: targetAudience.join(", "),
+      }));
     }
   };
 
@@ -38,6 +46,34 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
       updatedAudience.splice(index, 1);
       return updatedAudience;
     });
+  };
+
+  const handleSolveProblem = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      problem_solving: e.target.value,
+    }));
+  };
+
+  const handlePlanMoney = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      plan_money: e.target.value,
+    }));
+  };
+
+  const handleStartDate = (date) =>{
+    setFormData((prev) => ({
+      ...prev,
+      timeline: date.toISOString().split('T')[0] || startDate.toISOString.split('T')[0],
+    }));
+  };
+
+  const handleFinishDate = (date) =>{
+    setFormData((prev) => ({
+      ...prev,
+      expected_date: date.toISOString().split('T')[0],
+    }));
   };
 
   return (
@@ -165,6 +201,7 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
             placeholder="Explain...."
             id=""
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+            onChange={handleSolveProblem}
           />
           <span className="float-right text-right text-[14px] text-[#3B8004]">
             500 words maximum
@@ -178,10 +215,13 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
           >
             Expected start date
           </label>
-         
+
           <ReactDatePicker
             selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            onChange={(date) => {
+              setStartDate(date);
+              handleStartDate(date)
+            }}
             customInput={<CustomCalendarInput />}
           />
         </div>
@@ -191,8 +231,11 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
             Expected finishing date
           </label>
           <ReactDatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            selected={finishDate}
+            onChange={(date) => {
+              setFinishDate(date);
+              handleFinishDate(date)
+            }}
             customInput={<CustomCalendarInput />}
           />
           <div></div>
@@ -208,6 +251,7 @@ const Step3 = ({ openstep3, setopenstep3, setopenstep4, setopenstep2 }) => {
             placeholder="Explain..."
             id=""
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+            onChange={handlePlanMoney}
           />
           <span className="float-right text-right text-[14px] text-[#3B8004]">
             500 words maximum

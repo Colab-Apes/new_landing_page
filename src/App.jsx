@@ -6,9 +6,11 @@ import Platform from "./Platform/Platform";
 import ProtectedRoute from "./Validation/ProtectedRoute";
 import { Legality, Privacy, TermsOfUse } from "./pages";
 import NotFound from "./pages/NotFound";
+import { AppContextProvider } from "./context/ContextProvider";
 
 function App() {
   return (
+    <AppContextProvider>
     <div className="App">
       <ToastContainer className="text-2xl" />
       <Routes>
@@ -28,6 +30,7 @@ function App() {
         <Route path="/termsofuse" element={<TermsOfUse />} />
       </Routes>
     </div>
+    </AppContextProvider>
   );
 }
 

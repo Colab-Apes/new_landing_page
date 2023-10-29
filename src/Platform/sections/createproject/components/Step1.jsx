@@ -12,10 +12,12 @@ import arrowRight from "../assets/arrow-right.svg";
 import "../../../../App.css";
 import useStep1 from "./hooks/useStep1";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
+import { useCreateProject } from "../../../../context/CreateProject";
 
 const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   const { formik1 } = useStep1();
 
+  const { setFormData, formData } = useCreateProject();
   const [selectedOption, setSelectedOption] = useState("");
   const [otherRole, setOtherRole] = useState("");
 
@@ -57,27 +59,34 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
   const [roles, setRoles] = useState([]);
 
   //logic
-  const handleSelect = (selectedOption) => {
+  const handleSelectProjectType = (selectedOption) => {
     console.log(selectedOption);
     setSelectedOption(selectedOption);
+    setFormData((prev) => ({ ...prev, project_type: selectedOption }));
+  };
+  const handleSelectType = (selectedOption) => {
+    console.log(selectedOption);
+    setFormData((prev) => ({ ...prev, type: selectedOption }));
   };
 
   const handleAddRole = (role) => {
     setRoles((prev) => [...prev, role]);
+    setFormData((prev) => ({ ...prev, roles: roles.join(', ') }));
   };
 
   const handleRemoveRole = (index) => {
     setRoles((prevRoles) => {
       const updatedRoles = [...prevRoles];
       updatedRoles.splice(index, 1);
+      setFormData((prev) => ({ ...prev, roles: updatedRoles.join(', ') }));
       return updatedRoles;
     });
   };
 
   const handlOtherRole = (e) => {
     if (e.key === "Enter" && otherRole.trim() !== "") {
-      handleAddRole(otherRole)
-     e.target.value = ""
+      handleAddRole(otherRole);
+      e.target.value = "";
     }
   };
 
@@ -94,6 +103,10 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
       divRef.current.scrollLeft += 100;
     }
   };
+  console.log(formData);
+
+  const updateStep1 = () => {};
+
   return (
     <div className={openstep1 ? "" : "hidden"}>
       <div className={"flex items-center mt-10 w-full"}>
@@ -169,7 +182,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
               name=""
               id="audience"
               options={options}
-              onSelect={handleSelect}
+              onSelect={handleSelectProjectType}
               defaultText={"Select one..."}
             />
             {/* {formik1.errors.audience && formik1.touched.audience ? (
@@ -187,7 +200,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
               name=""
               id="audience"
               options={productServiceOptions[selectedOption]}
-              onSelect={handleSelect}
+              onSelect={handleSelectType}
               defaultText={"Select one..."}
             />
             {formik1.errors.audience && formik1.touched.audience ? (
@@ -284,8 +297,8 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
               id=""
               className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
               onKeyDown={handlOtherRole}
-              onChange={(e)=>{
-                setOtherRole(e.target.value)
+              onChange={(e) => {
+                setOtherRole(e.target.value);
               }}
             />
           </div>
@@ -304,6 +317,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             setopenstep1(false);
             setopenstep2(true);
             scrollTo(0, 0);
+            updateStep1();
           }}
           className="rounded-[30px] text-[#fff] font-bold text-[20px] btngrad h-[80px] w-[206px] bg-[5px_10px_30px_0px_rgba(59,_128,_4,_0,_10)]"
         >

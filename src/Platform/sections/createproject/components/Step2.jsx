@@ -8,6 +8,7 @@ import remove from "../assets/remove.svg";
 
 import "../../../../App.css";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
+import { useCreateProject } from "../../../../context/CreateProject";
 
 const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
   const options = ["Only me", "Multiple owners"];
@@ -16,22 +17,44 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
   const [outcomeInput, setOutcomeInput] = useState("");
   const [outcomes, setOutcomes] = useState([]);
 
-  const handleSelect = (selectedOption) => {
+  const { setFormData } = useCreateProject();
+
+  const handleNumberOfOwners = (selectedOption) => {
     console.log(selectedOption);
+    setFormData((prev) => ({ ...prev, number_of_owners: selectedOption }));
   };
 
   const handleAddObjective = (e) => {
     if (e.key === "Enter" && objectiveInput.trim() !== "") {
       setObjectives([...objectives, objectiveInput]);
-      se.target.value = ""
+      setFormData((prev) => ({ ...prev, objectives: objectives.join(", ") }));
+      e.target.value = "";
     }
   };
 
   const handleAddOutcome = (e) => {
     if (e.key === "Enter" && outcomeInput.trim() !== "") {
       setOutcomes([...outcomes, outcomeInput]);
-      e.target.value = ""
+      setFormData((prev) => ({
+        ...prev,
+        expected_outcome: outcomes.join(", "),
+      }));
+      e.target.value = "";
     }
+  };
+
+  const handleAddTitle = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      title: e.target.value,
+    }));
+  };
+
+  const handleAddOverview = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      overview: e.target.value,
+    }));
   };
 
   return (
@@ -108,6 +131,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             placeholder="Type title"
             id=""
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+            onChange={handleAddTitle}
           />
         </div>
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
@@ -118,7 +142,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             name=""
             id=""
             options={options}
-            onSelect={handleSelect}
+            onSelect={handleNumberOfOwners}
             defaultText={"Select number of owners"}
           />
         </div>
@@ -197,6 +221,7 @@ const Step2 = ({ setopenstep1, setopenstep2, openstep2, setopenstep3 }) => {
             placeholder="Project overview"
             id=""
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
+            onChange={handleAddOverview}
           />
           <span className="float-right text-right text-[14px] text-[#3B8004]">
             500 words maximum

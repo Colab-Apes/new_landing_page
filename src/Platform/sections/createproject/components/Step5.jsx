@@ -8,12 +8,61 @@ import upload from "../assets/upload.svg";
 
 import "../../../../App.css";
 import ReusableDropdown from "../../../../components/ResuasbleDropDown/ResusableDropDown";
+import { useState } from "react";
+import { useCreateProject } from "../../../../context/CreateProject";
+import photo from "../../../../assets/icons/photo.png";
+import acrobat from "../../../../assets/icons/acrobat.png";
 
 const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
-  const options = ["Before Recruitment", "Before Recruitment"];
-
+  const options = ["Before Recruitment", "After Recruitment"];
+  const [businessPlan, setBusinessPlan] = useState();
+  const [projectPhoto, setProjectPhoto] = useState();
+  const { setFormData } = useCreateProject();
   const handleSelect = (selectedOption) => {
     console.log(selectedOption);
+    if (selectedOption === "Before Recruitment") {
+      setFormData((prev) => ({
+        ...prev,
+        initial_step: "Before",
+      }));
+    }
+    if (selectedOption === "After Recruitment") {
+      if (selectedOption === "Before Recruitment") {
+        setFormData((prev) => ({
+          ...prev,
+          initial_step: "After",
+        }));
+      }
+    }
+  };
+
+  const handleBusinessPlan = (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+      setFormData((prev) => ({
+        ...prev,
+        business_plan_doc: file,
+      }));
+      if (file.type === "application/pdf") {
+        setBusinessPlan(acrobat);
+      }
+      if (file.type !== "application/pdf") {
+        setBusinessPlan(photo);
+      }
+    }
+  };
+  const handleProjectPhoto = (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+      const blob = new Blob([file], { type: file.type });
+      setProjectPhoto(blob);
+      setFormData((prev) => ({
+        ...prev,
+        business_project_photo: file,
+      }));
+    }
   };
 
   return (
@@ -117,22 +166,51 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
           <label className="text-[16px] text-[#999]  font-bold" htmlFor="">
             Upload Business or Operational plan
           </label>
-          <div className="flex flex-col image-drop-lg ">
-            <label
-              for="business-plan"
-              className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[10px] cursor-pointer bg-[#F8F8F8]  hover:bg-gray-100  "
-            >
-              <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
-                <img src={upload} alt="" />
-                <p className="text-[16px] text-[#555] ">
-                  <span className="font-semibold">
-                    Upload .pdf, .jpg, .PNG files
-                  </span>
-                </p>
+          {businessPlan ? (
+            <div className="flex items-center">
+              <div className="rounded-[10px] cursor-pointer bg-[#F8F8F8] w-[70%] h-[84px] flex items-center p-[10px]">
+                <div className="bg-[#FFF] px-[21px] py-[21px]">
+                  <img src={businessPlan} alt="" width={24} height={24} />
+                </div>
+
+                <span className="ml-4">Business Plan</span>
               </div>
-              <input id="business-plan" type="file" className="hidden" />
-            </label>
-          </div>
+              <label
+                className="bg-[#F8F8F8] text-[#054E12] py-[6px] px-[20px] justify-center text-[14px] font-bold rounded-[10px] ml-[8px] pointer hover:bg-gray-200"
+                for="business-plan"
+              >
+                Change File
+              </label>
+              <input
+                id="business-plan"
+                type="file"
+                className="hidden"
+                onChange={handleBusinessPlan}
+              />
+            </div>
+          ) : (
+            <div className="flex flex-col image-drop-lg ">
+              <label
+                for="business-plan"
+                className="flex flex-col py-[2.06rem] px-[8.94rem] rounded-[10px] cursor-pointer bg-[#F8F8F8]  hover:bg-gray-100  "
+              >
+                <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
+                  <img src={upload} alt="" />
+                  <p className="text-[16px] text-[#555] ">
+                    <span className="font-semibold">
+                      Upload .pdf, .jpg, .PNG files
+                    </span>
+                  </p>
+                </div>
+                <input
+                  id="business-plan"
+                  type="file"
+                  className="hidden"
+                  onChange={handleBusinessPlan}
+                />
+              </label>
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
@@ -151,27 +229,49 @@ const Step5 = ({ openstep5, setopenstep5, setopenstep6, setopenstep4 }) => {
           <label className="text-[16px] text-[#999]  font-bold" htmlFor="">
             Upload Project photo
           </label>
-          <div className="flex flex-col items-center justify-center image-drop-sm w-[322px]">
-            <label
-              for="project-image"
-              className="flex flex-col rounded-[30px] cursor-pointer bg-[#F8F8F8] "
-            >
-              <div className="flex flex-col items-center justify-center gap-[4.12rem] h-[260px] px-14">
-                <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
-                  <img src={upload} alt="" />
-                  <p className="text-[16px] font-bold text-[#555]">
-                    Upload a .jpg or .PNG file
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[#054E12] font-lato font-bold text-[14px] text-center mt-10">
-                    This would appear on your project cover
-                  </p>
-                </div>
+          {projectPhoto ? (
+            <div className="flex items-center ">
+              <div className="flex flex-col items-center justify-center image-drop-sm w-[322px]">
+                <img src={URL.createObjectURL(projectPhoto)} alt="" />
               </div>
-              <input id="project-image" type="file" className="hidden" />
-            </label>
-          </div>
+              <label htmlFor="project-image" className="bg-[#F8F8F8] text-[#054E12] py-[6px] px-[20px] justify-center text-[14px] font-bold rounded-[10px] ml-[8px] pointer hover:bg-gray-200">
+                Change Photo
+              </label>
+              <input
+                  id="project-image"
+                  type="file"
+                  className="hidden"
+                  onChange={handleProjectPhoto}
+                />
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center image-drop-sm w-[322px]">
+              <label
+                for="project-image"
+                className="flex flex-col rounded-[30px] cursor-pointer bg-[#F8F8F8] "
+              >
+                <div className="flex flex-col items-center justify-center gap-[4.12rem] h-[260px] px-14">
+                  <div className="flex flex-col items-center justify-center gap-[0.81rem] ">
+                    <img src={upload} alt="" />
+                    <p className="text-[16px] font-bold text-[#555]">
+                      Upload a .jpg or .PNG file
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[#054E12] font-lato font-bold text-[14px] text-center mt-10">
+                      This would appear on your project cover
+                    </p>
+                  </div>
+                </div>
+                <input
+                  id="project-image"
+                  type="file"
+                  className="hidden"
+                  onChange={handleProjectPhoto}
+                />
+              </label>
+            </div>
+          )}
 
           {/* <div className="border-2  rounded-[10px] border-dashed px-[19px] py-[23px]">
             <div className=" rounded-[10px] py-[33px] w-full gap-[10px] flex flex-col items-center justify-center bg-[#F8F8F8]">
