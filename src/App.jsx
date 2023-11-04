@@ -7,6 +7,7 @@ import ProtectedRoute from "./Validation/ProtectedRoute";
 import { Legality, Privacy, TermsOfUse } from "./pages";
 import NotFound from "./pages/NotFound";
 import { AppContextProvider } from "./context/ContextProvider";
+import { Project } from "./Platform/sections";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
 
+        <Route path="/project" element={<Project />} />
         <Route path="/legal" element={<Legality />} />
         <Route path="/privacypolicy" element={<Privacy />} />
         <Route path="/termsofuse" element={<TermsOfUse />} />
