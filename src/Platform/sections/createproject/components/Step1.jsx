@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import img1 from "../assets/circle.svg";
@@ -8,9 +9,25 @@ import "../../../../App.css";
 
 
 const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
+  const [selectedFruit, setSelectedFruit] = useState('');
+  const [selectedColor, setSelectedColor] = useState('');
+
+  const fruits = ['Product', 'Service'];
+  const colors = {
+    Product: ['Web Comics', 'Novels', 'Book', 'Animation', 'Softwares', 'Games', 'Podcast', 'Music', 'Web Art'],
+    Service: ['Video Editing', 'Software Creation', 'Picture Editing', 'Animation Services', 'Website Creation', 'Marketing', 'Cyber Security', 'Consulting'],
+  };
+
+
+  // Event handler for the first select
+  const handleFruitChange = (event) => {
+    setSelectedFruit(event.target.value);
+    // Update the options for the second select based on the selected fruit
+    setSelectedColor('');
+  };
+
   return (
     <div className={openstep1 ? "" : "hidden"}>
-
       
       <div className={"flex items-center mt-10 w-full"}>
 
@@ -92,26 +109,28 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">
             Are you looking to create a product or service?
           </label>
-          <select
-            name=""
-            id=""
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
-          >
-            <option value="volvo">Choose one</option>
-            <option value="saab">Saab</option>
+          <select id="fruits" value={selectedFruit} onChange={handleFruitChange} className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]">
+            <option value="">Choose one</option>
+            {fruits.map((fruit) => (
+              <option key={fruit} value={fruit}>
+                {fruit}
+              </option>
+            ))}
           </select>
         </div>
         <div className="flex flex-col w-full text-[#999] gap-y-4 ">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">Product / Service type?</label>
-          <select
-            name=""
-            id=""
-            className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5  border-2 rounded-[10px] text-[16px] font-bold border-[#999]/[0.5]"
-          >
-            <option value="volvo">Choose one</option>
-            <option value="saab">Saab</option>
+          <select id="colors" value={selectedColor} onChange={(e) => setSelectedColor(e.target.value)} className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5  border-2 rounded-[10px] text-[16px] font-bold border-[#999]/[0.5]">
+            <option value="">Choose one</option>
+            {colors[selectedFruit] &&
+              colors[selectedFruit].map((color) => (
+                <option key={color} value={color}>
+                  {color}
+                </option>
+              ))}
           </select>
         </div>
+
         <div className="flex flex-col w-full gap-y-4 text-[#999]">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">Which roles would your project require?</label>
           <div className="flex items-center justify-between bg-[#ddd]/[0.2] rounded-[10px] h-[50px] px-8">
@@ -172,7 +191,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
           </div>{" "}
         </div>
 
-        <div className="flex flex-col w-full text-[#999] gap-y-4">
+        {/* <div className="flex flex-col w-full text-[#999] gap-y-4">
           <label htmlFor="" className="text-[#999] text-[16px] font-bold">
             Other
           </label>
@@ -182,7 +201,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
             id=""
             className="focus:outline-none text-[#999] bg-[#fff]/[20%] py-4 px-5 border-2 rounded-[10px] text-[16px] font-bold  border-[#999]/[0.5]"
           />
-        </div>
+        </div> */}
 
         <div className="w-full mt-32 flex justify-between items-center col-span-2">
           <Link to="/home" className="p-5 rounded-[30px] h-[80px] text-[20px] font-bold text-[#054E12] w-[206px] shadow-[5px_10px_30px_0px_rgba(59,_128,_4,_0.10)]">
@@ -201,6 +220,7 @@ const Step1 = ({ setopenstep1, openstep1, setopenstep2 }) => {
           </button>
         </div>
       </div>
+      
     </div>
   );
 };
