@@ -4,12 +4,14 @@ import { TypeAnimation } from "react-type-animation";
 import { ClipLoader } from "react-spinners";
 
 import Socials from "./Socials";
+import WaitLiskHook from "../../../NewLandingPage/Hooks/WaitLiskHook";
 
 import heroimage from "../assets/waitlistheroimage.png";
 
 
 
 const Hero = () => {
+  const { email, setemail, setsuccess, success, submitEmail, load } = WaitLiskHook();
 
   return (
     <section className="grid lg:flex mt-4 lg:mt-0 xl:px-20 md:h-[75vh] lg:h-[80vh] sm:w-[33rem] md:w-[42rem] lg:w-full justify-center lg:gap-x-8 xl:gap-x-16 items-center justify-items-center">
@@ -56,21 +58,49 @@ const Hero = () => {
             Join the wait list
           </p>
           <div></div>
-            <div className="relative w-full duration-500 origin-left scale-x-[100%]">
-              <input
-                type="email"
-                // onChange={(e) => setemail(e.target.value)}
-                // value={email}
-                placeholder="enter your email address..."
-                className="h-[5rem] placeholder:text-[#999999] text-lg font-medium w-full lg:w-full lg:origin-left px-[1.3rem] pr-[7rem] rounded-[1.25rem] focus:outline-none border-[#3B8004] border-2 bg-transparent"
-              />
-                <button
-                //   onClick={() => submitEmail()}
-                  className="join absolute right-2 inset-y-2 bg-[#007D16]  hover:bg-transparent hover:text-[#007D16] hover:border hover:border-[#007D16] font-lato font-semibold h-[4.06rem] w-[7.3rem] rounded-[0.94rem] text-white"
-                >
-                  Join
-                </button>
-            </div>
+          {success ? (
+              // Success Message
+              <div
+                className={
+                  "w-[92%] md:w-[40rem] xl:w-full duration-500 origin-left scale-x-[92%] lg:scale-x-[22rem] md:px-10 h-[6rem] border-[#054E12] border-2 text-white  bg-[#054E12]/[50%] rounded-[20px] flex items-center text-center justify-center "
+                }
+              >
+                <RiErrorWarningLine className="text-2xl lg:text-4xl mr-3" />
+                <p className="md:text-lg lg:text-xl xl:text-2xl mr-3">
+                  Successfully submitted!
+                </p>
+                <IoIosClose
+                  className="text-2xl  lg:text-5xl cursor-pointer"
+                  onClick={() => setsuccess(false)}
+                />
+              </div>
+            ) : (
+              // Waitlist Form Input
+              <div className="relative w-full duration-500 origin-left scale-x-[100%]">
+                <input
+                  type="email"
+                  onChange={(e) => setemail(e.target.value)}
+                  value={email}
+                  placeholder="enter your email address..."
+                  className="h-[5rem] placeholder:text-[#999999] text-lg font-medium w-full lg:w-full lg:origin-left px-[1.3rem] pr-[7rem] rounded-[1.25rem] focus:outline-none border-[#3B8004] border-2 bg-transparent"
+                />
+                {load ? (
+                  <ClipLoader
+                    color="#3B8004"
+                    className="right-5 text-2xl  inset-y-4 absolute"
+                    aria-label="Loading Spinner"
+                    data-testid="loader"
+                  />
+                ) : (
+                  <button
+                    onClick={() => submitEmail()}
+                    className="join absolute right-2 inset-y-2 bg-[#007D16]  hover:bg-transparent hover:text-[#007D16] hover:border hover:border-[#007D16] font-lato font-semibold h-[4.06rem] w-[7.3rem] rounded-[0.94rem] text-white"
+                  >
+                    Join
+                  </button>
+                )}
+              </div>
+            )}
 
           {/* Social Media Icons (hidden on lg and larger screens) */}
           <div className="lg:hidden mt-6 mb-4 sm:mt-10 ">
