@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -8,9 +9,10 @@ const WaitLiskHook = () => {
   const [email, setemail] = useState("");
   var validRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const navigate = useNavigate();
+
 
   const submitEmail = () => {
-    console.log(email);
     if (email.length === 0) {
       toast.error("Enter an email", {
         position: "bottom-left",
@@ -33,10 +35,10 @@ const WaitLiskHook = () => {
           { email }
         )
         .then((response) => {
-          console.log(response);
           setsuccess(true);
           setemail("");
           setload(false);
+          navigate('/');
         })
         .catch((error) => {
           console.log(error);
