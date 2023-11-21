@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Learn from "./components/Learn";
 import { img1, img2, img3, img4, img5, img6, img7, img8 } from "./assets/BulkImport";
 
@@ -15,7 +17,9 @@ const LearningPool = () => {
         </p>
       </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 mt-[2.44rem] sm:mt-20 lg:mt-[6rem] gap-y-10 sm:gap-y-20 sm:gap-x-10 md:gap-10 lg:gap-y-10  lg:gap-x-4  xl:gap-x-6 xl:gap-y-10   mx-auto w-full ">
-        <Learn image={img1} name="Analytics" />
+        <Link to="/analytics">
+          <Learn image={img1} name="Analytics" />
+        </Link>
         <Learn image={img2} name="Artificial Intelligence" />
         <Learn image={img3} name="Animation" />
         <Learn image={img4} name="Coding" />

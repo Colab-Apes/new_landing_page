@@ -25,8 +25,8 @@ const Platform = () => {
         {checkindex === 0 ? (
           <HomePage />
         ) : checkindex === 1 ? (
-          // <LearningPool />
-          <ComingSoon />
+          <LearningPool />
+          // <ComingSoon />
         ) : (
           <CreateProject />
         )}
