@@ -1,1 +1,1 @@
-export const link = "https://co-backend-production.up.railway.app/api/v1";
+export const link = "http://3.139.224.185:8080/api/v1";
