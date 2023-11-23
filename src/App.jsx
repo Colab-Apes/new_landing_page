@@ -6,9 +6,6 @@ import Platform from "./Platform/Platform";
 import ProtectedRoute from "./Validation/ProtectedRoute";
 import { Waitlist, NotFound, Legality, Privacy, TermsOfUse } from "./pages";
 import Project from "./Platform/sections/project/Project";
-import NewMember from './Platform/sections/learningpool/newMember/NewMember';
-
-
 
 function App() {
   return (
@@ -25,23 +22,8 @@ function App() {
           }
         />
         <Route path="*" element={<NotFound />} />
-        
-        <Route
-          path="/project"
-          element={
-            <ProtectedRoute>
-              <Project />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/analytics"
-          element={
-            <ProtectedRoute>
-              <NewMember />
-            </ProtectedRoute>
-          }
-        />
+
+        <Route path="/project" element={<Project />} />
 
         <Route path="/waitlist" element={<Waitlist />} />
         <Route path="/legal" element={<Legality />} />
