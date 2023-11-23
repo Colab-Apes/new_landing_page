@@ -4,8 +4,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Platform from "./Platform/Platform";
 import ProtectedRoute from "./Validation/ProtectedRoute";
-import { Waitlist, NotFound, Legality, Privacy, TermsOfUse } from "./pages";
+import { Legality, Privacy, TermsOfUse } from "./pages";
 import Project from "./Platform/sections/project/Project";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -25,7 +26,6 @@ function App() {
 
         <Route path="/project" element={<Project />} />
 
-        <Route path="/waitlist" element={<Waitlist />} />
         <Route path="/legal" element={<Legality />} />
         <Route path="/privacypolicy" element={<Privacy />} />
         <Route path="/termsofuse" element={<TermsOfUse />} />

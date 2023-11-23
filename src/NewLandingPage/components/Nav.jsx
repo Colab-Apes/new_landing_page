@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
 import { TfiClose } from "react-icons/tfi";
 
 import OverlayHooks from "../Hooks/OverlayHooks";
@@ -38,16 +37,14 @@ const Nav = ({ changeValue }) => {
           <p>Create project</p>
         </div>
         <div className="flex gap-10">
-          <Link to="/waitlist">
-            <button
-              className="px-[8px] text-[#054E12] py-[12px] text-[17px] font-bold hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
-              // onClick={() => {
-              //   setopenjoinwaitlist(true);
-              // }}
-            >
-              Join waitlist
-            </button>
-          </Link>
+          <button
+            className="px-[8px] text-[#054E12] py-[12px] text-[17px] font-bold hover:animate-pulse hover:animate-once hover:animate-duration-[750ms] hover:animate-ease-in-out "
+            onClick={() => {
+              setopenjoinwaitlist(true);
+            }}
+          >
+            Join waitlist
+          </button>
           <button
             onClick={() => {
               hooks.setopensignupmodal(true);

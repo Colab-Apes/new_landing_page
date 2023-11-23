@@ -1,9 +1,9 @@
 const ComingSoon = () => {
 
   return (
-    <div className=" h-screen w-screen ">
-      
-    </div>
+    <section className=" h-[58rem] ">
+
+    </section>
   )
 }
 
