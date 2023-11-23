@@ -17,11 +17,11 @@ const Nav = ({ changeValue }) => {
   const hooks = OverlayHooks();
   const [openjoinwaitlist, setopenjoinwaitlist] = useState(false);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setopenjoinwaitlist(true);
-  //   }, 30000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setopenjoinwaitlist(true);
+    }, 30000);
+  }, []);
 
 
   return (
