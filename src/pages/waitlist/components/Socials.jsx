@@ -4,7 +4,7 @@ import linkedin from "../../../assets/socials/linkedin.svg";
 
 const Socials = () => {
   return (
-    <div className="flex w-full pr-14 md:h-[10vh] lg:min-h-[10vh] items-center justify-center md:justify-end gap-x-3">
+    <div className="flex w-full pr-14 md:h-[10vh] lg:min-h-[10vh] items-center justify-center lg:justify-end gap-x-3">
 
       {/* Instagram */}
       <a

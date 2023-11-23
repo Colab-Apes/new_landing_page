@@ -23,7 +23,7 @@ const Waitlist = () => {
         <Hero />
 
         {/* Socials Component for lg screen  */}
-        <div className="w-full md:block hidden">
+        <div className="w-full lg:block hidden">
           <Socials />
         </div>
 

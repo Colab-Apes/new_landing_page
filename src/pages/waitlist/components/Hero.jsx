@@ -14,7 +14,7 @@ const Hero = () => {
   const { email, setemail, setsuccess, success, submitEmail, load } = WaitLiskHook();
 
   return (
-    <section className="grid md:flex mt-4 lg:mt-0 xl:px-20 md:h-[75vh] lg:h-[80vh] sm:w-[33rem] md:w-[100vw] lg:w-full justify-center lg:gap-x-8 xl:gap-x-16 items-center justify-items-center">
+    <section className="grid lg:flex mt-4 lg:mt-0 xl:px-20 md:h-[75vh] lg:h-[80vh] sm:w-[33rem] md:w-[42rem] lg:w-full justify-center lg:gap-x-8 xl:gap-x-16 items-center justify-items-center">
       <div className="flex flex-col lg:min-h-[30vh] justify-between sm:justify-around">
         {/* Heading */}
         <div className="flex items-center gap-x-4">
@@ -48,7 +48,7 @@ const Hero = () => {
         <img
           src={heroimage}
           alt=""
-          className="w-[80%] sm:w-[27rem] object-contain md:hidden mx-auto lg:mx-0  mt-8 sm:mt-4 "
+          className="w-[80%] sm:w-[27rem] object-contain lg:hidden mx-auto lg:mx-0  mt-8 sm:mt-4 "
           loading="lazy"
         />
 
@@ -103,7 +103,7 @@ const Hero = () => {
             )}
 
           {/* Social Media Icons (hidden on lg and larger screens) */}
-          <div className="md:hidden mt-6 mb-4 sm:mt-10 ">
+          <div className="lg:hidden mt-6 mb-4 sm:mt-10 ">
             <Socials />
           </div>
         </div>
@@ -113,7 +113,7 @@ const Hero = () => {
       <img
         src={heroimage}
         alt=""
-        className=" md:w-[29.75rem] lg:w-[30.75rem] md:ml-[5.12rem] xl:w-[30vw] object-contain md:block hidden"
+        className="lg:w-[30.75rem] lg:ml-[5.12rem] xl:w-[30vw] object-contain lg:block hidden"
         loading="lazy"
       />
     </section>
